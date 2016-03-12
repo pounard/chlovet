@@ -96,7 +96,7 @@ fi
 echo "Giving rights to $WWW_USER:$DEV_GROUP on $SUB_PATH"
 
 find $ROOT_PATH -type d -exec chmod g+x,u+x '{}' \;
-find $ROOT_PATH -type f -exec chmod g-x,u-x '{}' \;
+#find $ROOT_PATH -type f -exec chmod g-x,u-x '{}' \;
 chown -R $WWW_USER:$DEV_GROUP $ROOT_PATH
 chmod -R $r_normal $ROOT_PATH
 
