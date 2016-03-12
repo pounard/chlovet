@@ -1,0 +1,5 @@
+<?php
+
+require_once 'hsm_content.field_widgets.inc';
+require_once 'hsm_content.field_formatters.inc';
+

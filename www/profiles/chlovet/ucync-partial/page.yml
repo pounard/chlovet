@@ -1,0 +1,40 @@
+# Editorial page node type
+field:
+
+  page_body:
+    label: Corps
+    type: text_long
+    instance_settings:
+      text_processing: 1
+
+
+  page_image:
+    label: Vignette
+    type: unoderef
+    widget:
+      type: unoderef
+      settings:
+        bundles: [image]
+        view_mode: favorite
+
+entity:
+  node:
+
+    page:
+      name: Page éditoriale
+      field:
+        body: ~
+        page_body: {required: true}
+        page_image: {required: true}
+        labels: true
+
+view:
+  node:
+
+    page:
+      default:
+        page_body: true
+        page_image:
+          type: unoderef
+          settings:
+            view_mode: favorite

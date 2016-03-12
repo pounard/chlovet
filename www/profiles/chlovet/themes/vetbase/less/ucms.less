@@ -1,0 +1,32 @@
+body {
+  overflow: hidden;
+}
+.ucms-contrib-result-inner {
+  position: relative;
+  overflow: hidden;
+
+  margin: 15px auto;
+
+  .title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: 0;
+    a {
+      color: white;
+      font-weight: bold;
+    }
+    padding: 3px;
+    opacity: 0.9;
+    background-color: @gray-dark;
+  }
+
+  &.ui-draggable-dragging {
+    background: #fff;
+  }
+}
+
+.ucms-contrib-result-inner {
+  height: @ucms-search-item-width;
+}

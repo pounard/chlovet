@@ -1,0 +1,40 @@
+# News node type
+field:
+
+  news_body:
+    label: Corps
+    type: text_long
+    instance_settings:
+      text_processing: 1
+
+  news_image:
+    label: Vignette
+    type: unoderef
+    widget:
+      type: unoderef
+      settings:
+        bundles: [image]
+        view_mode: favorite
+
+entity:
+  node:
+
+    news:
+      name: Actualité
+      field:
+        body: ~
+        news_body: {required: true}
+        news_image: {required: true}
+        labels: true
+
+view:
+  node:
+
+    news:
+
+      default:
+        news_body: true
+        news_image:
+          type: unoderef
+          settings:
+            view_mode: favorite

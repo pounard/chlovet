@@ -1,0 +1,29 @@
+# Document node type
+field:
+
+  file:
+    label: Fichier
+    type: file
+    widget:
+      type: file_chunked
+    instance_settings:
+      file_extensions: txt pdf
+      file_directory: documents
+
+entity:
+  node:
+
+    document:
+      name: Document
+      field:
+        body: ~
+        file: {required: true}
+        labels: true
+
+view:
+  node:
+
+    document:
+
+      default:
+        file: true

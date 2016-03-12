@@ -1,0 +1,79 @@
+# Drupal special role: anonymous user
+anonymous:
+  name: Internaute
+  permission:
+    - access content
+
+# Drupal special role: authenticated user
+authenticated:
+  name: Compte client
+  permission:
+    - access content
+    - access administration pages
+    - site request # Maybe not the best place
+    - use contextual pane
+    - view the administration theme
+
+admin_func:
+  name: Administrateur fonctionnel
+  permission:
+    - access site in maintenance mode
+    - access ucms content overview
+    - users manage all
+    - content view all
+    - content manage global
+    - content manage group
+    - site dashboard access
+    - site manage all
+    - site view all
+    - labels dashboard access
+    - labels edit locked
+    - labels edit non locked
+    - use favorites
+    - use text format full_html
+
+admin_tech:
+  name: Administrateur technique
+  permission:
+    - access site in maintenance mode
+    - access ucms content overview
+    - users manage all
+    - bypass node access
+    - site dashboard access
+    - site manage all
+    - site view all
+    - use favorites
+
+global_contrib:
+  name: Contributeur du référentiel global
+  permission:
+    - access ucms content overview
+    - content manage global
+    - content view global
+    - content view group
+    - labels dashboard access
+    - site dashboard access
+    - use favorites
+    - use text format full_html
+
+local_webmaster:
+  name: Webmaster local
+  permission:
+    - access ucms content overview
+    - content view global
+    - content view group
+    - content view other
+    - labels dashboard access
+    - labels edit non locked
+    - site dashboard access
+    - use favorites
+    - use text format full_html
+
+local_contrib:
+  name: Contributeur local
+  permission:
+    - access ucms content overview
+    - labels dashboard access
+    - site dashboard access
+    - use favorites
+    - use text format full_html

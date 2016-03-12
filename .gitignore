@@ -2,15 +2,15 @@
 # Ignore all core Drupal files.
 # On a prodcution steps you may comment theses ignore to push the real code
 # in git.
-www/*.*
-www/includes
-www/misc
-www/modules
-www/scripts
-www/translations
-www/themes
-www/profiles/*
-www/sites
+#www/*.*
+#www/includes
+#www/misc
+#www/modules
+#www/scripts
+#www/translations
+#www/themes
+#www/profiles/*
+#www/sites
 
 # Because we have beard, let's use composer and symfony
 app/cache
@@ -24,7 +24,7 @@ www/sites/all/themes/composer
 # to ignore theses files:
 www/sites/default
 www/sites/all/README.txt
-www/sites/default/default.settings.php
+#www/sites/default/default.settings.php
 www/sites/example.sites.php
 www/sites/sites.php
 www/sites/README.txt

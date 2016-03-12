@@ -1,0 +1,65 @@
+ucms_contrib_component_types: []
+  # - homepage
+  # - list_type
+
+ucms_contrib_editorial_types:
+  - news
+  - page
+
+ucms_contrib_tab_media_type:
+  - document
+  - image
+
+ucms_layout_regions_badm:
+  content: 1
+  help: 1
+  sidebar_first: 2
+
+ucms_layout_regions_bartwig:
+  content: 1
+  footer: 2
+  footer_firstcolumn: 2
+  footer_fourthcolumn: 2
+  footer_secondcolumn: 2
+  footer_thirdcolumn: 2
+  header: 2
+  highlighted: 2
+  sidebar_first: 1
+  sidebar_second: 1
+
+ucms_site_allowed_themes:
+  - badm
+  - bartwig
+
+ucms_site_home_node_type: page
+
+# Roles identifiers, this must be kept in sync with role in ucms_site
+ucms_site_relative_roles:
+  6: 1
+  7: 2
+
+# Roles identifiers, this must be kept in sync with role in ucms_site
+ucms_site_state_transition_matrix:
+  0:
+    10: {3: 3, 4: 4}
+    20: {3: 3, 4: 4}
+  10:
+    0: {3: 3, 4: 4, 6: 6}
+  20:
+    100: {4: 4}
+  100:
+    200: {3: 3, 4: 4}
+  200:
+    210: {3: 3, 4: 4, 6: 6}
+    300: {3: 3, 4: 4}
+  210:
+    200: {3: 3, 4: 4, 6: 6}
+  300:
+    200: {3: 3, 4: 4}
+
+ucms_search_cron_limit: 500
+
+# Few Drupal core variables
+user_register: 0
+admin_theme: badm
+node_admin_theme: true

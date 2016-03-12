@@ -1,0 +1,11 @@
+{
+    "name": "vetbase",
+    "version": "0.1.0",
+    "private": true,
+    "devDependencies": {
+        "gulp": "latest",
+        "gulp-rename": "latest",
+        "gulp-minify-css": "latest",
+        "gulp-less": "latest"
+    }
+}

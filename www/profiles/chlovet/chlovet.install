@@ -1,0 +1,128 @@
+<?php
+/**
+ * @file
+ * Installation procedure.
+ *
+ * Please keep this file to the bare minimum, almost everything can be
+ * installed within modules and should not get in here.
+ */
+
+/**
+ * Implements hook_install().
+ *
+ * Perform actions to set up the site for this profile.
+ *
+ * @see system_install()
+ */
+function chlovet_install() {
+  // Enable themes.
+  db_update('system')
+    ->fields(['status' => 1])
+    ->condition('type', 'theme')
+    ->condition('name', ['badm'])
+    ->execute()
+  ;
+
+  chlovet_update_7006();
+  chlovet_update_7009();
+}
+
+/**
+ * Configure CKEditor
+ */
+function chlovet_update_7006() {
+  module_enable(['ckeditor']);
+
+  $name = 'Full';
+  db_delete('ckeditor_settings')
+    ->condition('name', ['Advanced', $name])
+    ->execute();
+  db_delete('ckeditor_input_format')
+    ->condition('name', ['Advanced', $name])
+    ->execute();
+
+  $settings = [
+    'filebrowser'            => 'none',
+    'quickupload'            => 'f',
+    'ss'                     => '2',
+    'filters'                =>
+      [
+        'filter_html' => 1,
+      ],
+    'default'                => 't',
+    'show_toggle'            => 'f',
+    'popup'                  => 'f',
+    'toolbar'                => '
+[
+    [\'Maximize\', \'ShowBlocks\'],
+    [\'Undo\',\'Redo\'],
+    [\'Cut\',\'Copy\',\'PasteFromWord\'],
+    [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\'],
+    [\'Blockquote\',\'HorizontalRule\',\'SpecialChar\'],
+    \'/\',
+    [\'Format\'],
+    [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'RemoveFormat\'],
+    [\'Linkit\',\'Unlink\',\'Anchor\'],
+    [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\']
+]
+    ',
+    'expand'                 => 't',
+    'width'                  => '100%',
+    'lang'                   => 'fr',
+    'auto_lang'              => 't',
+    'language_direction'     => 'default',
+    'enter_mode'             => 'p',
+    'shift_enter_mode'       => 'br',
+    'font_format'            => 'p;pre;h2;h3;h4;h5;h6',
+    'format_source'          => 't',
+    'format_output'          => 't',
+    'custom_formatting'      => 'f',
+    'formatting'             =>
+      [
+        'custom_formatting_options' =>
+          [
+            'indent'          => 'indent',
+            'breakBeforeOpen' => 'breakBeforeOpen',
+            'breakAfterOpen'  => 'breakAfterOpen',
+            'breakAfterClose' => 'breakAfterClose',
+          ],
+      ],
+    'css_mode'               => 'none',
+    'css_path'               => '',
+    'user_choose'            => 'f',
+    'ckeditor_load_method'   => 'ckeditor.js',
+    'ckeditor_load_time_out' => 0,
+    'scayt_autoStartup'      => 'f',
+    'html_entities'          => 'f',
+  ];
+  db_insert('ckeditor_settings')
+    ->fields([
+      'name'     => $name,
+      'settings' => serialize($settings),
+    ])
+    ->execute();
+
+  db_insert('ckeditor_input_format')->fields([
+    'name'   => $name,
+    'format' => 'full_html',
+  ])->execute();
+}
+
+/**
+ * Install french locale.
+ */
+function chlovet_update_7009() {
+  include_once DRUPAL_ROOT . '/includes/locale.inc';
+  locale_add_language('fr', 'French', 'Français', LANGUAGE_LTR, '', '', TRUE, TRUE);
+  db_update('languages')
+    ->fields([
+      'enabled' => 0,
+    ])
+    ->condition('language', 'en')
+    ->execute();
+
+  variable_set('language_count', 1);
+  // Changing the language settings impacts the interface.
+  cache_clear_all('*', 'cache_page', TRUE);
+  module_invoke_all('multilingual_settings_changed');
+}

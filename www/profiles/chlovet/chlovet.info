@@ -1,0 +1,59 @@
+name = Chlovet
+description = This is a custom site.
+version = VERSION
+core = 7.x
+
+; This is a distribution.
+exclusive = true
+
+; Core dependencies.
+dependencies[] = dblog
+dependencies[] = field
+dependencies[] = field_sql_storage
+dependencies[] = file
+dependencies[] = filter
+dependencies[] = image
+dependencies[] = list
+dependencies[] = locale
+; I desesperatly want to get rid of the menu module
+dependencies[] = menu
+dependencies[] = node
+dependencies[] = number
+dependencies[] = options
+dependencies[] = path
+dependencies[] = system
+dependencies[] = taxonomy
+dependencies[] = text
+dependencies[] = user
+
+; Contrib.
+dependencies[] = jquery_update
+dependencies[] = ckeditor
+
+; Custom modules.
+dependencies[] = filechunk
+dependencies[] = gulpifier
+dependencies[] = minidialog
+dependencies[] = udate
+dependencies[] = usync
+dependencies[] = unoderef
+
+; The UCMS distribution.
+dependencies[] = ucms_contrib
+dependencies[] = ucms_dashboard
+dependencies[] = ucms_label
+dependencies[] = ucms_layout
+dependencies[] = ucms_notification
+dependencies[] = ucms_search
+dependencies[] = ucms_site
+dependencies[] = ucms_sso
+dependencies[] = ucms_user
+
+
+usync[] = usync/
+usync[] = usync-partial/common.yml
+usync[] = usync-partial/document.yml
+usync[] = usync-partial/image.yml
+usync[] = usync-partial/news.yml
+usync[] = usync-partial/page.yml
+;usync[] = usync-partial/list_type.yml
