@@ -60,6 +60,10 @@
         },
         {
             "type" : "vcs",
+            "url" : "git@github.com:makinacorpus/drupal-umenu.git"
+        },
+        {
+            "type" : "vcs",
             "url" : "git@github.com:makinacorpus/drupal-unoderef.git"
         },
         {
@@ -95,6 +99,7 @@
         "makinacorpus/drupal-ucms" : "dev-master",
         "makinacorpus/drupal-udate" : "dev-master",
         "makinacorpus/drupal-ulog" : "*",
+        "makinacorpus/drupal-umenu" : "*",
         "makinacorpus/drupal-unoderef" : "dev-master as 1.0",
         "makinacorpus/drupal-usync" : "dev-master",
         "makinacorpus/redis-bundle" : "dev-master",

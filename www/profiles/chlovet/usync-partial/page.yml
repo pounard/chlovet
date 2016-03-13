@@ -25,7 +25,7 @@ entity:
       field:
         body: ~
         page_body: {required: true}
-        page_image: {required: true}
+        page_image: ~
         labels: true
 
 view:

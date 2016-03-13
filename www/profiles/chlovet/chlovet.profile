@@ -26,6 +26,7 @@ function chlovet_page_delivery_callback_alter(&$callback) {
   $siteManager = ucms_site_manager();
   $item = menu_get_item();
   if ($item['path'] == 'node/%' && $siteManager->getContext()) {
+    /* WHAT
     // Get all list_type content for this site
     $query = db_select('node', 'n');
     $query->join('ucms_site_node', 'un', 'un.nid = n.nid'); // Specify this in case we are admin
@@ -43,6 +44,7 @@ function chlovet_page_delivery_callback_alter(&$callback) {
     if (in_array($node->type, array_keys($lists))) {
       $parent_path = 'node/' . $lists[$node->type];
     }
+     */
   }
 
   // If parent found, set it for menu tree trail future build.

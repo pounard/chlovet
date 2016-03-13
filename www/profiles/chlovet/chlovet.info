@@ -15,8 +15,6 @@ dependencies[] = filter
 dependencies[] = image
 dependencies[] = list
 dependencies[] = locale
-; I desesperatly want to get rid of the menu module
-dependencies[] = menu
 dependencies[] = node
 dependencies[] = number
 dependencies[] = options
@@ -35,6 +33,7 @@ dependencies[] = filechunk
 dependencies[] = gulpifier
 dependencies[] = minidialog
 dependencies[] = udate
+dependencies[] = umenu
 dependencies[] = usync
 dependencies[] = unoderef
 

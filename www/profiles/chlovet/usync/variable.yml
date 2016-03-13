@@ -27,9 +27,7 @@ ucms_layout_regions_bartwig:
   sidebar_first: 1
   sidebar_second: 1
 
-ucms_site_allowed_themes:
-  - badm
-  - bartwig
+ucms_site_allowed_themes: ['vetbase']
 
 ucms_site_home_node_type: page
 

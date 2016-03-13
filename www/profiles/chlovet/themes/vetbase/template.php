@@ -11,19 +11,9 @@ require_once __DIR__ . '/templates/form/template.php';
 require_once __DIR__ . '/templates/toolbar/template.php';
 
 /**
- * Node alterations.
- */
-require_once __DIR__ . '/templates/node/template.php';
-
-/**
  * µCMS alterations.
  */
 require_once __DIR__ . '/templates/ucms/template.php';
-
-/**
- * Views, CTools, and other stupid modules.
- */
-require_once __DIR__ . '/templates/stupidmodules/template.php';
 
 /**
  * Implements hook_theme_registry_alter().

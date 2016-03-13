@@ -9,6 +9,7 @@ AUTOLOAD=${SCRIPTPATH}/lib/vendor/autoload.php
 
 PROJECTS="${SCRIPTPATH}/www/sites/all/modules/composer/drupal-sf-dic
 ${SCRIPTPATH}/www/sites/all/modules/composer/drupal-ucms
+${SCRIPTPATH}/www/sites/all/modules/composer/drupal-umenu
 ${SCRIPTPATH}/lib/vendor/makinacorpus/redis-bundle"
 
 for project in $PROJECTS; do

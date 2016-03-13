@@ -1,4 +1,4 @@
-name = Bootstrap Admin
+name = Vetbase
 core = 7.x
 
 engine = twig
