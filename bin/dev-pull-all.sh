@@ -11,6 +11,7 @@ drupal-sf-dic
 drupal-ucms
 drupal-udate
 drupal-ulog
+drupal-umenu
 drupal-unoderef
 drupal-usync"
 
