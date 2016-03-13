@@ -31,6 +31,7 @@ dependencies[] = ckeditor
 ; Custom modules.
 dependencies[] = filechunk
 dependencies[] = gulpifier
+dependencies[] = iresponsive
 dependencies[] = minidialog
 dependencies[] = udate
 dependencies[] = umenu

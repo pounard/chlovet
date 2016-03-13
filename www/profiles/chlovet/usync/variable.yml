@@ -15,17 +15,18 @@ ucms_layout_regions_badm:
   help: 1
   sidebar_first: 2
 
-ucms_layout_regions_bartwig:
-  content: 1
-  footer: 2
-  footer_firstcolumn: 2
-  footer_fourthcolumn: 2
-  footer_secondcolumn: 2
-  footer_thirdcolumn: 2
+ucms_layout_regions_vetbase:
   header: 2
-  highlighted: 2
-  sidebar_first: 1
-  sidebar_second: 1
+  menu: 2
+  banner: 1
+  left: 1
+  content: 1
+  topleft: 1
+  bottomright: 1
+  footer1: 2
+  footer2: 2
+  footer3: 2
+  footer4: 2
 
 ucms_site_allowed_themes: ['vetbase']
 

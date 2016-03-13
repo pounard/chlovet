@@ -25,7 +25,6 @@ entity:
       field:
         body: ~
         page_body: {required: true}
-        page_image: ~
         labels: true
 
 view:
@@ -34,7 +33,9 @@ view:
     page:
       default:
         page_body: true
-        page_image:
-          type: unoderef
-          settings:
-            view_mode: favorite
+
+      teaser:
+        page_body: ~
+
+      favorite:
+        inherit: teaser

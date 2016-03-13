@@ -1,65 +1,76 @@
-<div id="page" class="container-fluid">
+{% macro content(page, title) %}
+  {% if title %}
+    <h1>{{ title }}</h1>
+  {% endif %}
+  <a id="main-content" title="{{ "Main content"|trans }}"></a>
+  {% if page.topleft %}
+    <div class="pull-left col-md-3">
+      {{ page.topleft }}
+    </div>
+  {% endif %}
+  {% if page.content %}
+    {{ page.content }}
+  {% endif %}
+{% endmacro %}
 
-  <div class="row">
+{% import _self as macros %}
+
+<div id="page" class="container">
+
+  {% if page.header %}
+  <div id="header" class="row">
     <div class="col-md-12">
-
-      <header id="header" class="container-fluid">
-        {% if logged_in %}
-          {{ breadcrumb }}
-        {% endif %}
-        {{ title_prefix }}
-        <h1 class="sr-only">{{ title }}</h1>
-        {{ title_suffix }}
-      </header>
-
-      {% if tabs %}
-        {{ tabs }}
-      {% endif %}
-
-      {% if action_links %}
-        <div id="page-actions">
-          {{ action_links }}
-        </div>
-      {% endif %}
-
-      {% if messages %}
-        {{ messages }}
-      {% endif %}
-
-      {% if page.help %}
-        <div class="panel panel-default">
-          <div class="panel-body alert-info">
-            {{ page.help }}
-          </div>
-        </div>
-      {% endif %}
-
+      {{ page.header }}
     </div>
   </div>
+  {% endif %}
+
+  {% if page.menu %}
+  <div id="menu" class="row">
+    <div class="col-md-12">
+      {{ page.menu }}
+    </div>
+  </div>
+  {% endif %}
+
+  {% if page.banner %}
+  <div id="banner" class="row">
+    <div class="col-md-12">
+      {{ page.banner }}
+    </div>
+  </div>
+  {% endif %}
 
   <div class="row">
-    {% if page.sidebar_first %}
-      <div id="content" class="col-md-9">
-        <a id="main-content" class="sr-only"></a>
-        {{ page.content }}
-      </div>
+    {% if page.left %}
       <div id="sidebar" class="col-md-3">
-        {{ page.sidebar_first }}
+        {{ page.left }}
+      </div>
+      <div id="content" class="col-md-9">
+        {{ macros.content(page, title) }}
       </div>
     {% else %}
       <div id="main" class="col-md-12">
-        <a id="main-content" class="sr-only"></a>
-        {{ page.content }}
+        {{ macros.content(page, title) }}
       </div>
     {% endif %}
   </div>
 
-</div>
-
-{% if feed_icons %}
-  <div class="container">
-    <div id="footer" class="row">
-      {{ feed_icons }}
+  <div id="footer" class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="container-fluid">
+          {% for name in ['footer1', 'footer2', 'footer3', 'footer4'] %}
+            {# always reserve space even if empty #}
+            <div id="{{ name }}" class="col-md-3">
+              {% if page[name] %}
+                {{ page[name] }}
+              {% endif %}
+            </div>
+          {% endfor %}
+        </div>
+      </div>
     </div>
   </div>
-{% endif %}
+
+</div>
