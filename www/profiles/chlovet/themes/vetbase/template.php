@@ -49,6 +49,21 @@ function vetbase_preprocess_page(&$variables) {
   } else {
     drupal_add_js($path . '/bootstrap/dist/js/bootstrap.min.js', $opts);
   }
+
+  // FIXME find a better way, this is already loaded during site:init event
+  if (\Drupal::getContainer()->has('umenu.storage') && \Drupal::getContainer()->has('ucms_site.manager')) {
+    /* @var $storage MakinaCorpus\Umenu\MenuStorageInterface */
+    $storage = \Drupal::service('umenu.storage');
+    /* @var $manager MakinaCorpus\Ucms\Site\SiteManager */
+    $manager = \Drupal::service('ucms_site.manager');
+    if ($manager->hasContext()) {
+      $menuList = $storage->loadWithConditions(['site_id' => $manager->getContext()->getId()]);
+      if ($menuList) {
+        // Take the first one, hop... Ni vu ni connnu je t'embrouille.
+        $variables['page']['menu'][] = menu_tree(reset($menuList)['name']);
+      }
+    }
+  }
 }
 
 /**
