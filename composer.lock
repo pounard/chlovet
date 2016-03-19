@@ -844,16 +844,16 @@
         },
         {
             "name": "elasticsearch/elasticsearch",
-            "version": "v2.1.4",
+            "version": "v2.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elastic/elasticsearch-php.git",
-                "reference": "add7f77f8e388d7d24df6d204c0be16bbb6c57c4"
+                "reference": "c1675245c0a6f789cbb80b3e0b333b9ef521a627"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/add7f77f8e388d7d24df6d204c0be16bbb6c57c4",
-                "reference": "add7f77f8e388d7d24df6d204c0be16bbb6c57c4",
+                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/c1675245c0a6f789cbb80b3e0b333b9ef521a627",
+                "reference": "c1675245c0a6f789cbb80b3e0b333b9ef521a627",
                 "shasum": ""
             },
             "require": {
@@ -894,7 +894,7 @@
                 "elasticsearch",
                 "search"
             ],
-            "time": "2016-01-08 22:58:44"
+            "time": "2016-03-18 16:31:37"
         },
         {
             "name": "fabpot/goutte",
@@ -1281,12 +1281,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/apubsub.git",
-                "reference": "9d89807c83d83f53f60d6fbfb824ce86fd8341e7"
+                "reference": "c9b35352e477d13b40d21b459814aac990b652e1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/apubsub/zipball/9d89807c83d83f53f60d6fbfb824ce86fd8341e7",
-                "reference": "9d89807c83d83f53f60d6fbfb824ce86fd8341e7",
+                "url": "https://api.github.com/repos/makinacorpus/apubsub/zipball/c9b35352e477d13b40d21b459814aac990b652e1",
+                "reference": "c9b35352e477d13b40d21b459814aac990b652e1",
                 "shasum": ""
             },
             "suggest": {
@@ -1321,7 +1321,7 @@
                 "source": "https://github.com/makinacorpus/apubsub/tree/master",
                 "issues": "https://github.com/makinacorpus/apubsub/issues"
             },
-            "time": "2016-02-04 16:32:47"
+            "time": "2016-03-16 09:12:30"
         },
         {
             "name": "makinacorpus/drupal-apubsub",
@@ -1374,12 +1374,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-badm.git",
-                "reference": "8e9e7ff59740da85fb2bfbc95dbb4de556e3acc9"
+                "reference": "bec1837ddd29fec2e0aa5ee5b7b249b572944191"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-badm/zipball/8e9e7ff59740da85fb2bfbc95dbb4de556e3acc9",
-                "reference": "8e9e7ff59740da85fb2bfbc95dbb4de556e3acc9",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-badm/zipball/bec1837ddd29fec2e0aa5ee5b7b249b572944191",
+                "reference": "bec1837ddd29fec2e0aa5ee5b7b249b572944191",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -1402,7 +1402,7 @@
                 "source": "https://github.com/makinacorpus/drupal-badm/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-badm/issues"
             },
-            "time": "2016-03-10 16:31:22"
+            "time": "2016-03-18 13:21:49"
         },
         {
             "name": "makinacorpus/drupal-filechunk",
@@ -1554,12 +1554,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-sf-dic.git",
-                "reference": "441923d13900ee4e5046babd103a514d6520fc20"
+                "reference": "b79c224198be5fa63b0f3d45ac814d2a85591e3a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/441923d13900ee4e5046babd103a514d6520fc20",
-                "reference": "441923d13900ee4e5046babd103a514d6520fc20",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/b79c224198be5fa63b0f3d45ac814d2a85591e3a",
+                "reference": "b79c224198be5fa63b0f3d45ac814d2a85591e3a",
                 "shasum": ""
             },
             "require": {
@@ -1603,10 +1603,10 @@
             "description": "Brings the vanilla Symfony 3 depency inject container component to Drupal 7 seamlessly along with a limited compatibility layer with Drupal 8 API",
             "homepage": "http://github.com/makinacorpus/drupal-sf-dic",
             "support": {
-                "source": "https://github.com/makinacorpus/drupal-sf-dic/tree/master",
+                "source": "https://github.com/makinacorpus/drupal-sf-dic/tree/3.0.0-rc2",
                 "issues": "https://github.com/makinacorpus/drupal-sf-dic/issues"
             },
-            "time": "2016-03-13 09:29:31"
+            "time": "2016-03-16 12:19:09"
         },
         {
             "name": "makinacorpus/drupal-ucms",
@@ -1614,18 +1614,19 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ucms.git",
-                "reference": "b31bfe24e8c75ac04abaacf09356afb93e4077d4"
+                "reference": "3b655dbbb605fb0c700c1eb786f15102e5592c64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/b31bfe24e8c75ac04abaacf09356afb93e4077d4",
-                "reference": "b31bfe24e8c75ac04abaacf09356afb93e4077d4",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/3b655dbbb605fb0c700c1eb786f15102e5592c64",
+                "reference": "3b655dbbb605fb0c700c1eb786f15102e5592c64",
                 "shasum": ""
             },
             "require": {
                 "elasticsearch/elasticsearch": "^2.0",
                 "makinacorpus/drupal-apubsub": "^4.0",
-                "makinacorpus/drupal-sf-dic": "^3.0"
+                "makinacorpus/drupal-sf-dic": "^3.0",
+                "makinacorpus/drupal-umenu": "*"
             },
             "type": "drupal-module",
             "autoload": {
@@ -1638,6 +1639,7 @@
                     "MakinaCorpus\\Ucms\\Search\\": "ucms_search/src",
                     "MakinaCorpus\\Ucms\\Seo\\": "ucms_seo/src",
                     "MakinaCorpus\\Ucms\\Site\\": "ucms_site/src",
+                    "MakinaCorpus\\Ucms\\Tree\\": "ucms_tree/src",
                     "MakinaCorpus\\Ucms\\User\\": "ucms_user/src"
                 }
             },
@@ -1664,7 +1666,7 @@
                 "source": "https://github.com/makinacorpus/drupal-ucms/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-ucms/issues"
             },
-            "time": "2016-03-13 09:36:37"
+            "time": "2016-03-18 18:18:07"
         },
         {
             "name": "makinacorpus/drupal-udate",
@@ -1744,12 +1746,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-umenu.git",
-                "reference": "04070d98833761df139c5e491417508a8dfcd9bb"
+                "reference": "d580f6ca59389e0f0d009dc7e98e75eee7f13549"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/04070d98833761df139c5e491417508a8dfcd9bb",
-                "reference": "04070d98833761df139c5e491417508a8dfcd9bb",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/d580f6ca59389e0f0d009dc7e98e75eee7f13549",
+                "reference": "d580f6ca59389e0f0d009dc7e98e75eee7f13549",
                 "shasum": ""
             },
             "require": {
@@ -1780,7 +1782,7 @@
                 "source": "https://github.com/makinacorpus/drupal-umenu/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-umenu/issues"
             },
-            "time": "2016-03-13 13:45:06"
+            "time": "2016-03-18 18:02:53"
         },
         {
             "name": "makinacorpus/drupal-unoderef",
@@ -1824,12 +1826,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-usync.git",
-                "reference": "cde248aa659341c863574c96cdc2e48caf41aeca"
+                "reference": "677b9f7bf136426941e38d4364afb041514aceda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-usync/zipball/cde248aa659341c863574c96cdc2e48caf41aeca",
-                "reference": "cde248aa659341c863574c96cdc2e48caf41aeca",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-usync/zipball/677b9f7bf136426941e38d4364afb041514aceda",
+                "reference": "677b9f7bf136426941e38d4364afb041514aceda",
                 "shasum": ""
             },
             "require": {
@@ -1860,7 +1862,7 @@
                 "source": "https://github.com/makinacorpus/drupal-usync/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-usync/issues"
             },
-            "time": "2016-03-13 13:49:14"
+            "time": "2016-03-14 14:37:54"
         },
         {
             "name": "makinacorpus/redis-bundle",
@@ -1912,16 +1914,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.18.0",
+            "version": "1.18.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "e19b764b5c855580e8ffa7e615f72c10fd2f99cc"
+                "reference": "a5f2734e8c16f3aa21b3da09715d10e15b4d2d45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/e19b764b5c855580e8ffa7e615f72c10fd2f99cc",
-                "reference": "e19b764b5c855580e8ffa7e615f72c10fd2f99cc",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/a5f2734e8c16f3aa21b3da09715d10e15b4d2d45",
+                "reference": "a5f2734e8c16f3aa21b3da09715d10e15b4d2d45",
                 "shasum": ""
             },
             "require": {
@@ -1986,7 +1988,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-03-01 18:00:40"
+            "time": "2016-03-13 16:08:35"
         },
         {
             "name": "pear/console_table",
@@ -4064,16 +4066,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.2.10",
+            "version": "5.2.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "37fa29b17b87a3e9f0a4d77c42f0aac5183b84d1"
+                "reference": "6f0948bab32270352f97d1913d82a49338dcb0da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/37fa29b17b87a3e9f0a4d77c42f0aac5183b84d1",
-                "reference": "37fa29b17b87a3e9f0a4d77c42f0aac5183b84d1",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6f0948bab32270352f97d1913d82a49338dcb0da",
+                "reference": "6f0948bab32270352f97d1913d82a49338dcb0da",
                 "shasum": ""
             },
             "require": {
@@ -4134,7 +4136,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-03-03 08:52:58"
+            "time": "2016-03-15 05:59:58"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
