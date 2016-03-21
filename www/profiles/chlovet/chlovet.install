@@ -31,7 +31,10 @@ function chlovet_install() {
  * Configure CKEditor
  */
 function chlovet_update_7006() {
-  module_enable(['ckeditor']);
+
+  if (!module_exists('ckeditor')) {
+    module_enable(['ckeditor']);
+  }
 
   $name = 'Full';
   db_delete('ckeditor_settings')
