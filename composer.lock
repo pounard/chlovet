@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "65668ddca4f981d9a40c07e664d6b25d",
-    "content-hash": "a459b7e179b3cf05ba6f3f005a9328ac",
+    "hash": "edeb934e9c254e89b55ee5f843dadd40",
+    "content-hash": "65e941622f262c9aae7c77b46b55cb6c",
     "packages": [
         {
             "name": "behat/behat",
@@ -1329,12 +1329,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-apubsub.git",
-                "reference": "3fc93fd0df22668e1a3343424fbf4fe2816fb175"
+                "reference": "61fca0ce7c7f2156f5ac184bc107d0e74bf0d2ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-apubsub/zipball/3fc93fd0df22668e1a3343424fbf4fe2816fb175",
-                "reference": "3fc93fd0df22668e1a3343424fbf4fe2816fb175",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-apubsub/zipball/61fca0ce7c7f2156f5ac184bc107d0e74bf0d2ce",
+                "reference": "61fca0ce7c7f2156f5ac184bc107d0e74bf0d2ce",
                 "shasum": ""
             },
             "require": {
@@ -1366,7 +1366,7 @@
                 "source": "https://github.com/makinacorpus/drupal-apubsub/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-apubsub/issues"
             },
-            "time": "2016-03-13 09:54:02"
+            "time": "2016-03-20 18:26:00"
         },
         {
             "name": "makinacorpus/drupal-badm",
@@ -1374,12 +1374,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-badm.git",
-                "reference": "bec1837ddd29fec2e0aa5ee5b7b249b572944191"
+                "reference": "e28623728bb339ab6e1147f2831bca6cba1c8d0b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-badm/zipball/bec1837ddd29fec2e0aa5ee5b7b249b572944191",
-                "reference": "bec1837ddd29fec2e0aa5ee5b7b249b572944191",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-badm/zipball/e28623728bb339ab6e1147f2831bca6cba1c8d0b",
+                "reference": "e28623728bb339ab6e1147f2831bca6cba1c8d0b",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -1402,7 +1402,7 @@
                 "source": "https://github.com/makinacorpus/drupal-badm/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-badm/issues"
             },
-            "time": "2016-03-18 13:21:49"
+            "time": "2016-03-19 17:08:12"
         },
         {
             "name": "makinacorpus/drupal-filechunk",
@@ -1518,12 +1518,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-minidialog.git",
-                "reference": "b205f71045d13efd8161f9e851f531e0de058009"
+                "reference": "3265f1db71e4871aa92ee6e2bf83854991e0cb36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-minidialog/zipball/b205f71045d13efd8161f9e851f531e0de058009",
-                "reference": "b205f71045d13efd8161f9e851f531e0de058009",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-minidialog/zipball/3265f1db71e4871aa92ee6e2bf83854991e0cb36",
+                "reference": "3265f1db71e4871aa92ee6e2bf83854991e0cb36",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1546,7 +1546,7 @@
                 "source": "https://github.com/makinacorpus/drupal-minidialog/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-minidialog/issues"
             },
-            "time": "2016-01-26 18:39:59"
+            "time": "2016-03-21 12:43:54"
         },
         {
             "name": "makinacorpus/drupal-sf-dic",
@@ -1554,12 +1554,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-sf-dic.git",
-                "reference": "b79c224198be5fa63b0f3d45ac814d2a85591e3a"
+                "reference": "54e3e9b4ff08b5bcebf18459ab5d8e946e1451fa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/b79c224198be5fa63b0f3d45ac814d2a85591e3a",
-                "reference": "b79c224198be5fa63b0f3d45ac814d2a85591e3a",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/54e3e9b4ff08b5bcebf18459ab5d8e946e1451fa",
+                "reference": "54e3e9b4ff08b5bcebf18459ab5d8e946e1451fa",
                 "shasum": ""
             },
             "require": {
@@ -1603,10 +1603,71 @@
             "description": "Brings the vanilla Symfony 3 depency inject container component to Drupal 7 seamlessly along with a limited compatibility layer with Drupal 8 API",
             "homepage": "http://github.com/makinacorpus/drupal-sf-dic",
             "support": {
-                "source": "https://github.com/makinacorpus/drupal-sf-dic/tree/3.0.0-rc2",
+                "source": "https://github.com/makinacorpus/drupal-sf-dic/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-sf-dic/issues"
             },
-            "time": "2016-03-16 12:19:09"
+            "time": "2016-03-21 15:56:07"
+        },
+        {
+            "name": "makinacorpus/drupal-tooling",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/makinacorpus/drupal-tooling.git",
+                "reference": "efa0605e8019efb5250598f19f8ae77f24cf16c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-tooling/zipball/efa0605e8019efb5250598f19f8ae77f24cf16c9",
+                "reference": "efa0605e8019efb5250598f19f8ae77f24cf16c9",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.6",
+                "psr/log": "1.*",
+                "symfony/config": "~2.8|~3.0",
+                "symfony/console": "~2.8|~3.0",
+                "symfony/dependency-injection": "~3.0",
+                "symfony/event-dispatcher": "~2.8|~3.0",
+                "symfony/expression-language": "~2.8|~3.0",
+                "symfony/http-foundation": "~2.8|~3.0",
+                "symfony/http-kernel": "~2.8|~3.0",
+                "symfony/translation": "~2.8|~3.0",
+                "symfony/yaml": "~2.8|~3.0"
+            },
+            "suggest": {
+                "makinacorpus/drupal-sf-dic": "For embeding the Symfony kernel into your Drupal 7 site",
+                "symfony/finder": "For potential bundles to be able to register commands"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MakinaCorpus\\DrupalTooling\\": "src"
+                },
+                "exclude-from-classmap": [
+                    "/src/Tests/"
+                ]
+            },
+            "license": [
+                "GPL-2"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Rineau",
+                    "email": "pierre.rineau@makina-corpus.com"
+                },
+                {
+                    "name": "Makina Corpus",
+                    "homepage": "http://makina-corpus.com"
+                }
+            ],
+            "description": "Minimalist Drupal custom console and toolset",
+            "homepage": "http://github.com/makinacorpus/drupal-tooling",
+            "support": {
+                "source": "https://github.com/makinacorpus/drupal-tooling/tree/master",
+                "issues": "https://github.com/makinacorpus/drupal-tooling/issues"
+            },
+            "time": "2016-03-21 16:17:00"
         },
         {
             "name": "makinacorpus/drupal-ucms",
@@ -1614,12 +1675,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ucms.git",
-                "reference": "3b655dbbb605fb0c700c1eb786f15102e5592c64"
+                "reference": "ec591f834ebe60757bdc7e3c48c11ff9f7a31019"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/3b655dbbb605fb0c700c1eb786f15102e5592c64",
-                "reference": "3b655dbbb605fb0c700c1eb786f15102e5592c64",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/ec591f834ebe60757bdc7e3c48c11ff9f7a31019",
+                "reference": "ec591f834ebe60757bdc7e3c48c11ff9f7a31019",
                 "shasum": ""
             },
             "require": {
@@ -1666,7 +1727,7 @@
                 "source": "https://github.com/makinacorpus/drupal-ucms/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-ucms/issues"
             },
-            "time": "2016-03-18 18:18:07"
+            "time": "2016-03-21 14:39:30"
         },
         {
             "name": "makinacorpus/drupal-udate",
@@ -1790,12 +1851,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-unoderef.git",
-                "reference": "62a1f9038557c4efca61a5be480c9b4e7cd28b76"
+                "reference": "280ab66864ccf21a396f785df643573dbf928293"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-unoderef/zipball/62a1f9038557c4efca61a5be480c9b4e7cd28b76",
-                "reference": "62a1f9038557c4efca61a5be480c9b4e7cd28b76",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-unoderef/zipball/280ab66864ccf21a396f785df643573dbf928293",
+                "reference": "280ab66864ccf21a396f785df643573dbf928293",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1818,7 +1879,7 @@
                 "source": "https://github.com/makinacorpus/drupal-unoderef/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-unoderef/issues"
             },
-            "time": "2016-03-10 16:40:58"
+            "time": "2016-03-21 12:45:47"
         },
         {
             "name": "makinacorpus/drupal-usync",
@@ -4697,6 +4758,7 @@
         "makinacorpus/drupal-iresponsive": 20,
         "makinacorpus/drupal-minidialog": 20,
         "makinacorpus/drupal-sf-dic": 20,
+        "makinacorpus/drupal-tooling": 20,
         "makinacorpus/drupal-ucms": 20,
         "makinacorpus/drupal-udate": 20,
         "makinacorpus/drupal-unoderef": 20,

@@ -17,7 +17,8 @@ drupal-usync"
 
 drupal_themes="drupal-badm"
 
-vendor_libraries="makinacorpus/apubsub"
+vendor_libraries="makinacorpus/apubsub
+makinacorpus/drupal-tooling"
 
 for module in $drupal_modules; do
     cd "www/sites/all/modules/composer/$module"

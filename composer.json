@@ -48,6 +48,10 @@
         },
         {
             "type" : "vcs",
+            "url" : "git@github.com:makinacorpus/drupal-tooling.git"
+        },
+        {
+            "type" : "vcs",
             "url" : "git@github.com:makinacorpus/drupal-ucms.git"
         },
         {
@@ -96,6 +100,7 @@
         "makinacorpus/drupal-iresponsive" : "dev-master",
         "makinacorpus/drupal-minidialog" : "dev-master",
         "makinacorpus/drupal-sf-dic" : "dev-master as 3.0",
+        "makinacorpus/drupal-tooling" : "dev-master",
         "makinacorpus/drupal-ucms" : "dev-master",
         "makinacorpus/drupal-udate" : "dev-master",
         "makinacorpus/drupal-ulog" : "*",
