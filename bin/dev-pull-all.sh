@@ -21,22 +21,22 @@ vendor_libraries="makinacorpus/apubsub
 makinacorpus/drupal-tooling"
 
 for module in $drupal_modules; do
-    cd "www/sites/all/modules/composer/$module"
-    echo " * www/sites/all/modules/composer/$module"
+    cd "web/sites/all/modules/composer/$module"
+    echo " * websites/all/modules/composer/$module"
     git pull --rebase
     cd $current
 done
 
 for module in $drupal_themes; do
-    cd "www/sites/all/themes/composer/$module"
-    echo " * www/sites/all/themes/composer/$module"
+    cd "web/sites/all/themes/composer/$module"
+    echo " * web/sites/all/themes/composer/$module"
     git pull --rebase
     cd $current
 done
 
 for library in $vendor_libraries; do
-    cd "lib/vendor/$library"
-    echo " * lib/vendor/$library"
+    cd "vendor/$library"
+    echo " * vendor/$library"
     git pull --rebase
     cd $current
 done

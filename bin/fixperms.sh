@@ -21,7 +21,7 @@ MODE=1
 DRUSH=0
 
 # Webroot folder name relative to script run
-WWW_DIR="www"
+WWW_DIR="web"
 
 # Force rights to be set without index.php file
 FORCE=0
@@ -58,7 +58,7 @@ done
 
 # Security
 if [ ! $FORCE ]; then
-  if [ ! -f "$ROOT_PATH/www/index.php" ]; then
+  if [ ! -f "${ROOT_PATH}/${WWW_DIR}/index.php" ]; then
     echo "You are not in a project webroot!"
     exit 1
   fi

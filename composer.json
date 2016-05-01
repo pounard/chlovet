@@ -85,13 +85,10 @@
     ],
     "minimum-stability" : "dev",
     "prefer-stable" : true,
-    "require-dev" : {
-        "phpunit/phpunit" : "^5.1"
-    },
     "require" : {
         "composer/installers" : "^1.0.20",
         "cweagans/composer-patches" : "~1.0",
-        "drush/drush": "7.*",
+        "drupal/drupal-extension": "~3.0",
         "makinacorpus/apubsub" : "dev-master as 4.0",
         "makinacorpus/drupal-apubsub" : "dev-master as 4.0",
         "makinacorpus/drupal-badm" : "dev-master",
@@ -99,7 +96,7 @@
         "makinacorpus/drupal-gulpifier" : "dev-7.x-1.x",
         "makinacorpus/drupal-iresponsive" : "dev-master",
         "makinacorpus/drupal-minidialog" : "dev-master",
-        "makinacorpus/drupal-sf-dic" : "dev-master as 3.0",
+        "makinacorpus/drupal-sf-dic" : "dev-fullstack as 3.0",
         "makinacorpus/drupal-tooling" : "dev-master",
         "makinacorpus/drupal-ucms" : "dev-master",
         "makinacorpus/drupal-udate" : "dev-master",
@@ -109,30 +106,41 @@
         "makinacorpus/drupal-usync" : "dev-master",
         "makinacorpus/redis-bundle" : "dev-master",
         "monolog/monolog": "^1.17",
-        "drupal/drupal-extension": "~3.0",
-        "symfony/dependency-injection" : "~3.0",
-        "symfony/templating" : "~3.0",
-        "symfony/twig-bridge" : "~3.0",
-        "symfony/twig-bundle" : "~3.0",
+        "pomm-project/cli" : "2.*",
+        "pomm-project/model-manager" : "2.*",
+        "pomm-project/foundation" : "2.*",
+        "pomm-project/pomm-symfony-bridge" : "2.*",
+        "pomm-project/pomm-bundle" : "2.*",
+        "sensio/framework-extra-bundle" : "^3.0.2",
+        "symfony/monolog-bundle" : "^2.8|^3.0",
+        "symfony/swiftmailer-bundle" : "^2.3",
+        "symfony/symfony" : "~3.0",
         "tfd7/tfd7": "dev-master",
         "twig/extensions": "~1.3",
         "twig/twig": "~1.20|~2.0"
     },
+    "require-dev" : {
+        "phpunit/phpunit" : "^5.1",
+        "sensio/generator-bundle" : "^3.0",
+        "symfony/phpunit-bridge" : "^2.7"
+    },
     "config" : {
-        "vendor-dir" : "lib/vendor"
+        "bin-dir" : "bin",
+        "vendor-dir" : "vendor"
     },
     "extra" : {
         "installer-paths": {
-            "www" : [ "type:drupal-core" ],
-            "www/sites/all/modules/composer/{$name}" : [ "type:drupal-module" ],
-            "www/sites/all/libraries/composer/{$name}" : [ "type:drupal-library" ],
-            "www/sites/all/themes/composer/{$name}" : [ "type:drupal-theme" ],
+            "web" : [ "type:drupal-core" ],
+            "web/sites/all/modules/composer/{$name}" : [ "type:drupal-module" ],
+            "web/sites/all/libraries/composer/{$name}" : [ "type:drupal-library" ],
+            "web/sites/all/themes/composer/{$name}" : [ "type:drupal-theme" ],
             "profiles/{$name}" : [ "type:drupal-profile" ]
         }
     },
-    "autoload": {
-        "psr-4": {
-            "Chlovet\\Profile\\" : "www/profiles/chlovet/src"
+    "autoload-dev" : {
+        "psr-4" : {
+            "Tests\\" : "tests/",
+            "Chlovet\\Profile\\" : "web/profiles/chlovet/src"
         }
     }
 }
