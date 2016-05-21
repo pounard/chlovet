@@ -57,6 +57,16 @@ web/sites/README.txt
 # but really, you should not, either work on Nginx config files or real Apache config files
 #!web/.htaccess
 
+# Ignore binaries from composer
+bin/behat
+bin/boris
+bin/drush.bat
+bin/drush.complete.sh
+bin/drush.php
+bin/lessc
+bin/phpunit
+
+
 # npm modules
 node_modules
 
