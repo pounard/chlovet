@@ -15,6 +15,10 @@ dependencies[] = filter
 dependencies[] = image
 dependencies[] = list
 dependencies[] = locale
+
+; better not to have this always loaded, and better to avoid uninstall of profile
+; when removing it
+; dependencies[] = migrate
 dependencies[] = node
 dependencies[] = number
 dependencies[] = options
@@ -25,18 +29,21 @@ dependencies[] = text
 dependencies[] = user
 
 ; Contrib.
-dependencies[] = jquery_update
 dependencies[] = ckeditor
+dependencies[] = jquery_update
 
 ; Custom modules.
 dependencies[] = filechunk
 dependencies[] = gulpifier
 dependencies[] = iresponsive
+dependencies[] = latlonfield
 dependencies[] = minidialog
+dependencies[] = schedulefield
 dependencies[] = udate
+dependencies[] = ulink
 dependencies[] = umenu
-dependencies[] = usync
 dependencies[] = unoderef
+dependencies[] = usync
 
 ; The UCMS distribution.
 dependencies[] = ucms_contrib
@@ -45,10 +52,11 @@ dependencies[] = ucms_label
 dependencies[] = ucms_layout
 dependencies[] = ucms_notification
 dependencies[] = ucms_search
+dependencies[] = ucms_seo
 dependencies[] = ucms_site
 dependencies[] = ucms_sso
+dependencies[] = ucms_tree
 dependencies[] = ucms_user
-
 
 usync[] = usync/
 usync[] = usync-partial/common.yml
@@ -56,4 +64,3 @@ usync[] = usync-partial/document.yml
 usync[] = usync-partial/image.yml
 usync[] = usync-partial/news.yml
 usync[] = usync-partial/page.yml
-;usync[] = usync-partial/list_type.yml

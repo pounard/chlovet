@@ -4,11 +4,14 @@ field:
   file:
     label: Fichier
     type: file
+    instance:
+      required: true
+      settings:
+        file_extensions: txt pdf
+        file_directory: documents
+        max_filesize: 5242880
     widget:
       type: file_chunked
-    instance_settings:
-      file_extensions: txt pdf
-      file_directory: documents
 
 entity:
   node:

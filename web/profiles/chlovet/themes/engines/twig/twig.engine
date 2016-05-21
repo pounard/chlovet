@@ -124,8 +124,6 @@ function _twig_map_names(&$templates) {
     // current theme rendering engine, so ours, so it'll work.
     if (null === $info['engine']) {
       $info['engine'] = 'twig';
-    } else {
-      time(); // WHAT?
     }
 
     // In the theme registry, filename is not complete and we have to rebuild
@@ -160,18 +158,26 @@ function _twig_map_names(&$templates) {
  *   a phptemplate base theme for your custom themes.
  */
 function twig_theme($existing, $type, $theme, $path) {
-  $templates = drupal_find_theme_functions($existing, array($theme));
+  $themes = list_themes();
+  if (!$themes[$theme]->status) {
+    throw new Exception("Trying to render something with a disabled theme.");
+  }
+
+  $templates = drupal_find_theme_functions($existing, [$theme]);
   // Allow modules to provide templates, this will trick Drupal into believing
   // they belong to the current theme instead, and use the correct engine.
   $theme_paths = [];
   foreach ($existing as $theme_hook) {
     if (!in_array($theme_hook['theme path'], $theme_paths)) {
       $theme_paths[] = $theme_hook['theme path'];
+      // We're not doing an array_merge or else module templates would override
+      // templates from parent themes.
       $templates += drupal_find_theme_templates($existing, twig_extension(), $theme_hook['theme path']);
     }
   }
-  // End up with rightful templates from the given path.
-  $templates += drupal_find_theme_templates($existing, twig_extension(), $path);
+  // Here we do an array_merge() because theme templates _should_ override
+  // those from parent themes and modules.
+  $templates = array_merge($templates, drupal_find_theme_templates($existing, twig_extension(), $path));
 
   // Just a little bit, just a little bit, of magic.
   _twig_map_names($templates);

@@ -3,7 +3,7 @@ ucms_contrib_component_types: []
   # - list_type
 
 ucms_contrib_editorial_types:
-  - news
+#  - news
   - page
 
 ucms_contrib_tab_media_type:

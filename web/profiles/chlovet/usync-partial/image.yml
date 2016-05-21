@@ -6,10 +6,12 @@ field:
     type: image
     widget:
       type: file_chunked
-    instance_settings:
-      alt_field: true
-      title_field: true
-      file_directory: images
+    instance:
+      required: true
+      settings:
+        alt_field: true
+        title_field: true
+        file_directory: images
 
 entity:
   node:
@@ -18,7 +20,7 @@ entity:
       name: Image
       field:
         body: ~
-        image: {required: true}
+        image: true
         labels: true
 
 view:

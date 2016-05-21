@@ -4,8 +4,8 @@ pushd "`dirname $0`/.." > /dev/null
 SCRIPTPATH=`pwd -P`
 popd > /dev/null
 
-cd "${SCRIPTPATH}/www"
-DRUSH="${SCRIPTPATH}/lib/vendor/drush/drush/drush"
+cd "${SCRIPTPATH}/web"
+DRUSH="${SCRIPTPATH}/vendor/drush/drush/drush"
 
 $DRUSH "${@}"
 exit ${?}
