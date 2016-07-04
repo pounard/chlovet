@@ -1,0 +1,36 @@
+# Editorial page node type
+field:
+
+  page_body: '@textfield'
+
+  page_image:
+    label: Vignette
+    type: unoderef
+    widget:
+      type: unoderef
+      settings:
+        bundles: [image]
+        view_mode: favorite
+
+entity:
+  node:
+
+    page:
+      name: Page éditoriale
+      field:
+        body: ~
+        page_body: true
+        labels: true
+
+view:
+  node:
+    page:
+
+      default:
+        page_body: true
+
+      teaser:
+        page_body: ~
+
+      favorite:
+        inherit: teaser

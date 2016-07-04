@@ -1,10 +1,14 @@
 full_html:
   name: HTML Complet
   filters:
-    filter_html:
+    ulink_entity:
       weight: 1
-      settings:
-        allowed_html: '<a> <em> <strong> <blockquote> <ul> <ol> <li> <h2> <h3> <h4> <h5> <h6> <del> <hr> <div>'
-        filter_html_help: 0
-    filter_htmlcorrector:
+    filter_html:
       weight: 2
+      settings:
+        allowed_html: '<a> <em> <strong> <blockquote> <ul> <ol> <li> <h2> <h3> <h4> <h5> <h6> <del> <hr> <br> <div> <p> <span> <img> <picture> <source> <abbr> <del> <strike>'
+        filter_html_help: 0
+    ucmsmediadnd:
+      weight: 3
+    filter_htmlcorrector:
+      weight: 4

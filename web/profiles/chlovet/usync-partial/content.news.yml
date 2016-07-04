@@ -1,0 +1,35 @@
+# News node type
+field:
+
+  news_body: '@textfield'
+
+  news_image:
+    label: Vignette
+    type: unoderef
+    widget:
+      type: unoderef
+      settings:
+        bundles: [image]
+        view_mode: favorite
+
+entity:
+  node:
+
+    news:
+      name: Actualité
+      field:
+        body: ~
+        news_body: true
+        news_image: true
+        labels: true
+
+view:
+  node:
+    news:
+
+      default:
+        news_body: true
+        news_image:
+          type: unoderef
+          settings:
+            view_mode: favorite

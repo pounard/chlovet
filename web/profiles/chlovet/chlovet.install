@@ -9,123 +9,159 @@
 
 /**
  * Implements hook_install().
- *
- * Perform actions to set up the site for this profile.
- *
- * @see system_install()
  */
 function chlovet_install() {
-  // Enable themes.
+
   db_update('system')
     ->fields(['status' => 1])
     ->condition('type', 'theme')
-    ->condition('name', ['badm'])
+    ->condition('name', ['bootbase', 'badm', 'vetbase'])
     ->execute()
   ;
 
-  chlovet_update_7006();
-  chlovet_update_7009();
+  chlovet_install_french();
+  chlovet_install_ckeditor();
 }
 
 /**
- * Configure CKEditor
+ * Main CKEditor configuration function.
  */
-function chlovet_update_7006() {
+function chlovet_install_ckeditor() {
 
-  if (!module_exists('ckeditor')) {
-    module_enable(['ckeditor']);
-  }
+  // Just in case, but profile must have done it...
+  module_enable(['ckeditor']);
 
-  $name = 'Full';
-  db_delete('ckeditor_settings')
-    ->condition('name', ['Advanced', $name])
-    ->execute();
-  db_delete('ckeditor_input_format')
-    ->condition('name', ['Advanced', $name])
-    ->execute();
+  db_delete('ckeditor_settings')->execute();
+  db_delete('ckeditor_input_format')->execute();
 
-  $settings = [
-    'filebrowser'            => 'none',
-    'quickupload'            => 'f',
-    'ss'                     => '2',
-    'filters'                =>
-      [
-        'filter_html' => 1,
-      ],
-    'default'                => 't',
-    'show_toggle'            => 'f',
-    'popup'                  => 'f',
-    'toolbar'                => '
-[
-    [\'Maximize\', \'ShowBlocks\'],
-    [\'Undo\',\'Redo\'],
-    [\'Cut\',\'Copy\',\'PasteFromWord\'],
-    [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\'],
-    [\'Blockquote\',\'HorizontalRule\',\'SpecialChar\'],
-    \'/\',
-    [\'Format\'],
-    [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'RemoveFormat\'],
-    [\'Linkit\',\'Unlink\',\'Anchor\'],
-    [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\']
-]
-    ',
-    'expand'                 => 't',
-    'width'                  => '100%',
-    'lang'                   => 'fr',
-    'auto_lang'              => 't',
-    'language_direction'     => 'default',
-    'enter_mode'             => 'p',
-    'shift_enter_mode'       => 'br',
-    'font_format'            => 'p;pre;h2;h3;h4;h5;h6',
-    'format_source'          => 't',
-    'format_output'          => 't',
-    'custom_formatting'      => 'f',
-    'formatting'             =>
-      [
-        'custom_formatting_options' =>
-          [
-            'indent'          => 'indent',
-            'breakBeforeOpen' => 'breakBeforeOpen',
-            'breakAfterOpen'  => 'breakAfterOpen',
-            'breakAfterClose' => 'breakAfterClose',
-          ],
-      ],
-    'css_mode'               => 'none',
-    'css_path'               => '',
-    'user_choose'            => 'f',
-    'ckeditor_load_method'   => 'ckeditor.js',
-    'ckeditor_load_time_out' => 0,
-    'scayt_autoStartup'      => 'f',
-    'html_entities'          => 'f',
-  ];
-  db_insert('ckeditor_settings')
-    ->fields([
-      'name'     => $name,
-      'settings' => serialize($settings),
-    ])
-    ->execute();
+  $settings = array(
+    'skin' => 'bootstrapck',
+    'ckeditor_path' => '%m/ckeditor/ckeditor',
+    'ckeditor_local_path' => '',
+    'ckeditor_plugins_path' => '%m/plugins',
+    'ckeditor_plugins_local_path' => '',
+    'ckfinder_path' => '%m/ckfinder',
+    'ckfinder_local_path' => '',
+    'ckeditor_aggregate' => 'f',
+    'toolbar_wizard' => 't',
+    'loadPlugins' => array(),
+  );
 
-  db_insert('ckeditor_input_format')->fields([
-    'name'   => $name,
-    'format' => 'full_html',
-  ])->execute();
+  db_merge('ckeditor_settings')->key(['name' => 'CKEditor Global Profile'])->fields(['settings' => serialize($settings)])->execute();
+
+  $settings = array(
+    'ss' => '2',
+    'toolbar' => '[
+      [\'Maximize\', \'ShowBlocks\', \'Source\'],
+      [\'Undo\',\'Redo\'],
+      [\'Cut\',\'Copy\',\'PasteFromWord\'],
+      [\'JustifyLeft\',\'JustifyCenter\',\'JustifyRight\',\'JustifyBlock\'],
+      [\'Blockquote\',\'HorizontalRule\',\'SpecialChar\'],
+      \'/\',
+      [\'Format\'],
+      [\'Bold\',\'Italic\',\'Underline\',\'Strike\',\'-\',\'Styles\',\'RemoveFormat\'],
+      [\'ulink\',\'Unlink\',\'Anchor\',\'Picto\'],
+      [\'NumberedList\',\'BulletedList\',\'-\',\'Outdent\',\'Indent\']
+  ]',
+    'expand' => 't',
+    'default' => 't',
+    'show_toggle' => 'f',
+    'uicolor' => 'default',
+    'uicolor_user' => 'default',
+    'width' => '100%',
+    'lang' => 'fr',
+    'auto_lang' => 't',
+    'language_direction' => 'default',
+    'allowed_content' => 't',
+    'extraAllowedContent' => 'div[*];img{width,height}[style,src,srcset,media,sizes];picture{width,height}[style];source[src,srcset,media,sizes];span(icon,icon-*);',
+    'enter_mode' => 'p',
+    'shift_enter_mode' => 'br',
+    'font_format' => 'p;pre;h2;h3;h4;h5;h6',
+    'custom_formatting' => 'f',
+    'formatting' => array(
+      'custom_formatting_options' => array(
+        'indent' => 'indent',
+        'breakBeforeOpen' => 'breakBeforeOpen',
+        'breakAfterOpen' => 'breakAfterOpen',
+        'breakAfterClose' => 'breakAfterClose',
+        'breakBeforeClose' => 0,
+        'pre_indent' => 0,
+      ),
+    ),
+    'css_mode' => 'none',
+    'css_path' => '',
+    'css_style' => 'theme',
+    'styles_path' => '',
+    'filebrowser' => 'none',
+    'filebrowser_image' => '',
+    'filebrowser_flash' => '',
+    'UserFilesPath' => '%b%f/',
+    'UserFilesAbsolutePath' => '%d%b%f/',
+    'forcePasteAsPlainText' => 'f',
+    'html_entities' => 'f',
+    'scayt_autoStartup' => 'f',
+    'theme_config_js' => 'f',
+    'js_conf' => '',
+    'loadPlugins' => array(
+      'picto' => array(
+        'name' => 'picto',
+        'desc' => 'Pictogram insertion',
+        'path' => '%base_path%profiles/dsf/modules/hsm_content/js/ckeditor/',
+        'buttons' => array(
+          'picto' => array(
+            'label' => 'Insert pictogram',
+            'icon' => 'icons/picto.png',
+          ),
+        ),
+      ),
+      'ucmsmediadnd' => array(
+        'name' => 'ucmsmediadnd',
+        'desc' => 'UCMS medias drop & paste management',
+        'path' => '%base_path%sites/all/modules/composer/drupal-ucms/ucms_contrib/js/ckeditor/',
+      ),
+      'ulink' => array(
+        'name' => 'ulink',
+        'desc' => 'µLink entity selector',
+        'path' => '%base_path%sites/all/modules/composer/drupal-ulink/js/ckeditor/',
+        'buttons' => array(
+          'ulink' => array(
+            'label' => 'Link content',
+            'icon' => 'icons/ulink.png',
+          ),
+        ),
+      ),
+    ),
+  );
+
+  db_merge('ckeditor_settings')->key(['name' => 'Full'])->fields(['settings' => serialize($settings)])->execute();
+  db_merge('ckeditor_input_format')->key(['name' => 'Full'])->fields(['format' => 'full_html'])->execute();
 }
 
 /**
  * Install french locale.
  */
-function chlovet_update_7009() {
+function chlovet_install_french() {
   include_once DRUPAL_ROOT . '/includes/locale.inc';
+
+  db_delete('languages')->condition('language', 'fr')->execute();
   locale_add_language('fr', 'French', 'Français', LANGUAGE_LTR, '', '', TRUE, TRUE);
+
   db_update('languages')
-    ->fields([
-      'enabled' => 0,
-    ])
+    ->fields(['enabled' => 0])
     ->condition('language', 'en')
-    ->execute();
+    ->execute()
+  ;
 
   variable_set('language_count', 1);
   // Changing the language settings impacts the interface.
   cache_clear_all('*', 'cache_page', TRUE);
   module_invoke_all('multilingual_settings_changed');
+}
+
+/**
+ * Ensure install worked correctly.
+ */
+function chlovet_update_7001() {
+  chlovet_install_french();
+  chlovet_install_ckeditor();
 }

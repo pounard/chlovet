@@ -1,0 +1,36 @@
+# Common elements to all content types
+macro:
+
+  textfield:
+    label: Corps
+    type: text_long
+    instance:
+      required: true
+      settings:
+        text_processing: 1
+    widget:
+      type: text_textarea
+      settings:
+        rows: 30
+
+field:
+
+  media: ~
+
+  publication_period:
+    label: Période de publication
+    type: udate_range
+    instance:
+      settings:
+        collectTime: true
+        granularity: 1
+
+  labels:
+    label: Labels
+    type: taxonomy_term_reference
+    cardinality: -1
+    settings:
+      allowed_values: [{ vocabulary: labels, parent: 0 }]
+      options_list_callback: ucms_label_allowed_values
+    widget:
+      type: options_select
