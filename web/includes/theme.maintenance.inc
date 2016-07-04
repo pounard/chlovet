@@ -87,8 +87,8 @@ function _drupal_maintenance_theme() {
 /**
  * Builds the registry when the site needs to bypass any database calls.
  */
-function _theme_load_offline_registry($theme, $base_theme = NULL, $theme_engine = NULL) {
-  return _theme_build_registry($theme, $base_theme, $theme_engine);
+function _theme_load_offline_registry($theme, $base_theme = NULL) {
+  return _theme_build_registry($theme, $base_theme);
 }
 
 /**

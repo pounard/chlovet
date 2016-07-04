@@ -2606,12 +2606,12 @@ function _system_rebuild_theme_data() {
       $themes[$base_theme]->sub_themes[$key] = $themes[$key]->info['name'];
     }
     // Copy the 'owner' and 'engine' over if the top level theme uses a theme
-    // engine.
-    if (isset($themes[$base_key]->owner)) {
+    // engine and the current theme has no engine itself.
+    if (isset($themes[$base_key]->owner) && !isset($themes[$key]->owner)) {
       if (isset($themes[$base_key]->info['engine'])) {
-        $themes[$key]->info['engine'] = $themes[$base_key]->info['engine'];
-        $themes[$key]->owner = $themes[$base_key]->owner;
-        $themes[$key]->prefix = $themes[$base_key]->prefix;
+         $themes[$key]->info['engine'] = $themes[$base_key]->info['engine'];
+         $themes[$key]->owner = $themes[$base_key]->owner;
+         $themes[$key]->prefix = $themes[$base_key]->prefix;
       }
       else {
         $themes[$key]->prefix = $key;

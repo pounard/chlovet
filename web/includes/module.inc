@@ -193,8 +193,11 @@ function system_list($type) {
           foreach (array_keys($lists['theme'][$key]->base_themes) as $base_theme) {
             $lists['theme'][$base_theme]->sub_themes[$key] = $lists['theme'][$key]->info['name'];
           }
-          // Add the base theme's theme engine info.
-          $lists['theme'][$key]->info['engine'] = isset($lists['theme'][$base_key]->info['engine']) ? $lists['theme'][$base_key]->info['engine'] : 'theme';
+          // Add the base theme's theme engine info only when subtheme does not
+          // define one, this allows to use different theme engines.
+          if (!isset($lists['theme'][$key]->info['engine'])) {
+            $lists['theme'][$key]->info['engine'] = isset($lists['theme'][$base_key]->info['engine']) ? $lists['theme'][$base_key]->info['engine'] : 'theme';
+          }
         }
         else {
           // A plain theme is its own engine.
