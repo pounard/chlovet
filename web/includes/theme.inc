@@ -139,7 +139,7 @@ function drupal_theme_initialize() {
  *   The callback to invoke to set the theme registry.
  */
 function _drupal_theme_initialize($theme, $base_theme = array(), $registry_callback = '_theme_load_registry') {
-  global $theme_info, $base_theme_info, $theme_path;
+  global $theme_info, $base_theme_info, $theme_engine, $theme_path;
   $theme_info = $theme;
   $base_theme_info = $base_theme;
 
@@ -201,20 +201,37 @@ function _drupal_theme_initialize($theme, $base_theme = array(), $registry_callb
     drupal_add_js($script, array('group' => JS_THEME, 'every_page' => TRUE));
   }
 
-  // Initialize all themes and engines.
-  foreach (array_merge($base_theme, array($theme)) as $current) {
-    if (isset($current->owner)) {
-      include_once DRUPAL_ROOT . '/' . $current->owner;
-    }
-    if (isset($current->engine)) {
-      if (function_exists($current->engine . '_init')) {
-        call_user_func($current->engine . '_init', $current);
+  $theme_engine = NULL;
+
+  // Initialize the theme.
+  if (isset($theme->engine)) {
+    // Include the engine.
+    include_once DRUPAL_ROOT . '/' . $theme->owner;
+
+    $theme_engine = $theme->engine;
+    if (function_exists($theme_engine . '_init')) {
+      foreach ($base_theme as $base) {
+        call_user_func($theme_engine . '_init', $base);
       }
+      call_user_func($theme_engine . '_init', $theme);
+    }
+  }
+  else {
+    // include non-engine theme files
+    foreach ($base_theme as $base) {
+      // Include the theme file or the engine.
+      if (!empty($base->owner)) {
+        include_once DRUPAL_ROOT . '/' . $base->owner;
+      }
+    }
+    // and our theme gets one too.
+    if (!empty($theme->owner)) {
+      include_once DRUPAL_ROOT . '/' . $theme->owner;
     }
   }
 
   if (isset($registry_callback)) {
-    _theme_registry_callback($registry_callback, array($theme, $base_theme));
+    _theme_registry_callback($registry_callback, array($theme, $base_theme, $theme_engine));
   }
 }
 
@@ -287,6 +304,8 @@ function _theme_registry_callback($callback = NULL, array $arguments = array()) 
  * @param $base_theme
  *   An array of loaded $theme objects representing the ancestor themes in
  *   oldest first order.
+ * @param $theme_engine
+ *   The name of the theme engine.
  * @param $complete
  *   Whether to load the complete theme registry or an instance of the
  *   ThemeRegistry class.
@@ -294,7 +313,7 @@ function _theme_registry_callback($callback = NULL, array $arguments = array()) 
  * @return
  *   The theme registry array, or an instance of the ThemeRegistry class.
  */
-function _theme_load_registry($theme, $base_theme = NULL, $complete = TRUE) {
+function _theme_load_registry($theme, $base_theme = NULL, $theme_engine = NULL, $complete = TRUE) {
   if ($complete) {
     // Check the theme registry cache; if it exists, use it.
     $cached = cache_get("theme_registry:$theme->name");
@@ -303,7 +322,7 @@ function _theme_load_registry($theme, $base_theme = NULL, $complete = TRUE) {
     }
     else {
       // If not, build one and cache it.
-      $registry = _theme_build_registry($theme, $base_theme);
+      $registry = _theme_build_registry($theme, $base_theme, $theme_engine);
       // Only persist this registry if all modules are loaded. This assures a
       // complete set of theme hooks.
       if (module_load_all(NULL)) {
@@ -653,8 +672,10 @@ function _theme_process_registry(&$cache, $name, $type, $theme, $path) {
  * @param $base_theme
  *   An array of loaded $theme objects representing the ancestor themes in
  *   oldest first order.
+ * @param $theme_engine
+ *   The name of the theme engine.
  */
-function _theme_build_registry($theme, $base_theme) {
+function _theme_build_registry($theme, $base_theme, $theme_engine) {
   $cache = array();
   // First, process the theme hooks advertised by modules. This will
   // serve as the basic registry. Since the list of enabled modules is the same
@@ -677,15 +698,15 @@ function _theme_build_registry($theme, $base_theme) {
   foreach ($base_theme as $base) {
     // If the base theme uses a theme engine, process its hooks.
     $base_path = dirname($base->filename);
-    if (isset($base->engine)) {
-      _theme_process_registry($cache, $base->engine, 'base_theme_engine', $base->name, $base_path);
+    if ($theme_engine) {
+      _theme_process_registry($cache, $theme_engine, 'base_theme_engine', $base->name, $base_path);
     }
     _theme_process_registry($cache, $base->name, 'base_theme', $base->name, $base_path);
   }
 
   // And then the same thing, but for the theme.
-  if (isset($theme->engine)) {
-    _theme_process_registry($cache, $theme->engine, 'theme_engine', $theme->name, dirname($theme->filename));
+  if ($theme_engine) {
+    _theme_process_registry($cache, $theme_engine, 'theme_engine', $theme->name, dirname($theme->filename));
   }
 
   // Finally, hooks provided by the theme itself.
@@ -1146,8 +1167,8 @@ function theme($hook, $variables = array()) {
     $extension = '.tpl.php';
 
     // The theme engine may use a different extension and a different renderer.
-    if (isset($info['engine'])) {
-      $theme_engine = $info['engine'];
+    global $theme_engine;
+    if (isset($theme_engine)) {
       if ($info['type'] != 'module') {
         if (function_exists($theme_engine . '_render_template')) {
           $render_function = $theme_engine . '_render_template';
@@ -1287,20 +1308,9 @@ function drupal_find_theme_templates($cache, $extension, $path) {
   // used for filtering. This allows base themes to have sub-themes in its
   // folder hierarchy without affecting the base themes template discovery.
   $theme_paths = array();
-  $current_theme = NULL;
-  $current_engine = NULL;
-  foreach (list_themes() as $key => $theme_info) {
+  foreach (list_themes() as $theme_info) {
     if (!empty($theme_info->base_theme)) {
       $theme_paths[$theme_info->base_theme][$theme_info->name] = dirname($theme_info->filename);
-    }
-    $theme_path = dirname($theme_info->filename);
-    if ($path === $theme_path) {
-      $current_theme = $current_theme;
-      $current_engine = isset($theme_info->engine) ? $theme_info->engine : NULL;
-    }
-    else if (!$current_theme && 0 === strpos($theme_path, $current_theme)) {
-      $current_theme = $current_theme;
-      $current_engine = isset($theme_info->engine) ? $theme_info->engine : NULL;
     }
   }
   foreach ($theme_paths as $basetheme => $subthemes) {
@@ -1338,7 +1348,6 @@ function drupal_find_theme_templates($cache, $extension, $path) {
     if (isset($cache[$hook])) {
       $implementations[$hook] = array(
         'template' => $template,
-        'engine' => $current_engine,
         'path' => dirname($file->uri),
       );
     }
@@ -1365,7 +1374,6 @@ function drupal_find_theme_templates($cache, $extension, $path) {
           $arg_name = isset($info['variables']) ? 'variables' : 'render element';
           $implementations[strtr($file, '-', '_')] = array(
             'template' => $file,
-            'engine' => $current_engine,
             'path' => dirname($files[$match]->uri),
             $arg_name => $info[$arg_name],
             'base hook' => $hook,
