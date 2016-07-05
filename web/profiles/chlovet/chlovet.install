@@ -15,7 +15,7 @@ function chlovet_install() {
   db_update('system')
     ->fields(['status' => 1])
     ->condition('type', 'theme')
-    ->condition('name', ['bootbase', 'badm', 'vetbase'])
+    ->condition('name', ['bootbase', 'badm', 'vetbase', 'vetadmin'])
     ->execute()
   ;
 

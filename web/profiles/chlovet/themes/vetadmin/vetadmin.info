@@ -1,0 +1,22 @@
+name = Vetadmin
+core = 7.x
+
+base theme = badm
+
+engine = twig
+
+regions[header] = Header
+regions[menu] = Menu
+regions[banner] = Banner
+regions[left] = Left sidebar
+regions[content] = Content
+regions[bottomright] = Content bottom right
+regions[footer1] = Footer 1
+regions[footer2] = Footer 2
+regions[footer3] = Footer 3
+regions[footer4] = Footer 4
+
+stylesheets[all][] = dist/style.min.css
+; @todo Later, use LESS version of jQuery bootstrap theme and generate it
+; with out variables whenever possible
+scripts[] = js/script.js

@@ -58,5 +58,5 @@ ucms_search_cron_limit: 500
 
 # Few Drupal core variables
 user_register: 0
-admin_theme: badm
+admin_theme: vetadmin
 node_admin_theme: true

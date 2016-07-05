@@ -6,6 +6,7 @@
         "gulp": "latest",
         "gulp-rename": "latest",
         "gulp-minify-css": "latest",
-        "gulp-less": "latest"
+        "gulp-less": "latest",
+        "gulp-shell": "latest"
     }
 }
