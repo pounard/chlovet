@@ -1,0 +1,15 @@
+{% macro search_form(url) %}
+  <form method="get" action="{{ url }}" class="form-inline">
+    <div class="form-group">
+      <label class="sr-only" for="search-input">{{ "Search text"|trans }}</label>
+      <div class="input-group">
+        <input type="text" class="form-control" name="s" id="search-input" placeholder="{{ "Dog, cat, ..."|trans }}" maxlength="128"/>
+        <div class="input-group-btn">
+          <button type="submit" value="{{ "Search"|trans }}" class="btn btn-primary">
+            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+{% endmacro %}

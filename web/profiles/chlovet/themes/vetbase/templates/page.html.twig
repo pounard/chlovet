@@ -1,3 +1,5 @@
+{% import 'theme:vetbase:templates/node/search.html.twig' as search %}
+
 {% macro content(page, title) %}
   {% if title %}
     <h1>{{ title }}</h1>
@@ -9,22 +11,23 @@
 {% endmacro %}
 
 {% macro banner(banner) %}
-  <div id="banner" class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        {{ banner }}
-      </div>
-    </div>
+  <div id="banner">
+    {{ banner }}
   </div>
 {% endmacro %}
 
 {% import _self as macros %}
 
-{% if page.header %}
+{% if page.header or search_url %}
   <div id="header" class="container">
     <div class="row">
       <div class="col-md-12">
-        {{ page.header }}
+        {% if search_url %}
+          {{ search.search_form(search_url) }}
+        {% endif %}
+        {% if page.header %}
+          {{ page.header }}
+        {% endif %}
       </div>
     </div>
   </div>
@@ -39,6 +42,15 @@
 {% endif %}
 
 <div id="page" class="container">
+
+  {% if breadcrumb %}
+    <div class="row">
+      <div class="col-md-12">
+        {{ breadcrumb }}
+      </div>
+    </div>
+  {% endif %}
+
   <div class="row">
     {% if page.left or menu_siblings %}
       <div id="sidebar" class="col-md-4">

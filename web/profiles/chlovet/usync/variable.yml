@@ -1,9 +1,7 @@
-ucms_contrib_component_types: []
-  # - homepage
-  # - list_type
+ucms_contrib_component_types:
+  - search
 
 ucms_contrib_editorial_types:
-#  - news
   - page
 
 ucms_contrib_tab_media_type:

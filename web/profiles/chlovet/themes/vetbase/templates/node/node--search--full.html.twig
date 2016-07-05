@@ -1,0 +1,17 @@
+{% extends 'theme:vetbase:templates/node/node.html.twig' %}
+
+{% import 'theme:vetbase:templates/node/search.html.twig' as search %}
+
+{% block content %}
+  <section id="search-results">
+    {{ search.search_form(node_url) }}
+    {% for node_view in search_results %}
+      {{ node_view }}
+    {% else %}
+      <p>{{ "Your search yielded no resuls"|trans }}</p>
+    {% endfor %}
+    {% if search_displayed and search_total %}
+      <p class="small text-muted">Displaying {{ search_displayed }} in {{ search_total }} results</p>
+    {% endif %}
+  </section>
+{% endblock %}

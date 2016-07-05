@@ -1,0 +1,19 @@
+<div class="media"{{ attributes }}>
+  <div class="media-left">
+    {% if content.page_image %}
+      <a href="{{ node_url }}">
+        {{ content.page_image }}
+      </a>
+    {% endif %}
+  </div>
+  <div class="media-body">
+    <h4 class="media-heading">
+      <a href="{{ node_url }}">
+        {{ title }}
+      </a>
+    </h4>
+    {% if content.page_body %}
+      {{ content.page_body }}
+    {% endif %}
+  </div>
+</div>

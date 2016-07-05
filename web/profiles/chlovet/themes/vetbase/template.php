@@ -111,6 +111,22 @@ function vetbase_preprocess_page(&$variables) {
         ];
       }
     }
+
+    // Append, whenever possible, the search form, for that we need a
+    // search component, take the first available
+    $searchPageNid = db_select('node', 'n')
+      ->fields('n', ['nid'])
+      ->condition('n.type', 'search')
+      ->condition('n.status', 1)
+      ->addTag('node_access')
+      ->addTag('ucms_site_access')
+      ->range(0, 1)
+      ->execute()
+      ->fetchField()
+    ;
+    if ($searchPageNid) {
+      $variables['search_url'] = url('node/' . $searchPageNid);
+    }
   }
 }
 

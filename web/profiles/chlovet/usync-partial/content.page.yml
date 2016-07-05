@@ -20,6 +20,7 @@ entity:
       field:
         body: ~
         page_body: true
+        page_image: true
         labels: true
 
 view:
@@ -30,7 +31,29 @@ view:
         page_body: true
 
       teaser:
-        page_body: ~
+        page_image:
+          type: iresponsive
+          settings:
+            viewport: 60
+            html_tag: img
+            include_full: false
+        page_body:
+          type: text_trimmed
+          settings:
+            trim_length: 200
 
       favorite:
         inherit: teaser
+
+      search_result:
+        page_image:
+          type: iresponsive
+          settings:
+            viewport: 60
+            html_tag: img
+            include_full: false
+        page_body:
+          type: text_trimmed
+          settings:
+            trim_length: 400
+

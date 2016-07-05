@@ -1,0 +1,20 @@
+# Image node type
+entity:
+  node:
+
+    search:
+      name: Page de recherche
+      field:
+        body: ~
+
+view:
+  node:
+    image:
+
+      default: {}
+
+      teaser:
+        inherit: default
+
+      favorite:
+        inherit: default
