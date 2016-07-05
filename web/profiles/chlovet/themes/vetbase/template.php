@@ -33,10 +33,25 @@ function vetbase_preprocess(&$vars) {
 /**
  * Implements hook_preprocess_HOOK().
  */
+function vetbase_preprocess_ucms_layout_item(&$vars) {
+  // For now, we override the view_mode and replace it by region name.
+  // This enables subtheme to override given certain condition, and may be
+  // replaced later by a user setting from ucms_layout table.
+  $vars['view_mode'] = $vars['region']->getName();
+}
+
+/**
+ * Implements hook_preprocess_HOOK().
+ */
 function vetbase_preprocess_page(&$variables) {
+
+  $siteManager  = ucms_site_manager();
+  $hasContext   = $siteManager->hasContext();
+  $siteContext  = $hasContext ? $siteManager->getContext() : null;
+
   // Force some JS inclusion.
   $opts = ['preprocess' => true, 'every_page' => true];
-  $path = drupal_get_path('theme', 'vetbase');
+  $path = drupal_get_path('theme', 'vetbase') . '/../resources';
   if (theme_get_setting('gulpifier_single_js')) {
     drupal_add_js($path . '/bootstrap/js/alert.js', $opts);
     drupal_add_js($path . '/bootstrap/js/button.js', $opts);
@@ -61,6 +76,39 @@ function vetbase_preprocess_page(&$variables) {
       if ($menuList) {
         // Take the first one, hop... Ni vu ni connnu je t'embrouille.
         $variables['page']['menu'][] = menu_tree(reset($menuList)['name']);
+      }
+    }
+  }
+
+  if ($siteContext) {
+    $menuTree = umenu_get_manager()->buildTree('site-main-' . $siteContext->getId());
+
+    // Main menu
+    if ($menuTree) {
+      $variables['menu'] = [
+        '#tree'  => $menuTree,
+        '#theme' => 'umenu__main_menu',
+      ];
+    }
+
+    if ($menuTree && ($node = menu_get_object())) {
+      $menuCurrent = $menuTree->getMostRevelantItemForNode($node->nid);
+
+      // Child entries
+      if ($menuCurrent && $menuCurrent->hasChildren()) {
+        $variables['menu_children'] = [
+          '#tree'  => $menuCurrent,
+          '#theme' => 'umenu__children',
+        ];
+      }
+
+      // Create siblings
+      if ($menuCurrent && $menuCurrent->getParentId()) {
+        $variables['menu_siblings'] = [
+          '#tree'     => $menuTree->getItemById($menuCurrent->getParentId()),
+          '#current'  => $menuCurrent->getNodeId(),
+          '#theme'    => 'umenu__siblings',
+        ];
       }
     }
   }

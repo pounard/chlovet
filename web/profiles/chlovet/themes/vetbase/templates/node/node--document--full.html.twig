@@ -1,0 +1,7 @@
+{% extends 'theme:vetbase:templates/media/media-node.html.twig' %}
+
+{% import 'theme:vetbase:templates/media/media-document.html.twig' as document %}
+
+{% block media %}
+  {{ document.as_links(node.file) }}
+{% endblock %}

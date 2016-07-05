@@ -1,0 +1,16 @@
+{# A few macros #}
+
+{% macro as_links(files) %}
+  {% for language in files %}
+    {% for file in language %}
+      <div class="document">
+        <a href="{{ file_url(file.uri) }}">
+          <span class="icon icon-download"></span>
+          {% trans with {'@type': file.filemime|split('/')|last|upper} %}
+            Download the @type document
+          {% endtrans %}
+        </a>
+      </div>
+    {% endfor %}
+  {% endfor %}
+{% endmacro %}

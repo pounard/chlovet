@@ -1,23 +1,14 @@
-<div id="node-{{ node.nid }}" class="{{ classes }} clearfix"{{ attributes }}>
-
-  {{ user_picture }}
-
+<article class="{{ classes }}"{{ attributes }}>
   {{ title_prefix }}
   {% if not page %}
-    <h2{{ title_attributes }}><a href="{{ node_url }}">{{ title }}</a></h2>
+    {% block title_tag %}
+      <h1>
+        <a href="{{ node_url }}">{{ title }}</a>
+      </h1>
+    {% endblock %}
   {% endif %}
   {{ title_suffix }}
-
-  {% if display_submitted %}
-    <div class="submitted">
-      {{ submitted }}
-    </div>
-  {% endif %}
-
-  <div class="content"{{ content_attributes }}>
-    {{ content|without(['links','comments']) }}
-  </div>
-
-  {{ content.links }}
-  {{ content.comments }}
-</div>
+  {% block content %}
+    {{ content|without(['body','links','comments']) }}
+  {% endblock %}
+</article>
