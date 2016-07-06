@@ -29,34 +29,3 @@
     }
   }
 }
-
-#header {
-  background-color: @header-top-bg;
-  * {
-    border: none;
-  }
-  > div {
-    padding-top: 2em;
-    padding-bottom: 2em;
-    background-color: @header-inner-bg;
-    color: @header-inner;
-  }
-  .form-control {
-    height: auto;
-    padding: 0.5em 1em;
-    background-color: @header-form-input-bg;
-    color: @header-form-input;
-    &:focus {
-      // Reset bootstrap default
-      border-color: none;
-      outline: 0;
-      .box-shadow(0 0 0);
-      // And go with our own
-      background-color: @header-form-input-focus-bg;
-      color: @header-form-input-focus;
-    }
-  }
-  .btn {
-    padding: 0.5em 1em;
-  }
-}

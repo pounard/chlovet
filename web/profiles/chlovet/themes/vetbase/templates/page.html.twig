@@ -1,52 +1,38 @@
 {% import 'theme:vetbase:templates/node/search.html.twig' as search %}
-
-{% macro content(page, title) %}
-  {% if title %}
-    <h1>{{ title }}</h1>
-  {% endif %}
-  <a id="main-content" title="{{ "Main content"|trans }}"></a>
-  {% if page.content %}
-    {{ page.content }}
-  {% endif %}
-{% endmacro %}
-
-{% macro banner(banner) %}
-  <div id="banner">
-    {{ banner }}
-  </div>
-{% endmacro %}
-
-{% import _self as macros %}
-
-{% if page.header or search_url %}
+<div id="page">
   <div id="header" class="container-fluid">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          {% if search_url %}
-            {{ search.search_form(search_url) }}
-          {% endif %}
-          {% if page.header %}
-            {{ page.header }}
-          {% endif %}
+      <div class="table-div">
+        <div>
+          <div class="middle">
+            {% if page.header %}
+              {{ page.header }}
+            {% endif %}
+          </div>
+          <div class="middle">
+            {% if site_name %}
+              <h1>{{ site_name }}</h1>
+            {% endif %}
+            <p><blockquote>Au plus proche de vos compagnons</blockquote></p>
+          </div>
+          <div class="middle">
+            {% if search_url %}
+              {{ search.search_form(search_url) }}
+            {% endif %}
+          </div>
         </div>
       </div>
     </div>
   </div>
-{% endif %}
-
-{% if menu %}
-  {{ menu }}
-{% endif %}
-
-{% if page.banner %}
-  {{ macros.banner(page.banner) }}
-{% endif %}
-
-<div id="page">
-
+  {% if menu %}
+    {{ menu }}
+  {% endif %}
+  {% if page.banner %}
+    <div id="banner">
+      {{ banner }}
+    </div>
+  {% endif %}
   <div class="container">
-
     {% if breadcrumb %}
       <div class="row">
         <div class="col-md-12">
@@ -54,7 +40,6 @@
         </div>
       </div>
     {% endif %}
-
     <div class="row">
       {% if page.left or menu_siblings %}
         <div id="sidebar" class="col-md-4">
@@ -66,32 +51,36 @@
           {% endif %}
         </div>
         <div id="content" class="col-md-8">
-          {{ macros.content(page) }}
+          <a id="main-content" title="{{ "Main content"|trans }}"></a>
+          {% if page.content %}
+            {{ page.content }}
+          {% endif %}
         </div>
       {% else %}
         <div id="main" class="col-md-12">
-          {{ macros.content(page) }}
+          <a id="main-content" title="{{ "Main content"|trans }}"></a>
+          {% if page.content %}
+            {{ page.content }}
+          {% endif %}
         </div>
       {% endif %}
     </div>
-
     {% if menu_children %}{{ menu_children }}{% endif %}
   </div>
-</div>
-
-<div id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="container-fluid">
-          {% for name in ['footer1', 'footer2', 'footer3', 'footer4'] %}
-            {# always reserve space even if empty #}
-            <div id="{{ name }}" class="col-md-3">
-              {% if page[name] %}
-                {{ page[name] }}
-              {% endif %}
-            </div>
-          {% endfor %}
+  <div id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="container-fluid">
+            {% for name in ['footer1', 'footer2', 'footer3', 'footer4'] %}
+              {# always reserve space even if empty #}
+              <div id="{{ name }}" class="col-md-3">
+                {% if page[name] %}
+                  {{ page[name] }}
+                {% endif %}
+              </div>
+            {% endfor %}
+          </div>
         </div>
       </div>
     </div>

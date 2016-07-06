@@ -1,0 +1,43 @@
+#header {
+  background-color: @header-top-bg;
+  // Banish borders, we want FLAT
+  * {
+    border: none;
+  }
+  // Fix the title
+  h1 {
+    margin: 0;
+    font-size: 2.1em;
+    color: @color-clouds;
+    text-shadow: 2px 2px 1px black;
+  }
+  // Coloring
+  > div {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: @header-inner-bg;
+    color: @header-inner;
+  }
+  // Deal with search form positionning and display
+  form {
+    .pull-right();
+  }
+  .form-control {
+    height: auto;
+    padding: 0.5em 1em;
+    background-color: @header-form-input-bg;
+    color: @header-form-input;
+    &:focus {
+      // Reset bootstrap default
+      border-color: none;
+      outline: 0;
+      .box-shadow(0 0 0);
+      // And go with our own
+      background-color: @header-form-input-focus-bg;
+      color: @header-form-input-focus;
+    }
+  }
+  .btn {
+    padding: 0.5em 1em;
+  }
+}

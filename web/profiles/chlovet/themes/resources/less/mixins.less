@@ -1,3 +1,16 @@
 .background-ease() {
   transition: background-color 0.2s ease;
 }
+.table-div {
+  display: table;
+  width: 100%;
+  > div {
+    display: table-row;
+    > * {
+      display: table-cell;
+      &.middle {
+        vertical-align: middle;
+      }
+    }
+  }
+}

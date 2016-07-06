@@ -13,7 +13,7 @@
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav">
           {% for item in tree.children %}
-            {% if current == item.nodeId %}
+            {% if item.isInTrailof(current) %}
               <li class="active"><a href="{{ url(item.route) }}">{{ item.title }} <span class="sr-only">({{ "current"|trans }})</span></a></li>
             {% else %}
               <li><a href="{{ url(item.route) }}">{{ item.title }}</a></li>
