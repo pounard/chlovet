@@ -1,3 +1,14 @@
 // variables.less is included into bootstrap.less
 @import "./bootstrap.less";
+
+// Needs to be imported first
+@import "./mixins.less";
+
+// Include 'misc' previous to others to ensure they can be overriden
+@import "./misc.less";
+
+// Various admin-only related styles
 @import "./admin.less";
+
+// Those will be common with front themes
+@import "./menu.less";

@@ -29,14 +29,16 @@ view:
 
       default:
         page_body: true
+        page_image:
+          type: unoderef
+          settings:
+            view_mode: default
 
       teaser:
         page_image:
-          type: iresponsive
+          type: unoderef
           settings:
-            viewport: 60
-            html_tag: img
-            include_full: false
+            view_mode: default
         page_body:
           type: text_trimmed
           settings:
@@ -47,11 +49,9 @@ view:
 
       search_result:
         page_image:
-          type: iresponsive
+          type: unoderef
           settings:
-            viewport: 60
-            html_tag: img
-            include_full: false
+            view_mode: default
         page_body:
           type: text_trimmed
           settings:

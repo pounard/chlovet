@@ -1,12 +1,14 @@
-<div id="menu-children">
-  <ul class="nav nav-stacked">
-    {% for item in tree.children %}
-      <li>
-        <a href="{{ url(item.route) }}">
-          <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-          {{ item.title }}
-        </a>
-      </li>
-    {% endfor %}
-  </ul>
+<div id="menu-children" class="container-fluid">
+  <h2 class="container sr-only">Lire la suite</h2>
+  <div class="container" id="menu-children-list">
+    <div class="row">
+      {% for item in tree.children %}
+        <div class="item col-lg-3 col-md-4 col-sm-6 col-xs-12">
+          <a href="{{ url(item.route) }}">
+            {{ item.title }}
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 </div>

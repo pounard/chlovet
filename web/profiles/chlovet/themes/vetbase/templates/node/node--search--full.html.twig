@@ -5,11 +5,13 @@
 {% block content %}
   <section id="search-results">
     {{ search.search_form(node_url) }}
-    {% for node_view in search_results %}
-      {{ node_view }}
-    {% else %}
-      <p>{{ "Your search yielded no resuls"|trans }}</p>
-    {% endfor %}
+    <div class="row">
+      {% for node_view in search_results %}
+        {{ node_view }}
+      {% else %}
+        <p>{{ "Your search yielded no resuls"|trans }}</p>
+      {% endfor %}
+    </div>
     {% if search_displayed and search_total %}
       <p class="small text-muted">Displaying {{ search_displayed }} in {{ search_total }} results</p>
     {% endif %}

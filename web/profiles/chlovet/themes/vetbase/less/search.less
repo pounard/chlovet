@@ -1,6 +1,62 @@
 #search-results {
+  .media {
+    &:first-child {
+      margin-top: 15px;
+    }
+    padding-top: @padding-large-vertical;
+    padding-bottom: @padding-large-vertical;
+    background-color: @search-result-bg;
+    &:hover {
+      background-color: @search-result-hover-bg;
+      .background-ease();
+      .media-heading a {
+        color: @search-result-title-hover;
+      }
+    }
+  }
   .media-left {
-    width: 128px;
-    min-width: 128px;
+    width: 96px;
+    min-width: 96px;
+    min-height: 96px;
+    overflow-x: hidden;
+    img {
+      width: 100%;
+    }
+  }
+  .media-heading {
+    a {
+      color: @search-result-title;
+    }
+  }
+}
+
+#header {
+  background-color: @header-top-bg;
+  * {
+    border: none;
+  }
+  > div {
+    padding-top: 2em;
+    padding-bottom: 2em;
+    background-color: @header-inner-bg;
+    color: @header-inner;
+  }
+  .form-control {
+    height: auto;
+    padding: 0.5em 1em;
+    background-color: @header-form-input-bg;
+    color: @header-form-input;
+    &:focus {
+      // Reset bootstrap default
+      border-color: none;
+      outline: 0;
+      .box-shadow(0 0 0);
+      // And go with our own
+      background-color: @header-form-input-focus-bg;
+      color: @header-form-input-focus;
+    }
+  }
+  .btn {
+    padding: 0.5em 1em;
   }
 }

@@ -2,7 +2,6 @@
 @import "../../resources/bootstrap/less/variables.less";
 @import "../../resources/less/variables.less";
 @import "./variables.less";
-@import "../../resources/less/style.less";
 
 // Base theme over the common resources
 @badm-theme-path: "../../../../../sites/all/themes/composer/drupal-badm";
@@ -19,4 +18,8 @@
 @import "@{badm-theme-path}/less/admin-field.less";
 @import "@{badm-theme-path}/less/admin-user.less";
 
+// Base theme is more important than badm and must override whenever possible
+@import "../../resources/less/style.less";
+
 // And here goes our theme
+//  - There is still nothing here...
