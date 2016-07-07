@@ -1,0 +1,14 @@
+<section class="{{ classes }}"{{ attributes }}>
+  {{ title_prefix }}
+  <h1>
+    <a href="{{ node_url }}">{{ title }}</a>
+  </h1>
+  {{ title_suffix }}
+  {% block content %}
+    {% if content.list_type %}
+      <div class="row">
+        {{ content.list_type }}
+      </div>
+    {% endif %}
+  {% endblock %}
+</section>

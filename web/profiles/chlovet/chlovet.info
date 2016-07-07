@@ -62,6 +62,7 @@ usync[] = usync/
 usync[] = usync-partial/content.common.yml
 usync[] = usync-partial/content.document.yml
 usync[] = usync-partial/content.image.yml
+usync[] = usync-partial/content.list.yml
 usync[] = usync-partial/content.news.yml
 usync[] = usync-partial/content.page.yml
 usync[] = usync-partial/content.search.yml

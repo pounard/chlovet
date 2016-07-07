@@ -10,7 +10,7 @@ field:
       type: unoderef
       settings:
         bundles: [image]
-        view_mode: favorite
+        view_mode: default
 
 entity:
   node:
@@ -28,8 +28,14 @@ view:
     news:
 
       default:
+        news_image: '@media_view_default'
         news_body: true
-        news_image:
-          type: unoderef
-          settings:
-            view_mode: favorite
+
+      front1:
+        news_image: '@media_view_default'
+      front2:
+        news_image: '@media_view_default'
+      front3:
+        news_image: '@media_view_default'
+      front4:
+        news_image: '@media_view_default'

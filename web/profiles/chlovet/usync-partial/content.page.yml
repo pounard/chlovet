@@ -10,7 +10,7 @@ field:
       type: unoderef
       settings:
         bundles: [image]
-        view_mode: favorite
+        view_mode: default
 
 entity:
   node:
@@ -28,32 +28,22 @@ view:
     page:
 
       default:
+        page_image: '@media_view_default'
         page_body: true
-        page_image:
-          type: unoderef
-          settings:
-            view_mode: default
 
       teaser:
-        page_image:
-          type: unoderef
-          settings:
-            view_mode: default
-        page_body:
-          type: text_trimmed
-          settings:
-            trim_length: 200
+        page_image: '@media_view_default'
+        page_body: '@text_view_trimmed'
 
-      favorite:
-        inherit: teaser
+      front1:
+        page_image: '@media_view_default'
+      front2:
+        page_image: '@media_view_default'
+      front3:
+        page_image: '@media_view_default'
+      front4:
+        page_image: '@media_view_default'
 
       search_result:
-        page_image:
-          type: unoderef
-          settings:
-            view_mode: default
-        page_body:
-          type: text_trimmed
-          settings:
-            trim_length: 400
-
+        page_image: '@media_view_default'
+        page_body: '@text_view_trimmed'

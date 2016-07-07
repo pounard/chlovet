@@ -1,0 +1,58 @@
+# List node type
+field:
+
+  list_type:
+    label: Type
+    type: list_text
+    settings:
+      allowed_values_function: chlovet_allowed_list_types
+    widget:
+      type: options_select
+
+entity:
+  node:
+
+    list:
+      name: Liste
+      field:
+        body: ~
+        list_type: true
+
+view:
+  node:
+    list:
+
+      default:
+        list_type:
+          type: list_type
+          settings:
+            view_mode: teaser
+            limit: 3
+
+      front1:
+        list_type:
+          type: list_type
+          settings:
+            view_mode: front1
+            limit: 3
+
+      front2:
+        list_type:
+          type: list_type
+          settings:
+            view_mode: front2
+            limit: 3
+
+      front3:
+        list_type:
+          type: list_type
+          settings:
+            view_mode: front3
+            limit: 3
+
+      front4:
+        list_type:
+          type: list_type
+          settings:
+            view_mode: front4
+            limit: 3

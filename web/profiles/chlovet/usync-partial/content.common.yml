@@ -13,9 +13,17 @@ macro:
       settings:
         rows: 30
 
-field:
+  media_view_default:
+    type: unoderef
+    settings:
+      view_mode: default
 
-  media: ~
+  text_view_trimmed:
+    type: text_trimmed
+    settings:
+      trim_length: 400
+
+field:
 
   publication_period:
     label: Période de publication

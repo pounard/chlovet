@@ -21,11 +21,44 @@
     overflow-x: hidden;
     img {
       width: 100%;
+      //.img-circle();
     }
   }
   .media-heading {
     a {
       color: @search-result-title;
+    }
+  }
+  // Make the search bar being huge and nice
+  .search {
+    padding: 2em 25%;
+    * {
+      border: 0;
+    }
+    .form {
+      border: 1px solid @color-silver;
+    }
+    .form-control, .input-group-btn {
+      background: @color-peter-river;
+      color: @color-front;
+    }
+    .form-control {
+      height: auto;
+      padding: 1.5em 2em;
+      .placeholder(@color-front);
+      &:focus {
+        // Reset bootstrap default
+        border-color: none;
+        outline: 0;
+        .box-shadow(0 0 0);
+        // And go with our own
+        //background-color: @header-form-input-focus-bg;
+        //color: @header-form-input-focus;
+      }
+    }
+    .btn {
+      background: transparent;
+      padding: 0 2em;
     }
   }
 }

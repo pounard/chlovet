@@ -1,7 +1,9 @@
 ucms_contrib_component_types:
+  - list
   - search
 
 ucms_contrib_editorial_types:
+  - news
   - page
 
 ucms_contrib_tab_media_type:
@@ -16,6 +18,10 @@ ucms_layout_regions_badm:
 ucms_layout_regions_vetbase:
   header: 2
   menu: 2
+  front1: 1
+  front2: 1
+  front3: 1
+  front4: 1
   banner: 1
   left: 1
   content: 1

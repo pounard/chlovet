@@ -45,6 +45,8 @@ function vetbase_preprocess_ucms_layout_item(&$vars) {
  */
 function vetbase_preprocess_page(&$variables) {
 
+  $variables['isFrontPage'] = drupal_is_front_page();
+
   $siteManager  = ucms_site_manager();
   $hasContext   = $siteManager->hasContext();
   $siteContext  = $hasContext ? $siteManager->getContext() : null;

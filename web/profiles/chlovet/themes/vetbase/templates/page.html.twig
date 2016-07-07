@@ -29,7 +29,7 @@
   {% endif %}
   {% if page.banner %}
     <div id="banner">
-      {{ banner }}
+      {{ page.banner }}
     </div>
   {% endif %}
   <div class="container">
@@ -41,31 +41,55 @@
       </div>
     {% endif %}
     <div class="row">
-      {% if page.left or menu_siblings %}
-        <div id="sidebar" class="col-md-4">
-          {% if menu_siblings %}
-            {{ menu_siblings }}
-          {% endif %}
-          {% if page.left %}
-            {{ page.left }}
-          {% endif %}
-        </div>
-        <div id="content" class="col-md-8">
-          <a id="main-content" title="{{ "Main content"|trans }}"></a>
-          {% if page.content %}
-            {{ page.content }}
-          {% endif %}
-        </div>
+      {% if isFrontPage %}
+        {% if page.front1 %}
+          <div id="front1">
+            {{ page.front1 }}
+          </div>
+        {% endif %}
+        {% if page.front2 %}
+          <div id="front2">
+            {{ page.front2 }}
+          </div>
+        {% endif %}
+        {% if page.front3 %}
+          <div id="front3">
+            {{ page.front3 }}
+          </div>
+        {% endif %}
+        {% if page.front4 %}
+          <div id="front4">
+            {{ page.front4 }}
+          </div>
+        {% endif %}
       {% else %}
-        <div id="main" class="col-md-12">
-          <a id="main-content" title="{{ "Main content"|trans }}"></a>
-          {% if page.content %}
-            {{ page.content }}
-          {% endif %}
-        </div>
+        {% if page.left or menu_siblings %}
+          <div id="sidebar" class="col-md-4">
+            {% if menu_siblings %}
+              {{ menu_siblings }}
+            {% endif %}
+            {% if page.left %}
+              {{ page.left }}
+            {% endif %}
+          </div>
+          <div id="content" class="col-md-8">
+            <a id="main-content" title="{{ "Main content"|trans }}"></a>
+            {% if page.content %}
+              {{ page.content }}
+            {% endif %}
+          </div>
+        {% else %}
+          <div id="main" class="col-md-12">
+            <a id="main-content" title="{{ "Main content"|trans }}"></a>
+            {% if page.content %}
+              {{ page.content }}
+            {% endif %}
+          </div>
+        {% endif %}
       {% endif %}
     </div>
     {% if menu_children %}{{ menu_children }}{% endif %}
+
   </div>
   <div id="footer">
     <div class="container">
