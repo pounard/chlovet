@@ -4,21 +4,21 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "da8870d2707b3bfbff7b126d996b5c34",
-    "content-hash": "8a4e8379c1b0992917c9203c26404777",
+    "hash": "fac4347a27ef68b9327f1f495a5c7867",
+    "content-hash": "8f2a995c138e5890636f97f543020ff1",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.0.25",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e"
+                "reference": "a3595c5272a6f247228abb20076ed27321e4aae9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
-                "reference": "36e5b5843203d7f1cf6ffb0305a97e014387bd8e",
+                "url": "https://api.github.com/repos/composer/installers/zipball/a3595c5272a6f247228abb20076ed27321e4aae9",
+                "reference": "a3595c5272a6f247228abb20076ed27321e4aae9",
                 "shasum": ""
             },
             "require": {
@@ -65,6 +65,7 @@
                 "MODX Evo",
                 "Mautic",
                 "OXID",
+                "RadPHP",
                 "SMF",
                 "Thelia",
                 "WolfCMS",
@@ -80,6 +81,7 @@
                 "dokuwiki",
                 "drupal",
                 "elgg",
+                "expressionengine",
                 "fuelphp",
                 "grav",
                 "installer",
@@ -105,7 +107,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-04-13 19:46:30"
+            "time": "2016-07-05 06:18:20"
         },
         {
             "name": "cweagans/composer-patches",
@@ -819,16 +821,16 @@
         },
         {
             "name": "makinacorpus/drupal-schedulefield",
-            "version": "1.0.0-alpha4",
+            "version": "1.0.0-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-schedulefield.git",
-                "reference": "3c7cf5fe75ddd6c20d449a560e761937421aa3ba"
+                "reference": "c3ce7dac0106792978c7c2e0750b1bcc3e565bfe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-schedulefield/zipball/3c7cf5fe75ddd6c20d449a560e761937421aa3ba",
-                "reference": "3c7cf5fe75ddd6c20d449a560e761937421aa3ba",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-schedulefield/zipball/c3ce7dac0106792978c7c2e0750b1bcc3e565bfe",
+                "reference": "c3ce7dac0106792978c7c2e0750b1bcc3e565bfe",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -853,20 +855,20 @@
             ],
             "description": "Very simple schedule/planning field",
             "homepage": "http://github.com/makinacorpus/drupal-schedulefield",
-            "time": "2016-06-17 14:37:03"
+            "time": "2016-06-22 08:53:28"
         },
         {
             "name": "makinacorpus/drupal-sf-dic",
-            "version": "3.0.6",
+            "version": "3.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-sf-dic.git",
-                "reference": "6a405d8cc59cf7f8f5b1a821bf701a123285820d"
+                "reference": "7f5fa8d781abd964f07b834f4e4370688b6d2746"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/6a405d8cc59cf7f8f5b1a821bf701a123285820d",
-                "reference": "6a405d8cc59cf7f8f5b1a821bf701a123285820d",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/7f5fa8d781abd964f07b834f4e4370688b6d2746",
+                "reference": "7f5fa8d781abd964f07b834f4e4370688b6d2746",
                 "shasum": ""
             },
             "require": {
@@ -910,7 +912,7 @@
             ],
             "description": "Brings the vanilla Symfony 3 depency inject container component to Drupal 7 seamlessly along with a limited compatibility layer with Drupal 8 API",
             "homepage": "http://github.com/makinacorpus/drupal-sf-dic",
-            "time": "2016-06-24 15:31:11"
+            "time": "2016-07-12 13:33:57"
         },
         {
             "name": "makinacorpus/drupal-tooling",
@@ -975,16 +977,16 @@
         },
         {
             "name": "makinacorpus/drupal-ucms",
-            "version": "1.2.10",
+            "version": "1.2.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ucms.git",
-                "reference": "433f8dede40d5042bb65ca7a840266393b36acfb"
+                "reference": "9dcf8146b5d06cd8909ae813c074961823399000"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/433f8dede40d5042bb65ca7a840266393b36acfb",
-                "reference": "433f8dede40d5042bb65ca7a840266393b36acfb",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/9dcf8146b5d06cd8909ae813c074961823399000",
+                "reference": "9dcf8146b5d06cd8909ae813c074961823399000",
                 "shasum": ""
             },
             "require": {
@@ -1028,10 +1030,10 @@
             "description": " µCMS modules - Node/Elasticsearch/favorites based Drupal fast contribution UI/UX",
             "homepage": "http://github.com/makinacorpus/drupal-ucms",
             "support": {
-                "source": "https://github.com/makinacorpus/drupal-ucms/tree/1.2.10",
+                "source": "https://github.com/makinacorpus/drupal-ucms/tree/1.2.12",
                 "issues": "https://github.com/makinacorpus/drupal-ucms/issues"
             },
-            "time": "2016-07-04 09:48:16"
+            "time": "2016-07-05 16:07:29"
         },
         {
             "name": "makinacorpus/drupal-udate",
@@ -1145,16 +1147,16 @@
         },
         {
             "name": "makinacorpus/drupal-umenu",
-            "version": "1.0.14",
+            "version": "1.0.16",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-umenu.git",
-                "reference": "1f473219c7ad5c1dcf697c2302404421c6545662"
+                "reference": "d899911328a328613515c14a8dc65ed0a3f22f29"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/1f473219c7ad5c1dcf697c2302404421c6545662",
-                "reference": "1f473219c7ad5c1dcf697c2302404421c6545662",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/d899911328a328613515c14a8dc65ed0a3f22f29",
+                "reference": "d899911328a328613515c14a8dc65ed0a3f22f29",
                 "shasum": ""
             },
             "require": {
@@ -1184,7 +1186,7 @@
             ],
             "description": "Drupal core menu module replacement that does not attach to node types",
             "homepage": "http://github.com/makinacorpus/drupal-umenu",
-            "time": "2016-06-21 14:00:52"
+            "time": "2016-07-14 11:16:46"
         },
         {
             "name": "makinacorpus/drupal-unoderef",

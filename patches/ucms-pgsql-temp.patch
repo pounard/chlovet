@@ -1,0 +1,79 @@
+diff --git a/ucms_label/ucms_label.info b/ucms_label/ucms_label.info
+index a7d7dd1..fc058c1 100644
+--- a/ucms_label/ucms_label.info
++++ b/ucms_label/ucms_label.info
+@@ -8,4 +8,4 @@ usync[] = usync/vocabulary.yml
+ 
+ dependencies[] = sf_dic
+ dependencies[] = ucms_dashboard
+-dependencies[] = ucms_notification
+\ No newline at end of file
++suggests[] = ucms_notification
+diff --git a/ucms_label/ucms_label.services.yml b/ucms_label/ucms_label.services.yml
+index b610f43..81b46ee 100644
+--- a/ucms_label/ucms_label.services.yml
++++ b/ucms_label/ucms_label.services.yml
+@@ -8,11 +8,11 @@ services:
+     class: MakinaCorpus\Ucms\Label\Page\LabelAdminDatasource
+     arguments: ["@database", "@ucms_label.manager"]
+ 
+-  ucms_label.label_action_provider:
+-    public: false
+-    class: MakinaCorpus\Ucms\Label\Action\LabelActionProvider
+-    arguments: ["@ucms_label.manager", "@ucms_notification.service", "@current_user"]
+-    tags: [{name: ucms_dashboard.action_provider}]
++#  ucms_label.label_action_provider:
++#    public: false
++#    class: MakinaCorpus\Ucms\Label\Action\LabelActionProvider
++#    arguments: ["@ucms_label.manager", "@ucms_notification.service", "@current_user"]
++#    tags: [{name: ucms_dashboard.action_provider}]
+ 
+   ucms_label.context_pane_event_listener:
+     class: MakinaCorpus\Ucms\Label\EventDispatcher\ContextPaneEventListener
+@@ -20,13 +20,13 @@ services:
+     tags:
+       - { name: event_listener, event: ucms_dashboard.context_init }
+ 
+-  ucms_label.label_event_listener:
+-    class: MakinaCorpus\Ucms\Label\EventDispatcher\LabelEventListener
+-    arguments: ["@ucms_label.manager", "@apb.notification"]
+-    tags:
+-      - { name: event_listener, event: "label:add" }
+-      - { name: event_listener, event: "label:edit" }
+-      - { name: event_listener, event: "label:delete" }
++#  ucms_label.label_event_listener:
++#    class: MakinaCorpus\Ucms\Label\EventDispatcher\LabelEventListener
++#    arguments: ["@ucms_label.manager", "@apb.notification"]
++#    tags:
++#      - { name: event_listener, event: "label:add" }
++#      - { name: event_listener, event: "label:edit" }
++#      - { name: event_listener, event: "label:delete" }
+ 
+   ucms_label.node_event_listener:
+     class: MakinaCorpus\Ucms\Label\EventDispatcher\NodeEventListener
+diff --git a/ucms_site/ucms_site.module b/ucms_site/ucms_site.module
+index 899dc07..3cec533 100644
+--- a/ucms_site/ucms_site.module
++++ b/ucms_site/ucms_site.module
+@@ -311,13 +311,18 @@ function ucms_site_admin_path_is_allowed($path) {
+  * Implements hook_url_outbound_alter().
+  */
+ function ucms_site_url_outbound_alter(&$path, &$options, $original_path) {
+-  // Enforce master-only (administration pages) links to be absolute with the
+-  // master hostname instead of being directed to the current site.
+-  if ($path && !$options['absolute'] && ucms_site_manager()->hasContext()) {
++  $manager = ucms_site_manager();
++  if ($path && !$options['absolute'] && $manager->hasContext()) {
+     if (!ucms_site_admin_path_is_allowed($path)) {
++      // Enforce master-only (administration pages) links to be absolute with the
++      // master hostname instead of being directed to the current site.
+       $options['absolute'] = true;
+       $options['external'] = true;
+       $path = ucms_site_master_absolute_url() . '/' . $path;
++    } else if ('node/' . $manager->getContext()->getHomeNodeId() === $original_path) {
++      // We are working with the front page node link, alter the URL to always
++      // be the front page instead.
++      $path = '<front>';
+     }
+   }
+ }
