@@ -1,0 +1,93 @@
+.front-pane {
+  > .container {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  img {
+    width: 100%;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  h1 {
+    font-size: 2em;
+    text-align: center;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: -2px;
+    font-weight: bold;
+  }
+  h2 {
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 1em;
+  }
+  media {
+    max-height: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: block;
+  }
+  hr {
+    display: block;
+    height: 0px;
+    border: 2px solid @text-color;
+    padding: 0;
+    width: 15%;
+    margin: 1em auto 2em;
+    border-radius: 2px;
+  }
+}
+
+.front-pane(@background-color, @color, @hr-color) {
+  background-color: @background-color;
+  color: @color;
+  hr {
+    border-color: @hr-color;
+  }
+  h1 {
+    text-shadow: 1px 1px 1px @hr-color;
+  }
+}
+
+#front1 {
+  .front-pane(@front1-bg, @front1-color, @front1-hr);
+}
+
+#front2 {
+  .front-pane(@front2-bg, @front2-color, @front2-hr);
+  // We are going to make this one special!
+  media {
+    max-height: 100vh;
+    height: auto;
+  }
+  h2 {
+    position: absolute;
+    text-align: center;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    padding: 1em;
+    text-shadow: 0px 1px 1px @color-wet-asphalt;
+  }
+}
+
+#front3 {
+  .front-pane(@front3-bg, @front3-color, @front3-hr);
+}
+
+#front4 {
+  .front-pane(@front4-bg, @front4-color, @front4-hr);
+}
+
+@media (max-width: @screen-xs-max) {
+  .front-pane {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}

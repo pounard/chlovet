@@ -27,21 +27,21 @@ view:
           type: list_type
           settings:
             view_mode: teaser
-            limit: 3
+            limit: 4
 
       front1:
         list_type:
           type: list_type
           settings:
             view_mode: front1
-            limit: 3
+            limit: 4
 
       front2:
         list_type:
           type: list_type
           settings:
             view_mode: front2
-            limit: 3
+            limit: 2
 
       front3:
         list_type:
@@ -55,4 +55,4 @@ view:
           type: list_type
           settings:
             view_mode: front4
-            limit: 3
+            limit: 4

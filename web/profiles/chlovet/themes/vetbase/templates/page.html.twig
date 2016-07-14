@@ -1,6 +1,6 @@
 {% import 'theme:vetbase:templates/node/search.html.twig' as search %}
 <div id="page">
-  <div id="header" class="container-fluid">
+  <div id="header" class="container-fluid{% if not isFrontPage %} sub-page{% endif %}">
     <div class="container">
       <div class="table-div">
         <div>
@@ -13,7 +13,9 @@
             {% if site_name %}
               <h1>{{ site_name }}</h1>
             {% endif %}
-            <p><blockquote>Au plus proche de vos compagnons</blockquote></p>
+            {% if isFrontPage %}
+              <p><blockquote>Au plus proche de vos compagnons</blockquote></p>
+            {% endif %}
           </div>
           <div class="middle">
             {% if search_url %}
@@ -32,42 +34,53 @@
       {{ page.banner }}
     </div>
   {% endif %}
-  <div class="container">
+  {% if isFrontPage %}
+    {% if page.front1 %}
+      <div id="front1" class="front-pane container-fluid">
+        <div class="container">
+          {{ page.front1 }}
+        </div>
+      </div>
+    {% endif %}
+    {% if page.front2 %}
+      <div id="front2" class="front-pane container-fluid">
+        <div class="container">
+          {{ page.front2 }}
+        </div>
+      </div>
+    {% endif %}
+    {% if page.front3 %}
+      <div id="front3" class="front-pane container-fluid">
+        <div class="container">
+          {{ page.front3 }}
+        </div>
+      </div>
+    {% endif %}
+    {% if page.front4 %}
+      <div id="front4" class="front-pane container-fluid">
+        <div class="container">
+          {{ page.front4 }}
+        </div>
+      </div>
+    {% endif %}
+  {% else %}
     {% if breadcrumb %}
-      <div class="row">
-        <div class="col-md-12">
+      <div id="breadcrumb" class="container-fluid">
+        <div class="container">
           {{ breadcrumb }}
         </div>
       </div>
     {% endif %}
-    <div class="row">
-      {% if isFrontPage %}
-        {% if page.front1 %}
-          <div id="front1">
-            {{ page.front1 }}
-          </div>
-        {% endif %}
-        {% if page.front2 %}
-          <div id="front2">
-            {{ page.front2 }}
-          </div>
-        {% endif %}
-        {% if page.front3 %}
-          <div id="front3">
-            {{ page.front3 }}
-          </div>
-        {% endif %}
-        {% if page.front4 %}
-          <div id="front4">
-            {{ page.front4 }}
-          </div>
-        {% endif %}
-      {% else %}
-        {% if page.left or menu_siblings %}
+    <div class="container">
+      <div class="row">
+      {# {% if page.left or menu_siblings %} #}
+      {% if page.left %}
           <div id="sidebar" class="col-md-4">
+            {#
             {% if menu_siblings %}
               {{ menu_siblings }}
             {% endif %}
+             #}
             {% if page.left %}
               {{ page.left }}
             {% endif %}
@@ -77,6 +90,7 @@
             {% if page.content %}
               {{ page.content }}
             {% endif %}
+            {% if menu_children %}{{ menu_children }}{% endif %}
           </div>
         {% else %}
           <div id="main" class="col-md-12">
@@ -84,13 +98,12 @@
             {% if page.content %}
               {{ page.content }}
             {% endif %}
+            {# {% if menu_children %}{{ menu_children }}{% endif %} #}
           </div>
         {% endif %}
-      {% endif %}
+      </div>
     </div>
-    {% if menu_children %}{{ menu_children }}{% endif %}
-
-  </div>
+  {% endif %}
   <div id="footer">
     <div class="container">
       <div class="row">

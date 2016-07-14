@@ -1,1 +1,11 @@
-{% extends 'theme:vetbase:templates/front/node--list--front1.html.twig' %}
+<section class="{{ classes }}"{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% block content %}
+    {% if content.list_type %}
+      <div class="row">
+        {{ content.list_type }}
+      </div>
+    {% endif %}
+  {% endblock %}
+</section>

@@ -41,6 +41,49 @@ function vetbase_preprocess_ucms_layout_item(&$vars) {
 }
 
 /**
+ * Append current page menus to template variables.
+ */
+function _vatbase_add_menus(&$variables) {
+
+  $siteManager  = ucms_site_manager();
+  $hasContext   = $siteManager->hasContext();
+  $siteContext  = $hasContext ? $siteManager->getContext() : null;
+
+  if ($siteContext) {
+    $menuTree = umenu_get_manager()->buildTree('site-main-' . $siteContext->getId());
+
+    // Main menu
+    if ($menuTree) {
+      $variables['menu'] = [
+        '#tree'  => $menuTree,
+        '#theme' => 'umenu__main_menu',
+      ];
+    }
+
+    if ($menuTree && ($node = menu_get_object())) {
+      $menuCurrent = $menuTree->getMostRevelantItemForNode($node->nid);
+
+      // Child entries
+      if ($menuCurrent && $menuCurrent->hasChildren()) {
+        $variables['menu_children'] = [
+          '#tree'  => $menuCurrent,
+          '#theme' => 'umenu__children',
+        ];
+      }
+
+      // Create siblings
+      if ($menuCurrent && $menuCurrent->getParentId()) {
+        $variables['menu_siblings'] = [
+          '#tree'     => $menuTree->getItemById($menuCurrent->getParentId()),
+          '#current'  => $menuCurrent->getNodeId(),
+          '#theme'    => 'umenu__siblings',
+        ];
+      }
+    }
+  }
+}
+
+/**
  * Implements hook_preprocess_HOOK().
  */
 function vetbase_preprocess_page(&$variables) {
@@ -83,37 +126,6 @@ function vetbase_preprocess_page(&$variables) {
   }
 
   if ($siteContext) {
-    $menuTree = umenu_get_manager()->buildTree('site-main-' . $siteContext->getId());
-
-    // Main menu
-    if ($menuTree) {
-      $variables['menu'] = [
-        '#tree'  => $menuTree,
-        '#theme' => 'umenu__main_menu',
-      ];
-    }
-
-    if ($menuTree && ($node = menu_get_object())) {
-      $menuCurrent = $menuTree->getMostRevelantItemForNode($node->nid);
-
-      // Child entries
-      if ($menuCurrent && $menuCurrent->hasChildren()) {
-        $variables['menu_children'] = [
-          '#tree'  => $menuCurrent,
-          '#theme' => 'umenu__children',
-        ];
-      }
-
-      // Create siblings
-      if ($menuCurrent && $menuCurrent->getParentId()) {
-        $variables['menu_siblings'] = [
-          '#tree'     => $menuTree->getItemById($menuCurrent->getParentId()),
-          '#current'  => $menuCurrent->getNodeId(),
-          '#theme'    => 'umenu__siblings',
-        ];
-      }
-    }
-
     // Append, whenever possible, the search form, for that we need a
     // search component, take the first available
     $searchPageNid = db_select('node', 'n')
@@ -130,6 +142,8 @@ function vetbase_preprocess_page(&$variables) {
       $variables['search_url'] = url('node/' . $searchPageNid);
     }
   }
+
+  _vatbase_add_menus($variables);
 }
 
 /**
@@ -206,6 +220,10 @@ function vetbase_preprocess_region(&$variables) {
 function vetbase_preprocess_node(&$variables) {
   $node = $variables['node'];
   $view_mode = $variables['view_mode'];
+
+  if ($variables['page']) {
+    _vatbase_add_menus($variables);
+  }
 
   // Add smart template suggestions.
   $variables['theme_hook_suggestions'][] = 'node__' . $view_mode;

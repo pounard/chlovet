@@ -9,7 +9,7 @@
     margin: 0;
     font-size: 2.1em;
     color: @color-clouds;
-    text-shadow: 2px 2px 1px black;
+    text-shadow: 1px 1px 1px black;
   }
   // Coloring
   > div {
@@ -21,6 +21,9 @@
   // Deal with search form positionning and display
   form {
     .pull-right();
+  }
+  .form-group {
+    margin: 0;
   }
   .form-control {
     height: auto;
@@ -39,5 +42,17 @@
   }
   .btn {
     padding: 0.5em 1em;
+  }
+  &.sub-page {
+    img {
+      width: auto;
+      height: 50px;
+    }
+    h1 {
+      font-size: 1.5em;
+    }
+    > div {
+      padding: @padding-large-vertical @padding-large-horizontal;
+    }
   }
 }
