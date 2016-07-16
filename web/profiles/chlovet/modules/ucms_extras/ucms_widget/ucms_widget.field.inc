@@ -4,6 +4,8 @@
  * Field handling related functions.
  */
 
+use MakinaCorpus\Ucms\Widget\WidgetInterface;
+
 /**
  * Implements hook_field_info().
  */
@@ -44,33 +46,47 @@ function ucms_widget_field_formatter_info() {
     'ucms_widget' => [
       'label'       => t("Widget display"),
       'field types' => ['ucms_widget'],
-      'settings'    => [],
+      'settings'    => ['options' => []],
     ],
   ];
+}
+
+/**
+ * Get formatter options from instance
+ *
+ * @param WidgetInterface $widget
+ * @param mixed[] $instance
+ *
+ * @return mixed[]
+ */
+function _ucms_widget_formatter_get_options(WidgetInterface $widget, $instance, $display) {
+
+  $settings = $display['settings']['options'];
+  $defaults = $widget->getDefaultFormatterOptions();
+
+  return drupal_array_merge_deep($defaults, $settings);
 }
 
 /**
  * Implements hook_field_formatter_settings_form().
  */
 function ucms_widget_field_formatter_settings_form($field, $instance, $view_mode, $form, &$form_state) {
-  $widget = ucms_widget_registry()->get($field['settings']['type']);
+  $element = [];
 
-  // Compute defaults
+  $widget   = ucms_widget_registry()->get($field['settings']['type']);
   $display  = $instance['display'][$view_mode];
-  $settings = $display['settings'];
-  $defaults = $widget->getDefaultFormatterOptions();
-  $settings = drupal_array_merge_deep($defaults, $settings);
+  $settings = _ucms_widget_formatter_get_options($widget, $instance, $display);
 
   // Fetch form with values
   $localForm = $widget->getFormatterOptionsForm($settings);
   if (is_string($localForm)) {
-    return \Drupal::formBuilder()->getForm($localForm, $settings);
+    $element['options'] = \Drupal::formBuilder()->getForm($localForm, $settings);
   }
   if (is_array($localForm)) {
-    return $localForm;
+    $element['options'] = $localForm;
   }
 
-  return [];
+  return $element;
 }
 
 /**
@@ -93,13 +109,15 @@ function ucms_widget_field_formatter_view($entity_type, $entity, $field, $instan
 
   if ($items) {
     $site = $manager->getContext();
+
     $widget = ucms_widget_registry()->get($field['settings']['type']);
     $defaults = $widget->getDefaultOptions();
+    $formatterOptions = _ucms_widget_formatter_get_options($widget, $instance, $display);
 
     foreach ($items as $delta => $item) {
       $settings = drupal_array_merge_deep($defaults, $item['options']);
 
-      $output = $widget->render($site, $settings);
+      $output = $widget->render($site, $settings, $formatterOptions);
       if (!is_array($output)) {
         $output = ['#markup' => $output];
       }

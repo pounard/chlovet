@@ -15,12 +15,13 @@ interface WidgetInterface
      *
      * @param Site $site
      * @param mixed[] $options
+     * @param mixed[] $formatterOptions
      *
      * @return mixed
      *   Anything that can be placed in a twig template or rendered via
      *   drupal_render()
      */
-    public function render(Site $site, $options = []);
+    public function render(Site $site, $options = [], $formatterOptions = []);
 
     /**
      * Get default options

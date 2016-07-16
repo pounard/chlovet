@@ -12,7 +12,7 @@ class NullWidget implements WidgetInterface
     /**
      * {@inheritdoc}
      */
-    public function render(Site $site, $options = [])
+    public function render(Site $site, $options = [], $formatterOptions = [])
     {
         return '';
     }

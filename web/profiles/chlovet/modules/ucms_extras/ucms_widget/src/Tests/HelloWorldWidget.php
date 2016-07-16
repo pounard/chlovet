@@ -10,9 +10,9 @@ class HelloWorldWidget implements WidgetInterface
     /**
      * {@inheritdoc}
      */
-    public function render(Site $site, $options = [])
+    public function render(Site $site, $options = [], $formatterOptions = [])
     {
-        if ($options['bold']) {
+        if ($formatterOptions['strong']) {
             return '<p>Hello, <strong>' . check_plain($options['name']) . '&nbsp;!</strong></p>';
         }
         return '<p>Hello, ' . check_plain($options['name']) . '&nbsp;!</p>';
