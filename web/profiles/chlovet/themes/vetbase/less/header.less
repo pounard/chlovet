@@ -13,8 +13,8 @@
   }
   // Coloring
   > div {
-    padding-top: 2em;
-    padding-bottom: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
     background-color: @header-inner-bg;
     color: @header-inner;
   }
@@ -39,6 +39,18 @@
       background-color: @header-form-input-focus-bg;
       color: @header-form-input-focus;
     }
+  }
+  blockquote {
+    margin: 0;
+    position: relative;
+//    &::before{
+//      content: "\201C"; /*Unicode for Left Double Quote*/
+//      font-size: 1.5em;
+//      font-weight: bold;
+//      position: absolute;
+//      left: 10px;
+//      top:5px;
+//    }
   }
   .btn {
     padding: 0.5em 1em;

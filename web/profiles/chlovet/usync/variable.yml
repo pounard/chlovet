@@ -15,6 +15,8 @@ ucms_layout_regions_badm:
   help: 1
   sidebar_first: 2
 
+ucms_tree_menu_nesting_limit: 6
+
 ucms_layout_regions_vetbase:
   header: 2
   menu: 2
