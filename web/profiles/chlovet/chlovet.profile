@@ -4,64 +4,11 @@
  */
 
 /**
- * Fields API.
- */
-require_once __DIR__ . '/chlovet.field_formatters.inc';
-
-/**
  * Implements hook_page_build().
  */
 function chlovet_page_build() {
   // @todo For some unknown reason sometime it's missing
   drupal_add_library('system', 'ui.droppable');
-}
-
-/**
- * Implements hook_theme().
- */
-function chlovet_theme() {
-  return [
-    'chlovet_list_type' => [
-      'template'  => 'views/chlovet-list-type',
-      'variables' => [
-        'nodes'     => [],
-        'type'      => [],
-        'view_mode' => 'teaser',
-        'pager'     => null,
-        'limit'     => 3,
-        'count'     => 0,
-      ],
-    ],
-  ];
-}
-
-/**
- * Return 'List by types' allowed values for types.
- */
-function chlovet_allowed_list_types($field, $instance, $entity_type, $entity, $cacheable) {
-  $existing_types = [];
-
-  // If in a context of a site, prevent creating other list of same type.
-  $siteManager = ucms_site_manager();
-  $site = $siteManager->getContext();
-  if ($site) {
-    $query = db_select('node', 'n');
-    $query->innerJoin('field_data_list_type', 'lt', "lt.entity_type = 'node' AND n.nid = lt.entity_id");
-    $existing_types = $query
-      ->fields('lt', ['list_type_value'])
-      ->condition('n.type', $entity->type)
-      ->addTag('node_access')
-      ->execute()
-      ->fetchCol();
-  }
-
-  $typeHandler = ucms_contrib_type_handler_get();
-  $types = $typeHandler->getEditorialContentTypes();
-  if ($existing_types) {
-    $types = array_diff($types, $existing_types);
-  }
-
-  return $typeHandler->getTypesAsHumanReadableList($types);
 }
 
 /**
@@ -199,14 +146,5 @@ function chlovet_user_login_replace_email_by_name($form, &$form_state) {
     if ($name) {
       $form_state['values']['name'] = $name;
     }
-  }
-}
-
-/**
- * Implements template_preprocess_HOOK().
- */
-function template_preprocess_chlovet_list_type(&$variables) {
-  if (!empty($variables['view_mode'])) {
-    $variables['theme_hook_suggestions'][] = 'chlovet_list_type__' . str_replace('-', '_', $variables['view_mode']);
   }
 }
