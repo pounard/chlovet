@@ -1,0 +1,7 @@
+services:
+  ucms_widget.registry:
+    class: MakinaCorpus\Ucms\Widget\DependencyInjection\WidgetRegistry
+    arguments: ['@service_container', '%kernel.debug%']
+  ucms_widget.widget.hello_world:
+    class: MakinaCorpus\Ucms\Widget\Tests\HelloWorldWidget
+    tags: [{name: ucms_widget, type: hello_world}]

@@ -89,7 +89,9 @@
     "autoload-dev" : {
         "psr-4" : {
             "Tests\\" : "tests/",
-            "Chlovet\\Profile\\" : "web/profiles/chlovet/src"
+            "Chlovet\\Profile\\" : "web/profiles/chlovet/src",
+            "MakinaCorpus\\Ucms\\ContentList\\" : "web/profiles/chlovet/modules/ucms_extras/ucms_list/src",
+            "MakinaCorpus\\Ucms\\Widget\\" : "web/profiles/chlovet/modules/ucms_extras/ucms_widget/src"
         }
     }
 }
