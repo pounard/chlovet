@@ -2,6 +2,8 @@
 
 namespace MakinaCorpus\Ucms\Widget;
 
+use Drupal\Core\Entity\EntityInterface;
+
 use MakinaCorpus\Ucms\Site\Site;
 
 /**
@@ -12,7 +14,7 @@ class NullWidget implements WidgetInterface
     /**
      * {@inheritdoc}
      */
-    public function render(Site $site, $options = [], $formatterOptions = [])
+    public function render(EntityInterface $entity, Site $site, $options = [], $formatterOptions = [])
     {
         return '';
     }

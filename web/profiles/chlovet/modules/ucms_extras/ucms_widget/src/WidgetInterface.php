@@ -2,6 +2,8 @@
 
 namespace MakinaCorpus\Ucms\Widget;
 
+use Drupal\Core\Entity\EntityInterface;
+
 use MakinaCorpus\Ucms\Site\Site;
 
 /**
@@ -13,6 +15,7 @@ interface WidgetInterface
     /**
      * Render the widget
      *
+     * @param EntityInterface $entity
      * @param Site $site
      * @param mixed[] $options
      * @param mixed[] $formatterOptions
@@ -21,7 +24,7 @@ interface WidgetInterface
      *   Anything that can be placed in a twig template or rendered via
      *   drupal_render()
      */
-    public function render(Site $site, $options = [], $formatterOptions = []);
+    public function render(EntityInterface $entity, Site $site, $options = [], $formatterOptions = []);
 
     /**
      * Get default options

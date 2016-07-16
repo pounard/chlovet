@@ -1,0 +1,5 @@
+name = "UCMS - Content lists components"
+description = "Provide a set of field formatters that aims to provide content lists"
+core = 7.x
+package = UCMS Extras
+php = 5.5
