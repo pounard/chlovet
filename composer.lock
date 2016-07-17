@@ -1070,16 +1070,16 @@
         },
         {
             "name": "makinacorpus/drupal-ulink",
-            "version": "1.0.0-alpha2",
+            "version": "1.0.0-alpha3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ulink.git",
-                "reference": "68d41420cd707a6e651a74965eb9273e392221a0"
+                "reference": "b1ac09055516f73caada72bd5e2eedace4406337"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ulink/zipball/68d41420cd707a6e651a74965eb9273e392221a0",
-                "reference": "68d41420cd707a6e651a74965eb9273e392221a0",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ulink/zipball/b1ac09055516f73caada72bd5e2eedace4406337",
+                "reference": "b1ac09055516f73caada72bd5e2eedace4406337",
                 "shasum": ""
             },
             "require": {
@@ -1107,7 +1107,7 @@
             ],
             "description": "Provide some input filters for making links, along with an optional CKEditor plugin",
             "homepage": "http://github.com/makinacorpus/drupal-ulink",
-            "time": "2016-06-14 08:52:04"
+            "time": "2016-07-17 14:33:59"
         },
         {
             "name": "makinacorpus/drupal-ulog",
