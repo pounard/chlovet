@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "fac4347a27ef68b9327f1f495a5c7867",
+    "hash": "833a38a858356b294a720178b132b2c3",
     "content-hash": "8f2a995c138e5890636f97f543020ff1",
     "packages": [
         {
@@ -276,16 +276,16 @@
         },
         {
             "name": "elasticsearch/elasticsearch",
-            "version": "v2.2.0",
+            "version": "v2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elastic/elasticsearch-php.git",
-                "reference": "11ebdf2c847d0e2c4a47ac993485beb5a19d5dc4"
+                "reference": "7b34186a58730d0a8963741bd62fa5ab45658ada"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/11ebdf2c847d0e2c4a47ac993485beb5a19d5dc4",
-                "reference": "11ebdf2c847d0e2c4a47ac993485beb5a19d5dc4",
+                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/7b34186a58730d0a8963741bd62fa5ab45658ada",
+                "reference": "7b34186a58730d0a8963741bd62fa5ab45658ada",
                 "shasum": ""
             },
             "require": {
@@ -326,7 +326,7 @@
                 "elasticsearch",
                 "search"
             ],
-            "time": "2016-06-03 21:09:29"
+            "time": "2016-07-14 14:13:40"
         },
         {
             "name": "guzzlehttp/ringphp",
@@ -859,16 +859,16 @@
         },
         {
             "name": "makinacorpus/drupal-sf-dic",
-            "version": "3.0.8",
+            "version": "3.0.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-sf-dic.git",
-                "reference": "7f5fa8d781abd964f07b834f4e4370688b6d2746"
+                "reference": "bd1d8152995913b49b594f9a0c61773afc8f1fd4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/7f5fa8d781abd964f07b834f4e4370688b6d2746",
-                "reference": "7f5fa8d781abd964f07b834f4e4370688b6d2746",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/bd1d8152995913b49b594f9a0c61773afc8f1fd4",
+                "reference": "bd1d8152995913b49b594f9a0c61773afc8f1fd4",
                 "shasum": ""
             },
             "require": {
@@ -912,7 +912,7 @@
             ],
             "description": "Brings the vanilla Symfony 3 depency inject container component to Drupal 7 seamlessly along with a limited compatibility layer with Drupal 8 API",
             "homepage": "http://github.com/makinacorpus/drupal-sf-dic",
-            "time": "2016-07-12 13:33:57"
+            "time": "2016-07-15 12:08:56"
         },
         {
             "name": "makinacorpus/drupal-tooling",
