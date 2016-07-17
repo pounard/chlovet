@@ -1,4 +1,14 @@
 #header {
+  &.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    p {
+      display: none;
+    }
+  }
+  // Goes over navbars
+  z-index: 121;
   background-color: @header-top-bg;
   // Banish borders, we want FLAT
   * {
@@ -40,22 +50,10 @@
       color: @header-form-input-focus;
     }
   }
-  blockquote {
-    margin: 0;
-    position: relative;
-//    &::before{
-//      content: "\201C"; /*Unicode for Left Double Quote*/
-//      font-size: 1.5em;
-//      font-weight: bold;
-//      position: absolute;
-//      left: 10px;
-//      top:5px;
-//    }
-  }
   .btn {
     padding: 0.5em 1em;
   }
-  &.sub-page {
+  &.sub-page, &.sticky {
     img {
       width: auto;
       height: 50px;

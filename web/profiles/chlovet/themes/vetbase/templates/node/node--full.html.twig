@@ -18,7 +18,6 @@
       </div>
     </div>
   </div>
-  {% if menu_siblings %}{{ menu_siblings }}{% endif %}
   {{ content|without(['body','links','comments', 'page_image', 'news_image']) }}
   {% if menu_children %}{{ menu_children }}{% endif %}
 </article>

@@ -2,27 +2,21 @@
 <div id="page">
   <div id="header" class="container-fluid{% if not isFrontPage %} sub-page{% endif %}">
     <div class="container">
-      <div class="table-div">
-        <div>
-          <div class="middle">
-            {% if page.header %}
-              {{ page.header }}
-            {% endif %}
-          </div>
-          <div class="middle">
-            {% if site_name %}
-              <h1>{{ site_name }}</h1>
-            {% endif %}
-            {% if isFrontPage %}
-              <blockquote>Au plus proche de vos compagnons</blockquote>
-            {% endif %}
-          </div>
-          <div class="middle">
-            {% if search_url %}
-              {{ search.search_form(search_url) }}
-            {% endif %}
-          </div>
-        </div>
+      <div class="col-md-9 col-sm-8 col-xs-12">
+        {% if page.header %}
+          {{ page.header }}
+        {% endif %}
+        {% if site_name %}
+          <h1>{{ site_name }}</h1>
+        {% endif %}
+        {% if isFrontPage %}
+          <p>Au plus proche de vos compagnons</p>
+        {% endif %}
+      </div>
+      <div class="col-md-3 col-sm-4 col-xs-12">
+        {% if search_url %}
+          {{ search.search_form(search_url) }}
+        {% endif %}
       </div>
     </div>
   </div>
@@ -72,15 +66,13 @@
       </div>
     {% endif %}
     <div class="container">
-      <div class="row">
+      <div class="row" id="main-wrapper">
       {# {% if page.left or menu_siblings %} #}
-      {% if page.left %}
+      {% if page.left or menu_siblings %}
           <div id="sidebar" class="col-md-4">
-            {#
             {% if menu_siblings %}
               {{ menu_siblings }}
             {% endif %}
-             #}
             {% if page.left %}
               {{ page.left }}
             {% endif %}
@@ -90,7 +82,7 @@
             {% if page.content %}
               {{ page.content }}
             {% endif %}
-            {% if menu_children %}{{ menu_children }}{% endif %}
+            {# {% if menu_children %}{{ menu_children }}{% endif %} #}
           </div>
         {% else %}
           <div id="main" class="col-md-12">

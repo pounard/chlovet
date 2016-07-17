@@ -68,3 +68,5 @@ ucms_search_cron_limit: 500
 user_register: 0
 admin_theme: vetadmin
 node_admin_theme: true
+
+gulpifier_map_path: ../themes/resources/map.json
