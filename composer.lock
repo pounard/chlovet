@@ -276,16 +276,16 @@
         },
         {
             "name": "elasticsearch/elasticsearch",
-            "version": "v2.2.1",
+            "version": "v2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/elastic/elasticsearch-php.git",
-                "reference": "7b34186a58730d0a8963741bd62fa5ab45658ada"
+                "reference": "11ebdf2c847d0e2c4a47ac993485beb5a19d5dc4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/7b34186a58730d0a8963741bd62fa5ab45658ada",
-                "reference": "7b34186a58730d0a8963741bd62fa5ab45658ada",
+                "url": "https://api.github.com/repos/elastic/elasticsearch-php/zipball/11ebdf2c847d0e2c4a47ac993485beb5a19d5dc4",
+                "reference": "11ebdf2c847d0e2c4a47ac993485beb5a19d5dc4",
                 "shasum": ""
             },
             "require": {
@@ -326,7 +326,7 @@
                 "elasticsearch",
                 "search"
             ],
-            "time": "2016-07-14 14:13:40"
+            "time": "2016-06-03 21:09:29"
         },
         {
             "name": "guzzlehttp/ringphp",
@@ -977,20 +977,20 @@
         },
         {
             "name": "makinacorpus/drupal-ucms",
-            "version": "1.2.13",
+            "version": "1.2.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ucms.git",
-                "reference": "08ff04173b229b6fe8ba351b3847e15e58ff92f5"
+                "reference": "f9cab52ec9d857b2a4f76a9c2cb7ecd84a5e3e6b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/08ff04173b229b6fe8ba351b3847e15e58ff92f5",
-                "reference": "08ff04173b229b6fe8ba351b3847e15e58ff92f5",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/f9cab52ec9d857b2a4f76a9c2cb7ecd84a5e3e6b",
+                "reference": "f9cab52ec9d857b2a4f76a9c2cb7ecd84a5e3e6b",
                 "shasum": ""
             },
             "require": {
-                "elasticsearch/elasticsearch": "^2.0",
+                "elasticsearch/elasticsearch": "2.2.0",
                 "makinacorpus/drupal-apubsub": "^4.0",
                 "makinacorpus/drupal-sf-dic": "^3.0",
                 "makinacorpus/drupal-umenu": ">=1.0.13"
@@ -1030,10 +1030,10 @@
             "description": " µCMS modules - Node/Elasticsearch/favorites based Drupal fast contribution UI/UX",
             "homepage": "http://github.com/makinacorpus/drupal-ucms",
             "support": {
-                "source": "https://github.com/makinacorpus/drupal-ucms/tree/1.2.13",
+                "source": "https://github.com/makinacorpus/drupal-ucms/tree/1.2.14",
                 "issues": "https://github.com/makinacorpus/drupal-ucms/issues"
             },
-            "time": "2016-07-15 12:39:27"
+            "time": "2016-07-17 14:05:31"
         },
         {
             "name": "makinacorpus/drupal-udate",
