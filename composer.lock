@@ -977,16 +977,16 @@
         },
         {
             "name": "makinacorpus/drupal-ucms",
-            "version": "1.2.14",
+            "version": "1.2.15",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ucms.git",
-                "reference": "f9cab52ec9d857b2a4f76a9c2cb7ecd84a5e3e6b"
+                "reference": "7b58b7da63406a2122a35f5287e10ce9b1df37d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/f9cab52ec9d857b2a4f76a9c2cb7ecd84a5e3e6b",
-                "reference": "f9cab52ec9d857b2a4f76a9c2cb7ecd84a5e3e6b",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/7b58b7da63406a2122a35f5287e10ce9b1df37d5",
+                "reference": "7b58b7da63406a2122a35f5287e10ce9b1df37d5",
                 "shasum": ""
             },
             "require": {
@@ -1030,10 +1030,10 @@
             "description": " µCMS modules - Node/Elasticsearch/favorites based Drupal fast contribution UI/UX",
             "homepage": "http://github.com/makinacorpus/drupal-ucms",
             "support": {
-                "source": "https://github.com/makinacorpus/drupal-ucms/tree/1.2.14",
+                "source": "https://github.com/makinacorpus/drupal-ucms/tree/1.2.15",
                 "issues": "https://github.com/makinacorpus/drupal-ucms/issues"
             },
-            "time": "2016-07-17 14:05:31"
+            "time": "2016-07-17 14:13:23"
         },
         {
             "name": "makinacorpus/drupal-udate",
