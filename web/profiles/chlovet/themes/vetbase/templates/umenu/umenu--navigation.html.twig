@@ -1,0 +1,24 @@
+{% macro tree(tree, current) %}
+  {% import _self as umenu %}
+  {% if tree.children %}
+    <ul>
+      {% for item in tree.children %}
+        {% if item.isInTrailOf(current) %}
+         <li class="active">
+            <a {% if item.nodeId == current %}class="active" {% endif %}href="{{ url(item.route) }}">{{ item.title }}</a>{{ umenu.tree(item, current) }}
+          </li>
+        {% else %}
+         <li>
+            <a href="{{ url(item.route) }}">{{ item.title }}</a>
+          </li>
+        {% endif %}
+      {% endfor %}
+    </ul>
+  {% endif %}
+{% endmacro %}
+
+{% import _self as umenu %}
+
+<nav id="menu-navigation">
+  {{ umenu.tree(tree, current) }}
+</nav>

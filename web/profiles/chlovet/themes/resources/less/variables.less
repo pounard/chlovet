@@ -25,6 +25,13 @@
 // Front color when background is colored
 @color-front: #ecf0f1;
 
+// Chlovet colors
+@color-chlovet-pink-dark: #821332;
+@color-chlovet-pink: #B01A44;
+@color-chlovet-gray-darker: #2F2E2E;
+@color-chlovet-gray-dark: #3E3E3E;
+@color-chlovet-gray: #5f6060;
+
 // Flat UI colors
 @color-turquoise: #1ABC9C;
 @color-green-sea: #16A085;
@@ -51,6 +58,7 @@
 @breadcrumb-padding-vertical: @padding-large-vertical;
 @breadcrumb-padding-horizontal: @padding-large-horizontal;
 @breadcrumb-bg: transparent;
+//@breadcrumb-color: transparent;
 
 // Front
 @front1-bg: transparent;
@@ -68,8 +76,10 @@
 
 // Navbar
 @navbar-default-color: @color-front;
-@navbar-default-bg: @color-pumpkin;
-@navbar-default-link-active-bg: @color-carrot;
+//@navbar-default-bg: @color-pumpkin;
+//@navbar-default-link-active-bg: @color-carrot;
+@navbar-default-bg: @color-chlovet-pink;
+@navbar-default-link-active-bg: @color-chlovet-pink-dark;
 // Following is inheritance, do not change!
 @navbar-default-toggle-border-color: @navbar-default-color;
 @navbar-default-toggle-hover-bg: @navbar-default-bg;
@@ -81,6 +91,10 @@
 @navbar-default-link-hover-color: @navbar-default-color;
 @navbar-default-link-hover-bg: @navbar-default-link-active-bg;
 @navbar-default-link-active-color: @navbar-default-color;
+
+// Navigaton menu
+@menu-navigation-color: @text-color;
+@menu-navigation-active-color: @color-chlovet-pink;
 
 // Menu direct siblings nav
 @menu-siblings-bg: transparent;
@@ -101,12 +115,15 @@
 @menu-children-link-hover: @color-front;
 
 // Header
-@header-top-bg: @color-midnight-blue;
+@btn-header-color: @color-front;
+@btn-header-bg: @color-chlovet-gray;
+@btn-header-border: @color-chlovet-gray;
+@header-top-bg: @color-chlovet-gray-darker;
 @header-inner-bg: transparent;
 @header-inner: @color-front;
-@header-form-input-bg: @color-wet-asphalt;
+@header-form-input-bg: @color-chlovet-gray-dark;
 @header-form-input: @color-front;
-@header-form-input-focus-bg: @color-wet-asphalt;
+@header-form-input-focus-bg: @color-chlovet-gray-dark;
 @header-form-input-focus: @header-form-input;
 
 // Search results

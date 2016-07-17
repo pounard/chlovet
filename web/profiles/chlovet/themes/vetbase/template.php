@@ -79,6 +79,14 @@ function _vatbase_add_menus(&$variables) {
           '#theme'    => 'umenu__siblings',
         ];
       }
+
+      if ($menuCurrent) {
+        $variables['menu_navigation'] = [
+          '#tree'     => $menuTree,
+          '#current'  => $menuCurrent->getNodeId(),
+          '#theme'    => 'umenu__navigation',
+        ];
+      }
     }
   }
 }

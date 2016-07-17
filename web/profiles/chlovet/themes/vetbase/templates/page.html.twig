@@ -68,10 +68,10 @@
     <div class="container">
       <div class="row" id="main-wrapper">
       {# {% if page.left or menu_siblings %} #}
-      {% if page.left or menu_siblings %}
+      {% if page.left or menu_navigation %}
           <div id="sidebar" class="col-md-4">
-            {% if menu_siblings %}
-              {{ menu_siblings }}
+            {% if menu_navigation %}
+              {{ menu_navigation }}
             {% endif %}
             {% if page.left %}
               {{ page.left }}

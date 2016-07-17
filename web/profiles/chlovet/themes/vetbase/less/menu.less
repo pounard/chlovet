@@ -21,6 +21,35 @@
   padding: 0;
 }
 
+#menu-navigation {
+  margin-top: @line-height-computed;
+  > ul > li.active {
+    border-left: 2px solid @menu-navigation-active-color;
+    padding-left: 14px; // removes 2px from padding
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    margin-left: @padding-large-horizontal;
+  }
+  li {
+    padding-left: 16px;
+    line-height: ceil((@font-size-base * 1.8));
+    &.active {
+      > a {
+        font-weight: bold;
+      }
+    }
+  }
+  a {
+    color: @menu-navigation-color;
+    &.active {
+      color: @menu-navigation-active-color;
+    }
+  }
+}
+
 #menu-siblings {
   ul {
     //text-shadow: 0px 1px 1px @color-wet-asphalt;
