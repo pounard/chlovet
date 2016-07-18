@@ -1,23 +1,23 @@
 <article class="{{ classes }}"{{ attributes }}>
-  <div id="node-page-header" class="table-div">
-    <div>
-      {% if content.page_image or content.news_image %}
-        <div class="media">
-          {% if content.page_image %}
-            {{ content.page_image }}
-          {% endif %}
-          {% if content.news_image %}
-            {{ content.news_image }}
-          {% endif %}
-        </div>
-      {% endif %}
-      <div>
-        {{ title_prefix }}
-        <h1>{{ title }}</h1>
-        {{ title_suffix }}
-      </div>
-    </div>
-  </div>
-  {{ content|without(['body','links','comments', 'page_image', 'news_image']) }}
+  <header>
+    {{ title_prefix }}
+    <h1>{{ title }}</h1>
+    {{ title_suffix }}
+    {% if display_authoring %}
+      <p class="authoring">
+        <em>
+          <span class="author">{{ "Article written by @name"|trans({'@name': content_author}) }}</span>
+          <span class="date">{{ "Latest update on @date"|trans({'@date': content_date|date('F Y')}) }}</span>
+        </em>
+      </p>
+    {% endif %}
+  </header>
+  {{ content|without(['body','links','comments', 'page_image', 'news_image', 'biblio', 'content_author', 'content_date']) }}
   {% if menu_children %}{{ menu_children }}{% endif %}
+  {% if content.biblio %}
+    <div class="biblio">
+      <h2>{{ "Bibliographic record"|trans }}</h2>
+      {{ content.biblio }}
+    </div>
+  {% endif %}
 </article>

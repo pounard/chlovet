@@ -233,6 +233,31 @@ function vetbase_preprocess_node(&$variables) {
     _vatbase_add_menus($variables);
   }
 
+  switch ($node->type) {
+
+    case 'page':
+    case 'news':
+      $variables['display_authoring'] = ('full' === $view_mode);
+      break;
+
+    default:
+      $variables['display_authoring'] = false;
+  }
+
+  // @todo I would have preferred to do this in the template directly
+  if ($variables['display_authoring']) {
+    if ($items = field_get_items('node', $node, 'content_author')) {
+      $variables['content_author'] = check_plain($items[0]['value']);
+    } else {
+      $variables['content_author'] = format_username(user_load($node->uid));
+    }
+    if ($items = field_get_items('node', $node, 'content_date')) {
+      $variables['content_date'] = $items[0]['date'];
+    } else {
+      $variables['content_date'] = $node->changed;
+    }
+  }
+
   // Add smart template suggestions.
   $variables['theme_hook_suggestions'][] = 'node__' . $view_mode;
   $variables['theme_hook_suggestions'][] = 'node__' . $node->type . '__' . $view_mode;

@@ -25,6 +25,27 @@ macro:
 
 field:
 
+  biblio:
+    label: Référence bibliographique
+    type: text_long
+    settings:
+      text_processing: 1
+    instance:
+      settings:
+        text_processing: 1
+
+  content_author:
+    label: Auteur (si différent)
+    type: text
+
+  content_date:
+    label: Date de création (si différent)
+    type: udate
+    instance:
+      settings:
+        collectTime: false
+        granularity: 5 # day
+
   publication_period:
     label: Période de publication
     type: udate_range

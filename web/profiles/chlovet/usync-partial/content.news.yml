@@ -19,8 +19,11 @@ entity:
       name: Actualité
       field:
         body: ~
-        news_body: true
         news_image: true
+        news_body: true
+        biblio: true
+        content_author: true
+        content_date: true
         labels: true
 
 view:
@@ -30,6 +33,13 @@ view:
       default:
         news_image: '@media_view_default'
         news_body: true
+
+      full:
+        news_image: '@media_view_default'
+        news_body: true
+        content_author: true
+        content_date: true
+        biblio: true
 
       front1:
         news_image: '@media_view_default'

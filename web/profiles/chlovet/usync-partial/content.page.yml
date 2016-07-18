@@ -19,8 +19,11 @@ entity:
       name: Page éditoriale
       field:
         body: ~
-        page_body: true
         page_image: true
+        page_body: true
+        biblio: true
+        content_author: true
+        content_date: true
         labels: true
 
 view:
@@ -30,6 +33,13 @@ view:
       default:
         page_image: '@media_view_default'
         page_body: true
+
+      full:
+        page_image: '@media_view_default'
+        page_body: true
+        content_author: true
+        content_date: true
+        biblio: true
 
       teaser:
         page_image: '@media_view_default'
