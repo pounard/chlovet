@@ -1,0 +1,5 @@
+{% import 'theme:vetbase:common-templates/media/media-document.html.twig' as document %}
+
+<media data-nid="{{ nid }}">
+  {{ document.as_links(node.file) }}
+</media>
