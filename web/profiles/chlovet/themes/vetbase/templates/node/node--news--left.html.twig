@@ -1,0 +1,15 @@
+<article class="{{ classes }}"{{ attributes }}>
+  <a href="{{ node_url }}">
+    <h1>{{ title }}</h1>
+    <div class="image">
+      {% if content.news_image %}
+        {{ content.news_image }}
+      {% endif %}
+    </div>
+    {% if content.news_teaser %}
+      {{ content.news_teaser }}
+    {% else %}
+      {{ content.news_body }}
+    {% endif %}
+  </a>
+</article>

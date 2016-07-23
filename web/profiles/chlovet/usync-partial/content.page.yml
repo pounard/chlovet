@@ -1,6 +1,7 @@
 # Editorial page node type
 field:
 
+  page_teaser: '@teaserfield'
   page_body: '@textfield'
 
   page_image:
@@ -19,6 +20,7 @@ entity:
       name: Page éditoriale
       field:
         body: ~
+        page_teaser: true
         page_image: true
         page_body: true
         biblio: true
@@ -32,7 +34,8 @@ view:
 
       default:
         page_image: '@media_view_default'
-        page_body: true
+        page_body: '@text_view_trimmed'
+        page_teaser: true
 
       full:
         page_image: '@media_view_default'

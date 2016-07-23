@@ -1,0 +1,29 @@
+.related {
+  h1, h2, h3, h4, h5, h6 {
+    font-size: @font-size-base;
+    color: @text-color;
+    margin: 0;
+  }
+  a {
+    color: @text-color;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  article {
+    .clearfix();
+    border-left: 2px solid @color-chlovet-pink;
+    // Align with grid, gutters, and navigation
+    padding: 0 @padding-large-horizontal;
+    margin-left: @padding-large-horizontal;
+    h1 {
+      font-size: @font-size-h3;
+      margin-bottom: ceil(@line-height-computed / 2)
+    }
+    .image {
+      width: 33%;
+      float: left;
+      margin-right: @padding-large-horizontal;
+    }
+  }
+}

@@ -1,6 +1,7 @@
 # News node type
 field:
 
+  news_teaser: '@teaserfield'
   news_body: '@textfield'
 
   news_image:
@@ -19,6 +20,7 @@ entity:
       name: Actualité
       field:
         body: ~
+        news_teaser: true
         news_image: true
         news_body: true
         biblio: true
@@ -32,7 +34,8 @@ view:
 
       default:
         news_image: '@media_view_default'
-        news_body: true
+        news_body: '@text_view_trimmed'
+        news_teaser: true
 
       full:
         news_image: '@media_view_default'
