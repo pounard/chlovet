@@ -1,0 +1,9 @@
+<section class="{{ classes }}"{{ attributes }}>
+  {{ title_prefix }}
+  {{ title_suffix }}
+  {% if content.menu_tree %}
+    {{ content.menu_tree }}
+  {% else %}
+    <p>{{ "Missing menu"|trans }}</p>
+  {% endif %}
+</section>

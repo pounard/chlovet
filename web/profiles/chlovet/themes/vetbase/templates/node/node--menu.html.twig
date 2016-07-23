@@ -1,0 +1,8 @@
+<section class="{{ classes }}"{{ attributes }}>
+  {{ title_prefix }}
+    <h1>{{ title }}</h1>
+  {{ title_suffix }}
+  {% if content.menu_tree %}
+    {{ content.menu_tree }}
+  {% endif %}
+</section>

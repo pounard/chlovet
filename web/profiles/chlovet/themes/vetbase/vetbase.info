@@ -4,6 +4,7 @@ core = 7.x
 engine = twig
 
 regions[header] = Header
+regions[header2] = Header, below title
 regions[menu] = Menu
 regions[banner] = Banner
 regions[front1] = Front page first

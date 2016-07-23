@@ -1,0 +1,15 @@
+{% if tree.children %}
+  <ul class="nav nav-pills">
+    {% for item in tree.children %}
+      {% if current == item.nodeId %}
+        <li role="presentation" class="active">
+          <a href="{{ url(item.route) }}">{{ item.title }}</a>{{ umenu.tree(item, current) }}
+        </li>
+      {% else %}
+        <li role="presentation">
+          <a href="{{ url(item.route) }}">{{ item.title }}</a>{{ umenu.tree(item, current) }}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}

@@ -20,6 +20,7 @@ ucms_tree_menu_nesting_limit: 6
 
 ucms_layout_regions_vetbase:
   header: 2
+  header2: 2
   menu: 2
   front1: 1
   front2: 1

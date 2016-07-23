@@ -30,6 +30,11 @@ view:
           type: menu_tree
           settings: {options: {suggestion: header}}
 
+      header2:
+        menu_tree:
+          type: menu_tree
+          settings: {options: {suggestion: header}}
+
       footer1:
         menu_tree:
           type: menu_tree
