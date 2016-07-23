@@ -5,8 +5,11 @@
   ul {
     margin-bottom: 0;
     li {
-      list-style: disc;
+      //list-style: disc;
       margin: 0 0 (@line-height-computed / 4);
+      li:first-child {
+        margin-top: (@line-height-computed / 4);
+      }
     }
   }
   h4 {
