@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "833a38a858356b294a720178b132b2c3",
-    "content-hash": "8f2a995c138e5890636f97f543020ff1",
+    "hash": "f1cfdc060982d2c1f2dfa8785a14f0d0",
+    "content-hash": "dd0d46b5b031ec7f908e217d6813c17d",
     "packages": [
         {
             "name": "composer/installers",
@@ -859,16 +859,16 @@
         },
         {
             "name": "makinacorpus/drupal-sf-dic",
-            "version": "3.0.9",
+            "version": "3.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-sf-dic.git",
-                "reference": "bd1d8152995913b49b594f9a0c61773afc8f1fd4"
+                "reference": "c936827b4ba7e25149d8e247de6c8bff1dbc971c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/bd1d8152995913b49b594f9a0c61773afc8f1fd4",
-                "reference": "bd1d8152995913b49b594f9a0c61773afc8f1fd4",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/c936827b4ba7e25149d8e247de6c8bff1dbc971c",
+                "reference": "c936827b4ba7e25149d8e247de6c8bff1dbc971c",
                 "shasum": ""
             },
             "require": {
@@ -912,7 +912,7 @@
             ],
             "description": "Brings the vanilla Symfony 3 depency inject container component to Drupal 7 seamlessly along with a limited compatibility layer with Drupal 8 API",
             "homepage": "http://github.com/makinacorpus/drupal-sf-dic",
-            "time": "2016-07-15 12:08:56"
+            "time": "2016-07-22 12:30:41"
         },
         {
             "name": "makinacorpus/drupal-tooling",
@@ -977,23 +977,23 @@
         },
         {
             "name": "makinacorpus/drupal-ucms",
-            "version": "1.2.15",
+            "version": "dev-tree-flexible",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ucms.git",
-                "reference": "7b58b7da63406a2122a35f5287e10ce9b1df37d5"
+                "reference": "4388dfa1e01b686c029fd2aebee7d7a4236a03f9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/7b58b7da63406a2122a35f5287e10ce9b1df37d5",
-                "reference": "7b58b7da63406a2122a35f5287e10ce9b1df37d5",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/4388dfa1e01b686c029fd2aebee7d7a4236a03f9",
+                "reference": "4388dfa1e01b686c029fd2aebee7d7a4236a03f9",
                 "shasum": ""
             },
             "require": {
                 "elasticsearch/elasticsearch": "2.2.0",
                 "makinacorpus/drupal-apubsub": "^4.0",
                 "makinacorpus/drupal-sf-dic": "^3.0",
-                "makinacorpus/drupal-umenu": ">=1.0.13"
+                "makinacorpus/drupal-umenu": ">=1.1.2"
             },
             "type": "drupal-module",
             "autoload": {
@@ -1030,10 +1030,10 @@
             "description": " µCMS modules - Node/Elasticsearch/favorites based Drupal fast contribution UI/UX",
             "homepage": "http://github.com/makinacorpus/drupal-ucms",
             "support": {
-                "source": "https://github.com/makinacorpus/drupal-ucms/tree/1.2.15",
+                "source": "https://github.com/makinacorpus/drupal-ucms/tree/tree-flexible",
                 "issues": "https://github.com/makinacorpus/drupal-ucms/issues"
             },
-            "time": "2016-07-17 14:13:23"
+            "time": "2016-07-23 16:25:53"
         },
         {
             "name": "makinacorpus/drupal-udate",
@@ -1147,16 +1147,16 @@
         },
         {
             "name": "makinacorpus/drupal-umenu",
-            "version": "1.0.16",
+            "version": "1.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-umenu.git",
-                "reference": "d899911328a328613515c14a8dc65ed0a3f22f29"
+                "reference": "7dcdc9e5a3d2e9a477da3096c3cc45885276f074"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/d899911328a328613515c14a8dc65ed0a3f22f29",
-                "reference": "d899911328a328613515c14a8dc65ed0a3f22f29",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/7dcdc9e5a3d2e9a477da3096c3cc45885276f074",
+                "reference": "7dcdc9e5a3d2e9a477da3096c3cc45885276f074",
                 "shasum": ""
             },
             "require": {
@@ -1186,7 +1186,7 @@
             ],
             "description": "Drupal core menu module replacement that does not attach to node types",
             "homepage": "http://github.com/makinacorpus/drupal-umenu",
-            "time": "2016-07-14 11:16:46"
+            "time": "2016-07-23 15:40:15"
         },
         {
             "name": "makinacorpus/drupal-unoderef",
@@ -3309,16 +3309,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.4.6",
+            "version": "5.4.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "2f1fc94b77ea6418bd6a06c64a1dac0645fbce59"
+                "reference": "6c8a756c17a1a92a066c99860eb57922e8b723da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/2f1fc94b77ea6418bd6a06c64a1dac0645fbce59",
-                "reference": "2f1fc94b77ea6418bd6a06c64a1dac0645fbce59",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/6c8a756c17a1a92a066c99860eb57922e8b723da",
+                "reference": "6c8a756c17a1a92a066c99860eb57922e8b723da",
                 "shasum": ""
             },
             "require": {
@@ -3383,7 +3383,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-06-16 06:01:15"
+            "time": "2016-07-21 06:55:27"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -4064,6 +4064,12 @@
     ],
     "aliases": [
         {
+            "alias": "1.2",
+            "alias_normalized": "1.2.0.0",
+            "version": "dev-tree-flexible",
+            "package": "makinacorpus/drupal-ucms"
+        },
+        {
             "alias": "1.2.0",
             "alias_normalized": "1.2.0.0",
             "version": "9999999-dev",
@@ -4073,6 +4079,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "makinacorpus/drupal-tooling": 20,
+        "makinacorpus/drupal-ucms": 20,
         "makinacorpus/redis-bundle": 20,
         "pear/console_table": 20,
         "tfd7/tfd7": 20

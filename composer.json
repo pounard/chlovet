@@ -49,7 +49,7 @@
         "makinacorpus/drupal-sf-dic" : "3.0.*",
         "makinacorpus/drupal-tooling" : "dev-master",
         "makinacorpus/drupal-plusql" : "1.0.*",
-        "makinacorpus/drupal-ucms" : "dev-tree-flexible",
+        "makinacorpus/drupal-ucms" : "dev-tree-flexible as 1.2",
         "makinacorpus/drupal-udate" : "1.0.*",
         "makinacorpus/drupal-ulink" : "1.0.*",
         "makinacorpus/drupal-ulog" : "*",
