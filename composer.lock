@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "f1cfdc060982d2c1f2dfa8785a14f0d0",
-    "content-hash": "dd0d46b5b031ec7f908e217d6813c17d",
+    "hash": "1abdb206917579d546f409c5f93da542",
+    "content-hash": "759b6a677feef825d8b1fe708483eaea",
     "packages": [
         {
             "name": "composer/installers",
@@ -859,16 +859,16 @@
         },
         {
             "name": "makinacorpus/drupal-sf-dic",
-            "version": "3.0.11",
+            "version": "3.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-sf-dic.git",
-                "reference": "c936827b4ba7e25149d8e247de6c8bff1dbc971c"
+                "reference": "73c78c2e25bac4b4cc35f847eeb5ce4fbd0395ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/c936827b4ba7e25149d8e247de6c8bff1dbc971c",
-                "reference": "c936827b4ba7e25149d8e247de6c8bff1dbc971c",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/73c78c2e25bac4b4cc35f847eeb5ce4fbd0395ed",
+                "reference": "73c78c2e25bac4b4cc35f847eeb5ce4fbd0395ed",
                 "shasum": ""
             },
             "require": {
@@ -912,7 +912,7 @@
             ],
             "description": "Brings the vanilla Symfony 3 depency inject container component to Drupal 7 seamlessly along with a limited compatibility layer with Drupal 8 API",
             "homepage": "http://github.com/makinacorpus/drupal-sf-dic",
-            "time": "2016-07-22 12:30:41"
+            "time": "2016-07-23 18:11:34"
         },
         {
             "name": "makinacorpus/drupal-tooling",
