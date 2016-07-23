@@ -1,0 +1,51 @@
+# List node type
+field:
+
+  menu_tree:
+    label: Menu
+    type: ucms_widget
+    settings:
+      type: menu_tree
+
+entity:
+  node:
+
+    menu:
+      name: Affichage de menu
+      field:
+        body: ~
+        menu_tree: true
+
+view:
+  node:
+    menu:
+
+      default:
+        menu_tree:
+          type: menu_tree
+          settings: {options: {suggestion: ~}}
+
+      header:
+        menu_tree:
+          type: menu_tree
+          settings: {options: {suggestion: header}}
+
+      footer1:
+        menu_tree:
+          type: menu_tree
+          settings: {options: {suggestion: footer}}
+
+      footer1:
+        menu_tree:
+          type: menu_tree
+          settings: {options: {suggestion: footer}}
+
+      footer1:
+        menu_tree:
+          type: menu_tree
+          settings: {options: {suggestion: footer}}
+
+      footer1:
+        menu_tree:
+          type: menu_tree
+          settings: {options: {suggestion: footer}}

@@ -138,7 +138,7 @@ abstract class AbstractContentList implements ContentListInterface
         ];
 
         $form['order'] = [
-            '#type'           => 'sselect',
+            '#type'           => 'select',
             '#options'        => ['asc' => $this->t("Ascending"), 'desc' => $this->t("Descending")],
             '#title'          => $this->t("Order"),
             '#default_value'  => $options['order'],

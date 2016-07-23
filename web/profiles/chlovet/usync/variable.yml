@@ -1,5 +1,6 @@
 ucms_contrib_component_types:
   - list
+  - menu
   - search
 
 ucms_contrib_editorial_types:
