@@ -40,17 +40,17 @@ view:
           type: menu_tree
           settings: {options: {suggestion: footer}}
 
-      footer1:
+      footer2:
         menu_tree:
           type: menu_tree
           settings: {options: {suggestion: footer}}
 
-      footer1:
+      footer3:
         menu_tree:
           type: menu_tree
           settings: {options: {suggestion: footer}}
 
-      footer1:
+      footer4:
         menu_tree:
           type: menu_tree
           settings: {options: {suggestion: footer}}

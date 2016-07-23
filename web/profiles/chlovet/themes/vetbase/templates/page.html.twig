@@ -12,15 +12,17 @@
         {% if isFrontPage %}
           <p>Au plus proche de vos compagnons</p>
         {% endif %}
-        {% if page.header2 %}
-          {{ page.header2 }}
-        {% endif %}
       </div>
       <div class="col-md-3 col-sm-4 col-xs-12">
         {% if search_url %}
           {{ search.search_form(search_url) }}
         {% endif %}
       </div>
+      {% if page.header2 %}
+        <div class="col-md-12">
+          {{ page.header2 }}
+        </div>
+      {% endif %}
     </div>
   </div>
   {% if menu %}
@@ -103,18 +105,19 @@
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <div class="container-fluid">
-            {% for name in ['footer1', 'footer2', 'footer3', 'footer4'] %}
-              {# always reserve space even if empty #}
-              <div id="{{ name }}" class="col-md-3">
-                {% if page[name] %}
-                  {{ page[name] }}
-                {% endif %}
-              </div>
-            {% endfor %}
-          </div>
+          {% for name in ['footer1', 'footer2', 'footer3', 'footer4'] %}
+            {# always reserve space even if empty #}
+            <div id="{{ name }}" class="col-md-3">
+              {% if page[name] %}
+                {{ page[name] }}
+              {% endif %}
+            </div>
+          {% endfor %}
         </div>
       </div>
     </div>
+  </div>
+  <div id="footer-footer">
+    <a href="{{ url('<front>') }}">{{ site_name }}</a>
   </div>
 </div>

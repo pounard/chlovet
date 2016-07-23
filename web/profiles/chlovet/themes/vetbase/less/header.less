@@ -40,7 +40,6 @@
     margin: 0;
   }
   .form-control {
-    height: auto;
     padding: 0.5em 1em;
     background-color: @header-form-input-bg;
     color: @header-form-input;
@@ -58,6 +57,30 @@
     padding: 0.5em 1em;
     .btn-header();
   }
+
+  #header-menu {
+    .pull-right();
+    margin-top: 16px;
+    > li {
+      float: left;
+      list-style: none;
+      > a {
+        line-height: 20px;
+        padding: @padding-base-vertical @padding-base-horizontal;
+        color: @color-front;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+  &.sticky {
+    #header-menu {
+      display: none;
+    }
+  }
+
   &.sub-page, &.sticky {
     img {
       width: auto;
