@@ -1,12 +1,20 @@
 .typography {
-  p, li {
-    text-align: justify;
+  h2 {
+    color: @color-chlovet-pink-dark;
   }
-  ul {
-    margin-bottom: 0;
-    li {
-      list-style: disc;
-      margin: 0 0 (@line-height-computed / 2);
+  h3 {
+    color: @color-chlovet-pink;
+  }
+  h5 {
+    &::before {
+      line-height: @line-height-computed;
+      width: @line-height-computed;
+      font-size: 75%;
+      top: 0px; // fix positioning
+      text-align: center;
+      .glyphicon();
+      color: @color-chlovet-pink;
+      content: "\e072";
     }
   }
 }
