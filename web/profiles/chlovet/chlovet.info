@@ -31,6 +31,7 @@ dependencies[] = user
 ; Contrib.
 dependencies[] = ckeditor
 dependencies[] = jquery_update
+dependencies[] = telephone
 
 ; Custom modules.
 dependencies[] = filechunk
@@ -61,6 +62,7 @@ dependencies[] = ucms_user
 usync[] = usync/
 usync[] = usync-partial/content.common.yml
 usync[] = usync-partial/content.document.yml
+usync[] = usync-partial/content.contact.yml
 usync[] = usync-partial/content.image.yml
 usync[] = usync-partial/content.list.yml
 usync[] = usync-partial/content.menu.yml

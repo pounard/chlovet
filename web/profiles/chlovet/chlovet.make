@@ -13,6 +13,8 @@ projects[l10n_update][version] = 2.0
 
 ; Contribution
 projects[ckeditor][version] = 1.17
+projects[telephone][version] = 1.0-alpha1
+
 
 ; Other
 projects[jquery_update][version] = 3.0-alpha3

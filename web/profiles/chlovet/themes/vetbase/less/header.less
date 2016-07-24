@@ -1,3 +1,14 @@
+
+.header2-container() {
+  margin-top: 16px;
+}
+.header2-item() {
+  line-height: 20px;
+  padding: @padding-base-vertical @padding-base-horizontal;
+  display: block;
+  position: relative;
+}
+
 #header {
   &.sticky {
     position: fixed;
@@ -6,14 +17,22 @@
     p {
       display: none;
     }
+    border-bottom: 4px solid @color-chlovet-pink-dark;
   }
+
   // Goes over navbars
   z-index: 121;
   background-color: @header-top-bg;
+
   // Banish borders, we want FLAT
   * {
     border: none;
   }
+
+  a {
+    color: @color-front;
+  }
+
   // Fix the title
   h1 {
     a {
@@ -58,28 +77,43 @@
     .btn-header();
   }
 
+  #header2 {
+    > * {
+      .header2-container();
+      float: left;
+      &:last-child {
+        float: right;
+      }
+    }
+    .telephone {
+      .header2-item();
+      padding-left: 0;
+    }
+  }
   #header-menu {
-    .pull-right();
-    margin-top: 16px;
+    margin: 0;
     > li {
       float: left;
       list-style: none;
       > a {
-        line-height: 20px;
-        padding: @padding-base-vertical @padding-base-horizontal;
-        color: @color-front;
+        .header2-item();
         &:hover {
           text-decoration: none;
+        }
+      }
+      &:last-child {
+        > a {
+          padding-right: 0;
         }
       }
     }
   }
 
-  &.sticky {
-    #header-menu {
-      display: none;
-    }
-  }
+//  &.sticky {
+//    #header-menu {
+//      display: none;
+//    }
+//  }
 
   &.sub-page, &.sticky {
     img {

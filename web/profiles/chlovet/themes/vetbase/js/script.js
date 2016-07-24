@@ -23,6 +23,7 @@
      */
   }
 
+
   function onScroll() {
     // Header
     if (header) {

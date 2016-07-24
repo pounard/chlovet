@@ -1,0 +1,51 @@
+field:
+
+  contact_info: '@textfield'
+
+  contact_address:
+    label: Adresse
+    type: address
+    instance:
+      required: true
+
+  contact_position:
+    label: Coordonnées géographiques
+    type: latlon
+    instance:
+      required: true
+
+  contact_telephone:
+    label: Téléphone
+    type: telephone
+    instance:
+      required: true
+
+  contact_schedule:
+    label: Horaires
+    type: schedule
+    instance:
+      description: "Journée complête : saisir sur les 2 premières lignes - Par demi-journée, utiliser les 4 lignes de saisies"
+
+entity:
+  node:
+    contact:
+      name: Informations de contact
+      field:
+        body: ~
+        contact_info: true
+        contact_address: true
+        contact_position: true
+        contact_telephone: true
+        # contact_schedule: true
+
+view:
+  node:
+    contact:
+
+      default:
+        contact_info: true
+        contact_address: true
+        contact_position: true
+        contact_telephone:
+          type: telephone_link
+        # contact_schedule: true

@@ -165,3 +165,10 @@ function chlovet_update_7001() {
   chlovet_install_french();
   chlovet_install_ckeditor();
 }
+
+/**
+ * Enables the telephone module.
+ */
+function chlovet_update_7002() {
+  module_enable(['telephone']);
+}

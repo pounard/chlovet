@@ -1,4 +1,5 @@
 ucms_contrib_component_types:
+  - contact
   - list
   - menu
   - search

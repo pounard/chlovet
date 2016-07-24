@@ -206,6 +206,10 @@ function vetbase_preprocess_block(&$variables) {
  */
 function vetbase_preprocess_region(&$variables) {
 
+  if ('header2' === $variables['region']) {
+    $variables['attributes_array']['class'][] = 'col-md-12';
+  }
+
   unset($variables['theme_hook_suggestions']);
   $variables['theme_hook_suggestions'][] = 'region';
   $variables['theme_hook_suggestions'][] = 'region__' . $variables['region'];
