@@ -12,13 +12,15 @@
   }
   article {
     .clearfix();
-    border-left: 2px solid @color-chlovet-pink;
+    background-color: @color-chlovet-footer-bg;
+    border-left: 2px solid @color-chlovet-blue;
     // Align with grid, gutters, and navigation
-    padding: 0 @padding-large-horizontal;
+    padding: @padding-large-vertical @padding-large-horizontal;
     margin-left: @padding-large-horizontal;
     h1 {
       font-size: @font-size-h3;
-      margin-bottom: ceil(@line-height-computed / 2)
+      margin-bottom: ceil(@line-height-computed / 2);
+      color: @color-chlovet-blue;
     }
     .image {
       width: 33%;
