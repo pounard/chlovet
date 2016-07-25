@@ -1,1 +1,5 @@
-{% extends 'theme:vetbase:templates/node/node--contact.html.twig' %}
+<section class="{{ classes }}"{{ attributes }}>
+  {% if content.contact_telephone %}
+    <span class="telephone">Tél&nbsp;: {{ content.contact_telephone }}</span>
+  {% endif %}
+</section>

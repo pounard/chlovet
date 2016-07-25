@@ -1,4 +1,4 @@
-(function ($) {
+(function ($, D) {
   "use strict";
 
   if (!window.getComputedStyle) {
@@ -56,4 +56,4 @@
   window.addEventListener('load', onLoad);
   window.addEventListener('scroll', onScroll);
 
-}(jQuery));
+}(jQuery, Drupal));

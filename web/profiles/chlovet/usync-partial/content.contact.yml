@@ -45,7 +45,15 @@ view:
       default:
         contact_info: true
         contact_address: true
-        contact_position: true
+        contact_position:
+          type: latlonfield_leaflet
+          settings:
+            id: map-contact
+            map: {zoomControl: false}
+            zoom: 17
+            maxZoom: 17,
+            minZoom: 17,
+            attribution: '© <a href="http://openstreetmap.org">OSM</a>'
         contact_telephone:
           type: telephone_link
         # contact_schedule: true

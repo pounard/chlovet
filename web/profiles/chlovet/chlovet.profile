@@ -4,6 +4,11 @@
  */
 
 /**
+ * Register custom field formatters.
+ */
+require_once __DIR__ . '/chlovet.field_formatters.inc';
+
+/**
  * Implements hook_page_build().
  */
 function chlovet_page_build() {

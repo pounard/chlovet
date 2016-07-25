@@ -1,3 +1,10 @@
+.front-media() {
+  max-height: 200px;
+  height: 200px;
+  overflow: hidden;
+  display: block;
+}
+
 .front-pane {
   > .container {
     padding-top: 100px;
@@ -22,16 +29,10 @@
     font-weight: bold;
   }
   h2 {
-    font-size: 1.3em;
-    font-weight: bold;
-    margin: 0;
-    margin-bottom: 1em;
+    .block-title();
   }
   media {
-    max-height: 200px;
-    height: 200px;
-    overflow: hidden;
-    display: block;
+    .front-media();
   }
   hr {
     display: block;
@@ -41,6 +42,10 @@
     width: 15%;
     margin: 1em auto 2em;
     border-radius: 2px;
+  }
+
+  #map-contact {
+    .front-media();
   }
 }
 
@@ -61,20 +66,6 @@
 
 #front2 {
   .front-pane(@front2-bg, @front2-color, @front2-hr);
-  // We are going to make this one special!
-  media {
-    max-height: 100vh;
-    height: auto;
-  }
-  h2 {
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    padding: 1em;
-    text-shadow: 0px 1px 1px @color-wet-asphalt;
-  }
 }
 
 #front3 {

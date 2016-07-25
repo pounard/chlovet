@@ -1,5 +1,14 @@
+{% set length = nodes|length  %}
 {% for node in nodes %}
-  <div class="col-md-3 col-sm-6 col-xs-12">
+  {% if length == 1 %}
+    <div class="col-xs-12">
+  {% elseif length == 2 %}
+    <div class="col-sm-6 col-xs-12">
+  {% elseif length == 3 %}
+    <div class="col-md-4 col-sm-6 col-xs-12">
+  {% else %}
+    <div class="col-md-3 col-sm-6 col-xs-12">
+  {% endif %}
     {{ node_view(node, view_mode) }}
   </div>
 {% endfor %}

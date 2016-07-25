@@ -206,8 +206,18 @@ function vetbase_preprocess_block(&$variables) {
  */
 function vetbase_preprocess_region(&$variables) {
 
-  if ('header2' === $variables['region']) {
-    $variables['attributes_array']['class'][] = 'col-md-12';
+  switch ($variables['region']) {
+
+    case 'header2':
+      $variables['attributes_array']['class'][] = 'col-md-12';
+      break;
+
+    case 'front1':
+    case 'front2':
+    case 'front3':
+    case 'front4':
+      $variables['attributes_array']['class'][] = 'row';
+      break;
   }
 
   unset($variables['theme_hook_suggestions']);
@@ -235,6 +245,22 @@ function vetbase_preprocess_node(&$variables) {
 
   if ($variables['page']) {
     _vatbase_add_menus($variables);
+  }
+
+  if (in_array($view_mode, ['front1', 'front2', 'front3', 'front4'])) {
+    switch ($node->type) {
+
+      case 'list': // List will expand 100%
+        break;
+
+      case 'contact':
+        $variables['classes_array'][] = 'col-md-8';
+        break;
+
+      default: // Default is to be 3rd or 4th of div width
+        $variables['classes_array'][] = 'col-md-4';
+        break;
+    }
   }
 
   switch ($node->type) {

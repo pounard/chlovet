@@ -93,7 +93,7 @@ function ucms_widget_field_formatter_settings_form($field, $instance, $view_mode
  * Implements hook_field_formatter_settings_summary().
  */
 function ucms_widget_field_formatter_settings_summary($field, $instance, $view_mode) {
-  return t("...");
+  return "&hellip";
 }
 
 /**

@@ -5,6 +5,12 @@
 // Fouque gutters
 //@grid-gutter-width: 0;
 
+@zindex-leaflet: 1000;
+@zindex-base: ceil(@zindex-leaflet + 100);
+@zindex-admin-contextual-pane: ceil(@zindex-base + 1);
+@zindex-admin-navbar: ceil(@zindex-admin-contextual-pane + 1);
+@zindex-header: ceil(@zindex-admin-contextual-pane - 1);
+
 // We don't want borders
 @border-radius-base: 0;
 @border-radius-large: 0;

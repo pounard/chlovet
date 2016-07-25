@@ -1,12 +1,10 @@
 <article class="{{ classes }}"{{ attributes }}>
   <a href="{{ node_url }}">
+    <h2>{{ title }}</h2>
     {% block content %}
       {{ content|without(['body','links','comments']) }}
     {% endblock %}
     {{ title_prefix }}
-    <h2>
-      {{ title }}
-    </h2>
     {{ title_suffix }}
   </a>
 </article>
