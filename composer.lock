@@ -750,16 +750,16 @@
         },
         {
             "name": "makinacorpus/drupal-latlonfield",
-            "version": "1.0.2",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-latlonfield.git",
-                "reference": "50857b40a9d0d5c45fb0adec1f61e73a2e496e4d"
+                "reference": "e7ea27c248162b4fb1d2dfeddcf63c0bdb14a676"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-latlonfield/zipball/50857b40a9d0d5c45fb0adec1f61e73a2e496e4d",
-                "reference": "50857b40a9d0d5c45fb0adec1f61e73a2e496e4d",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-latlonfield/zipball/e7ea27c248162b4fb1d2dfeddcf63c0bdb14a676",
+                "reference": "e7ea27c248162b4fb1d2dfeddcf63c0bdb14a676",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -784,7 +784,7 @@
             ],
             "description": "Very simple latitude/longitude storage field",
             "homepage": "http://github.com/makinacorpus/drupal-latlonfield",
-            "time": "2016-06-24 11:06:09"
+            "time": "2016-07-24 16:18:38"
         },
         {
             "name": "makinacorpus/drupal-minidialog",
@@ -1027,12 +1027,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ucms.git",
-                "reference": "4388dfa1e01b686c029fd2aebee7d7a4236a03f9"
+                "reference": "aff8ecd55ceaa25b482dff1e60db0c42f4dde68c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/4388dfa1e01b686c029fd2aebee7d7a4236a03f9",
-                "reference": "4388dfa1e01b686c029fd2aebee7d7a4236a03f9",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/aff8ecd55ceaa25b482dff1e60db0c42f4dde68c",
+                "reference": "aff8ecd55ceaa25b482dff1e60db0c42f4dde68c",
                 "shasum": ""
             },
             "require": {
@@ -1079,7 +1079,7 @@
                 "source": "https://github.com/makinacorpus/drupal-ucms/tree/tree-flexible",
                 "issues": "https://github.com/makinacorpus/drupal-ucms/issues"
             },
-            "time": "2016-07-23 16:25:53"
+            "time": "2016-07-25 11:20:56"
         },
         {
             "name": "makinacorpus/drupal-udate",
