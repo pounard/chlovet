@@ -96,7 +96,12 @@ abstract class AbstractContentList implements ContentListInterface
         ];
     }
 
-    protected function getViewModeList()
+    /**
+     * Get view mode list
+     *
+     * @return string[]
+     */
+    private function getViewModeList()
     {
         $ret = [];
         $entityInfo = entity_get_info('node');
