@@ -1,4 +1,16 @@
 .block-title() {
   font-size: @font-size-h3;
-  color: @color-chlovet-footer;
+  &, a {
+    color: @color-chlovet-footer;
+  }
+  a {
+    &, &:hover {
+      text-decoration: none;
+    }
+  }
+}
+
+.highlight-block() {
+  .clearfix();
+  background-color: @color-chlovet-footer-bg;
 }

@@ -1,0 +1,27 @@
+<article class="{{ classes }}"{{ attributes }}>
+  <div class="row">
+    <div class="col-md-3">
+      {% if content.page_image %}
+        {{ content.page_image }}
+      {% endif %}
+      {% if content.news_image %}
+        {{ content.news_image }}
+      {% endif %}
+    </div>
+    <div class="col-md-9">
+      {{ title_prefix }}
+      <h2><a href="{{ node_url }}">{{ title }}</a></h2>
+      {{ title_suffix }}
+      {% if content.page_teaser %}
+        {{ content.page_teaser }}
+      {% elseif content.news_teaser %}
+        {{ content.news_teaser }}
+      {% elseif content.page_body %}
+        {{ content.page_body }}
+      {% elseif content.news_body %}
+        {{ content.news_body }}
+      {% endif %}
+    </div>
+  </div>
+  <hr/>
+</article>

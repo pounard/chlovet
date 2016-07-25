@@ -1,14 +1,13 @@
 .front-media() {
-  max-height: 200px;
-  height: 200px;
+  max-height: @front-media-height;
+  height: @front-media-height;
   overflow: hidden;
   display: block;
 }
 
 .front-pane {
   > .container {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding: 100px 0;
   }
   img {
     width: 100%;
@@ -46,6 +45,23 @@
 
   #map-contact {
     .front-media();
+  }
+
+  .node-contact {
+    // node contact has a col-* in a col-* which makes double padding
+    // and breaks gutters, fix that
+    padding: 0;
+  }
+
+  .address-highlight {
+    .highlight-block();
+    padding: @padding-large-vertical @padding-large-horizontal;
+    height: @front-media-height;
+    min-height: @front-media-height;
+    .telephone {
+      display: block;
+      margin-bottom: ceil(@line-height-computed / 2);
+    }
   }
 }
 

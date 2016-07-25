@@ -33,7 +33,7 @@ view:
     news:
 
       default:
-        news_image: '@media_view_default'
+        news_image: '@media_view_small'
         news_body: '@text_view_trimmed'
         news_teaser: true
 

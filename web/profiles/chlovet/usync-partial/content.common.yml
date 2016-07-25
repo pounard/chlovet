@@ -29,11 +29,20 @@ macro:
     type: unoderef
     settings:
       view_mode: default
+      viewport: 60
+
+  media_view_small:
+    type: unoderef
+    settings:
+      view_mode: default
+      viewport: 30
 
   text_view_trimmed:
-    type: text_trimmed
+    type: chlovet_htmlawed
     settings:
-      trim_length: 400
+      config: ~
+      spec: ''
+      trim: 400
 
 field:
 

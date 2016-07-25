@@ -10,11 +10,13 @@
     <div class="col-xs-12">
   {% endif %}
     <h2>Nous contacter</h2>
-    {% if content.contact_telephone %}
-      <span class="telephone">Tél&nbsp;: {{ content.contact_telephone }}</span>
-    {% endif %}
-    {% if content.contact_address %}
-      {{ content.contact_address }}
-    {% endif %}
+    <div class="address-highlight">
+      {% if content.contact_telephone %}
+        <span class="telephone">Tél&nbsp;: {{ content.contact_telephone }}</span>
+      {% endif %}
+      {% if content.contact_address %}
+        {{ content.contact_address }}
+      {% endif %}
+    </div>
   </div>
 </article>
