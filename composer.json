@@ -7,10 +7,6 @@
         {
             "name" : "Pierre Rineau",
             "email" : "pierre.rineau@makina-corpus.com"
-        },
-        {
-            "name" : "Makina Corpus",
-            "homepage" : "http://makina-corpus.com"
         }
     ],
     "repositories": [
@@ -88,9 +84,12 @@
         }
     },
     "autoload-dev" : {
+        "files" : [
+            "app/AppKernel.php"
+        ],
         "psr-4" : {
             "Tests\\" : "tests/",
-            "Chlovet\\Profile\\" : "web/profiles/chlovet/src"
+            "Chlovet\\" : "src"
         }
     }
 }

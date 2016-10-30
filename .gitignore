@@ -64,11 +64,15 @@ web/sites/README.txt
 # Ignore binaries from composer
 bin/behat
 bin/boris
+bin/console
 bin/drush.bat
 bin/drush.complete.sh
+bin/drush.launcher
 bin/drush.php
 bin/lessc
 bin/phpunit
+bin/php-parse
+bin/psysh
 
 # npm modules
 node_modules

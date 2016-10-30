@@ -1,0 +1,16 @@
+
+filechunk:
+    resource: "@FilechunkBundle/Resources/config/routing.yml"
+    prefix: /
+
+autocomplete:
+    resource: "@AutocompleteBundle/Resources/config/routing.yml"
+    prefix: /
+
+saur_form:
+    resource: "@SaurFormBundle/Resources/config/routing/testing.yml"
+    prefix: /form/
+
+saur_form_admin:
+    resource: "@SaurFormBundle/Resources/config/routing/admin.yml"
+    prefix: /
