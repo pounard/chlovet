@@ -16,11 +16,19 @@
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/drupal-ucms.git"
+            "url" : "git@github.com:makinacorpus/apubsub.git"
+        },
+        {
+            "type" : "vcs",
+            "url" : "git@github.com:makinacorpus/drupal-apubsub.git"
         },
         {
             "type" : "vcs",
             "url" : "git@github.com:makinacorpus/drupal-ulog.git"
+        },
+        {
+            "type" : "vcs",
+            "url" : "git@github.com:makinacorpus/drupal-ucms.git"
         },
         {
             "type" : "vcs",
@@ -37,8 +45,8 @@
         "composer/installers" : "^1.0.20",
         "cweagans/composer-patches" : "~1.0",
         "drush/drush": "8.*",
-        "makinacorpus/apubsub" : "4.0.0",
-        "makinacorpus/drupal-apubsub" : "4.0.0",
+        "makinacorpus/apubsub" : "dev-master as 4.0.0",
+        "makinacorpus/drupal-apubsub" : "dev-master as 4.0.0",
         "makinacorpus/drupal-badm" : "1.0.*",
         "makinacorpus/drupal-filechunk" : "1.0.*",
         "makinacorpus/drupal-gulpifier" : "1.0.*",
@@ -89,6 +97,7 @@
         ],
         "psr-4" : {
             "Tests\\" : "tests/",
+            "MakinaCorpus\\Ucms\\Tag\\" : "web/sites/all/modules/composer/drupal-ucms/ucms_tag/src",
             "Chlovet\\" : "src"
         }
     }

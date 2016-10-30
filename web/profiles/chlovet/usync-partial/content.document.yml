@@ -21,7 +21,8 @@ entity:
       field:
         body: ~
         file: true
-        labels: true
+        # labels: true
+        labels: ~
 
 view:
   node:

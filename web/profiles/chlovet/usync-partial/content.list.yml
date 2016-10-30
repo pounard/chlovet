@@ -59,3 +59,6 @@ view:
             options:
               view_mode: front4
               limit: 4
+
+      favorite: {}
+      contentadmin: {}

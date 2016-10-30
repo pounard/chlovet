@@ -251,6 +251,7 @@ function vetbase_preprocess_node(&$variables) {
     switch ($node->type) {
 
       case 'list': // List will expand 100%
+      case 'highlight':
         break;
 
       case 'contact':

@@ -12,9 +12,6 @@ view:
     image:
 
       default: {}
-
-      teaser:
-        inherit: default
-
-      favorite:
-        inherit: default
+      teaser: {}
+      favorite: {}
+      contentadmin: {}

@@ -1,0 +1,58 @@
+# Home hightlight
+field:
+
+  list_highlight:
+    label: Content
+    type: unoderef
+    cardinality: -1
+    widget:
+      type: unoderef
+      settings:
+        bundles: [page, news]
+        view_mode: favorite
+
+entity:
+  node:
+
+    highlight:
+      name: Tuile de page d'accueil
+      field:
+        body: ~
+        list_highlight: true
+
+view:
+  node:
+    highlight:
+
+      default:
+        list_highlight:
+          type: unoderef
+          settings:
+            view_mode: teaser
+
+      front1:
+        list_highlight:
+          type: unoderef
+          settings:
+            view_mode: front1
+
+      front2:
+        list_highlight:
+          type: unoderef
+          settings:
+            view_mode: front2
+
+      front3:
+        list_highlight:
+          type: unoderef
+          settings:
+            view_mode: front3
+
+      front4:
+        list_highlight:
+          type: unoderef
+          settings:
+            view_mode: front4
+
+      favorite: {}
+      contentadmin: {}

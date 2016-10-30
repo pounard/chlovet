@@ -57,3 +57,6 @@ view:
         contact_telephone:
           type: telephone_link
         # contact_schedule: true
+
+      favorite: {}
+      contentadmin: {}

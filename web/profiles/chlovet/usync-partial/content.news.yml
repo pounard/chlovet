@@ -26,7 +26,8 @@ entity:
         biblio: true
         content_author: true
         content_date: true
-        labels: true
+        # labels: true
+        labels: ~
 
 view:
   node:
@@ -52,3 +53,6 @@ view:
         news_image: '@media_view_default'
       front4:
         news_image: '@media_view_default'
+
+      favorite: {}
+      contentadmin: {}
