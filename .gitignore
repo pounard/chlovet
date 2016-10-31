@@ -95,6 +95,7 @@ node_modules
 .idea
 .DS_Store
 *.DS_Store
+backup
 nbproject
 .hg
 atlassian-ide-plugin.xml
