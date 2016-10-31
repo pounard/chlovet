@@ -60,7 +60,7 @@
         "makinacorpus/drupal-udate" : "1.0.*",
         "makinacorpus/drupal-ulink" : "^2.0",
         "makinacorpus/drupal-ulog" : "dev-master",
-        "makinacorpus/drupal-umenu" : "^1",
+        "makinacorpus/drupal-umenu" : "^1.1.6",
         "makinacorpus/drupal-unoderef" : "1.0.*",
         "makinacorpus/drupal-usync" : "1.0.*",
         "makinacorpus/redis-bundle" : "dev-master",
