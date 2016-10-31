@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "2444716185f6e7450b10a7939019d3d4",
-    "content-hash": "c376b5ea007d4e3f5a4d98655ebdbc16",
+    "hash": "a594ee3ce19c534df0dc5d630153af25",
+    "content-hash": "4974b72ee7205f82eac0f18f0acbe7f0",
     "packages": [
         {
             "name": "composer/installers",
@@ -1475,12 +1475,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ucms.git",
-                "reference": "cc67aa14a4eca1df272bb74e362374016093a22c"
+                "reference": "9e096976236467d5e8ee8b966bc2219ddf58e53d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/cc67aa14a4eca1df272bb74e362374016093a22c",
-                "reference": "cc67aa14a4eca1df272bb74e362374016093a22c",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/9e096976236467d5e8ee8b966bc2219ddf58e53d",
+                "reference": "9e096976236467d5e8ee8b966bc2219ddf58e53d",
                 "shasum": ""
             },
             "require": {
@@ -1551,7 +1551,7 @@
                 "source": "https://github.com/makinacorpus/drupal-ucms/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-ucms/issues"
             },
-            "time": "2016-10-30 14:13:55"
+            "time": "2016-10-31 10:17:20"
         },
         {
             "name": "makinacorpus/drupal-udate",
@@ -1588,16 +1588,16 @@
         },
         {
             "name": "makinacorpus/drupal-ulink",
-            "version": "2.0.2",
+            "version": "2.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ulink.git",
-                "reference": "fbd84be7a8857b918c1b39d3e1310e1538cb5247"
+                "reference": "c68adfb7f706f97504c5f458bae89a405a044fa2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ulink/zipball/fbd84be7a8857b918c1b39d3e1310e1538cb5247",
-                "reference": "fbd84be7a8857b918c1b39d3e1310e1538cb5247",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ulink/zipball/c68adfb7f706f97504c5f458bae89a405a044fa2",
+                "reference": "c68adfb7f706f97504c5f458bae89a405a044fa2",
                 "shasum": ""
             },
             "require": {
@@ -1625,7 +1625,7 @@
             ],
             "description": "Provide some input filters for making links, along with an optional CKEditor plugin",
             "homepage": "http://github.com/makinacorpus/drupal-ulink",
-            "time": "2016-10-19 15:00:15"
+            "time": "2016-10-31 12:23:27"
         },
         {
             "name": "makinacorpus/drupal-ulog",
