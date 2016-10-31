@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5119753f6c97b2e8b8f4868abefdfefa",
-    "content-hash": "7d4b204a233307d53fc510c5b31ca4e0",
+    "hash": "2444716185f6e7450b10a7939019d3d4",
+    "content-hash": "c376b5ea007d4e3f5a4d98655ebdbc16",
     "packages": [
         {
             "name": "composer/installers",
@@ -1665,16 +1665,16 @@
         },
         {
             "name": "makinacorpus/drupal-umenu",
-            "version": "1.1.5",
+            "version": "1.1.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-umenu.git",
-                "reference": "64099659c7fe8b1659f9c39063512e0b7ee948e7"
+                "reference": "01a07c39e84bd490112cababd8175b633e7e4fbb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/64099659c7fe8b1659f9c39063512e0b7ee948e7",
-                "reference": "64099659c7fe8b1659f9c39063512e0b7ee948e7",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/01a07c39e84bd490112cababd8175b633e7e4fbb",
+                "reference": "01a07c39e84bd490112cababd8175b633e7e4fbb",
                 "shasum": ""
             },
             "require": {
@@ -1704,7 +1704,7 @@
             ],
             "description": "Drupal core menu module replacement that does not attach to node types",
             "homepage": "http://github.com/makinacorpus/drupal-umenu",
-            "time": "2016-09-08 09:48:08"
+            "time": "2016-10-31 11:49:25"
         },
         {
             "name": "makinacorpus/drupal-unoderef",
