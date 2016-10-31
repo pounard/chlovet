@@ -46,11 +46,12 @@ function vetbase_preprocess_ucms_layout_item(&$vars) {
 function _vatbase_add_menus(&$variables) {
 
   $siteManager  = ucms_site_manager();
+  $menuManager  = umenu_get_manager();
   $hasContext   = $siteManager->hasContext();
   $siteContext  = $hasContext ? $siteManager->getContext() : null;
 
   if ($siteContext) {
-    $menuTree = umenu_get_manager()->buildTree('site-main-' . $siteContext->getId());
+    $menuTree = $menuManager->buildTree('site-main-' . $siteContext->getId());
 
     // Main menu
     if ($menuTree) {
@@ -60,32 +61,44 @@ function _vatbase_add_menus(&$variables) {
       ];
     }
 
-    if ($menuTree && ($node = menu_get_object())) {
-      $menuCurrent = $menuTree->getMostRevelantItemForNode($node->nid);
+    if ($node = menu_get_object()) {
 
-      // Child entries
-      if ($menuCurrent && $menuCurrent->hasChildren()) {
-        $variables['menu_children'] = [
-          '#tree'  => $menuCurrent,
-          '#theme' => 'umenu__children',
-        ];
+      if ($menuTree && $menuTree->hasNodeItems($node->nid)) {
+        // By default, proceed to lookup in the main menu
+        $nodeTree = $menuTree;
+      } else {
+        // If node is not in main menu, find preferred menu for node
+        // using the menu manager
+        $nodeTree = $menuManager->findTreeForNode($node->nid);
       }
 
-      // Create siblings
-      if ($menuCurrent && $menuCurrent->getParentId()) {
-        $variables['menu_siblings'] = [
-          '#tree'     => $menuTree->getItemById($menuCurrent->getParentId()),
-          '#current'  => $menuCurrent->getNodeId(),
-          '#theme'    => 'umenu__siblings',
-        ];
-      }
+      if ($nodeTree) {
+        $menuCurrent = $nodeTree->getMostRevelantItemForNode($node->nid);
 
-      if ($menuCurrent) {
-        $variables['menu_navigation'] = [
-          '#tree'     => $menuTree,
-          '#current'  => $menuCurrent->getNodeId(),
-          '#theme'    => 'umenu__navigation',
-        ];
+        // Child entries
+        if ($menuCurrent && $menuCurrent->hasChildren()) {
+          $variables['menu_children'] = [
+            '#tree'  => $menuCurrent,
+            '#theme' => 'umenu__children',
+          ];
+        }
+
+        // Create siblings
+        if ($menuCurrent && $menuCurrent->getParentId()) {
+          $variables['menu_siblings'] = [
+            '#tree'     => $nodeTree->getItemById($menuCurrent->getParentId()),
+            '#current'  => $menuCurrent->getNodeId(),
+            '#theme'    => 'umenu__siblings',
+          ];
+        }
+
+        if ($menuCurrent) {
+          $variables['menu_navigation'] = [
+            '#tree'     => $nodeTree,
+            '#current'  => $menuCurrent->getNodeId(),
+            '#theme'    => 'umenu__navigation',
+          ];
+        }
       }
     }
   }
