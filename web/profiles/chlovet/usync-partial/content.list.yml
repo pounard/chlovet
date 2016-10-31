@@ -15,6 +15,7 @@ entity:
       field:
         body: ~
         list_type: true
+        menu_hide_bottom: true
 
 view:
   node:

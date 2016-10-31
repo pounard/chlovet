@@ -75,6 +75,16 @@ field:
         collectTime: true
         granularity: 1
 
+  menu_hide_bottom:
+    label: Cacher les enfants en bas de la page
+    type: list_boolean
+    settings:
+      allowed_values:
+        0: Afficher les enfants en bas de la page
+        1: Cacher les enfants en bas de la page
+    widget:
+      type: options_onoff
+
   labels:
     label: Labels
     type: taxonomy_term_reference

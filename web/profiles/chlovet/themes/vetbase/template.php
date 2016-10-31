@@ -75,8 +75,16 @@ function _vatbase_add_menus(&$variables) {
       if ($nodeTree) {
         $menuCurrent = $nodeTree->getMostRevelantItemForNode($node->nid);
 
+        $displayChildren = true;
+
+        if ($items = field_get_items('node', $node, 'menu_hide_bottom')) {
+          if ($items[0]['value']) {
+            $displayChildren = false;
+          }
+        }
+
         // Child entries
-        if ($menuCurrent && $menuCurrent->hasChildren()) {
+        if ($displayChildren && $menuCurrent && $menuCurrent->hasChildren()) {
           $variables['menu_children'] = [
             '#tree'  => $menuCurrent,
             '#theme' => 'umenu__children',

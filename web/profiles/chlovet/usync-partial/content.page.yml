@@ -28,6 +28,7 @@ entity:
         content_date: true
         # labels: true
         labels: ~
+        menu_hide_bottom: true
 
 view:
   node:

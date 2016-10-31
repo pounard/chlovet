@@ -37,6 +37,7 @@ entity:
         contact_position: true
         contact_telephone: true
         # contact_schedule: true
+        menu_hide_bottom: true
 
 view:
   node:

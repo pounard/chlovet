@@ -19,6 +19,7 @@ entity:
       field:
         body: ~
         list_highlight: true
+        menu_hide_bottom: true
 
 view:
   node:
