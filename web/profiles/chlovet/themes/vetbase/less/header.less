@@ -1,7 +1,4 @@
 
-.header2-container() {
-  margin-top: 16px;
-}
 .header2-item() {
   line-height: 20px;
   padding: @padding-base-vertical @padding-base-horizontal;
@@ -41,8 +38,11 @@
       }
       color: @color-clouds;
     }
+    .header2-item();
     margin: 0;
+    padding-left: 0;
     text-shadow: 1px 1px 1px black;
+    font-size: @font-size-h4;
   }
   // Coloring
   > div {
@@ -51,45 +51,13 @@
     background-color: @header-inner-bg;
     color: @header-inner;
   }
-  // Deal with search form positionning and display
-  form {
-    .pull-right();
-  }
-  .form-group {
-    margin: 0;
-  }
-  .form-control {
-    padding: 0.5em 1em;
-    background-color: @header-form-input-bg;
-    color: @header-form-input;
-    &:focus {
-      // Reset bootstrap default
-      border-color: none;
-      outline: 0;
-      .box-shadow(0 0 0);
-      // And go with our own
-      background-color: @header-form-input-focus-bg;
-      color: @header-form-input-focus;
-    }
-  }
-  .btn {
-    padding: 0.5em 1em;
-    .btn-header();
-  }
 
   #header2 {
-    > * {
-      .header2-container();
-      float: left;
-      &:last-child {
-        float: right;
-      }
-    }
-    .telephone {
-      .header2-item();
-      padding-left: 0;
+    ul {
+      float: right;
     }
   }
+
   #header-menu {
     margin: 0;
     > li {
@@ -106,25 +74,6 @@
           padding-right: 0;
         }
       }
-    }
-  }
-
-//  &.sticky {
-//    #header-menu {
-//      display: none;
-//    }
-//  }
-
-  &.sub-page, &.sticky {
-    img {
-      width: auto;
-      height: 50px;
-    }
-    h1 {
-      font-size: 1.5em;
-    }
-    > div {
-      padding: @padding-large-vertical @padding-large-horizontal;
     }
   }
 }

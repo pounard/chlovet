@@ -2,25 +2,26 @@
 <div id="page">
   <div id="header" class="container-fluid{% if not isFrontPage %} sub-page{% endif %}">
     <div class="container">
-      <div class="col-md-9 col-sm-8 col-xs-12">
-        {% if page.header %}
-          {{ page.header }}
-        {% endif %}
-        {% if site_name %}
-          <h1><a href="{{ url('<front>') }}">{{ site_name }}</a></h1>
-        {% endif %}
-        {% if isFrontPage %}
-          <p>Au plus proche de vos compagnons</p>
+      <div class="row">
+        {% if page.header2 %}
+          <div class="col-sm-6 col-xs-12">
+            {% if page.header %}{{ page.header }}{% endif %}
+            {% if site_name %}
+              <h1><a href="{{ url('<front>') }}">{{ site_name }}</a></h1>
+            {% endif %}
+          </div>
+          <div class="col-sm-6 col-xs-12">
+            {{ page.header2 }}
+          </div>
+        {% else %}
+          <div class="col-xs-12">
+            {% if page.header %}{{ page.header }}{% endif %}
+            {% if site_name %}
+              <h1><a href="{{ url('<front>') }}">{{ site_name }}</a></h1>
+            {% endif %}
+          </div>
         {% endif %}
       </div>
-      <div class="col-md-3 col-sm-4 col-xs-12">
-        {% if search_url %}
-          {{ search.search_form(search_url) }}
-        {% endif %}
-      </div>
-      {% if page.header2 %}
-        {{ page.header2 }}
-      {% endif %}
     </div>
   </div>
   {% if menu %}
