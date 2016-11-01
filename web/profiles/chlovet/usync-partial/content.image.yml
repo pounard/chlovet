@@ -13,6 +13,10 @@ field:
         title_field: true
         file_directory: images
 
+#  media_licence:
+#  media_author:
+#  media_source:
+
 entity:
   node:
 
