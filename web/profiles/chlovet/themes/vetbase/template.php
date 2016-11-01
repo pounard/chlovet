@@ -43,12 +43,13 @@ function vetbase_preprocess_ucms_layout_item(&$vars) {
 /**
  * Append current page menus to template variables.
  */
-function _vatbase_add_menus(&$variables) {
+function _vetbase_add_menus(&$variables) {
 
   $siteManager  = ucms_site_manager();
   $menuManager  = umenu_get_manager();
   $hasContext   = $siteManager->hasContext();
   $siteContext  = $hasContext ? $siteManager->getContext() : null;
+  $node         = null;
 
   if ($siteContext) {
     $menuTree = $menuManager->buildTree('site-main-' . $siteContext->getId());
@@ -108,6 +109,20 @@ function _vatbase_add_menus(&$variables) {
           ];
         }
       }
+    }
+
+    // Also attempt to load the header menu
+    $headerMenu = $menuManager->getMenuStorage()->loadWithConditions([
+      'site_id' => $siteContext->getId(),
+      'role'    => 'header',
+    ]);
+    if ($headerMenu) {
+      $headerMenu = reset($headerMenu);
+      $variables['menu_header'] = [
+        '#tree'     => $menuManager->buildTree($headerMenu->getId()),
+        '#current'  => $node ? $node->nid : null,
+        '#theme'    => 'umenu__header',
+      ];
     }
   }
 }
@@ -172,7 +187,7 @@ function vetbase_preprocess_page(&$variables) {
     }
   }
 
-  _vatbase_add_menus($variables);
+  _vetbase_add_menus($variables);
 }
 
 /**
@@ -265,7 +280,7 @@ function vetbase_preprocess_node(&$variables) {
   $view_mode = $variables['view_mode'];
 
   if ($variables['page']) {
-    _vatbase_add_menus($variables);
+    _vetbase_add_menus($variables);
   }
 
   if (in_array($view_mode, ['front1', 'front2', 'front3', 'front4'])) {

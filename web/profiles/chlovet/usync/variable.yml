@@ -29,6 +29,7 @@ ucms_layout_regions_vetbase:
   front3: 1
   front4: 1
   banner: 1
+  banner_right: 1
   left: 1
   content: 1
   topleft: 1
@@ -67,6 +68,9 @@ ucms_site_state_transition_matrix:
     200: {3: 3, 4: 4}
 
 ucms_search_cron_limit: 500
+
+umenu_allowed_roles:
+  header: Header
 
 # Few Drupal core variables
 user_register: 0

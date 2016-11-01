@@ -1,12 +1,13 @@
+{# This template does not care about children and recursion #}
 {% if tree.children %}
-  <ul id="header-menu">
+  <ul class="nav navbar-nav navbar-right">
     {% for item in tree.children %}
       {% if current == item.nodeId %}
-        <li role="presentation" class="active">
+        <li class="active">
           <a href="{{ url(item.route) }}">{{ item.title }}</a>{{ umenu.tree(item, current) }}
         </li>
       {% else %}
-        <li role="presentation">
+        <li>
           <a href="{{ url(item.route) }}">{{ item.title }}</a>{{ umenu.tree(item, current) }}
         </li>
       {% endif %}

@@ -7,6 +7,7 @@ regions[header] = Header
 regions[header2] = Header, below title
 regions[menu] = Menu
 regions[banner] = Banner
+regions[banner_right] = Banner right column
 regions[front1] = Front page first
 regions[front2] = Front page second
 regions[front3] = Front page third
