@@ -1,6 +1,8 @@
 <section class="{{ classes }}"{{ attributes }}>
-  <h1>Nous situer</h&>
-  {{ content.contact_position }}
+  {% if content.contact_position %}
+    <h1>Nous situer</h1>
+    {{ content.contact_position }}
+  {% endif %}
   <h1>Nous contacter</h1>
   {% if content.contact_telephone %}
     <span class="telephone">Tél&nbsp;: {{ content.contact_telephone }}</span>

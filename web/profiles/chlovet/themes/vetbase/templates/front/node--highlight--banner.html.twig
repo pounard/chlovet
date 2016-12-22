@@ -1,0 +1,17 @@
+<section class="{{ classes }} clearfix"{{ attributes }}>
+  {{ title_prefix }}
+  <h1>
+    <a href="{{ node_url }}">{{ title }}</a>
+  </h1>
+  <hr/>
+  {{ title_suffix }}
+  {% block content %}
+    {% if content.list_highlight %}
+      <div class="container-fluid">
+        <div class="row">
+          {{ content.list_highlight }}
+        </div>
+      </div>
+    {% endif %}
+  {% endblock %}
+</section>

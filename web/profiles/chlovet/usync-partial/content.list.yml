@@ -29,6 +29,14 @@ view:
               view_mode: teaser
               limit: 4
 
+      banner:
+        list_type:
+          type: list_type
+          settings:
+            options:
+              view_mode: front2
+              limit: 2
+
       front1:
         list_type:
           type: list_type
