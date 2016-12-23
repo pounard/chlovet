@@ -1,0 +1,7 @@
+{% import 'theme:vetbase:templates/node/search.html.twig' as search %}
+
+{% block content %}
+  <section id="search-results">
+    {{ search.search_form(node_url) }}
+  </section>
+{% endblock %}

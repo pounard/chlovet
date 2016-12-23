@@ -29,23 +29,31 @@
       color: @search-result-title;
     }
   }
+  .no-result {
+    text-align: center;
+    display: block;
+  }
   // Make the search bar being huge and nice
   .search {
-    padding: 2em 25%;
+    padding: 0 /*2em*/ 20%;
     * {
       border: 0;
     }
-    .form {
-      border: 1px solid @color-silver;
+    input {
+      font-size: @font-size-base;
+    }
+    .input-group {
+      box-shadow:  1px 1px 3px 0px #9b9b9b;
     }
     .form-control, .input-group-btn {
-      background: @color-peter-river;
-      color: @color-front;
+      //background: @color-clouds;
+      background: transparent;
+      color: @text-color;
     }
     .form-control {
       height: auto;
       padding: 1.5em 2em;
-      .placeholder(@color-front);
+      .placeholder(@color-asbestos);
       &:focus {
         // Reset bootstrap default
         border-color: none;
@@ -57,6 +65,10 @@
       }
     }
     .btn {
+      color: @color-asbestos;
+      &:hover {
+        color: @text-color;
+      }
       background: transparent;
       padding: 0 2em;
     }

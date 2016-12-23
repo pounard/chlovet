@@ -11,11 +11,12 @@ entity:
   node:
 
     autolist:
-      name: autoliste
+      name: Liste automatique
       field:
         body: ~
         autolist_list: true
         menu_hide_bottom: true
+        breadcrum_display: true
 
 view:
   node:

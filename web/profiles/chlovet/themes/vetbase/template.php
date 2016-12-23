@@ -143,6 +143,13 @@ function _vetbase_add_menus(&$variables) {
       ];
     }
   }
+
+
+  if ($items = field_get_items('node', $node, 'hide_breadcrum')) {
+    if ($items[0]['value']) {
+      $variables['showBreadcrumb'] = false;
+    }
+  }
 }
 
 /**
@@ -151,6 +158,7 @@ function _vetbase_add_menus(&$variables) {
 function vetbase_preprocess_page(&$variables) {
 
   $variables['isFrontPage'] = drupal_is_front_page();
+  $variables['showBreadcrumb'] = true;
 
   $siteManager  = ucms_site_manager();
   $hasContext   = $siteManager->hasContext();

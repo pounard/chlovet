@@ -1,9 +1,12 @@
-{% macro search_form(url) %}
+{% macro search_form(url, placeholder) %}
+  {% if not placeholder %}
+    {% set placeholder = "Rechercher sur le site, chien, chat, vaccin..."|trans %}
+  {% endif %}
   <form method="get" action="{{ url }}" class="search">
     <div class="form-group">
       <label class="sr-only" for="search-input">{{ "Search text"|trans }}</label>
       <div class="input-group">
-        <input type="text" class="form-control" name="s" id="search-input" placeholder="{{ "Dog, cat, ..."|trans }}" maxlength="128"/>
+        <input type="text" class="form-control" value="{{ app.request.query.get('s')|escape }}" name="s" id="search-input" placeholder="{{ placeholder }}" maxlength="128"/>
         <div class="input-group-btn">
           <button type="submit" value="{{ "Search"|trans }}" class="btn btn-primary">
             <span class="glyphicon glyphicon-search" aria-hidden="true"></span>

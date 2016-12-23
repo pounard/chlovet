@@ -82,6 +82,16 @@ field:
         collectTime: true
         granularity: 1
 
+  breadcrum_display:
+    label: Cacher le fil d'arianne
+    type: list_boolean
+    settings:
+      allowed_values:
+        0: Afficher le fil d'arianne
+        1: Cacher le fil d'arianne
+    widget:
+      type: options_onoff
+
   menu_hide_bottom:
     label: Cacher les enfants en bas de la page
     type: list_boolean

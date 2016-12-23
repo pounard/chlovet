@@ -12,7 +12,7 @@
       {% for node_view in search_results %}
         {{ node_view }}
       {% else %}
-        <p>{{ "Your search yielded no resuls"|trans }}</p>
+        <p class="no-result">{{ "Tapez votre recherche dans la barre ci-dessus."|trans }}</p>
       {% endfor %}
     </div>
     {% if search_displayed and search_total %}

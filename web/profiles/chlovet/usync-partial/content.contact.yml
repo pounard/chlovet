@@ -38,6 +38,7 @@ entity:
         contact_telephone: true
         # contact_schedule: true
         menu_hide_bottom: true
+        breadcrum_display: true
 
 view:
   node:

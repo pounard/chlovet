@@ -14,3 +14,30 @@
   .clearfix();
   background-color: @color-chlovet-footer-bg;
 }
+
+.highlight-square(@color) {
+  //border: 1px solid @color;
+  background-color: lighten(@color, 25%);
+  &:hover {
+    background-color: ligthen(@color, 5%);
+  }
+}
+
+.titleize {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: ceil((@font-size-base /* * 1.25 */));
+}
+
+.mediaize(@height: 250px) {
+  height: @height;
+  max-height: @height;
+  overflow-y: hidden;
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
