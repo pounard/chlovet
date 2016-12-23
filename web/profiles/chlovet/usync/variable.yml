@@ -1,6 +1,6 @@
 ucms_contrib_component_types:
+  - autolist
   - contact
-  - highlight
   - list
   - menu
   - search

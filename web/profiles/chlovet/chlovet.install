@@ -172,3 +172,11 @@ function chlovet_update_7001() {
 function chlovet_update_7002() {
   module_enable(['telephone']);
 }
+
+/**
+ * Houston, we changed node types.
+ */
+function chlovet_update_7003() {
+  node_type_delete('list');
+  node_type_delete('highlight');
+}

@@ -1,17 +1,14 @@
+{% set classes = classes ~ ' col-md-6 teaser-list' %}
 <section class="{{ classes }}"{{ attributes }}>
   {{ title_prefix }}
-  <h1 class="sr-only">
+  <h1>
     <a href="{{ node_url }}">{{ title }}</a>
   </h1>
-  <hr/>
   {{ title_suffix }}
+  <hr/>
   {% block content %}
-    {% if content.list_type %}
-      <div class="container-fluid">
-        <div class="row">
-          {{ content.list_type }}
-        </div>
-      </div>
+    {% if content.autolist_list %}
+      {{ content.autolist_list }}
     {% endif %}
   {% endblock %}
 </section>

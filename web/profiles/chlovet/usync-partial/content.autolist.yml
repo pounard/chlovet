@@ -1,0 +1,50 @@
+# Automatic autolist node type
+field:
+
+  autolist_list:
+    label: Type
+    type: ucms_widget
+    settings:
+      type: list_type
+
+entity:
+  node:
+
+    autolist:
+      name: autoliste
+      field:
+        body: ~
+        autolist_list: true
+        menu_hide_bottom: true
+
+view:
+  node:
+    autolist:
+
+      default:
+        autolist_list:
+          type: list_type
+          settings:
+            options:
+              view_mode: teaser
+              limit: 4
+
+      banner:
+        autolist_list:
+          type: list_type
+          settings:
+            options:
+              view_mode: front_teaser
+              limit: 6
+
+      front:
+        autolist_list:
+          type: list_type
+          settings:
+            options:
+              view_mode: front_teaser
+              limit: 6
+
+      square: {}
+      favorite: {}
+      contentadmin: {}

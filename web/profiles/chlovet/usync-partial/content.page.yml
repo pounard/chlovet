@@ -49,19 +49,20 @@ view:
       teaser:
         page_image: '@media_view_small'
         page_body: '@text_view_trimmed'
+        page_teaser: true
 
-      front1:
-        page_image: '@media_view_default'
-      front2:
-        page_image: '@media_view_default'
-      front3:
-        page_image: '@media_view_default'
-      front4:
+      v:
+        page_image: '@media_view_small'
+        page_body: '@text_view_trimmed_smaller'
+        page_teaser: true
+
+      front:
         page_image: '@media_view_default'
 
       search_result:
         page_image: '@media_view_default'
         page_body: '@text_view_trimmed'
 
+      square: {}
       favorite: {}
       contentadmin: {}

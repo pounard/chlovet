@@ -42,7 +42,14 @@ macro:
     settings:
       config: ~
       spec: ''
-      trim: 400
+      trim: 300
+
+  text_view_trimmed_smaller:
+    type: chlovet_htmlawed
+    settings:
+      config: ~
+      spec: ''
+      trim: 100
 
 field:
 

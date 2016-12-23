@@ -1,20 +1,34 @@
-# List node type
+# Home list to pages
 field:
 
-  list_type:
-    label: Type
-    type: ucms_widget
-    settings:
-      type: list_type
+  list_list:
+    label: Content
+    type: unoderef
+    cardinality: -1
+    widget:
+      type: unoderef
+      settings:
+        bundles: [page, news, list, autolist]
+        view_mode: favorite
+
+  list_image:
+    label: Vignette
+    type: unoderef
+    widget:
+      type: unoderef
+      settings:
+        bundles: [image]
+        view_mode: default
 
 entity:
   node:
 
     list:
-      name: Liste
+      name: Tuile de page d'accueil
       field:
         body: ~
-        list_type: true
+        list_image: true
+        list_list: true
         menu_hide_bottom: true
 
 view:
@@ -22,52 +36,15 @@ view:
     list:
 
       default:
-        list_type:
-          type: list_type
+        list_list:
+          type: unoderef
           settings:
-            options:
-              view_mode: teaser
-              limit: 4
+            view_mode: teaser
 
-      banner:
-        list_type:
-          type: list_type
-          settings:
-            options:
-              view_mode: front2
-              limit: 4
+      front:
+        list_image: '@media_view_default'
+        list_list: ~
 
-      front1:
-        list_type:
-          type: list_type
-          settings:
-            options:
-              view_mode: front1
-              limit: 4
-
-      front2:
-        list_type:
-          type: list_type
-          settings:
-            options:
-              view_mode: front2
-              limit: 2
-
-      front3:
-        list_type:
-          type: list_type
-          settings:
-            options:
-              view_mode: front3
-              limit: 3
-
-      front4:
-        list_type:
-          type: list_type
-          settings:
-            options:
-              view_mode: front4
-              limit: 4
-
+      square: {}
       favorite: {}
       contentadmin: {}

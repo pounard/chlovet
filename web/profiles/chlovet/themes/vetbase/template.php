@@ -37,7 +37,25 @@ function vetbase_preprocess_ucms_layout_item(&$vars) {
   // For now, we override the view_mode and replace it by region name.
   // This enables subtheme to override given certain condition, and may be
   // replaced later by a user setting from ucms_layout table.
-  $vars['view_mode'] = $vars['region']->getName();
+  $name = $vars['region']->getName();
+
+  switch ($name) {
+
+    case 'banner_right':
+      $vars['view_mode'] = 'square';
+      break;
+
+    case 'front1':
+    case 'front2':
+    case 'front3':
+    case 'front4':
+      $vars['view_mode'] = 'front';
+      break;
+
+    default:
+      $vars['view_mode'] = $name;
+      break;
+  }
 }
 
 /**
@@ -286,8 +304,8 @@ function vetbase_preprocess_node(&$variables) {
   if (in_array($view_mode, ['front1', 'front2', 'front3', 'front4'])) {
     switch ($node->type) {
 
-      case 'list': // List will expand 100%
-      case 'highlight':
+      case 'autolist': // List will expand 100%
+      case 'list':
         break;
 
       case 'contact':

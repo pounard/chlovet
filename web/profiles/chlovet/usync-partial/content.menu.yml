@@ -55,5 +55,6 @@ view:
           type: menu_tree
           settings: {options: {suggestion: footer}}
 
+      square: {}
       favorite: {}
       contentadmin: {}

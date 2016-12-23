@@ -39,6 +39,16 @@ view:
         news_body: '@text_view_trimmed'
         news_teaser: true
 
+      teaser:
+        news_image: '@media_view_small'
+        news_body: '@text_view_trimmed'
+        news_teaser: true
+
+      front_teaser:
+        news_image: '@media_view_small'
+        news_body: '@text_view_trimmed_smaller'
+        news_teaser: true
+
       full:
         news_image: '@media_view_default'
         news_body: true
@@ -46,14 +56,9 @@ view:
         content_date: true
         biblio: true
 
-      front1:
-        news_image: '@media_view_default'
-      front2:
-        news_image: '@media_view_default'
-      front3:
-        news_image: '@media_view_default'
-      front4:
+      front:
         news_image: '@media_view_default'
 
+      square: {}
       favorite: {}
       contentadmin: {}

@@ -13,5 +13,6 @@ view:
 
       default: {}
       teaser: {}
+      square: {}
       favorite: {}
       contentadmin: {}

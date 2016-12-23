@@ -1,85 +1,114 @@
-.front-media() {
-  max-height: @front-media-height;
-  height: @front-media-height;
-  overflow: hidden;
-  display: block;
+
+.titleize {
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: ceil((@font-size-base /* * 1.25 */));
+}
+
+#banner {
+  margin-bottom: ceil(@padding-base-horizontal * 2);
+}
+
+#map-contact {
+  height: 66vh;
+}
+
+#banner, .front-pane {
+
+  a {
+    color: @text-color;
+  }
+
+  h1 {
+    .titleize();
+    text-align: center;
+  }
 }
 
 .front-pane {
-  > .container {
-    padding: 100px 0;
-  }
-  img {
-    width: 100%;
-  }
-  a {
-    color: inherit;
-    text-decoration: none;
-    &:hover {
-      text-decoration: none;
+  margin-top: ceil(@line-height-computed * 4);
+
+  .teaser-list {
+    h2 {
+      .titleize();
     }
   }
-  h1 {
-    font-size: 2em;
-    text-align: center;
-    margin: 0;
-    text-transform: uppercase;
-    letter-spacing: -2px;
-    font-weight: bold;
+}
+
+.highlight-square(@color) {
+  //border: 1px solid @color;
+  background-color: lighten(@color, 25%);
+  &:hover {
+    background-color: ligthen(@color, 5%);
   }
+}
+
+.square {
+  // This will cascade and allow the text positioning trick to work, it
+  // will work because even if cascaded, the text aboslute positionning
+  // will be relative to the closest relative parent, which is this
+  position: relative;
+  margin-bottom: ceil(@padding-base-horizontal * 2);
+
+  &:nth-child(1) {
+    > a {
+      .highlight-square(@color-emerald);
+    }
+  }
+  &:nth-child(2) {
+    > a {
+      .highlight-square(@color-peter-river);
+    }
+  }
+  &:nth-child(3) {
+    > a {
+      .highlight-square(@color-amethyst);
+    }
+  }
+  &:nth-child(4) {
+    > a {
+      .highlight-square(@color-carrot);
+    }
+  }
+  &:nth-child(5) {
+    > a {
+      .highlight-square(@color-alizarin);
+    }
+  }
+  &:nth-child(6) {
+    > a {
+      .highlight-square(@color-concrete);
+    }
+  }
+
+  // We need an intermediate element for background coloring and borders
+  > a {
+    position: absolute;
+    top: 0;
+    left: @padding-base-horizontal;
+    bottom: 0;
+    right: @padding-base-horizontal;
+
+    // Centering text
+    // https://www.w3.org/Style/Examples/007/center.en.html#vertical3
+    > span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
   h2 {
-    .block-title();
-  }
-  media {
-    .front-media();
+    .titleize();
+    text-align: center;
   }
 
-  #map-contact {
-    .front-media();
-  }
-
-  .node-contact {
-    // node contact has a col-* in a col-* which makes double padding
-    // and breaks gutters, fix that
-    padding: 0;
-  }
-
-  .address-highlight {
-    .highlight-block();
-    padding: @padding-large-vertical @padding-large-horizontal;
-    height: @front-media-height;
-    min-height: @front-media-height;
-    .telephone {
-      display: block;
-      margin-bottom: ceil(@line-height-computed / 2);
-    }
-  }
-}
-
-.front-pane(@background-color, @color) {
-  background-color: @background-color;
-  color: @color;
-}
-
-#front1 {
-  .front-pane(@front1-bg, @front1-color);
-}
-
-#front2 {
-  .front-pane(@front2-bg, @front2-color);
-}
-
-#front3 {
-  .front-pane(@front3-bg, @front3-color);
-}
-
-#front4 {
-  .front-pane(@front4-bg, @front4-color);
-}
-
-@media (max-width: @screen-xs-max) {
-  .front-pane {
-    padding-top: 2em;
-    padding-bottom: 2em;
+  // Make it a square
+  // https://spin.atomicobject.com/2015/07/14/css-responsive-square/
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
   }
 }

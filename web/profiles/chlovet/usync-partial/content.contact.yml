@@ -74,5 +74,6 @@ view:
         contact_telephone:
           type: telephone_link
 
+      square: {}
       favorite: {}
       contentadmin: {}

@@ -23,19 +23,12 @@
   {% endif %}
   <div id="banner" class="container">
     <div class="row">
-      {# <div class="col-md-8 col-sm-6 col-xs-12"> #}
-      <div class="col-md-12">
-        {% if page.banner %}
-          {{ page.banner }}
-        {% endif %}
-      </div>
-      {#
-      <div class="col-md-4 col-sm-6 col-xs-12">
-        {% if page.banner_right %}
-          {{ page.banner_right }}
-        {% endif %}
-      </div>
-      #}
+      {% if page.banner %}
+        {{ page.banner }}
+      {% endif %}
+      {% if page.banner_right %}
+        {{ page.banner_right }}
+      {% endif %}
     </div>
   </div>
   {% if isFrontPage %}

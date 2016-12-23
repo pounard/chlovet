@@ -1,0 +1,10 @@
+{% set classes = classes ~ ' col-xs-6 square' %}
+<article class="{{ classes }}"{{ attributes }}>
+  {{ title_prefix }}
+  <a href="{{ node_url }}">
+    <span>
+      <h2>{{ title }}</h2>
+    </span>
+  </a>
+  {{ title_suffix }}
+</article>

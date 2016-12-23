@@ -39,3 +39,5 @@ view:
             viewport: 60
             html_tag: img
             include_full: false
+
+      square: {}
