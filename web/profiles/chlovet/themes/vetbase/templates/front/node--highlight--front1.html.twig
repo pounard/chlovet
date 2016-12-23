@@ -7,8 +7,10 @@
   {{ title_suffix }}
   {% block content %}
     {% if content.list_highlight %}
-      <div class="row">
-        {{ content.list_highlight }}
+      <div class="container-fluid">
+        <div class="row">
+          {{ content.list_highlight }}
+        </div>
       </div>
     {% endif %}
   {% endblock %}

@@ -35,7 +35,7 @@ view:
           settings:
             options:
               view_mode: front2
-              limit: 2
+              limit: 4
 
       front1:
         list_type:

@@ -33,15 +33,6 @@
   media {
     .front-media();
   }
-  hr {
-    display: block;
-    height: 0px;
-    border: 2px solid @text-color;
-    padding: 0;
-    width: 15%;
-    margin: 1em auto 2em;
-    border-radius: 2px;
-  }
 
   #map-contact {
     .front-media();
@@ -65,31 +56,25 @@
   }
 }
 
-.front-pane(@background-color, @color, @hr-color) {
+.front-pane(@background-color, @color) {
   background-color: @background-color;
   color: @color;
-  hr {
-    border-color: @hr-color;
-  }
-  h1 {
-    text-shadow: 1px 1px 1px @hr-color;
-  }
 }
 
 #front1 {
-  .front-pane(@front1-bg, @front1-color, @front1-hr);
+  .front-pane(@front1-bg, @front1-color);
 }
 
 #front2 {
-  .front-pane(@front2-bg, @front2-color, @front2-hr);
+  .front-pane(@front2-bg, @front2-color);
 }
 
 #front3 {
-  .front-pane(@front3-bg, @front3-color, @front3-hr);
+  .front-pane(@front3-bg, @front3-color);
 }
 
 #front4 {
-  .front-pane(@front4-bg, @front4-color, @front4-hr);
+  .front-pane(@front4-bg, @front4-color);
 }
 
 @media (max-width: @screen-xs-max) {

@@ -28,7 +28,15 @@
         },
         {
             "type" : "vcs",
+            "url" : "git@github.com:makinacorpus/drupal-sf-dic.git"
+        },
+        {
+            "type" : "vcs",
             "url" : "git@github.com:makinacorpus/drupal-ucms.git"
+        },
+        {
+            "type" : "vcs",
+            "url" : "git@github.com:makinacorpus/php-acl.git"
         },
         {
             "type" : "vcs",
@@ -54,15 +62,16 @@
         "makinacorpus/drupal-latlonfield" : "1.0.*",
         "makinacorpus/drupal-minidialog" : "*",
         "makinacorpus/drupal-schedulefield" : "1.0.*",
-        "makinacorpus/drupal-sf-dic" : "^3.1",
+        "makinacorpus/drupal-sf-dic" : "dev-master as 3.1",
         "makinacorpus/drupal-plusql" : "^1",
-        "makinacorpus/drupal-ucms" : "dev-master as 1.3",
+        "makinacorpus/drupal-ucms" : "dev-master as 1.5",
         "makinacorpus/drupal-udate" : "1.0.*",
         "makinacorpus/drupal-ulink" : "^2.0.3",
         "makinacorpus/drupal-ulog" : "dev-master",
         "makinacorpus/drupal-umenu" : "^1.1.6",
         "makinacorpus/drupal-unoderef" : "1.0.*",
         "makinacorpus/drupal-usync" : "1.0.*",
+        "makinacorpus/php-acl" : "dev-master",
         "makinacorpus/redis-bundle" : "dev-master",
         "monolog/monolog": "^1.17",
         "pear/console_table" : "dev-master as 1.3.0",

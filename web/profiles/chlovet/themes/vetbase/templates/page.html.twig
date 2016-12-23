@@ -23,52 +23,45 @@
   {% endif %}
   <div id="banner" class="container">
     <div class="row">
-      <div class="col-md-8 col-sm-6 col-xs-12">
+      {# <div class="col-md-8 col-sm-6 col-xs-12"> #}
+      <div class="col-md-12">
         {% if page.banner %}
           {{ page.banner }}
         {% endif %}
       </div>
+      {#
       <div class="col-md-4 col-sm-6 col-xs-12">
         {% if page.banner_right %}
           {{ page.banner_right }}
         {% endif %}
       </div>
+      #}
     </div>
   </div>
   {% if isFrontPage %}
-    {% if page.front1 %}
-      <div id="front1" class="front-pane container-fluid">
-        <div class="container">
-          {{ page.front1 }}
+    {% set frontRegionList = ['front1', 'front2', 'front3', 'front4'] %}
+    {% for frontRegion in frontRegionList %}
+      {% if page[frontRegion] %}
+        <div id="{{ frontRegion }}" class="front-pane">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                {{ page[frontRegion] }}
+              </div>
+            </div>
+          </div>
         </div>
-      </div>
-    {% endif %}
-    {% if page.front2 %}
-      <div id="front2" class="front-pane container-fluid">
-        <div class="container">
-          {{ page.front2 }}
-        </div>
-      </div>
-    {% endif %}
-    {% if page.front3 %}
-      <div id="front3" class="front-pane container-fluid">
-        <div class="container">
-          {{ page.front3 }}
-        </div>
-      </div>
-    {% endif %}
-    {% if page.front4 %}
-      <div id="front4" class="front-pane container-fluid">
-        <div class="container">
-          {{ page.front4 }}
-        </div>
-      </div>
-    {% endif %}
+      {% endif %}
+    {% endfor %}
   {% else %}
     {% if breadcrumb %}
-      <div id="breadcrumb" class="container-fluid">
+      <div id="breadcrumb">
         <div class="container">
-          {{ breadcrumb }}
+          <div class="row">
+            <div class="col-md-12">
+              {{ breadcrumb }}
+            </div>
+          </div>
         </div>
       </div>
     {% endif %}

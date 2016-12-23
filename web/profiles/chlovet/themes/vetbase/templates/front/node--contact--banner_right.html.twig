@@ -1,13 +1,17 @@
 <section class="{{ classes }}"{{ attributes }}>
+  <div class="contact-position">
   {% if content.contact_position %}
-    <h1>Nous situer</h1>
+    <h1 class="sr-only">Nous situer</h1>
     {{ content.contact_position }}
   {% endif %}
-  <h1>Nous contacter</h1>
-  {% if content.contact_telephone %}
-    <span class="telephone">Tél&nbsp;: {{ content.contact_telephone }}</span>
-  {% endif %}
-  {% if content.contact_address %}
-    {{ content.contact_address }}
-  {% endif %}
+  <hr/>
+  <div class="contact-information">
+    <h1 class="sr-only">Nous contacter</h1>
+    {% if content.contact_telephone %}
+      <span class="telephone">Tél&nbsp;: {{ content.contact_telephone }}</span>
+    {% endif %}
+    {% if content.contact_address %}
+      {{ content.contact_address }}
+    {% endif %}
+  </div>
 </section>
