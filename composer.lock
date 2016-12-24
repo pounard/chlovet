@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "5bf1cbbc4accc3c152c5b0814d0b76b3",
-    "content-hash": "d66094a863a6ef56ad894f161e8aeab1",
+    "hash": "4b6d727964a4661cf78ef6ab731a4928",
+    "content-hash": "acbc4f1761d60d19c223d5f317b1e185",
     "packages": [
         {
             "name": "composer/installers",
@@ -1373,7 +1373,7 @@
         },
         {
             "name": "makinacorpus/drupal-schedulefield",
-            "version": "1.0.0-alpha5",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-schedulefield.git",
@@ -1479,12 +1479,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ucms.git",
-                "reference": "011395138464d9256919d1d8512004b9bc98b913"
+                "reference": "36eccef6942c74814205e3ca9bac6849acd77d5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/011395138464d9256919d1d8512004b9bc98b913",
-                "reference": "011395138464d9256919d1d8512004b9bc98b913",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/36eccef6942c74814205e3ca9bac6849acd77d5a",
+                "reference": "36eccef6942c74814205e3ca9bac6849acd77d5a",
                 "shasum": ""
             },
             "require": {
@@ -1556,7 +1556,7 @@
                 "source": "https://github.com/makinacorpus/drupal-ucms/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-ucms/issues"
             },
-            "time": "2016-12-23 10:49:03"
+            "time": "2016-12-24 10:13:46"
         },
         {
             "name": "makinacorpus/drupal-udate",
@@ -4377,6 +4377,12 @@
             "package": "makinacorpus/drupal-apubsub"
         },
         {
+            "alias": "1.0",
+            "alias_normalized": "1.0.0.0",
+            "version": "9999999-dev",
+            "package": "makinacorpus/drupal-schedulefield"
+        },
+        {
             "alias": "3.1",
             "alias_normalized": "3.1.0.0",
             "version": "9999999-dev",
@@ -4399,6 +4405,7 @@
     "stability-flags": {
         "makinacorpus/apubsub": 20,
         "makinacorpus/drupal-apubsub": 20,
+        "makinacorpus/drupal-schedulefield": 20,
         "makinacorpus/drupal-sf-dic": 20,
         "makinacorpus/drupal-ucms": 20,
         "makinacorpus/drupal-ulog": 20,
