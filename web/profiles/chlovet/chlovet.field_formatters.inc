@@ -85,11 +85,13 @@ function chlovet_field_formatter_view($entity_type, $entity, $field, $instance, 
         $text   = $item['value'];
         $format = $item['format'] ? $item['format'] : null;
 
+        // Use of the 'html_partial' format allows us to skip entity loading
+        // from media and link filters;
         if ($format) {
-          $text = check_markup($text, $format);
+          $text = check_markup($text, 'partial_html');
         }
         if ($trim) {
-          $text = text_summary($text, $format, $trim);
+          $text = text_summary($text, 'partial_html', $trim);
         }
 
         $text = htmLawed($text, $config, $spec);

@@ -12,3 +12,16 @@ full_html:
       weight: 3
     filter_htmlcorrector:
       weight: 4
+
+# Created for performance reasons: by removing some filter we will remove
+# a few SQL queries at runtime and gain performances. This filter aims to
+# build the full HTML representation minus a few details, to be then
+# lowered to teasers using htmlawed library.
+partial_html:
+  name: HTML Partiel
+  filters:
+    filter_html:
+      weight: 1
+      settings:
+        allowed_html: '<em> <strong> <blockquote> <ul> <ol> <li> <h2> <h3> <h4> <h5> <h6> <br> <p> <span> <abbr>'
+        filter_html_help: 0

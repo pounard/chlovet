@@ -144,9 +144,11 @@ function _vetbase_add_menus(&$variables) {
     }
   }
 
-  if ($items = field_get_items('node', $node, 'hide_breadcrumb')) {
-    if ($items[0]['value']) {
-      $variables['showBreadcrumb'] = false;
+  if ($node) {
+    if ($items = field_get_items('node', $node, 'hide_breadcrumb')) {
+      if ($items[0]['value']) {
+        $variables['showBreadcrumb'] = false;
+      }
     }
   }
 }
