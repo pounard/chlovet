@@ -38,7 +38,7 @@ entity:
         contact_telephone: true
         # contact_schedule: true
         menu_hide_bottom: true
-        breadcrum_display: true
+        hide_breadcrumb: true
 
 view:
   node:
@@ -53,8 +53,9 @@ view:
             id: map-contact
             map: {zoomControl: false}
             zoom: 17
-            maxZoom: 17,
-            minZoom: 17,
+            maxZoom: 17
+            minZoom: 17
+            showBubbles: true
             attribution: '© <a href="http://openstreetmap.org">OSM</a>'
         contact_telephone:
           type: telephone_link
@@ -66,11 +67,12 @@ view:
         contact_position:
           type: latlonfield_leaflet
           settings:
-            id: map-banner
+            id: map-contact
             map: {zoomControl: false}
             zoom: 17
-            maxZoom: 17,
-            minZoom: 17,
+            maxZoom: 17
+            minZoom: 17
+            showBubbles: true
             attribution: '© <a href="http://openstreetmap.org">OSM</a>'
         contact_telephone:
           type: telephone_link

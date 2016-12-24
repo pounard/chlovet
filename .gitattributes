@@ -24,6 +24,8 @@
 *.yml     text eol=lf whitespace=blank-at-eol,-blank-at-eof,-space-before-tab,tab-in-indent,tabwidth=2
 
 # Define binary file attributes.
+*.min.js  -text diff
+*.min.css -text diff
 *.gif     -text diff
 *.gz      -text diff
 *.ico     -text diff

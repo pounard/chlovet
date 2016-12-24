@@ -61,7 +61,7 @@
         "makinacorpus/drupal-iresponsive" : "1.0.*",
         "makinacorpus/drupal-latlonfield" : "1.0.*",
         "makinacorpus/drupal-minidialog" : "*",
-        "makinacorpus/drupal-schedulefield" : "1.0.*",
+        "makinacorpus/drupal-schedulefield" : "dev-master as 1.0",
         "makinacorpus/drupal-sf-dic" : "dev-master as 3.1",
         "makinacorpus/drupal-plusql" : "^1",
         "makinacorpus/drupal-ucms" : "dev-master as 1.5",

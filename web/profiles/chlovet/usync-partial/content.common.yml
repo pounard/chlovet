@@ -82,7 +82,7 @@ field:
         collectTime: true
         granularity: 1
 
-  breadcrum_display:
+  hide_breadcrumb:
     label: Cacher le fil d'arianne
     type: list_boolean
     settings:

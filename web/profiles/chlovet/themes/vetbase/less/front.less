@@ -19,13 +19,19 @@
 
 .front-pane {
   margin-top: ceil(@line-height-computed * 4);
-  media {
-    .mediaize();
+  .node-list {
+    media {
+      .mediaize();
+    }
   }
   .teaser-list {
     h2 {
       .titleize();
       margin: 0;
+      margin-bottom: @padding-small-horizontal;
+    }
+    img {
+      // .img-thumbnail();
     }
   }
 }

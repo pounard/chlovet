@@ -7,7 +7,7 @@ entity:
       field:
         body: ~
         menu_hide_bottom: true
-        breadcrum_display: true
+        hide_breadcrumb: true
 
 view:
   node:
