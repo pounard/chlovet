@@ -101,11 +101,15 @@
         }
     },
     "autoload-dev" : {
+        "psr-4" : {
+            "Tests\\" : "tests/"
+        }
+    },
+    "autoload" : {
         "files" : [
             "app/AppKernel.php"
         ],
         "psr-4" : {
-            "Tests\\" : "tests/",
             "MakinaCorpus\\Ucms\\Tag\\" : "web/sites/all/modules/composer/drupal-ucms/ucms_tag/src",
             "Chlovet\\" : "src"
         }
