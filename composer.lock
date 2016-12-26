@@ -1479,12 +1479,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ucms.git",
-                "reference": "36eccef6942c74814205e3ca9bac6849acd77d5a"
+                "reference": "ac0d6b7758d07ba4091ed3b80b7443127c5ee38a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/36eccef6942c74814205e3ca9bac6849acd77d5a",
-                "reference": "36eccef6942c74814205e3ca9bac6849acd77d5a",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/ac0d6b7758d07ba4091ed3b80b7443127c5ee38a",
+                "reference": "ac0d6b7758d07ba4091ed3b80b7443127c5ee38a",
                 "shasum": ""
             },
             "require": {
@@ -1556,7 +1556,7 @@
                 "source": "https://github.com/makinacorpus/drupal-ucms/tree/master",
                 "issues": "https://github.com/makinacorpus/drupal-ucms/issues"
             },
-            "time": "2016-12-24 10:13:46"
+            "time": "2016-12-24 16:38:10"
         },
         {
             "name": "makinacorpus/drupal-udate",
