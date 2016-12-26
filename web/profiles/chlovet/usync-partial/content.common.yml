@@ -37,6 +37,12 @@ macro:
       view_mode: default
       viewport: 30
 
+  media_view_square:
+    type: unoderef
+    settings:
+      view_mode: default_square
+      viewport: 50
+
   media_view_3:
     type: unoderef
     settings:

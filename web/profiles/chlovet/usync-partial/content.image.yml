@@ -40,6 +40,15 @@ view:
             html_tag: img
             include_full: false
 
+      default_square:
+        image:
+          type: iresponsive
+          settings:
+            viewport: 50
+            modifier: s
+            html_tag: img
+            include_full: false
+
       banner:
         image:
           type: image
@@ -69,3 +78,21 @@ view:
             image_link: ~
 
       square: {}
+
+      # For content administration
+      favorite:
+        image:
+          type: iresponsive
+          settings:
+            viewport: 30
+            html_tag: img
+            modifier: s
+            include_full: false
+      contentadmin:
+        image:
+          type: iresponsive
+          settings:
+            viewport: 30
+            html_tag: img
+            modifier: s
+            include_full: false

@@ -48,7 +48,7 @@ view:
         biblio: true
 
       teaser:
-        news_image: '@media_view_small'
+        news_image: '@media_view_square'
         news_body: '@text_view_trimmed'
         news_teaser: true
 
