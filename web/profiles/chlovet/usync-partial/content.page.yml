@@ -53,16 +53,12 @@ view:
         page_teaser: true
 
       front_teaser:
-        page_image: '@media_view_small'
+        page_image: '@media_view_63'
         page_body: '@text_view_trimmed_smaller'
         page_teaser: true
 
       front:
         page_image: '@media_view_default'
-
-      search_result:
-        page_image: '@media_view_default'
-        page_body: '@text_view_trimmed'
 
       square: {}
       favorite: {}

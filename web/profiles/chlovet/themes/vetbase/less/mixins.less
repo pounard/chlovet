@@ -29,7 +29,8 @@
   font-size: ceil((@font-size-base /* * 1.25 */));
 }
 
-.mediaize(@height: 250px) {
+// For media with dynamic height (full width, no crop)
+.media-dynamic(@height: 250px) {
   height: @height;
   max-height: @height;
   overflow-y: hidden;
@@ -39,5 +40,30 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+  }
+}
+
+// For fixed-height media (Drupal image styles)
+.media-fixed() {
+  overflow-x: hidden;
+  img {
+    // Fixes responsive image rules
+    width: auto !important;
+    max-width: 3000vh !important;
+  }
+}
+
+// For fixed-height media (Drupal image styles) - centered horizontally
+.media-fixed-centered(@height: 355px) {
+  overflow-x: hidden;
+  position: relative;
+  height: @height;
+  img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    // Fixes responsive image rules
+    width: auto !important;
+    max-width: 3000vh !important;
   }
 }

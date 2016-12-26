@@ -43,7 +43,7 @@ view:
             view_mode: teaser
 
       front:
-        list_image: '@media_view_default'
+        list_image: '@media_view_4'
 
       square: {}
       favorite: {}

@@ -37,6 +37,24 @@ macro:
       view_mode: default
       viewport: 30
 
+  media_view_3:
+    type: unoderef
+    settings:
+      view_mode: image_4
+      viewport: 30
+
+  media_view_4:
+    type: unoderef
+    settings:
+      view_mode: image_4
+      viewport: 30
+
+  media_view_63:
+    type: unoderef
+    settings:
+      view_mode: image_63
+      viewport: 30
+
   text_view_trimmed:
     type: chlovet_htmlawed
     settings:

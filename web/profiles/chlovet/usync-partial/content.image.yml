@@ -40,4 +40,32 @@ view:
             html_tag: img
             include_full: false
 
+      banner:
+        image:
+          type: image
+          settings:
+            image_style: front_banner
+            image_link: ~
+
+      image_3:
+        image:
+          type: image
+          settings:
+            image_style: front_3
+            image_link: ~
+
+      image_4:
+        image:
+          type: image
+          settings:
+            image_style: front_4
+            image_link: ~
+
+      image_63:
+        image:
+          type: image
+          settings:
+            image_style: front_63
+            image_link: ~
+
       square: {}

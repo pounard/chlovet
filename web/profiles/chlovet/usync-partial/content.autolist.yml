@@ -28,7 +28,7 @@ view:
           settings:
             options:
               view_mode: teaser
-              limit: 4
+              limit: 8
 
       banner:
         autolist_list:

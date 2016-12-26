@@ -1,0 +1,25 @@
+
+front_3:
+  effects:
+    image_scale_and_crop:
+      width: 262
+      height: 262
+
+front_4:
+  effects:
+    image_scale_and_crop:
+      width: 360
+      height: 360
+
+front_63:
+  effects:
+    image_scale_and_crop:
+      width: 104
+      height: 104
+
+front_banner:
+  effects:
+    image_scale:
+      width: 0
+      height: 355
+      upscale: 1

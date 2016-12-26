@@ -1,6 +1,9 @@
 
 #banner {
   margin-bottom: ceil(@padding-base-horizontal * 2);
+  media {
+    .media-fixed-centered(355px);
+  }
 }
 
 #map-contact {
@@ -19,11 +22,30 @@
 
 .front-pane {
   margin-top: ceil(@line-height-computed * 4);
+
   .node-list {
     media {
-      .mediaize();
+      .media-fixed();
+    }
+    a {
+      // Use the link to be relative so we exclude grid gutter
+      // margin and padding from .title marging computation
+      position: relative;
+      display: block;
+    }
+    .title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      > h1 {
+        background-color: white;
+        padding: ceil(@padding-base-horizontal * 2);
+        margin: ceil(@padding-base-horizontal * 2);
+      }
     }
   }
+
   .teaser-list {
     h2 {
       .titleize();

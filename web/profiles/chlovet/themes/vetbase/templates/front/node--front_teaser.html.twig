@@ -1,6 +1,6 @@
 <article class="{{ classes }}"{{ attributes }}>
   <div class="row">
-    <div class="col-sm-2 hidden-xs">
+    <div class="col-sm-3 hidden-xs">
       {% if content.page_image %}
         {{ content.page_image }}
       {% endif %}
@@ -8,7 +8,7 @@
         {{ content.news_image }}
       {% endif %}
     </div>
-    <div class="col-sm-10 col-xs-12">
+    <div class="col-sm-9 col-xs-12">
       {{ title_prefix }}
       <h2><a href="{{ node_url }}">{{ title }}</a></h2>
       {{ title_suffix }}
