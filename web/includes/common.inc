@@ -4573,6 +4573,9 @@ function drupal_process_attached($elements, $group = JS_DEFAULT, $dependency_che
   // Add the libraries first.
   $success = TRUE;
   foreach ($elements['#attached']['library'] as $library) {
+    if (!isset($library[0]) ||!is_array($library)) {
+      time();
+    }
     if (drupal_add_library($library[0], $library[1], $every_page) === FALSE) {
       $success = FALSE;
       // Exit if the dependency is missing.

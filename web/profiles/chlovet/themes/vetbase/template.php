@@ -95,19 +95,40 @@ function _vetbase_add_menus(&$variables) {
         $menuCurrent = $nodeTree->getMostRevelantItemForNode($node->nid);
 
         $displayChildren = true;
+        $childrenAsTeasers = false;
+        $displayNavigation = true;
 
         if ($items = field_get_items('node', $node, 'menu_hide_bottom')) {
           if ($items[0]['value']) {
             $displayChildren = false;
           }
         }
+        if ($displayChildren) {
+          if ($items = field_get_items('node', $node, 'menu_children_as_teasers')) {
+            if ($items[0]['value']) {
+              $childrenAsTeasers = true;
+            }
+          }
+        }
+        if ($items = field_get_items('node', $node, 'menu_hide_nav')) {
+          if ($items[0]['value']) {
+            $displayNavigation = false;
+          }
+        }
 
         // Child entries
         if ($displayChildren && $menuCurrent && $menuCurrent->hasChildren()) {
-          $variables['menu_children'] = [
-            '#tree'  => $menuCurrent,
-            '#theme' => 'umenu__children',
-          ];
+          if ($childrenAsTeasers) {
+            $children = node_view_multiple(node_load_multiple($menuCurrent->getChildrenNodeIdList()), 'teaser');
+          } else {
+            $children = [
+              '#tree'   => $menuCurrent,
+              '#theme'  => 'umenu__children',
+            ];
+          }
+          // Move it the lowest possible
+          $children['#weight'] = 10000;
+          $variables['page']['content']['menu_children'] = $children;
         }
 
         // Create siblings
@@ -119,7 +140,7 @@ function _vetbase_add_menus(&$variables) {
           ];
         }
 
-        if ($menuCurrent) {
+        if ($displayNavigation && $menuCurrent) {
           $variables['menu_navigation'] = [
             '#tree'     => $nodeTree,
             '#current'  => $menuCurrent->getNodeId(),
@@ -305,10 +326,6 @@ function vetbase_preprocess_region(&$variables) {
 function vetbase_preprocess_node(&$variables) {
   $node = $variables['node'];
   $view_mode = $variables['view_mode'];
-
-  if ($variables['page']) {
-    _vetbase_add_menus($variables);
-  }
 
   if (in_array($view_mode, ['front1', 'front2', 'front3', 'front4'])) {
     switch ($node->type) {

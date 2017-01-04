@@ -6,7 +6,9 @@ entity:
       name: Page de recherche
       field:
         body: ~
+        menu_hide_nav: true
         menu_hide_bottom: true
+        menu_children_as_teasers: true
         hide_breadcrumb: true
 
 view:

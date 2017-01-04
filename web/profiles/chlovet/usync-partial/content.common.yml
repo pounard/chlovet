@@ -106,6 +106,16 @@ field:
         collectTime: true
         granularity: 1
 
+  menu_children_as_teasers:
+    label: Afficher les enfants sous forme de résumés
+    type: list_boolean
+    settings:
+      allowed_values:
+        0: Afficher les enfants sous forme de liens
+        1: Afficher les enfants sous forme de résumés
+    widget:
+      type: options_onoff
+
   hide_breadcrumb:
     label: Cacher le fil d'arianne
     type: list_boolean
@@ -113,6 +123,16 @@ field:
       allowed_values:
         0: Afficher le fil d'arianne
         1: Cacher le fil d'arianne
+    widget:
+      type: options_onoff
+
+  menu_hide_nav:
+    label: Cacher l'index de navigation de gauche
+    type: list_boolean
+    settings:
+      allowed_values:
+        0: Afficher l'index de navigation de gauche
+        1: Cacher l'index de navigation de gauche
     widget:
       type: options_onoff
 

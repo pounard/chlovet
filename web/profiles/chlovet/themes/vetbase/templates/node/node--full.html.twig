@@ -6,8 +6,8 @@
     {% if display_authoring %}
       <p class="authoring">
         <em>
-          <span class="author">{{ "Article written by @name"|trans({'@name': content_author}) }}</span>
-          <span class="date">{{ "Latest update on @date"|trans({'@date': content_date|date('F Y')}) }}</span>
+          <span class="author">{{ "Écrit par @name"|trans({'@name': content_author}) }}</span>,
+          <span class="date">{{ "dernière mise à jour le @date"|trans({'@date': content_date|date('F Y')}) }}</span>
         </em>
       </p>
     {% endif %}
@@ -16,7 +16,7 @@
   {% if menu_children %}{{ menu_children }}{% endif %}
   {% if content.biblio %}
     <div class="biblio">
-      <h2>{{ "Bibliographic record"|trans }}</h2>
+      <h2>{{ "Références bibliographiques"|trans }}</h2>
       {{ content.biblio }}
     </div>
   {% endif %}
