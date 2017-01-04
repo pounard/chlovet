@@ -55,7 +55,7 @@
         "drush/drush": "8.*",
         "makinacorpus/apubsub" : "dev-master as 4.0.0",
         "makinacorpus/drupal-apubsub" : "dev-master as 4.0.0",
-        "makinacorpus/drupal-badm" : "1.0.*",
+        "makinacorpus/drupal-badm" : "^1.0.4",
         "makinacorpus/drupal-filechunk" : "1.0.*",
         "makinacorpus/drupal-gulpifier" : "1.0.*",
         "makinacorpus/drupal-iresponsive" : "1.0.*",
