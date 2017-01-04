@@ -360,7 +360,8 @@ function vetbase_preprocess_node(&$variables) {
     if ($items = field_get_items('node', $node, 'content_author')) {
       $variables['content_author'] = check_plain($items[0]['value']);
     } else {
-      $variables['content_author'] = format_username(user_load($node->uid));
+      // Never display author if there's no user input.
+      // $variables['content_author'] = format_username(user_load($node->uid));
     }
     if ($items = field_get_items('node', $node, 'content_date')) {
       $variables['content_date'] = $items[0]['date'];
