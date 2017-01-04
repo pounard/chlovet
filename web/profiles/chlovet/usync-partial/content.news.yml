@@ -20,6 +20,7 @@ entity:
       name: Actualité
       field:
         body: ~
+        front_square_title: true
         news_teaser: true
         news_image: true
         news_body: true
@@ -62,6 +63,8 @@ view:
       front:
         news_image: '@media_view_default'
 
-      square: {}
+      square:
+        front_square_title: true
+
       favorite: {}
       contentadmin: {}

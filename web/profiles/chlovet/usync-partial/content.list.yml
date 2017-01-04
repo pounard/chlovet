@@ -27,6 +27,7 @@ entity:
       name: Tuile de page d'accueil
       field:
         body: ~
+        front_square_title: true
         list_image: true
         list_list: true
         menu_hide_nav: true
@@ -47,6 +48,8 @@ view:
       front:
         list_image: '@media_view_4'
 
-      square: {}
+      square:
+        front_square_title: true
+
       favorite: {}
       contentadmin: {}

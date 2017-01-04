@@ -14,6 +14,7 @@ entity:
       name: Liste automatique
       field:
         body: ~
+        front_square_title: true
         autolist_list: true
         menu_hide_bottom: true
         hide_breadcrumb: true
@@ -46,6 +47,8 @@ view:
               view_mode: front_teaser
               limit: 6
 
-      square: {}
+      square:
+        front_square_title: true
+
       favorite: {}
       contentadmin: {}

@@ -32,6 +32,7 @@ entity:
       name: Informations de contact
       field:
         body: ~
+        front_square_title: true
         contact_info: true
         contact_address: true
         contact_position: true
@@ -79,6 +80,8 @@ view:
         contact_telephone:
           type: telephone_link
 
-      square: {}
+      square:
+        front_square_title: true
+
       favorite: {}
       contentadmin: {}

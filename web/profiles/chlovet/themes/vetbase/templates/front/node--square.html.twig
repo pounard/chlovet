@@ -3,7 +3,13 @@
   {{ title_prefix }}
   <a href="{{ node_url }}">
     <span>
-      <h2>{{ title }}</h2>
+      <h2>
+        {% if content.front_square_title %}
+          {{ content.front_square_title }}
+        {% else %}
+          {{ title }}
+        {% endif %}
+      </h2>
     </span>
   </a>
   {{ title_suffix }}

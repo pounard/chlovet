@@ -6,6 +6,7 @@ entity:
       name: Page de recherche
       field:
         body: ~
+        front_square_title: true
         menu_hide_nav: true
         menu_hide_bottom: true
         menu_children_as_teasers: true
@@ -17,6 +18,9 @@ view:
 
       default: {}
       teaser: {}
-      square: {}
+
+      square:
+        front_square_title: true
+
       favorite: {}
       contentadmin: {}

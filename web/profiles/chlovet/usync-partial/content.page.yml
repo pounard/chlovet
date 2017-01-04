@@ -20,6 +20,7 @@ entity:
       name: Page éditoriale
       field:
         body: ~
+        front_square_title: true
         page_teaser: true
         page_image: true
         page_body: true
@@ -62,6 +63,8 @@ view:
       front:
         page_image: '@media_view_default'
 
-      square: {}
+      square:
+        front_square_title: true
+
       favorite: {}
       contentadmin: {}

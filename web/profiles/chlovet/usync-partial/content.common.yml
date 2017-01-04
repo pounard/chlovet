@@ -86,6 +86,10 @@ field:
       settings:
         text_processing: 1
 
+  front_square_title:
+    label: Titre carré sur la page d'accueil
+    type: text
+
   content_author:
     label: Auteur (si différent)
     type: text
