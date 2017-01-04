@@ -1,7 +1,7 @@
 name = Vetbase
 core = 7.x
-
 engine = twig
+base theme = bootbase
 
 regions[header] = Header
 regions[header2] = Header, below title

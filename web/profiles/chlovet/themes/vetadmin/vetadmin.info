@@ -1,8 +1,6 @@
 name = Vetadmin
 core = 7.x
-
 base theme = badm
-
 engine = twig
 
 regions[header] = Header
