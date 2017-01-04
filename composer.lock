@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "4e72d92a7a541d975540e17ae012c0fd",
-    "content-hash": "acbc4f1761d60d19c223d5f317b1e185",
+    "hash": "6f8dd54ef470438db7376687b2c0c5a4",
+    "content-hash": "2bf8f14cf91a2f78fe2dd38d3be3ec82",
     "packages": [
         {
             "name": "composer/installers",
@@ -193,16 +193,16 @@
         },
         {
             "name": "doctrine/annotations",
-            "version": "v1.3.0",
+            "version": "v1.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/annotations.git",
-                "reference": "30e07cf03edc3cd3ef579d0dd4dd8c58250799a5"
+                "reference": "bd4461328621bde0ae6b1b2675fbc6aca4ceb558"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/annotations/zipball/30e07cf03edc3cd3ef579d0dd4dd8c58250799a5",
-                "reference": "30e07cf03edc3cd3ef579d0dd4dd8c58250799a5",
+                "url": "https://api.github.com/repos/doctrine/annotations/zipball/bd4461328621bde0ae6b1b2675fbc6aca4ceb558",
+                "reference": "bd4461328621bde0ae6b1b2675fbc6aca4ceb558",
                 "shasum": ""
             },
             "require": {
@@ -257,7 +257,7 @@
                 "docblock",
                 "parser"
             ],
-            "time": "2016-10-24 11:45:47"
+            "time": "2016-12-30 15:59:45"
         },
         {
             "name": "doctrine/cache",
@@ -977,16 +977,16 @@
         },
         {
             "name": "jbroadway/urlify",
-            "version": "1.0.9-stable",
+            "version": "1.1.0-stable",
             "source": {
                 "type": "git",
                 "url": "https://github.com/jbroadway/urlify.git",
-                "reference": "d3e240cdd5bfb63b84a65916154a3185038ab887"
+                "reference": "99bb78cd9002d0e9ce479bb81635eb665e37e981"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/jbroadway/urlify/zipball/d3e240cdd5bfb63b84a65916154a3185038ab887",
-                "reference": "d3e240cdd5bfb63b84a65916154a3185038ab887",
+                "url": "https://api.github.com/repos/jbroadway/urlify/zipball/99bb78cd9002d0e9ce479bb81635eb665e37e981",
+                "reference": "99bb78cd9002d0e9ce479bb81635eb665e37e981",
                 "shasum": ""
             },
             "require": {
@@ -1027,14 +1027,14 @@
                 "url",
                 "urlify"
             ],
-            "time": "2016-09-14 14:22:45"
+            "time": "2017-01-03 20:12:54"
         },
         {
             "name": "makinacorpus/apubsub",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/makinacorpus/apubsub.git",
+                "url": "git@github.com:makinacorpus/apubsub.git",
                 "reference": "28b5f238b61e0ac4d688e06234cdffaba26e9247"
             },
             "dist": {
@@ -1082,7 +1082,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/makinacorpus/drupal-apubsub.git",
+                "url": "git@github.com:makinacorpus/drupal-apubsub.git",
                 "reference": "984a31070e8cdc436f9ce1fa2762b15ed9dcf661"
             },
             "dist": {
@@ -1124,16 +1124,16 @@
         },
         {
             "name": "makinacorpus/drupal-badm",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-badm.git",
-                "reference": "ad12958184732cf5636a7e0c1531ededfadb1329"
+                "reference": "2fff1ea6a2d0229bb0c060ced4839eb1b8fcca47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-badm/zipball/ad12958184732cf5636a7e0c1531ededfadb1329",
-                "reference": "ad12958184732cf5636a7e0c1531ededfadb1329",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-badm/zipball/2fff1ea6a2d0229bb0c060ced4839eb1b8fcca47",
+                "reference": "2fff1ea6a2d0229bb0c060ced4839eb1b8fcca47",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -1153,7 +1153,7 @@
             ],
             "description": " Bootstrap based admin theme",
             "homepage": "http://github.com/makinacorpus/drupal-badm",
-            "time": "2016-07-04 09:33:45"
+            "time": "2017-01-04 14:03:37"
         },
         {
             "name": "makinacorpus/drupal-filechunk",
@@ -1256,16 +1256,16 @@
         },
         {
             "name": "makinacorpus/drupal-latlonfield",
-            "version": "1.0.3",
+            "version": "1.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-latlonfield.git",
-                "reference": "e7ea27c248162b4fb1d2dfeddcf63c0bdb14a676"
+                "reference": "9e4849376420bfbbded52dbbb416806467a8e4de"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-latlonfield/zipball/e7ea27c248162b4fb1d2dfeddcf63c0bdb14a676",
-                "reference": "e7ea27c248162b4fb1d2dfeddcf63c0bdb14a676",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-latlonfield/zipball/9e4849376420bfbbded52dbbb416806467a8e4de",
+                "reference": "9e4849376420bfbbded52dbbb416806467a8e4de",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1290,7 +1290,7 @@
             ],
             "description": "Very simple latitude/longitude storage field",
             "homepage": "http://github.com/makinacorpus/drupal-latlonfield",
-            "time": "2016-07-24 16:18:38"
+            "time": "2017-01-04 14:06:09"
         },
         {
             "name": "makinacorpus/drupal-minidialog",
@@ -1414,13 +1414,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/makinacorpus/drupal-sf-dic.git",
-                "reference": "ccdf1b751ea7344b11aa2baeecbd8daa4c1b88ed"
+                "url": "git@github.com:makinacorpus/drupal-sf-dic.git",
+                "reference": "6beeff8ca46cf9e3e5afb16c47a94c3d2ba20e97"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/ccdf1b751ea7344b11aa2baeecbd8daa4c1b88ed",
-                "reference": "ccdf1b751ea7344b11aa2baeecbd8daa4c1b88ed",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/6beeff8ca46cf9e3e5afb16c47a94c3d2ba20e97",
+                "reference": "6beeff8ca46cf9e3e5afb16c47a94c3d2ba20e97",
                 "shasum": ""
             },
             "require": {
@@ -1467,24 +1467,20 @@
             ],
             "description": "Brings the vanilla Symfony 3 depency inject container component to Drupal 7 seamlessly along with a limited compatibility layer with Drupal 8 API",
             "homepage": "http://github.com/makinacorpus/drupal-sf-dic",
-            "support": {
-                "source": "https://github.com/makinacorpus/drupal-sf-dic/tree/master",
-                "issues": "https://github.com/makinacorpus/drupal-sf-dic/issues"
-            },
-            "time": "2016-12-13 16:01:46"
+            "time": "2016-12-30 13:37:16"
         },
         {
             "name": "makinacorpus/drupal-ucms",
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/makinacorpus/drupal-ucms.git",
-                "reference": "b542b15a6c077b78ae342cf0dcfe396895869b4b"
+                "url": "git@github.com:makinacorpus/drupal-ucms.git",
+                "reference": "44cb191ee712f30fbf265d0be807b4ac1e147df7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/b542b15a6c077b78ae342cf0dcfe396895869b4b",
-                "reference": "b542b15a6c077b78ae342cf0dcfe396895869b4b",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/44cb191ee712f30fbf265d0be807b4ac1e147df7",
+                "reference": "44cb191ee712f30fbf265d0be807b4ac1e147df7",
                 "shasum": ""
             },
             "require": {
@@ -1552,11 +1548,7 @@
             ],
             "description": " µCMS modules - Node/Elasticsearch/favorites based Drupal fast contribution UI/UX",
             "homepage": "http://github.com/makinacorpus/drupal-ucms",
-            "support": {
-                "source": "https://github.com/makinacorpus/drupal-ucms/tree/master",
-                "issues": "https://github.com/makinacorpus/drupal-ucms/issues"
-            },
-            "time": "2016-12-26 15:54:30"
+            "time": "2017-01-04 13:19:13"
         },
         {
             "name": "makinacorpus/drupal-udate",
@@ -1637,7 +1629,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/makinacorpus/drupal-ulog.git",
+                "url": "git@github.com:makinacorpus/drupal-ulog.git",
                 "reference": "467c7817104471fd20dc5377b958ae0b75296d9e"
             },
             "dist": {
@@ -1670,16 +1662,16 @@
         },
         {
             "name": "makinacorpus/drupal-umenu",
-            "version": "1.1.6",
+            "version": "1.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-umenu.git",
-                "reference": "01a07c39e84bd490112cababd8175b633e7e4fbb"
+                "reference": "f803b0e2b0838d0fb52c68945a2c01f28317a5c8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/01a07c39e84bd490112cababd8175b633e7e4fbb",
-                "reference": "01a07c39e84bd490112cababd8175b633e7e4fbb",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/f803b0e2b0838d0fb52c68945a2c01f28317a5c8",
+                "reference": "f803b0e2b0838d0fb52c68945a2c01f28317a5c8",
                 "shasum": ""
             },
             "require": {
@@ -1709,7 +1701,7 @@
             ],
             "description": "Drupal core menu module replacement that does not attach to node types",
             "homepage": "http://github.com/makinacorpus/drupal-umenu",
-            "time": "2016-10-31 11:49:25"
+            "time": "2017-01-04 14:01:47"
         },
         {
             "name": "makinacorpus/drupal-unoderef",
@@ -1831,7 +1823,7 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/makinacorpus/php-acl.git",
+                "url": "git@github.com:makinacorpus/php-acl.git",
                 "reference": "ab76f59af05f2fc10543c4d385ece3cdbfff0f2b"
             },
             "dist": {
@@ -1915,13 +1907,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/makinacorpus/redis-bundle.git",
-                "reference": "1281763cf54963feaa4621c48db315ffea3d7364"
+                "url": "git@github.com:makinacorpus/redis-bundle.git",
+                "reference": "f1f69e66aef1bdb2bb3dd88fb2b1042fde60e316"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/redis-bundle/zipball/1281763cf54963feaa4621c48db315ffea3d7364",
-                "reference": "1281763cf54963feaa4621c48db315ffea3d7364",
+                "url": "https://api.github.com/repos/makinacorpus/redis-bundle/zipball/f1f69e66aef1bdb2bb3dd88fb2b1042fde60e316",
+                "reference": "f1f69e66aef1bdb2bb3dd88fb2b1042fde60e316",
                 "shasum": ""
             },
             "require": {
@@ -1962,11 +1954,7 @@
             ],
             "description": " Redis API standalone client manager or optional Symfony bundle configurator",
             "homepage": "http://github.com/makinacorpus/redis-bundle",
-            "support": {
-                "source": "https://github.com/makinacorpus/redis-bundle/tree/master",
-                "issues": "https://github.com/makinacorpus/redis-bundle/issues"
-            },
-            "time": "2016-12-22 14:05:59"
+            "time": "2017-01-04 13:10:56"
         },
         {
             "name": "monolog/monolog",
@@ -2901,13 +2889,13 @@
             "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/TFD7/TFD7.git",
-                "reference": "92c656528405deef281b428d1ae222f36c36dda8"
+                "url": "git@github.com:makinacorpus/tfd7.git",
+                "reference": "5a44395b1689fff6fcef49150c9b985c52384a63"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TFD7/TFD7/zipball/92c656528405deef281b428d1ae222f36c36dda8",
-                "reference": "92c656528405deef281b428d1ae222f36c36dda8",
+                "url": "https://api.github.com/repos/makinacorpus/tfd7/zipball/5a44395b1689fff6fcef49150c9b985c52384a63",
+                "reference": "5a44395b1689fff6fcef49150c9b985c52384a63",
                 "shasum": ""
             },
             "require": {
@@ -2933,11 +2921,7 @@
             "keywords": [
                 "templating"
             ],
-            "support": {
-                "source": "https://github.com/TFD7/TFD7/tree/master",
-                "issues": "https://github.com/TFD7/TFD7/issues"
-            },
-            "time": "2016-02-17 14:32:26"
+            "time": "2017-01-04 13:55:12"
         },
         {
             "name": "twig/extensions",
@@ -3605,16 +3589,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.4",
+            "version": "5.7.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "af91da3f2671006ff5d0628023de3b7ac4d1ef09"
+                "reference": "50fd2be8f3e23e91da825f36f08e5f9633076ffe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/af91da3f2671006ff5d0628023de3b7ac4d1ef09",
-                "reference": "af91da3f2671006ff5d0628023de3b7ac4d1ef09",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/50fd2be8f3e23e91da825f36f08e5f9633076ffe",
+                "reference": "50fd2be8f3e23e91da825f36f08e5f9633076ffe",
                 "shasum": ""
             },
             "require": {
@@ -3683,7 +3667,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-12-13 16:19:44"
+            "time": "2016-12-28 07:18:51"
         },
         {
             "name": "phpunit/phpunit-mock-objects",

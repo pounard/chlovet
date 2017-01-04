@@ -16,35 +16,43 @@
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/apubsub.git"
+            "url" : "git@github.com:makinacorpus/apubsub.git",
+            "no-api" : true
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/drupal-apubsub.git"
+            "url" : "git@github.com:makinacorpus/drupal-apubsub.git",
+            "no-api" : true
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/drupal-ulog.git"
+            "url" : "git@github.com:makinacorpus/drupal-ulog.git",
+            "no-api" : true
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/drupal-sf-dic.git"
+            "url" : "git@github.com:makinacorpus/drupal-sf-dic.git",
+            "no-api" : true
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/drupal-ucms.git"
+            "url" : "git@github.com:makinacorpus/drupal-ucms.git",
+            "no-api" : true
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/php-acl.git"
+            "url" : "git@github.com:makinacorpus/php-acl.git",
+            "no-api" : true
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/redis-bundle.git"
+            "url" : "git@github.com:makinacorpus/redis-bundle.git",
+            "no-api" : true
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:tfd7/tfd7.git"
+            "url" : "git@github.com:makinacorpus/tfd7.git",
+            "no-api" : true
         }
     ],
     "minimum-stability" : "dev",
