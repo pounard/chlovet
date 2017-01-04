@@ -59,7 +59,7 @@
         "makinacorpus/drupal-filechunk" : "1.0.*",
         "makinacorpus/drupal-gulpifier" : "1.0.*",
         "makinacorpus/drupal-iresponsive" : "1.0.*",
-        "makinacorpus/drupal-latlonfield" : "1.0.*",
+        "makinacorpus/drupal-latlonfield" : "^1.0.4",
         "makinacorpus/drupal-minidialog" : "*",
         "makinacorpus/drupal-schedulefield" : "dev-master as 1.0",
         "makinacorpus/drupal-sf-dic" : "dev-master as 3.1",
