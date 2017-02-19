@@ -19,30 +19,36 @@ admin_func:
   permission:
     - access site in maintenance mode
     - access ucms content overview
-    - users manage all
-    - content view all
     - content manage global
     - content manage group
-    - site dashboard access
-    - site manage all
-    - site view all
+    - content view all
     - labels dashboard access
     - labels edit locked
     - labels edit non locked
+    - site dashboard access
+    - site manage all
+    - site view all
+    - ucms seo content all manage
+    - ucms seo content own manage
+    - ucms seo global manage
     - use favorites
     - use text format full_html
+    - users manage all
 
 admin_tech:
   name: Administrateur technique
   permission:
     - access site in maintenance mode
     - access ucms content overview
-    - users manage all
     - bypass node access
     - site dashboard access
     - site manage all
     - site view all
+    - ucms seo content all manage
+    - ucms seo content own manage
+    - ucms seo global manage
     - use favorites
+    - users manage all
 
 global_contrib:
   name: Contributeur du référentiel global
@@ -66,6 +72,7 @@ local_webmaster:
     - labels dashboard access
     - labels edit non locked
     - site dashboard access
+    - ucms seo content own manage
     - use favorites
     - use text format full_html
 
