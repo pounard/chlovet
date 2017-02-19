@@ -28,13 +28,3 @@ twig:
         - "bootstrap_3_horizontal_layout.html.twig"
         # Custom form theme
         - "Form/bootstrap_custom.html.twig"
-
-#doctrine:
-#    dbal: {}
-#    orm:
-#        auto_generate_proxy_classes: "%kernel.debug%"
-#        naming_strategy: doctrine.orm.naming_strategy.underscore
-#        auto_mapping: true
-#        mappings:
-#            SaurFormBundle:
-#                type: annotation
