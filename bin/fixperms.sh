@@ -72,7 +72,9 @@ IGNORE="bin"
 # The last two are for ZF2 projects
 WWW_WRITABLE="log
 tmp
+var/cache
 var/log
+var/logs
 var/tmp
 app/cache
 app/logs
