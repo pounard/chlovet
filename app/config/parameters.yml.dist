@@ -1,2 +1,1 @@
-parameters:
-    saur.form.url.env: https://internetclientele-recette-waf.saur.fr/api
+parameters: {}
