@@ -40,6 +40,7 @@ dependencies[] = iresponsive
 dependencies[] = latlonfield
 dependencies[] = minidialog
 dependencies[] = schedulefield
+dependencies[] = udashboard
 dependencies[] = udate
 dependencies[] = ulink
 dependencies[] = umenu
@@ -48,7 +49,6 @@ dependencies[] = usync
 
 ; The UCMS distribution.
 dependencies[] = ucms_contrib
-dependencies[] = ucms_dashboard
 dependencies[] = ucms_label
 dependencies[] = ucms_layout
 dependencies[] = ucms_notification
