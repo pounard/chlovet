@@ -46,6 +46,11 @@
         },
         {
             "type" : "vcs",
+            "url" : "git@github.com:makinacorpus/drupal-umenu.git",
+            "no-api" : true
+        },
+        {
+            "type" : "vcs",
             "url" : "git@github.com:makinacorpus/php-acl.git",
             "no-api" : true
         },
@@ -79,12 +84,12 @@
         "makinacorpus/drupal-plusql" : "^1",
         "makinacorpus/drupal-schedulefield" : "dev-master as 1.0",
         "makinacorpus/drupal-sf-dic" : "dev-master as 3.2",
-        "makinacorpus/drupal-ucms" : "dev-master as 1.5",
+        "makinacorpus/drupal-ucms" : "dev-alias-ng as 1.5",
         "makinacorpus/drupal-udashboard" : "dev-master as 1.0",
         "makinacorpus/drupal-udate" : "1.0.*",
         "makinacorpus/drupal-ulink" : "^2.0.3",
         "makinacorpus/drupal-ulog" : "dev-master",
-        "makinacorpus/drupal-umenu" : "^1.1.7",
+        "makinacorpus/drupal-umenu" : "dev-master as 1.1.9999",
         "makinacorpus/drupal-unoderef" : "1.0.*",
         "makinacorpus/drupal-usync" : "1.0.*",
         "makinacorpus/php-acl" : "dev-master",
@@ -126,9 +131,6 @@
             "app/AppKernel.php"
         ],
         "psr-4" : {
-            "MakinaCorpus\\Ucms\\Tag\\" : "web/sites/all/modules/composer/drupal-ucms/ucms_tag/src",
-            "MakinaCorpus\\Drupal\\Dashboard\\" : "web/sites/all/modules/composer/drupal-udashboard/src",
-            "MakinaCorpus\\Drupal\\Dashboard\\Tests\\" : "web/sites/all/modules/composer/drupal-udashboard/tests",
             "Chlovet\\" : "src"
         }
     }
