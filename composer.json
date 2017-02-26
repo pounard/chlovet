@@ -84,7 +84,7 @@
         "makinacorpus/drupal-plusql" : "^1",
         "makinacorpus/drupal-schedulefield" : "dev-master as 1.0",
         "makinacorpus/drupal-sf-dic" : "dev-master as 3.2",
-        "makinacorpus/drupal-ucms" : "dev-alias-ng as 1.5",
+        "makinacorpus/drupal-ucms" : "dev-master-ng as 2.0",
         "makinacorpus/drupal-udashboard" : "dev-master as 1.0",
         "makinacorpus/drupal-udate" : "1.0.*",
         "makinacorpus/drupal-ulink" : "^2.0.3",
