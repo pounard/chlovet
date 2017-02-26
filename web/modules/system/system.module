@@ -2533,6 +2533,9 @@ function _system_rebuild_theme_data() {
   }
 
   // Set defaults for theme info.
+  // The 'owner' key will be stored into database, 'engine' key will not and
+  // be stored into the serialized 'info' array instead. This will be loaded
+  // into system_list() and used in _drupal_theme_initialize().
   $defaults = array(
     'engine' => NULL,
     'owner' => NULL,
@@ -2588,7 +2591,7 @@ function _system_rebuild_theme_data() {
       $filename = dirname($themes[$key]->uri) . '/' . $themes[$key]->name . '.theme';
       if (file_exists($filename)) {
         $themes[$key]->engine = 'theme';
-        $themes[$key]->owner = $themes[$key]->info['owner'] = $filename;
+        $themes[$key]->owner = $filename;
         $themes[$key]->prefix = $key;
       }
     }
@@ -2596,7 +2599,7 @@ function _system_rebuild_theme_data() {
       $engine = $themes[$key]->info['engine'];
       if (isset($engines[$engine])) {
         $themes[$key]->engine = $engine;
-        $themes[$key]->owner = $themes[$key]->info['owner'] = $engines[$engine]->uri;
+        $themes[$key]->owner = $engines[$engine]->uri;
         $themes[$key]->prefix = $engines[$engine]->name;
         $themes[$key]->template = TRUE;
       }
@@ -2627,9 +2630,12 @@ function _system_rebuild_theme_data() {
     }
     // Copy the 'owner' and 'engine' over if the top level theme uses a theme
     // engine and the current theme has no engine itself.
+    // Note that 'engine' must be stored into the info array because it has no
+    // associated column in the {system} table whereas the 'owner' column
+    // exists.
     if (isset($themes[$base_key]->engine) && !isset($themes[$key]->engine)) {
       $themes[$key]->engine = $themes[$key]->info['engine'] = $themes[$base_key]->engine;
-      $themes[$key]->owner = $themes[$key]->info['owner'] = $themes[$base_key]->owner;
+      $themes[$key]->owner = $themes[$base_key]->owner;
       $themes[$key]->prefix = $themes[$base_key]->prefix;
     }
     else {

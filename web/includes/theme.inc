@@ -205,7 +205,12 @@ function _drupal_theme_initialize($theme, $base_theme = array(), $registry_callb
   // Make sure of loading the current theme first so preprocess functions are
   // loaded properly.
   foreach (array($theme) + list_themes() as $current) {
-    include_once DRUPAL_ROOT . '/' . $current->owner;
+    // Do not attempt to load en empty owner, this could happen with malformed
+    // theme info, or missing parent theme engine; during runtime initialization
+    // we should not let Drupal emit warnings on a live site.
+    if ($current->owner) {
+      include_once DRUPAL_ROOT . '/' . $current->owner;
+    }
 
     if (function_exists($current->engine . '_init')) {
       call_user_func($current->engine . '_init', $current);
