@@ -646,3 +646,153 @@ class ThemeDebugMarkupTestCase extends DrupalWebTestCase {
   }
 
 }
+
+/**
+ * Tests module-provided theme engines.
+ */
+class ModuleProvidedThemeEngineTestCase extends DrupalWebTestCase {
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Theme engine test',
+      'description' => 'Tests module-provided theme engines.',
+      'group' => 'Theme',
+    );
+  }
+
+  function setUp() {
+    parent::setUp('theme_test');
+    theme_enable(array('test_theme', 'test_theme_nyan_cat'));
+  }
+
+  /**
+   * Ensures that the module provided theme engine is found and used by core.
+   */
+  function testEngineIsFoundAndWorking() {
+    variable_set('theme_default', 'test_theme_nyan_cat');
+    variable_set('admin_theme', 'test_theme_nyan_cat');
+
+    $this->drupalGet('theme-test/engine-info-test');
+    $this->assertText('Miaou');
+  }
+
+}
+
+/**
+ * Tests the multi theme engine support.
+ */
+class ThemeEngineNyanCatTestCase extends DrupalWebTestCase {
+  public static function getInfo() {
+    return array(
+      'name' => 'Theme engine test',
+      'description' => 'Tests the theme engine.',
+      'group' => 'Theme',
+    );
+  }
+
+  function setUp() {
+    parent::setUp('theme_test');
+    theme_enable(array('test_theme'));
+  }
+
+  /**
+   * Ensures a theme's template is overridable based on the 'template' filename.
+   */
+  function testTemplateOverride() {
+    variable_set('theme_default', 'test_theme_nyan_cat');
+    variable_set('admin_theme', 'test_theme_nyan_cat');
+
+    $this->drupalGet('theme-test/template-test-engine');
+    $this->assertText('Success: Template overridden with Nyan Cat theme. All of them', 'Template overridden by Nyan Cat file.');
+  }
+
+}
+
+/**
+ * Tests the multi theme engine support with a subtheme.
+ */
+class ThemeEngineNyanCatSubThemeTestCase extends DrupalWebTestCase {
+  public static function getInfo() {
+    return array(
+      'name' => 'Sub theme engine test',
+      'description' => 'Tests the theme engine on a subtheme.',
+      'group' => 'Theme',
+    );
+  }
+
+  function setUp() {
+    parent::setUp('theme_test');
+    theme_enable(array('test_theme', 'test_theme_nyan_cat', 'test_subtheme_nyan_cat'));
+  }
+
+  /**
+   * Ensures a theme's template is overridable based on the 'template' filename.
+   */
+  function testTemplateOverride() {
+    variable_set('theme_default', 'test_subtheme_nyan_cat');
+    variable_set('admin_theme', 'test_subtheme_nyan_cat');
+
+    $this->drupalGet('theme-test/template-test-engine');
+    $this->assertText('Success: Template overridden with Nyan Cat theme. All of them', 'Template overridden by Nyan Cat file.');
+  }
+
+  /**
+   * Ensures that a module providing both templates with different engines
+   * will all be correctly displayed, no matter is the theme, using their
+   * respective engines.
+   *
+   * Tests that phptemplate -> nyan_cat template override works.
+   */
+  function testEngineCohabitationFromDefaultToNyan() {
+    variable_set('theme_default', 'test_theme');
+    variable_set('admin_theme', 'test_theme');
+
+    $this->drupalGet('theme-test/engine-cohabitation');
+    $this->assertText('Inheritance 1.');
+    $this->assertText('Inheritance 2.');
+    $this->assertText('Inheritance 3.');
+    // This one is overriden.
+    $this->assertNoText('Inheritance 4.');
+    $this->assertText('Inheritance 6.');
+    // This one is in another theme.
+    $this->assertNoText('Inheritance 5.');
+  }
+
+  /**
+   * Ensures that a module providing both templates with different engines
+   * will all be correctly displayed, no matter is the theme, using their
+   * respective engines.
+   *
+   * Tests that nyan_cat -> phptemplate template override works.
+   */
+  function testEngineCohabitationFromNyanToDefault() {
+    variable_set('theme_default', 'test_theme_nyan_cat');
+    variable_set('admin_theme', 'test_theme_nyan_cat');
+
+    $this->drupalGet('theme-test/engine-cohabitation');
+    $this->assertText('Inheritance 1.');
+    $this->assertText('Inheritance 2.');
+    $this->assertText('Inheritance 4.');
+    // This one is overriden.
+    $this->assertNoText('Inheritance 3.');
+    $this->assertText('Inheritance 5.');
+    // This one is in another theme.
+    $this->assertNoText('Inheritance 6.');
+  }
+
+  /**
+   * Ensure the subtheme has inherited of the theme engine of it's base theme.
+   */
+  function testEngineIsCorrectlyInherited() {
+    $infos = list_themes();
+
+    // Get the base theme name from the theme 'test_subtheme_nyan_cat'
+    $base_theme_name = $infos['test_subtheme_nyan_cat']->info['base theme'];
+    // Get the base theme
+    $base_theme = $infos[$base_theme_name];
+
+    // Compare their theme engine.
+    $this->assertEqual($infos['test_subtheme_nyan_cat']->info['engine'], $base_theme->info['engine']);
+  }
+
+}

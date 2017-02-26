@@ -202,14 +202,13 @@ function _drupal_theme_initialize($theme, $base_theme = array(), $registry_callb
   }
 
   // Initialize all themes and engines.
-  foreach (array_merge($base_theme, array($theme)) as $current) {
-    if (isset($current->owner)) {
-      include_once DRUPAL_ROOT . '/' . $current->owner;
-    }
-    if (isset($current->engine)) {
-      if (function_exists($current->engine . '_init')) {
-        call_user_func($current->engine . '_init', $current);
-      }
+  // Make sure of loading the current theme first so preprocess functions are
+  // loaded properly.
+  foreach (array($theme) + list_themes() as $current) {
+    include_once DRUPAL_ROOT . '/' . $current->owner;
+
+    if (function_exists($current->engine . '_init')) {
+      call_user_func($current->engine . '_init', $current);
     }
   }
 
@@ -1148,14 +1147,12 @@ function theme($hook, $variables = array()) {
     // The theme engine may use a different extension and a different renderer.
     if (isset($info['engine'])) {
       $theme_engine = $info['engine'];
-      if ($info['type'] != 'module') {
-        if (function_exists($theme_engine . '_render_template')) {
-          $render_function = $theme_engine . '_render_template';
-        }
-        $extension_function = $theme_engine . '_extension';
-        if (function_exists($extension_function)) {
-          $extension = $extension_function();
-        }
+      if (function_exists($theme_engine . '_render_template')) {
+        $render_function = $theme_engine . '_render_template';
+      }
+      $extension_function = $theme_engine . '_extension';
+      if (function_exists($extension_function)) {
+        $extension = $extension_function();
       }
     }
 
@@ -1227,6 +1224,7 @@ function path_to_theme() {
 function drupal_find_theme_functions($cache, $prefixes) {
   $implementations = array();
   $functions = get_defined_functions();
+  $theme_functions = preg_grep('/^(' . implode(')|(', $prefixes) . ')_/', $functions['user']);
 
   foreach ($cache as $hook => $info) {
     foreach ($prefixes as $prefix) {
@@ -1243,7 +1241,7 @@ function drupal_find_theme_functions($cache, $prefixes) {
       // intermediary suggestion.
       $pattern = isset($info['pattern']) ? $info['pattern'] : ($hook . '__');
       if (!isset($info['base hook']) && !empty($pattern)) {
-        $matches = preg_grep('/^' . $prefix . '_' . $pattern . '/', $functions['user']);
+        $matches = preg_grep('/^' . $prefix . '_' . $pattern . '/', $theme_functions);
         if ($matches) {
           foreach ($matches as $match) {
             $new_hook = substr($match, strlen($prefix) + 1);
@@ -2630,7 +2628,7 @@ function template_preprocess_page(&$variables) {
   // Move some variables to the top level for themer convenience and template cleanliness.
   $variables['show_messages'] = $variables['page']['#show_messages'];
 
-  foreach (system_region_list($GLOBALS['theme']) as $region_key => $region_name) {
+  foreach (system_region_list($GLOBALS['theme'], REGIONS_ALL, FALSE) as $region_key) {
     if (!isset($variables['page'][$region_key])) {
       $variables['page'][$region_key] = array();
     }

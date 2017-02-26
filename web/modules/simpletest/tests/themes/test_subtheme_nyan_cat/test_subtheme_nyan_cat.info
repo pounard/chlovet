@@ -1,0 +1,5 @@
+name = 'Test subtheme with base theme and another theme engine'
+description = 'Test subtheme with base theme and another theme engine.'
+version = VERSION
+core = 7.x
+base theme = test_theme_nyan_cat

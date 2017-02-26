@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * @file
+ * Test theme.
+ */
+
+/**
+ * Implements hook_preprocess_theme_test_template_test_engine().
+ */
+function test_theme_nyan_cat_preprocess_theme_test_template_test_engine(&$variables) {
+  $variables['kittens'] = 'All of them';
+}

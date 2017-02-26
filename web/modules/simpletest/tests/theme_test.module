@@ -17,6 +17,39 @@ function theme_test_theme($existing, $type, $theme, $path) {
   $items['theme_test_foo'] = array(
     'variables' => array('foo' => NULL),
   );
+  $items['theme_test_template_test_engine'] = array(
+    'template' => 'theme_test.template_test_engine',
+    'engine' => 'nyan_cat'
+  );
+  // The following template is phptemplate per default, and will be displayed
+  // correctly even when using the 'test_theme_nyan_cat' theme, which is based
+  // upon the nyan_cat engine.
+  $items['theme_test_engine_inheritance_phpt'] = array(
+    'variables' => array(),
+    'template' => 'theme_test_engine_inheritance_phpt',
+  );
+  // The following template is nyan_cat per default, and will be displayed
+  // correctly even when using the 'test_theme' theme, which is based upon
+  // the phptemplate engine.
+  $items['theme_test_engine_inheritance_nyan'] = array(
+    'variables' => array(),
+    'template' => 'theme_test_engine_inheritance_nyan',
+    'engine' => 'nyan_cat'
+  );
+  // In opposition to the two templates above, this one is phptemplate but will
+  // be correctly overriden by the 'test_theme_nyan_cat' which has a different
+  // engine.
+  $items['theme_test_engine_inheritance_phpt_overriden'] = array(
+    'variables' => array(),
+    'template' => 'theme_test_engine_inheritance_phpt_overriden',
+  );
+  // Exact same as above, this one is nyan cat but will be correctly overriden
+  // by the 'test_theme' which has a different engine.
+  $items['theme_test_engine_inheritance_nyan_overriden'] = array(
+    'variables' => array(),
+    'template' => 'theme_test_engine_inheritance_nyan_overriden',
+    'engine' => 'nyan_cat'
+  );
   return $items;
 }
 
@@ -27,7 +60,17 @@ function theme_test_system_theme_info() {
   $themes['test_theme'] = drupal_get_path('module', 'theme_test') . '/themes/test_theme/test_theme.info';
   $themes['test_basetheme'] = drupal_get_path('module', 'theme_test') . '/themes/test_basetheme/test_basetheme.info';
   $themes['test_subtheme'] = drupal_get_path('module', 'theme_test') . '/themes/test_subtheme/test_subtheme.info';
+  $themes['test_theme_nyan_cat'] = drupal_get_path('module', 'theme_test') . '/themes/test_theme_nyan_cat/test_theme_nyan_cat.info';
+  $themes['test_subtheme_nyan_cat'] = drupal_get_path('module', 'theme_test') . '/themes/test_subtheme_nyan_cat/test_subtheme_nyan_cat.info';
   return $themes;
+}
+
+/**
+ * Implements hook_system_theme_engine_info().
+ */
+function theme_test_system_theme_engine_info() {
+  $theme_engines['nyan_cat'] = drupal_get_path('module', 'theme_test') . '/themes/engines/nyan_cat/nyan_cat.engine';
+  return $theme_engines;
 }
 
 /**
@@ -58,7 +101,45 @@ function theme_test_menu() {
     'access callback' => TRUE,
     'type' => MENU_CALLBACK,
   );
+  $items['theme-test/engine-info-test'] = array(
+    'description' => "Serves a simple page rendered using a Nyan Cat theme engine template.",
+    'page callback' => '_theme_test_engine_info_test',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  $items['theme-test/template-test-engine'] = array(
+    'page callback' => '_theme_test_template_test_engine',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+  $items['theme-test/engine-cohabitation'] = array(
+    'page callback' => '_theme_test_engine_inheritance',
+    'access callback' => TRUE,
+    'type' => MENU_CALLBACK,
+  );
+
   return $items;
+}
+
+/**
+ * Page callback, calls a theme hook suggestion.
+ */
+function _theme_test_template_test_engine() {
+  return array(
+    '#markup' => theme('theme_test_template_test_engine', array()),
+  );
+}
+
+/**
+ * Page callback, display various templates for various theme engines.
+ */
+function _theme_test_engine_inheritance() {
+  return array(
+    array('#theme' => 'theme_test_engine_inheritance_phpt'),
+    array('#theme' => 'theme_test_engine_inheritance_nyan'),
+    array('#theme' => 'theme_test_engine_inheritance_phpt_overriden'),
+    array('#theme' => 'theme_test_engine_inheritance_nyan_overriden'),
+  );
 }
 
 /**
@@ -137,6 +218,15 @@ function _theme_test_suggestion() {
 function _theme_test_drupal_add_region_content() {
   drupal_add_region_content('content', 'World');
   return 'Hello';
+}
+
+/**
+ * Serves a simple page renderered using a Nyan Cat theme engine template.
+ */
+function _theme_test_engine_info_test() {
+  return array(
+    '#markup' => theme('theme_test_template_test'),
+  );
 }
 
 /**
