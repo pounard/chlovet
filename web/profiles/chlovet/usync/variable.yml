@@ -70,7 +70,9 @@ ucms_site_state_transition_matrix:
 ucms_search_cron_limit: 500
 
 umenu_allowed_roles:
-  header: Header
+  header: Dans la barre du haut
+  home: Menu en haut des pages
+  navigation: Plan du site
 
 # Few Drupal core variables
 user_register: 0

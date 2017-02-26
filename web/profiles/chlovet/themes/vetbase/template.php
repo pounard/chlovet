@@ -72,14 +72,6 @@ function _vetbase_add_menus(&$variables) {
   if ($siteContext) {
     $menuTree = $menuManager->buildTree('site-main-' . $siteContext->getId());
 
-    // Main menu
-    if ($menuTree) {
-      $variables['menu'] = [
-        '#tree'  => $menuTree,
-        '#theme' => 'umenu__main_menu',
-      ];
-    }
-
     if ($node = menu_get_object()) {
 
       if ($menuTree && $menuTree->hasNodeItems($node->nid)) {
@@ -150,6 +142,20 @@ function _vetbase_add_menus(&$variables) {
       }
     }
 
+    // Home menu
+    $homeMenu = $menuManager->getMenuStorage()->loadWithConditions([
+      'site_id' => $siteContext->getId(),
+      'role'    => 'home',
+    ]);
+    if ($homeMenu) {
+      $homeMenu = reset($homeMenu);
+      $variables['menu'] = [
+        '#tree'     => $menuManager->buildTree($homeMenu->getId()),
+        '#current'  => $node ? $node->nid : null,
+        '#theme'    => 'umenu__main_menu',
+      ];
+    }
+
     // Also attempt to load the header menu
     $headerMenu = $menuManager->getMenuStorage()->loadWithConditions([
       'site_id' => $siteContext->getId(),
@@ -200,21 +206,6 @@ function vetbase_preprocess_page(&$variables) {
     drupal_add_js($path . '/bootstrap/js/popover.js', $opts);
   } else {
     drupal_add_js($path . '/bootstrap/dist/js/bootstrap.min.js', $opts);
-  }
-
-  // FIXME find a better way, this is already loaded during site:init event
-  if (\Drupal::getContainer()->has('umenu.storage') && \Drupal::getContainer()->has('ucms_site.manager')) {
-    /* @var $storage MakinaCorpus\Umenu\MenuStorageInterface */
-    $storage = \Drupal::service('umenu.storage');
-    /* @var $manager MakinaCorpus\Ucms\Site\SiteManager */
-    $manager = \Drupal::service('ucms_site.manager');
-    if ($manager->hasContext()) {
-      $menuList = $storage->loadWithConditions(['site_id' => $manager->getContext()->getId()]);
-      if ($menuList) {
-        // Take the first one, hop... Ni vu ni connnu je t'embrouille.
-        $variables['page']['menu'][] = menu_tree(reset($menuList)['name']);
-      }
-    }
   }
 
   if ($siteContext) {
@@ -855,90 +846,6 @@ function _vetbase_extract_data_from_attributes(&$vars, $name) {
       $item = $temp_real_value;
     }
   }
-}
-
-/**
- * Overrides theme_nice_menus_build().
- */
-function vetbase_nice_menus_build($variables) {
-  $menu = $variables['menu'];
-  $depth = $variables['depth'];
-  $trail = $variables['trail'];
-  $output = '';
-  // Prepare to count the links so we can mark first, last, odd and even.
-  $index = 0;
-  $count = 0;
-  foreach ($menu as $menu_count) {
-    if ($menu_count['link']['hidden'] == 0) {
-      $count++;
-    }
-  }
-  // Get to building the menu.
-  foreach ($menu as $menu_item) {
-    $mlid = $menu_item['link']['mlid'];
-    // Check to see if it is a visible menu item.
-    if (!isset($menu_item['link']['hidden']) || $menu_item['link']['hidden'] == 0) {
-      // Check our count and build first, last, odd/even classes.
-      $index++;
-      $first_class = $index == 1 ? ' first ' : '';
-      $oddeven_class = $index % 2 == 0 ? ' even ' : ' odd ';
-      $last_class = $index == $count ? ' last ' : '';
-      // Build class name based on menu path
-      // e.g. to give each menu item individual style.
-      // Strip funny symbols.
-      $clean_path = str_replace(array('http://', 'www', '<', '>', '&', '=', '?', ':', '.'), '', $menu_item['link']['href']);
-      // Convert slashes to dashes.
-      $clean_path = str_replace('/', '-', $clean_path);
-      $class = 'menu-path-' . $clean_path;
-      if ($trail && in_array($mlid, $trail)) {
-        $class .= ' active-trail';
-      }
-      // If it has children build a nice little tree under it.
-      if ((!empty($menu_item['link']['has_children'])) && (!empty($menu_item['below'])) && $depth != 0) {
-        // Keep passing children into the function 'til we get them all.
-        if ($menu_item['link']['depth'] <= $depth || $depth == -1) {
-          $children = array(
-            '#theme' => 'nice_menus_build',
-            '#prefix' => '<ul>',
-            '#suffix' => '</ul>',
-            '#menu' => $menu_item['below'],
-            '#depth' => $depth,
-            '#trail' => $trail,
-          );
-        }
-        else {
-          $children = '';
-        }
-        // Set the class to parent only of children are displayed.
-        $parent_class = ($children && ($menu_item['link']['depth'] <= $depth || $depth == -1)) ? 'menuparent ' : '';
-         $element = array(
-          '#below' => $children,
-          '#title' => $menu_item['link']['link_title'],
-          '#href' =>  $menu_item['link']['href'],
-          '#localized_options' => $menu_item['link']['localized_options'],
-          '#attributes' => array(
-            'class' => array('menu-' . $mlid, $parent_class, $class, $first_class, $oddeven_class, $last_class),
-          ),
-        );
-        $variables['element'] = $element;
-        $output .= theme('menu_link', $variables);
-      }
-      else {
-        $element = array(
-          '#below' => '',
-          '#title' => $menu_item['link']['link_title'],
-          '#href' =>  $menu_item['link']['href'],
-          '#localized_options' => $menu_item['link']['localized_options'],
-          '#attributes' => array(
-            'class' => array('menu-' . $mlid, $class, $first_class, $oddeven_class, $last_class),
-          ),
-        );
-        $variables['element'] = $element;
-        $output .= theme('menu_link', $variables);
-      }
-    }
-  }
-  return $output;
 }
 
 /**
