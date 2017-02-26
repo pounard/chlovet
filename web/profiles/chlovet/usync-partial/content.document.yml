@@ -31,4 +31,5 @@ view:
       default:
         file: true
 
+      favorite: {}
       square: {}

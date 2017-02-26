@@ -14,7 +14,7 @@ entity:
 
 view:
   node:
-    image:
+    search:
 
       default: {}
       teaser: {}
