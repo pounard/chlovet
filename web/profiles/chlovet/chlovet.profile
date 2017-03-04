@@ -4,6 +4,100 @@
  */
 
 /**
+ * Implements hook_boot().
+ */
+function chlovet_boot() {
+  // Prepolute some Drupal caches to avoid useless SQL queris.
+  drupal_static('system_date_format_locale', [
+    'fr' => [
+      'medium' => false,
+    ]
+  ]);
+  drupal_static('system_get_date_types', [
+    'long' => [
+      'module' => 'system',
+      'type' => 'long',
+      'title' => 'Long',
+      'locked' => 1,
+      'is_new' => false,
+    ],
+    'medium' =>[
+      'module' => 'system',
+      'type' => 'medium',
+      'title' => 'Medium',
+      'locked' => 1,
+      'is_new' => false,
+    ],
+    'short' => [
+      'module' => 'system',
+      'type' => 'short',
+      'title' => 'Short',
+      'locked' => 1,
+      'is_new' => false,
+    ],
+  ]);
+  drupal_static('language_list', [
+    'language' => [
+      'en' => (object)[
+        'language' => 'en',
+        'name' => 'English',
+        'native' => 'English',
+        'direction' => '0',
+        'enabled' => '0',
+        'plurals' => '0',
+        'formula' => '',
+        'domain' => '',
+        'prefix' => '',
+        'weight' => '0',
+        'javascript' => '',
+      ],
+      'fr' =>  (object)[
+        'language' => 'fr',
+        'name' => 'French',
+        'native' => 'Français',
+        'direction' => '0',
+        'enabled' => '1',
+        'plurals' => '0',
+        'formula' => '',
+        'domain' => '',
+        'prefix' => 'fr',
+        'weight' => '0',
+        'javascript' => '',
+      ],
+    ],
+    'enabled' => [[
+      'en' =>  (object)[
+        'language' => 'en',
+        'name' => 'English',
+        'native' => 'English',
+        'direction' => '0',
+        'enabled' => '0',
+        'plurals' => '0',
+        'formula' => '',
+        'domain' => '',
+        'prefix' => '',
+        'weight' => '0',
+        'javascript' => '',
+      ],
+      ], [
+      'fr' =>  (object)[
+        'language' => 'fr',
+        'name' => 'French',
+        'native' => 'Français',
+        'direction' => '0',
+        'enabled' => '1',
+        'plurals' => '0',
+        'formula' => '',
+        'domain' => '',
+        'prefix' => 'fr',
+        'weight' => '0',
+        'javascript' => '',
+      ],
+    ]],
+  ]);
+}
+
+/**
  * Implements hook_page_build().
  */
 function chlovet_page_build() {
