@@ -62,18 +62,14 @@ macro:
       viewport: 30
 
   text_view_trimmed:
-    type: chlovet_htmlawed
+    type: text_trimmed
     settings:
-      config: ~
-      spec: ''
-      trim: 300
+      trim_length: 300
 
   text_view_trimmed_smaller:
-    type: chlovet_htmlawed
+    type: text_trimmed
     settings:
-      config: ~
-      spec: ''
-      trim: 100
+      trim_length: 100
 
 field:
 

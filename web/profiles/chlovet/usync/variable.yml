@@ -75,6 +75,7 @@ umenu_allowed_roles:
   navigation: Plan du site
 
 # Few Drupal core variables
+ulink_unsafe_text_caching: true
 user_register: 0
 admin_theme: vetadmin
 node_admin_theme: true

@@ -3,15 +3,13 @@ full_html:
   filters:
     ulink_entity:
       weight: 1
-    filter_html:
+    chlovet_htmlawed:
       weight: 2
       settings:
-        allowed_html: '<a> <em> <strong> <blockquote> <ul> <ol> <li> <h2> <h3> <h4> <h5> <h6> <del> <hr> <br> <div> <p> <span> <img> <picture> <source> <abbr> <del> <strike>'
+        allowed_html: 'a, em, strong, blockquote, ul, ol, li, h2, h3, h4, h5, h6, del, hr, br, div, p, span, img, picture, source, abbr, del, strike'
         filter_html_help: 0
     ucmsmediadnd:
       weight: 3
-    filter_htmlcorrector:
-      weight: 4
 
 # Created for performance reasons: by removing some filter we will remove
 # a few SQL queries at runtime and gain performances. This filter aims to
@@ -20,8 +18,8 @@ full_html:
 partial_html:
   name: HTML Partiel
   filters:
-    filter_html:
+    chlovet_htmlawed:
       weight: 1
       settings:
-        allowed_html: '<em> <strong> <blockquote> <ul> <ol> <li> <h2> <h3> <h4> <h5> <h6> <br> <p> <span> <abbr>'
+        allowed_html: 'em, strong, blockquote, ul, ol, li, br, p, span, abbr'
         filter_html_help: 0

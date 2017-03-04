@@ -4,16 +4,77 @@
  */
 
 /**
- * Register custom field formatters.
- */
-require_once __DIR__ . '/chlovet.field_formatters.inc';
-
-/**
  * Implements hook_page_build().
  */
 function chlovet_page_build() {
   // @todo For some unknown reason sometime it's missing
   drupal_add_library('system', 'ui.droppable');
+}
+
+/**
+ * Implements hook_filter_info().
+ */
+function chlovet_filter_info() {
+  return [
+    'chlovet_htmlawed' => [
+      'title'             => t('Limit allowed HTML tags'),
+      'process callback'  => 'chlovet_filter_htmlawed',
+      'settings callback' => 'chlovet_filter_htmlawed_settings',
+      'default settings'  => [
+        'allowed_html'    => chlovet_filter_htmlawed_default(),
+        'filter_html_nofollow' => 0,
+      ],
+    ],
+  ];
+}
+
+/**
+ * Default tags allowed for stripped HTML.
+ */
+function chlovet_filter_htmlawed_default() {
+  return 'a, em, strong, cite, blockquote, ol, ul, li, dl, dt, dd';
+}
+
+/**
+ * Filter settings callback.
+ */
+function chlovet_filter_htmlawed_settings($form, &$form_state, $filter, $format, $defaults) {
+  $filter->settings += $defaults;
+  return [
+    'allowed_html' => [
+      '#type'           => 'textfield',
+      '#title'          => t('Allowed HTML tags'),
+      '#default_value'  => $filter->settings['allowed_html'],
+      '#maxlength'      => 1024,
+      '#description'    => t('A list of HTML tags that can be used. JavaScript event attributes, JavaScript URLs, and CSS are always stripped.'),
+    ],
+    'filter_html_nofollow' => [
+      '#type'           => 'checkbox',
+      '#title'          => t('Add rel="nofollow" to all links'),
+      '#default_value'  => $filter->settings['filter_html_nofollow'],
+    ],
+  ];
+}
+
+/**
+ * Filter process callback.
+ */
+function chlovet_filter_htmlawed($text, $filter) {
+
+  if (empty($text)) {
+    return $text;
+  }
+
+  # @todo allow image attributes, we need that for media udnd from ucms_contrib
+  $spec   = '';
+  $config = [
+    'safe'            => 1,
+    'keep_bad'        => 0,
+    'elements'        => $filter->settings['allowed_html'] ?? chlovet_filter_htmlawed_default(),
+    'deny_attribute'  => 'id, style'
+  ];
+
+  return htmLawed($text, $config, $spec);
 }
 
 /**

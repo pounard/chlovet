@@ -6,3 +6,28 @@
 #contextual-pane {
   z-index: @zindex-admin-contextual-pane;
 }
+
+ul.tree-admin {
+  list-style: none;
+  padding-left: @padding-small-horizontal;
+  overflow-x: hidden;
+
+  li {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+
+  a {
+    color: @navbar-inverse-link-color;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: @navbar-inverse-link-hover-color;
+      background-color: @navbar-inverse-link-hover-bg;
+    }
+  }
+}
