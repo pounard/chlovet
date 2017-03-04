@@ -180,3 +180,11 @@ function chlovet_update_7003() {
   node_type_delete('list');
   node_type_delete('highlight');
 }
+
+/**
+ * Removes the 'path' core module.
+ */
+function chlovet_update_7004() {
+  module_disable(['path']);
+  drupal_uninstall_modules(['path'], false);
+}

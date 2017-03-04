@@ -4,6 +4,7 @@ ucms_contrib_component_types:
   - list
   - menu
   - search
+  - sitemap
 
 ucms_contrib_editorial_types:
   - news

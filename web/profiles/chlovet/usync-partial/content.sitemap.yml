@@ -1,0 +1,32 @@
+# Home list to pages
+field:
+
+  sitemap:
+    label: Affichage du plan du site
+    type: ucms_widget
+    settings:
+      type: ucms_seo_sitemap
+
+entity:
+  node:
+
+    sitemap:
+      name: Plan du site
+      field:
+        body: ~
+        sitemap: true
+        menu_hide_nav: true
+        menu_hide_bottom: true
+        menu_children_as_teasers: true
+        hide_breadcrumb: true
+
+view:
+  node:
+    sitemap:
+
+      default: {}
+      favorite: {}
+      contentadmin: {}
+
+      full:
+        sitemap: true
