@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "03c2aa8a95d8a6548a08d5a757ddcef2",
+    "content-hash": "bff366d8c5877ca006855e9bc762fba2",
     "packages": [
         {
             "name": "composer/installers",
@@ -843,52 +843,6 @@
             "time": "2014-10-12T19:18:40+00:00"
         },
         {
-            "name": "htmlawed/htmlawed",
-            "version": "1.1.22",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/kesar/HTMLawed.git",
-                "reference": "b270453ba016ee4c6dae585f047d1e4f3cc456a1"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/kesar/HTMLawed/zipball/b270453ba016ee4c6dae585f047d1e4f3cc456a1",
-                "reference": "b270453ba016ee4c6dae585f047d1e4f3cc456a1",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">4.4.0"
-            },
-            "type": "library",
-            "autoload": {
-                "files": [
-                    "htmLawed.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "GPL-2.0+",
-                "LGPL-3.0"
-            ],
-            "authors": [
-                {
-                    "name": "Santosh Patnaik",
-                    "homepage": "http://www.bioinformatics.org/people/index.php?user_hash=558b661f92d0ff7b",
-                    "role": "Developer"
-                }
-            ],
-            "description": "htmLawed - Process text with HTML markup to make it more compliant with HTML standards and administrative policies",
-            "homepage": "http://www.bioinformatics.org/phplabware/internal_utilities/htmLawed/",
-            "keywords": [
-                "HTMLtidy",
-                "html",
-                "sanitize",
-                "strip",
-                "tags"
-            ],
-            "time": "2016-08-27T18:53:27+00:00"
-        },
-        {
             "name": "jakub-onderka/php-console-color",
             "version": "0.1",
             "source": {
@@ -1475,12 +1429,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-ucms.git",
-                "reference": "19e2aeaa780d12a29e1094f7dac50054d718597f"
+                "reference": "6c20ae8467084423e341e73c5a7f34177d653ba8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/19e2aeaa780d12a29e1094f7dac50054d718597f",
-                "reference": "19e2aeaa780d12a29e1094f7dac50054d718597f",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/6c20ae8467084423e341e73c5a7f34177d653ba8",
+                "reference": "6c20ae8467084423e341e73c5a7f34177d653ba8",
                 "shasum": ""
             },
             "require": {
@@ -1561,7 +1515,7 @@
             ],
             "description": " µCMS modules - Node/Elasticsearch/favorites based Drupal fast contribution UI/UX",
             "homepage": "http://github.com/makinacorpus/drupal-ucms",
-            "time": "2017-03-04 11:48:52"
+            "time": "2017-03-04 23:27:24"
         },
         {
             "name": "makinacorpus/drupal-udashboard",
@@ -1665,16 +1619,16 @@
         },
         {
             "name": "makinacorpus/drupal-ulink",
-            "version": "2.0.11",
+            "version": "2.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-ulink.git",
-                "reference": "5113b1efc4ea75e677638a4ad536ce406059f7d9"
+                "reference": "229cfba8951a0d0aaafea023af7891d47c05bf85"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ulink/zipball/5113b1efc4ea75e677638a4ad536ce406059f7d9",
-                "reference": "5113b1efc4ea75e677638a4ad536ce406059f7d9",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ulink/zipball/229cfba8951a0d0aaafea023af7891d47c05bf85",
+                "reference": "229cfba8951a0d0aaafea023af7891d47c05bf85",
                 "shasum": ""
             },
             "require": {
@@ -1702,7 +1656,7 @@
             ],
             "description": "Provide some input filters for making links, along with an optional CKEditor plugin",
             "homepage": "http://github.com/makinacorpus/drupal-ulink",
-            "time": "2017-03-04T10:05:24+00:00"
+            "time": "2017-03-04T23:20:45+00:00"
         },
         {
             "name": "makinacorpus/drupal-ulog",
@@ -1746,12 +1700,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-umenu.git",
-                "reference": "06ad709244f0a96760587cb2678802188de57596"
+                "reference": "ac965b33cc085c0d29f7538916f8e36937898b0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/06ad709244f0a96760587cb2678802188de57596",
-                "reference": "06ad709244f0a96760587cb2678802188de57596",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/ac965b33cc085c0d29f7538916f8e36937898b0f",
+                "reference": "ac965b33cc085c0d29f7538916f8e36937898b0f",
                 "shasum": ""
             },
             "require": {
@@ -1784,7 +1738,7 @@
             ],
             "description": "Drupal core menu module replacement that does not attach to node types",
             "homepage": "http://github.com/makinacorpus/drupal-umenu",
-            "time": "2017-03-04 11:32:17"
+            "time": "2017-03-04 22:55:17"
         },
         {
             "name": "makinacorpus/drupal-unoderef",

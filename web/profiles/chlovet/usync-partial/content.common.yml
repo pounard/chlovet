@@ -62,12 +62,12 @@ macro:
       viewport: 30
 
   text_view_trimmed:
-    type: text_trimmed
+    type: chlovet_text_summary
     settings:
       trim_length: 300
 
   text_view_trimmed_smaller:
-    type: text_trimmed
+    type: chlovet_text_summary
     settings:
       trim_length: 100
 
