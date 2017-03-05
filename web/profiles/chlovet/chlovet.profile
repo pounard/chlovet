@@ -111,6 +111,17 @@ function chlovet_page_build() {
 }
 
 /**
+ * Implements hook_html_head_alter().
+ */
+function chlovet_html_head_alter(&$head_elements) {
+  foreach ($head_elements as &$element) {
+    if (isset($element['#attributes']['rel']) && 'shortcut icon' === $element['#attributes']['rel']) {
+      $element['#attributes']['href'] = url(drupal_get_path('profile', 'chlovet') . '/favicon.png');
+    }
+  }
+}
+
+/**
  * Implements hook_library_alter().
  */
 function chlovet_library_alter(&$libraries, $module) {
