@@ -1,0 +1,34 @@
+name: Backoffice
+drop_on_update: true
+item:
+  -
+    name: "Contenu"
+    path: "admin/dashboard/content"
+    expanded: true
+    options:
+      icon: 'file'
+  -
+    name: "Media"
+    path: "admin/dashboard/media"
+    expanded: true
+    options:
+      icon: 'picture'
+  -
+    name: "Étiquettes"
+    path: "admin/dashboard/label"
+    expanded: true
+    options:
+      icon: 'tags'
+  -
+    name: "Sites"
+    path: "admin/dashboard/site"
+    expanded: true
+    options:
+      icon: 'cloud'
+  -
+    name: "Arborescence"
+    path: "admin/dashboard/tree"
+    expanded: true
+    options:
+      icon: 'tree-conifer'
+

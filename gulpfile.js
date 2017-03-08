@@ -1,6 +1,6 @@
 var gulp = require('gulp'),
   rename = require('gulp-rename'),
-  cssmin = require('gulp-minify-css'),
+  cssmin = require('gulp-clean-css'),
   less = require('gulp-less'),
   shell = require('gulp-shell'),
   use_sourcemaps = false

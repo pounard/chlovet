@@ -2,6 +2,42 @@
 // Change font path, else bootstrap won't find glyphicons
 @icon-font-path: "../../resources/bootstrap/fonts/";
 
+// Admin-only variables
+@navbar-height:                    46px;
+@navbar-border-radius:             0;
+
+// Inverted navbar
+@navbar-inverse-color:                      lighten(@gray-light, 15%);
+@navbar-inverse-bg:                         #222;
+@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-link-color:                 lighten(@gray-light, 15%);
+@navbar-inverse-link-hover-color:           #fff;
+@navbar-inverse-link-hover-bg:              darken(@brand-primary, 10%);
+@navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg:             @brand-primary;
+@navbar-inverse-link-disabled-color:        #444;
+@navbar-inverse-link-disabled-bg:           transparent;
+@navbar-inverse-brand-color:                @navbar-inverse-link-color;
+@navbar-inverse-brand-hover-color:          #fff;
+@navbar-inverse-brand-hover-bg:             transparent;
+@navbar-inverse-toggle-hover-bg:            #333;
+@navbar-inverse-toggle-icon-bar-bg:         #fff;
+@navbar-inverse-toggle-border-color:        #333;
+
+// Dropdown inverse
+@dropdown-bg:                    @navbar-inverse-bg;
+@dropdown-border:                @navbar-inverse-border;
+@dropdown-fallback-border:       @navbar-inverse-border;
+@dropdown-divider-bg:            transparent;
+@dropdown-link-color:            @navbar-inverse-link-color;
+@dropdown-link-hover-color:      @navbar-inverse-link-hover-color;
+@dropdown-link-hover-bg:         @navbar-inverse-link-hover-bg;
+@dropdown-link-active-color:     @navbar-inverse-link-active-color;
+@dropdown-link-active-bg:        @navbar-inverse-link-active-bg;
+@dropdown-link-disabled-color:   @navbar-inverse-link-disabled-color;
+@dropdown-header-color:          @gray-light;
+@dropdown-caret-color:           #000;
+
 // Fouque gutters
 //@grid-gutter-width: 0;
 

@@ -27,7 +27,7 @@
   function onScroll() {
     // Header
     if (header) {
-      if (window.pageYOffset >= headerPosition.top && !headerSticky) {
+      if (window.pageYOffset > headerPosition.top && !headerSticky) {
         $(header).addClass('sticky');
         header.parentNode.insertBefore(placeholder, header);
         headerSticky = true;

@@ -4,9 +4,9 @@
     "private": true,
     "devDependencies": {
         "gulp": "latest",
-        "gulp-rename": "latest",
-        "gulp-minify-css": "latest",
+        "gulp-clean-css": "latest",
         "gulp-less": "latest",
+        "gulp-rename": "latest",
         "gulp-shell": "latest"
     }
 }

@@ -1369,12 +1369,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-sf-dic.git",
-                "reference": "e638fa289bd2bf194c2565163a83bbe4de66c480"
+                "reference": "159fb797d2e5354bdbc37d4636c7be7bdbbf2ad3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/e638fa289bd2bf194c2565163a83bbe4de66c480",
-                "reference": "e638fa289bd2bf194c2565163a83bbe4de66c480",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/159fb797d2e5354bdbc37d4636c7be7bdbbf2ad3",
+                "reference": "159fb797d2e5354bdbc37d4636c7be7bdbbf2ad3",
                 "shasum": ""
             },
             "require": {
@@ -1421,7 +1421,7 @@
             ],
             "description": "Brings the vanilla Symfony 3 depency inject container component to Drupal 7 seamlessly along with a limited compatibility layer with Drupal 8 API",
             "homepage": "http://github.com/makinacorpus/drupal-sf-dic",
-            "time": "2017-03-01 18:46:33"
+            "time": "2017-03-05 12:40:44"
         },
         {
             "name": "makinacorpus/drupal-ucms",
@@ -1429,12 +1429,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-ucms.git",
-                "reference": "6c20ae8467084423e341e73c5a7f34177d653ba8"
+                "reference": "900054e1a295409c5e58d7597d4cb0bd37728fd9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/6c20ae8467084423e341e73c5a7f34177d653ba8",
-                "reference": "6c20ae8467084423e341e73c5a7f34177d653ba8",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/900054e1a295409c5e58d7597d4cb0bd37728fd9",
+                "reference": "900054e1a295409c5e58d7597d4cb0bd37728fd9",
                 "shasum": ""
             },
             "require": {
@@ -1515,7 +1515,7 @@
             ],
             "description": " µCMS modules - Node/Elasticsearch/favorites based Drupal fast contribution UI/UX",
             "homepage": "http://github.com/makinacorpus/drupal-ucms",
-            "time": "2017-03-04 23:27:24"
+            "time": "2017-03-05 12:28:42"
         },
         {
             "name": "makinacorpus/drupal-udashboard",
@@ -1523,12 +1523,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-udashboard.git",
-                "reference": "a4e2906b74a044e60c00b86fd17059cb963d2214"
+                "reference": "d82a8732d68cedc7c826262047202b7e1cb5f0b7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-udashboard/zipball/a4e2906b74a044e60c00b86fd17059cb963d2214",
-                "reference": "a4e2906b74a044e60c00b86fd17059cb963d2214",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-udashboard/zipball/d82a8732d68cedc7c826262047202b7e1cb5f0b7",
+                "reference": "d82a8732d68cedc7c826262047202b7e1cb5f0b7",
                 "shasum": ""
             },
             "require": {
@@ -1582,7 +1582,7 @@
                 }
             ],
             "description": "Advanced dashboard API for Drupal",
-            "time": "2017-03-04 11:46:47"
+            "time": "2017-03-06 19:18:57"
         },
         {
             "name": "makinacorpus/drupal-udate",
@@ -2069,16 +2069,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.0.4",
+            "version": "v3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "0bf561dfe75ba80441c22adecc0529056671a7d2"
+                "reference": "2b9e2f71b722f7c53918ab0c25f7646c2013f17d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/0bf561dfe75ba80441c22adecc0529056671a7d2",
-                "reference": "0bf561dfe75ba80441c22adecc0529056671a7d2",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/2b9e2f71b722f7c53918ab0c25f7646c2013f17d",
+                "reference": "2b9e2f71b722f7c53918ab0c25f7646c2013f17d",
                 "shasum": ""
             },
             "require": {
@@ -2116,7 +2116,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-02-10T20:20:03+00:00"
+            "time": "2017-03-05T18:23:57+00:00"
         },
         {
             "name": "oyejorge/less.php",
@@ -4414,20 +4414,23 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v2.8.17",
+            "version": "v2.8.18",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "6b9436c6f6fc474335871bb9c90743606d967806"
+                "reference": "bc240bf630ea49d5f86cef746254d64299029932"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/6b9436c6f6fc474335871bb9c90743606d967806",
-                "reference": "6b9436c6f6fc474335871bb9c90743606d967806",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/bc240bf630ea49d5f86cef746254d64299029932",
+                "reference": "bc240bf630ea49d5f86cef746254d64299029932",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3"
+            },
+            "conflict": {
+                "phpunit/phpunit": ">=6.0"
             },
             "suggest": {
                 "symfony/debug": "For tracking deprecated interfaces usages at runtime with DebugClassLoader"
@@ -4465,7 +4468,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2017-01-21T16:40:50+00:00"
+            "time": "2017-03-01T19:11:57+00:00"
         },
         {
             "name": "webmozart/assert",

@@ -76,6 +76,7 @@ umenu_allowed_roles:
   navigation: Plan du site
 
 # Few Drupal core variables
+udashboard.disable_css: true
 ulink_unsafe_text_caching: true
 user_register: 0
 admin_theme: vetadmin
