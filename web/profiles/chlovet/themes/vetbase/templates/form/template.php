@@ -450,7 +450,7 @@ function vetbase_preprocess_textfield(&$variables) {
   $element = &$variables['element'];
 
   // Enculé de Drupal:
-  if (60 === $element['#size']) {
+  if (isset($element['#size']) && 60 === $element['#size']) {
     unset($element['#size'], $element['#attributes']['size']);
   }
 

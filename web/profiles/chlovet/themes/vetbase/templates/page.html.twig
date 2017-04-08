@@ -32,20 +32,12 @@
     </div>
   </div>
   {% if isFrontPage %}
-    {% set frontRegionList = ['front1', 'front2', 'front3', 'front4'] %}
-    {% for frontRegion in frontRegionList %}
-      {% if page[frontRegion] %}
-        <div id="{{ frontRegion }}" class="front-pane">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
-                {{ page[frontRegion] }}
-              </div>
-            </div>
-          </div>
-        </div>
+    <div id="main" class="container">
+      <a id="main-content" title="{{ "Main content"|trans }}"></a>
+      {% if page.content %}
+        {{ page.content }}
       {% endif %}
-    {% endfor %}
+    </div>
   {% else %}
     {% if showBreadcrumb and breadcrumb %}
       <div id="breadcrumb">
@@ -91,18 +83,9 @@
   {% endif %}
   <div id="footer">
     <div class="container">
-      <div class="row">
-        <div class="col-md-12">
-          {% for name in ['footer1', 'footer2', 'footer3', 'footer4'] %}
-            {# always reserve space even if empty #}
-            <div id="{{ name }}" class="col-xs-12 col-sm-4 col-md-3">
-              {% if page[name] %}
-                {{ page[name] }}
-              {% endif %}
-            </div>
-          {% endfor %}
-        </div>
-      </div>
+      {% if page.footer %}
+        {{ page.footer }}
+      {% endif %}
     </div>
   </div>
   <div id="footer-footer">

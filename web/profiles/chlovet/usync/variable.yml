@@ -1,3 +1,16 @@
+
+phplayout_node_view_modes:
+  default: Par défault
+  banner: Bannière
+  footer: Footer
+  front: Teaser front
+  square: Carré de couleur
+  teaser: Résumé
+
+phplayout_region_options:
+  default:
+    container-none: true
+
 ucms_contrib_component_types:
   - autolist
   - contact
@@ -22,23 +35,16 @@ ucms_layout_regions_badm:
 ucms_tree_menu_nesting_limit: 6
 
 ucms_layout_regions_vetbase:
-  header: 2
-  header2: 2
-  menu: 2
-  front1: 1
-  front2: 1
-  front3: 1
-  front4: 1
   banner: 1
   banner_right: 1
-  left: 1
-  content: 1
-  topleft: 1
   bottomright: 1
-  footer1: 2
-  footer2: 2
-  footer3: 2
-  footer4: 2
+  content: 1
+  footer: 2
+  header2: 2
+  header: 2
+  left: 1
+  menu: 2
+  topleft: 1
 
 ucms_site_allowed_themes: ['vetbase']
 

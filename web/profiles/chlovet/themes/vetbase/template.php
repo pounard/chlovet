@@ -31,34 +31,6 @@ function vetbase_preprocess(&$vars) {
 }
 
 /**
- * Implements hook_preprocess_HOOK().
- */
-function vetbase_preprocess_ucms_layout_item(&$vars) {
-  // For now, we override the view_mode and replace it by region name.
-  // This enables subtheme to override given certain condition, and may be
-  // replaced later by a user setting from ucms_layout table.
-  $name = $vars['region']->getName();
-
-  switch ($name) {
-
-    case 'banner_right':
-      $vars['view_mode'] = 'square';
-      break;
-
-    case 'front1':
-    case 'front2':
-    case 'front3':
-    case 'front4':
-      $vars['view_mode'] = 'front';
-      break;
-
-    default:
-      $vars['view_mode'] = $name;
-      break;
-  }
-}
-
-/**
  * Append current page menus to template variables.
  */
 function _vetbase_add_menus(&$variables) {
@@ -286,13 +258,6 @@ function vetbase_preprocess_region(&$variables) {
     case 'header2':
       $variables['attributes_array']['class'][] = 'col-md-12';
       break;
-
-    case 'front1':
-    case 'front2':
-    case 'front3':
-    case 'front4':
-      $variables['attributes_array']['class'][] = 'row';
-      break;
   }
 
   unset($variables['theme_hook_suggestions']);
@@ -317,23 +282,6 @@ function vetbase_preprocess_region(&$variables) {
 function vetbase_preprocess_node(&$variables) {
   $node = $variables['node'];
   $view_mode = $variables['view_mode'];
-
-  if (in_array($view_mode, ['front1', 'front2', 'front3', 'front4'])) {
-    switch ($node->type) {
-
-      case 'autolist': // List will expand 100%
-      case 'list':
-        break;
-
-      case 'contact':
-        $variables['classes_array'][] = 'col-md-8';
-        break;
-
-      default: // Default is to be 3rd or 4th of div width
-        $variables['classes_array'][] = 'col-md-4';
-        break;
-    }
-  }
 
   switch ($node->type) {
 

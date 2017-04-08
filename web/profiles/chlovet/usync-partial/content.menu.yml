@@ -35,22 +35,7 @@ view:
           type: menu_tree
           settings: {options: {suggestion: header}}
 
-      footer1:
-        menu_tree:
-          type: menu_tree
-          settings: {options: {suggestion: footer}}
-
-      footer2:
-        menu_tree:
-          type: menu_tree
-          settings: {options: {suggestion: footer}}
-
-      footer3:
-        menu_tree:
-          type: menu_tree
-          settings: {options: {suggestion: footer}}
-
-      footer4:
+      footer:
         menu_tree:
           type: menu_tree
           settings: {options: {suggestion: footer}}

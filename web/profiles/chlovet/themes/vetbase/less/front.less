@@ -11,50 +11,57 @@
 }
 
 #banner, .front-pane {
-  a {
-    color: @text-color;
-  }
+}
+
+.node-list {
+
   h1 {
     .titleize();
     text-align: center;
   }
-}
 
-.front-pane {
-  margin-top: ceil(@line-height-computed * 4);
-
-  .node-list {
-    media {
-      .media-fixed();
-    }
-    a {
-      // Use the link to be relative so we exclude grid gutter
-      // margin and padding from .title marging computation
-      position: relative;
-      display: block;
-    }
-    .title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      > h1 {
-        background-color: white;
-        padding: ceil(@padding-base-horizontal * 2);
-        margin: ceil(@padding-base-horizontal * 2);
-      }
+  media {
+    .media-fixed();
+  }
+  a {
+    // Use the link to be relative so we exclude grid gutter
+    // margin and padding from .title marging computation
+    position: relative;
+    display: block;
+    color: @text-color;
+  }
+  .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    > h1 {
+      background-color: white;
+      padding: ceil(@padding-base-horizontal * 2);
+      margin: ceil(@padding-base-horizontal * 2);
     }
   }
+}
 
-  .teaser-list {
-    h2 {
-      .titleize();
-      margin: 0;
-      margin-bottom: @padding-small-horizontal;
-    }
-    img {
-      // .img-thumbnail();
-    }
+.teaser-list {
+
+  h1 {
+    .titleize();
+    text-align: center;
+  }
+
+  h2 {
+    .titleize();
+    margin: 0;
+    margin-bottom: @padding-small-horizontal;
+  }
+
+  a {
+    color: @text-color;
+  }
+
+  img {
+    // .img-thumbnail();
   }
 }
 
@@ -100,9 +107,9 @@
   > a {
     position: absolute;
     top: 0;
-    left: @padding-base-horizontal;
+    left: 0;
     bottom: 0;
-    right: @padding-base-horizontal;
+    right: 0;
 
     // Centering text
     // https://www.w3.org/Style/Examples/007/center.en.html#vertical3

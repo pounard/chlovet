@@ -26,6 +26,11 @@
         },
         {
             "type" : "vcs",
+            "url" : "git@github.com:makinacorpus/drupal-phplayout.git",
+            "no-api" : true
+        },
+        {
+            "type" : "vcs",
             "url" : "git@github.com:makinacorpus/drupal-ulog.git",
             "no-api" : true
         },
@@ -56,6 +61,11 @@
         },
         {
             "type" : "vcs",
+            "url" : "git@github.com:makinacorpus/php-layout.git",
+            "no-api" : true
+        },
+        {
+            "type" : "vcs",
             "url" : "git@github.com:makinacorpus/redis-bundle.git",
             "no-api" : true
         },
@@ -78,8 +88,9 @@
         "makinacorpus/drupal-filechunk" : "1.0.*",
         "makinacorpus/drupal-gulpifier" : "1.0.*",
         "makinacorpus/drupal-iresponsive" : "1.0.*",
-        "makinacorpus/drupal-latlonfield" : "^1.0.4",
+        "makinacorpus/drupal-latlonfield" : "^1.0.6",
         "makinacorpus/drupal-minidialog" : "*",
+        "makinacorpus/drupal-phplayout": "dev-master",
         "makinacorpus/drupal-plusql" : "^1",
         "makinacorpus/drupal-schedulefield" : "dev-master as 1.0",
         "makinacorpus/drupal-sf-dic" : "dev-master as 3.2",
@@ -91,7 +102,8 @@
         "makinacorpus/drupal-umenu" : "dev-master as 2.0.2",
         "makinacorpus/drupal-unoderef" : "1.0.*",
         "makinacorpus/drupal-usync" : "1.0.*",
-        "makinacorpus/php-acl" : "dev-master",
+        "makinacorpus/php-acl" : "dev-master as 1.0",
+        "makinacorpus/php-layout": "dev-master",
         "makinacorpus/redis-bundle" : "dev-master",
         "monolog/monolog": "^1.17",
         "oyejorge/less.php": "v1.7.0.10",
@@ -130,7 +142,8 @@
             "app/AppKernel.php"
         ],
         "psr-4" : {
-            "Chlovet\\" : "src"
+            "Chlovet\\" : "src",
+            "MakinaCorpus\\Ucms\\Composition\\" : "web/sites/all/modules/composer/drupal-ucms/ucms_composition/src"
         }
     }
 }
