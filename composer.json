@@ -120,7 +120,6 @@
         "symfony/phpunit-bridge" : "^2.7"
     },
     "config" : {
-        "bin-dir" : "bin",
         "vendor-dir" : "vendor"
     },
     "extra" : {

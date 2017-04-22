@@ -4,5 +4,5 @@ SCRIPTPATH=$(realpath "$SCRIPTPATH")
 PROJECTPATH="$(dirname "$SCRIPTPATH")"
 VENDORDIR="${PROJECTPATH}/vendor"
 DRUPALROOT="$(dirname "$SCRIPTPATH")/www"
-DRUSH="${VENDORDIR}/bin/drush"
-$DRUSH --root="${DRUPALROOT}" "$@"
+CONSOLE="${VENDORDIR}/bin/console"
+$CONSOLE "$@"

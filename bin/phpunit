@@ -1,0 +1,12 @@
+#!/bin/sh
+SCRIPTPATH=$(dirname "$0")
+SCRIPTPATH=$(realpath "$SCRIPTPATH")
+PROJECTPATH="$(dirname "$SCRIPTPATH")"
+VENDORDIR="${PROJECTPATH}/vendor"
+DRUPALROOT="$(dirname "$SCRIPTPATH")/www"
+PHPUNIT="${VENDORDIR}/bin/phpunit"
+if [ -f "${PROJECTPATH}/phpunit.xml" ]; then
+    $PHPUNIT --bootstrap="${VENDORDIR}/autoload.php" --configuration="${PROJECTPATH}/phpunit.xml" "$@"
+else
+    $PHPUNIT --bootstrap="${VENDORDIR}/autoload.php" --configuration="${PROJECTPATH}/phpunit.xml.dist" "$@"
+fi

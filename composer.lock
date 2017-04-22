@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "4fe57961a9dae4f7735273d23d66d1c5",
+    "content-hash": "0471a7ddef6535a8d78c2ba32bef9fba",
     "packages": [
         {
             "name": "composer/installers",
@@ -1210,16 +1210,16 @@
         },
         {
             "name": "makinacorpus/drupal-latlonfield",
-            "version": "1.0.5",
+            "version": "1.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-latlonfield.git",
-                "reference": "659a94457842e864b49d327394661178a7b3d9cc"
+                "reference": "0d09fca83786f3488ea0f739e1bb9b1e572bbae3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-latlonfield/zipball/659a94457842e864b49d327394661178a7b3d9cc",
-                "reference": "659a94457842e864b49d327394661178a7b3d9cc",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-latlonfield/zipball/0d09fca83786f3488ea0f739e1bb9b1e572bbae3",
+                "reference": "0d09fca83786f3488ea0f739e1bb9b1e572bbae3",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1244,7 +1244,7 @@
             ],
             "description": "Very simple latitude/longitude storage field",
             "homepage": "http://github.com/makinacorpus/drupal-latlonfield",
-            "time": "2017-03-21T10:35:47+00:00"
+            "time": "2017-04-05T11:24:28+00:00"
         },
         {
             "name": "makinacorpus/drupal-minidialog",
@@ -1290,18 +1290,19 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-phplayout.git",
-                "reference": "29d019a8844c12bb950b2cc49baa9f9e08fe0d79"
+                "reference": "b3dad99dcbce8fa677ae70c74ed6ea9514812273"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-phplayout/zipball/29d019a8844c12bb950b2cc49baa9f9e08fe0d79",
-                "reference": "29d019a8844c12bb950b2cc49baa9f9e08fe0d79",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-phplayout/zipball/b3dad99dcbce8fa677ae70c74ed6ea9514812273",
+                "reference": "b3dad99dcbce8fa677ae70c74ed6ea9514812273",
                 "shasum": ""
             },
             "require": {
                 "makinacorpus/drupal-plusql": "^1",
                 "makinacorpus/drupal-sf-dic": "^3.2",
-                "makinacorpus/php-layout": "*"
+                "makinacorpus/php-layout": "*",
+                "php": ">=7.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5"
@@ -1332,7 +1333,7 @@
             ],
             "description": "PHP Layout library support, brings page composition capacity to Drupal",
             "homepage": "http://github.com/makinacorpus/drupal-phplayout",
-            "time": "2017-03-29 17:05:44"
+            "time": "2017-04-20 10:29:45"
         },
         {
             "name": "makinacorpus/drupal-plusql",
@@ -1419,12 +1420,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-sf-dic.git",
-                "reference": "6961e1d8afa29857821c64b36aebad5bffd12f03"
+                "reference": "dbb3b4503525aa82a1e0f8c7c67e0ef4d191eb1c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/6961e1d8afa29857821c64b36aebad5bffd12f03",
-                "reference": "6961e1d8afa29857821c64b36aebad5bffd12f03",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/dbb3b4503525aa82a1e0f8c7c67e0ef4d191eb1c",
+                "reference": "dbb3b4503525aa82a1e0f8c7c67e0ef4d191eb1c",
                 "shasum": ""
             },
             "require": {
@@ -1471,7 +1472,7 @@
             ],
             "description": "Brings the vanilla Symfony 3 depency inject container component to Drupal 7 seamlessly along with a limited compatibility layer with Drupal 8 API",
             "homepage": "http://github.com/makinacorpus/drupal-sf-dic",
-            "time": "2017-03-29 13:33:51"
+            "time": "2017-04-19 09:29:58"
         },
         {
             "name": "makinacorpus/drupal-ucms",
@@ -1479,19 +1480,20 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-ucms.git",
-                "reference": "d3f01fe6a0c94a1f360bb9f8483c9e2f657e8ce7"
+                "reference": "f3b8217843d5d6a93513d5ac5dc38a149e81f007"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/d3f01fe6a0c94a1f360bb9f8483c9e2f657e8ce7",
-                "reference": "d3f01fe6a0c94a1f360bb9f8483c9e2f657e8ce7",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/f3b8217843d5d6a93513d5ac5dc38a149e81f007",
+                "reference": "f3b8217843d5d6a93513d5ac5dc38a149e81f007",
                 "shasum": ""
             },
             "require": {
                 "elasticsearch/elasticsearch": "2.2.0",
                 "makinacorpus/drupal-apubsub": "^4.0",
-                "makinacorpus/drupal-sf-dic": ">=3.2.0-alpha12",
-                "makinacorpus/drupal-udashboard": ">=1.0.0-alpha4",
+                "makinacorpus/drupal-phplayout": "*",
+                "makinacorpus/drupal-sf-dic": ">=3.2.0-alpha21",
+                "makinacorpus/drupal-udashboard": ">=1.0.0-alpha10",
                 "makinacorpus/drupal-ulink": "^2.0",
                 "makinacorpus/drupal-umenu": "^2.0.1",
                 "makinacorpus/drush-progressbar": "^1.0",
@@ -1502,28 +1504,22 @@
             "type": "drupal-module",
             "autoload": {
                 "exclude-from-classmap": [
+                    "/ucms_composition/src/Tests/",
                     "/ucms_contrib/src/Tests/",
-                    "/ucms_extranet/src/Tests/",
                     "/ucms_group/src/Tests/",
-                    "/ucms_harm/src/Tests/",
-                    "/ucms_label/src/Tests/",
                     "/ucms_layout/src/Tests/",
-                    "/ucms_list/src/Tests/",
-                    "/ucms_notification/src/Tests/",
                     "/ucms_search/src/Tests/",
                     "/ucms_seo/src/Tests/",
                     "/ucms_site/src/Tests/",
-                    "/ucms_sso/src/Tests/",
-                    "/ucms_tree/src/Tests/",
-                    "/ucms_user/src/Tests/",
                     "/ucms_widget/src/Tests/"
                 ],
                 "psr-4": {
+                    "MakinaCorpus\\Ucms\\Composition\\": "ucms_composition/src",
                     "MakinaCorpus\\Ucms\\ContentList\\": "ucms_list/src",
                     "MakinaCorpus\\Ucms\\Contrib\\": "ucms_contrib/src",
                     "MakinaCorpus\\Ucms\\Extranet\\": "ucms_extranet/src",
-                    "MakinaCorpus\\Ucms\\Harm\\": "ucms_harm/src",
                     "MakinaCorpus\\Ucms\\Group\\": "ucms_group/src",
+                    "MakinaCorpus\\Ucms\\Harm\\": "ucms_harm/src",
                     "MakinaCorpus\\Ucms\\Label\\": "ucms_label/src",
                     "MakinaCorpus\\Ucms\\Layout\\": "ucms_layout/src",
                     "MakinaCorpus\\Ucms\\Notification\\": "ucms_notification/src",
@@ -1533,6 +1529,11 @@
                     "MakinaCorpus\\Ucms\\Tree\\": "ucms_tree/src",
                     "MakinaCorpus\\Ucms\\User\\": "ucms_user/src",
                     "MakinaCorpus\\Ucms\\Widget\\": "ucms_widget/src"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "MakinaCorpus\\Ucms\\Composition\\Tests\\": "ucms_composition/tests"
                 }
             },
             "license": [
@@ -1566,7 +1567,7 @@
             ],
             "description": " µCMS modules - Node/Elasticsearch/favorites based Drupal fast contribution UI/UX",
             "homepage": "http://github.com/makinacorpus/drupal-ucms",
-            "time": "2017-03-22 17:13:58"
+            "time": "2017-04-22 08:59:44"
         },
         {
             "name": "makinacorpus/drupal-udashboard",
@@ -1574,12 +1575,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-udashboard.git",
-                "reference": "04773d1fe390f320c539ed1a24c2f68633d1ab5c"
+                "reference": "9d225fa7a82e916e5e330661cf1652979c523b11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-udashboard/zipball/04773d1fe390f320c539ed1a24c2f68633d1ab5c",
-                "reference": "04773d1fe390f320c539ed1a24c2f68633d1ab5c",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-udashboard/zipball/9d225fa7a82e916e5e330661cf1652979c523b11",
+                "reference": "9d225fa7a82e916e5e330661cf1652979c523b11",
                 "shasum": ""
             },
             "require": {
@@ -1633,7 +1634,7 @@
                 }
             ],
             "description": "Advanced dashboard API for Drupal",
-            "time": "2017-03-30 10:19:15"
+            "time": "2017-04-22 08:49:14"
         },
         {
             "name": "makinacorpus/drupal-udate",
@@ -1826,16 +1827,16 @@
         },
         {
             "name": "makinacorpus/drupal-usync",
-            "version": "1.0.9",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-usync.git",
-                "reference": "f73c47eaee03b2ebacd5da1193fc6edc5dc8fd09"
+                "reference": "6ef5d4448c99c878d783923a0c87710867fb3a03"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-usync/zipball/f73c47eaee03b2ebacd5da1193fc6edc5dc8fd09",
-                "reference": "f73c47eaee03b2ebacd5da1193fc6edc5dc8fd09",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-usync/zipball/6ef5d4448c99c878d783923a0c87710867fb3a03",
+                "reference": "6ef5d4448c99c878d783923a0c87710867fb3a03",
                 "shasum": ""
             },
             "require": {
@@ -1863,7 +1864,7 @@
             ],
             "description": "Drupal features-like configuration file driven synchronization module",
             "homepage": "http://github.com/makinacorpus/drupal-usync",
-            "time": "2017-02-27T14:50:02+00:00"
+            "time": "2017-04-18T17:23:27+00:00"
         },
         {
             "name": "makinacorpus/drush-progressbar",
@@ -1992,13 +1993,16 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/php-layout.git",
-                "reference": "ea503b30d368a079a36f15779645d544384c02b9"
+                "reference": "7df9bb612b4b77567ffa10faf2b258cb6116ede4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/php-layout/zipball/ea503b30d368a079a36f15779645d544384c02b9",
-                "reference": "ea503b30d368a079a36f15779645d544384c02b9",
+                "url": "https://api.github.com/repos/makinacorpus/php-layout/zipball/7df9bb612b4b77567ffa10faf2b258cb6116ede4",
+                "reference": "7df9bb612b4b77567ffa10faf2b258cb6116ede4",
                 "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5"
@@ -2021,7 +2025,7 @@
                 }
             ],
             "description": "Grid layout reprensentation",
-            "time": "2017-03-29 17:05:21"
+            "time": "2017-04-20 10:29:09"
         },
         {
             "name": "makinacorpus/redis-bundle",
@@ -2999,16 +3003,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.2.6",
+            "version": "v3.2.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "b0f8a7fa4b8baadf9db299cb6ac87c96a8977dbe"
+                "reference": "1631040ea8fc5e0e405c00d35cbf2c0b7b555f64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/b0f8a7fa4b8baadf9db299cb6ac87c96a8977dbe",
-                "reference": "b0f8a7fa4b8baadf9db299cb6ac87c96a8977dbe",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/1631040ea8fc5e0e405c00d35cbf2c0b7b555f64",
+                "reference": "1631040ea8fc5e0e405c00d35cbf2c0b7b555f64",
                 "shasum": ""
             },
             "require": {
@@ -3139,7 +3143,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-03-10T18:35:48+00:00"
+            "time": "2017-04-05T12:52:29+00:00"
         },
         {
             "name": "tfd7/tfd7",
@@ -3234,16 +3238,16 @@
         },
         {
             "name": "twig/twig",
-            "version": "v2.3.0",
+            "version": "v2.3.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "9718186a5df85a4f7917e78d3ffcabc204c75d25"
+                "reference": "85e8372c451510165c04bf781295f9d922fa524b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/9718186a5df85a4f7917e78d3ffcabc204c75d25",
-                "reference": "9718186a5df85a4f7917e78d3ffcabc204c75d25",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/85e8372c451510165c04bf781295f9d922fa524b",
+                "reference": "85e8372c451510165c04bf781295f9d922fa524b",
                 "shasum": ""
             },
             "require": {
@@ -3293,7 +3297,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-03-22T15:41:51+00:00"
+            "time": "2017-04-21T00:13:02+00:00"
         }
     ],
     "packages-dev": [
@@ -3353,16 +3357,16 @@
         },
         {
             "name": "myclabs/deep-copy",
-            "version": "1.6.0",
+            "version": "1.6.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/myclabs/DeepCopy.git",
-                "reference": "5a5a9fc8025a08d8919be87d6884d5a92520cefe"
+                "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/5a5a9fc8025a08d8919be87d6884d5a92520cefe",
-                "reference": "5a5a9fc8025a08d8919be87d6884d5a92520cefe",
+                "url": "https://api.github.com/repos/myclabs/DeepCopy/zipball/8e6e04167378abf1ddb4d3522d8755c5fd90d102",
+                "reference": "8e6e04167378abf1ddb4d3522d8755c5fd90d102",
                 "shasum": ""
             },
             "require": {
@@ -3391,7 +3395,7 @@
                 "object",
                 "object graph"
             ],
-            "time": "2017-01-26T22:05:40+00:00"
+            "time": "2017-04-12T18:52:22+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
@@ -3604,16 +3608,16 @@
         },
         {
             "name": "phpunit/php-code-coverage",
-            "version": "4.0.7",
+            "version": "4.0.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/php-code-coverage.git",
-                "reference": "09e2277d14ea467e5a984010f501343ef29ffc69"
+                "reference": "ef7b2f56815df854e66ceaee8ebe9393ae36a40d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/09e2277d14ea467e5a984010f501343ef29ffc69",
-                "reference": "09e2277d14ea467e5a984010f501343ef29ffc69",
+                "url": "https://api.github.com/repos/sebastianbergmann/php-code-coverage/zipball/ef7b2f56815df854e66ceaee8ebe9393ae36a40d",
+                "reference": "ef7b2f56815df854e66ceaee8ebe9393ae36a40d",
                 "shasum": ""
             },
             "require": {
@@ -3663,7 +3667,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-03-01T09:12:17+00:00"
+            "time": "2017-04-02T07:44:40+00:00"
         },
         {
             "name": "phpunit/php-file-iterator",
@@ -3853,16 +3857,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.17",
+            "version": "5.7.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "68752b665d3875f9a38a357e3ecb35c79f8673bf"
+                "reference": "69c4f49ff376af2692bad9cebd883d17ebaa98a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/68752b665d3875f9a38a357e3ecb35c79f8673bf",
-                "reference": "68752b665d3875f9a38a357e3ecb35c79f8673bf",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/69c4f49ff376af2692bad9cebd883d17ebaa98a1",
+                "reference": "69c4f49ff376af2692bad9cebd883d17ebaa98a1",
                 "shasum": ""
             },
             "require": {
@@ -3931,7 +3935,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-03-19T16:52:12+00:00"
+            "time": "2017-04-03T02:22:27+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -4507,7 +4511,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v2.8.18",
+            "version": "v2.8.19",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
