@@ -3,6 +3,6 @@ SCRIPTPATH=$(dirname "$0")
 SCRIPTPATH=$(realpath "$SCRIPTPATH")
 PROJECTPATH="$(dirname "$SCRIPTPATH")"
 VENDORDIR="${PROJECTPATH}/vendor"
-DRUPALROOT="$(dirname "$SCRIPTPATH")/www"
+DRUPALROOT="$(dirname "$SCRIPTPATH")/web"
 DRUSH="${VENDORDIR}/bin/drush"
 $DRUSH --root="${DRUPALROOT}" "$@"
