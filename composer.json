@@ -16,22 +16,7 @@
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/apubsub.git",
-            "no-api" : true
-        },
-        {
-            "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/drupal-apubsub.git",
-            "no-api" : true
-        },
-        {
-            "type" : "vcs",
             "url" : "git@github.com:makinacorpus/drupal-phplayout.git",
-            "no-api" : true
-        },
-        {
-            "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/drupal-ulog.git",
             "no-api" : true
         },
         {
@@ -46,12 +31,12 @@
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/drupal-udashboard.git",
+            "url" : "git@github.com:makinacorpus/drupal-unoderef.git",
             "no-api" : true
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/drupal-umenu.git",
+            "url" : "git@github.com:makinacorpus/drupal-udashboard.git",
             "no-api" : true
         },
         {
@@ -82,8 +67,8 @@
         "cweagans/composer-patches" : "~1.0",
         "drush/drush": "8.*",
         "jbroadway/urlify": "^1.0",
-        "makinacorpus/apubsub" : "dev-master as 4.0.0",
-        "makinacorpus/drupal-apubsub" : "dev-master as 4.0.0",
+        "makinacorpus/apubsub" : "^4",
+        "makinacorpus/drupal-apubsub" : "^4",
         "makinacorpus/drupal-badm" : "^1.1.3",
         "makinacorpus/drupal-dragula" : "^1",
         "makinacorpus/drupal-filechunk" : "1.0.*",
@@ -93,15 +78,15 @@
         "makinacorpus/drupal-minidialog" : "*",
         "makinacorpus/drupal-phplayout": "dev-master",
         "makinacorpus/drupal-plusql" : "^1",
-        "makinacorpus/drupal-schedulefield" : "dev-master as 1.0",
+        "makinacorpus/drupal-schedulefield" : "^1.0.0-alpha5",
         "makinacorpus/drupal-sf-dic" : "dev-master as 3.2",
-        "makinacorpus/drupal-ucms" : "dev-master as 2.0",
+        "makinacorpus/drupal-ucms" : "dev-master as 2.0.0-alpha2",
         "makinacorpus/drupal-udashboard" : "dev-master as 1.0",
         "makinacorpus/drupal-udate" : "1.0.*",
         "makinacorpus/drupal-ulink" : "^2.0.3",
-        "makinacorpus/drupal-ulog" : "dev-master",
-        "makinacorpus/drupal-umenu" : "dev-master as 2.0.2",
-        "makinacorpus/drupal-unoderef" : "1.0.*",
+        "makinacorpus/drupal-ulog" : "^1.0.0-alpha1",
+        "makinacorpus/drupal-umenu" : "^2.0.5",
+        "makinacorpus/drupal-unoderef" : "dev-typescript as 2.0",
         "makinacorpus/drupal-usync" : "1.0.*",
         "makinacorpus/php-acl" : "dev-master as 1.0",
         "makinacorpus/php-layout": "dev-master",
@@ -142,8 +127,7 @@
             "app/AppKernel.php"
         ],
         "psr-4" : {
-            "Chlovet\\" : "src",
-            "MakinaCorpus\\Ucms\\Composition\\" : "web/sites/all/modules/composer/drupal-ucms/ucms_composition/src"
+            "Chlovet\\" : "src"
         }
     }
 }

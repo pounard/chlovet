@@ -55,6 +55,7 @@ node_modules
 # Ignore IDE and OS-related files
 .buildpath
 .metadata
+.externalToolBuilders
 .settings
 .project
 .idea

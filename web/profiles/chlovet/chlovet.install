@@ -193,7 +193,7 @@ function chlovet_update_7004() {
  * Updates migrated layout data.
  */
 function chlovet_update_7005() {
-  if (true || !db_table_exists('layout')) {
+  if (!db_table_exists('layout')) {
     drupal_set_message("You must manually enable 'ucms_composition' and run its migration script prior to running this update", 'error');
     drupal_set_message('Please run: bin/console -vvv ucms:composition:migate --region-as-style --squash="(content front1 front2 front3 front4) (footer footer1 footer2 footer3 footer4)"', 'error');
     die();

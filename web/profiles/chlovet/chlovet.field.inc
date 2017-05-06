@@ -9,7 +9,7 @@
 function chlovet_field_formatter_info() {
   return [
     'chlovet_text_summary' => [
-      'label'       => t("Better text summary"),
+      'label'       => t("Better (but uncached, sorry) text summary"),
       'field types' => ['text', 'text_long', 'text_with_summary'],
       'settings'    => ['trim_length' => 600],
     ],

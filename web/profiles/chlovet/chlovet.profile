@@ -103,14 +103,6 @@ function chlovet_boot() {
 }
 
 /**
- * Implements hook_page_build().
- */
-function chlovet_page_build() {
-  // @todo For some unknown reason sometime it's missing
-  drupal_add_library('system', 'ui.droppable');
-}
-
-/**
  * Implements hook_html_head_alter().
  */
 function chlovet_html_head_alter(&$head_elements) {

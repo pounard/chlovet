@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "0471a7ddef6535a8d78c2ba32bef9fba",
+    "content-hash": "45ab85b1365a78c8862ec1c0f49d6617",
     "packages": [
         {
             "name": "composer/installers",
-            "version": "v1.2.0",
+            "version": "v1.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/installers.git",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804"
+                "reference": "79ad876c7498c0bbfe7eed065b8651c93bfd6045"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/installers/zipball/d78064c68299743e0161004f2de3a0204e33b804",
-                "reference": "d78064c68299743e0161004f2de3a0204e33b804",
+                "url": "https://api.github.com/repos/composer/installers/zipball/79ad876c7498c0bbfe7eed065b8651c93bfd6045",
+                "reference": "79ad876c7498c0bbfe7eed065b8651c93bfd6045",
                 "shasum": ""
             },
             "require": {
@@ -59,12 +59,16 @@
             "keywords": [
                 "Craft",
                 "Dolibarr",
+                "Eliasis",
                 "Hurad",
                 "ImageCMS",
+                "Kanboard",
                 "MODX Evo",
                 "Mautic",
+                "Maya",
                 "OXID",
                 "Plentymarkets",
+                "Porto",
                 "RadPHP",
                 "SMF",
                 "Thelia",
@@ -87,9 +91,11 @@
                 "fuelphp",
                 "grav",
                 "installer",
+                "itop",
                 "joomla",
                 "kohana",
                 "laravel",
+                "lavalite",
                 "lithium",
                 "magento",
                 "mako",
@@ -104,6 +110,7 @@
                 "roundcube",
                 "shopware",
                 "silverstripe",
+                "sydes",
                 "symfony",
                 "typo3",
                 "wordpress",
@@ -111,7 +118,7 @@
                 "zend",
                 "zikula"
             ],
-            "time": "2016-08-13T20:53:52+00:00"
+            "time": "2017-04-24T06:37:16+00:00"
         },
         {
             "name": "cweagans/composer-patches",
@@ -985,10 +992,10 @@
         },
         {
             "name": "makinacorpus/apubsub",
-            "version": "dev-master",
+            "version": "4.0.0",
             "source": {
                 "type": "git",
-                "url": "git@github.com:makinacorpus/apubsub.git",
+                "url": "https://github.com/makinacorpus/apubsub.git",
                 "reference": "28b5f238b61e0ac4d688e06234cdffaba26e9247"
             },
             "dist": {
@@ -1010,6 +1017,7 @@
                     "/src/Tests/"
                 ]
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2"
             ],
@@ -1025,18 +1033,14 @@
             ],
             "description": "Provides an asynchronous PubSub like API with Drupal implementations",
             "homepage": "http://github.com/makinacorpus/apubsub",
-            "support": {
-                "source": "https://github.com/makinacorpus/apubsub/tree/master",
-                "issues": "https://github.com/makinacorpus/apubsub/issues"
-            },
-            "time": "2016-03-30 13:43:04"
+            "time": "2016-03-30T13:43:04+00:00"
         },
         {
             "name": "makinacorpus/drupal-apubsub",
-            "version": "dev-master",
+            "version": "4.0.1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:makinacorpus/drupal-apubsub.git",
+                "url": "https://github.com/makinacorpus/drupal-apubsub.git",
                 "reference": "984a31070e8cdc436f9ce1fa2762b15ed9dcf661"
             },
             "dist": {
@@ -1055,6 +1059,7 @@
                     "MakinaCorpus\\Drupal\\APubSub\\": "src/"
                 }
             },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2"
             ],
@@ -1070,24 +1075,20 @@
             ],
             "description": "Drupal integration with APubSub",
             "homepage": "http://github.com/makinacorpus/drupal-apubsub",
-            "support": {
-                "source": "https://github.com/makinacorpus/drupal-apubsub/tree/4.0.1",
-                "issues": "https://github.com/makinacorpus/drupal-apubsub/issues"
-            },
-            "time": "2016-10-30 16:04:51"
+            "time": "2016-10-30T16:04:51+00:00"
         },
         {
             "name": "makinacorpus/drupal-badm",
-            "version": "1.1.2",
+            "version": "1.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-badm.git",
-                "reference": "1a1d76a0c37224959bfa023ee77615ec075c8ecd"
+                "reference": "086f450d37d74a325880083296a2c5463ae3ea2c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-badm/zipball/1a1d76a0c37224959bfa023ee77615ec075c8ecd",
-                "reference": "1a1d76a0c37224959bfa023ee77615ec075c8ecd",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-badm/zipball/086f450d37d74a325880083296a2c5463ae3ea2c",
+                "reference": "086f450d37d74a325880083296a2c5463ae3ea2c",
                 "shasum": ""
             },
             "type": "drupal-theme",
@@ -1107,7 +1108,40 @@
             ],
             "description": " Bootstrap based admin theme",
             "homepage": "http://github.com/makinacorpus/drupal-badm",
-            "time": "2017-03-29T17:08:20+00:00"
+            "time": "2017-04-27T16:10:12+00:00"
+        },
+        {
+            "name": "makinacorpus/drupal-dragula",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/makinacorpus/drupal-dragula.git",
+                "reference": "0be450142a017a9cface3a021c636559188443a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-dragula/zipball/0be450142a017a9cface3a021c636559188443a1",
+                "reference": "0be450142a017a9cface3a021c636559188443a1",
+                "shasum": ""
+            },
+            "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Pierre Rineau",
+                    "email": "pierre.rineau@makina-corpus.com"
+                },
+                {
+                    "name": "Makina Corpus",
+                    "homepage": "http://makina-corpus.com"
+                }
+            ],
+            "description": "Carries the Drugula library",
+            "homepage": "http://github.com/makinacorpus/drupal-dragula",
+            "time": "2017-04-23T15:38:58+00:00"
         },
         {
             "name": "makinacorpus/drupal-filechunk",
@@ -1290,15 +1324,16 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-phplayout.git",
-                "reference": "b3dad99dcbce8fa677ae70c74ed6ea9514812273"
+                "reference": "97c6364511ac69e02ed0c08951f3f0b1041fbdb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-phplayout/zipball/b3dad99dcbce8fa677ae70c74ed6ea9514812273",
-                "reference": "b3dad99dcbce8fa677ae70c74ed6ea9514812273",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-phplayout/zipball/97c6364511ac69e02ed0c08951f3f0b1041fbdb1",
+                "reference": "97c6364511ac69e02ed0c08951f3f0b1041fbdb1",
                 "shasum": ""
             },
             "require": {
+                "makinacorpus/drupal-dragula": "^1",
                 "makinacorpus/drupal-plusql": "^1",
                 "makinacorpus/drupal-sf-dic": "^3.2",
                 "makinacorpus/php-layout": "*",
@@ -1333,7 +1368,7 @@
             ],
             "description": "PHP Layout library support, brings page composition capacity to Drupal",
             "homepage": "http://github.com/makinacorpus/drupal-phplayout",
-            "time": "2017-04-20 10:29:45"
+            "time": "2017-04-23 15:44:13"
         },
         {
             "name": "makinacorpus/drupal-plusql",
@@ -1378,7 +1413,7 @@
         },
         {
             "name": "makinacorpus/drupal-schedulefield",
-            "version": "dev-master",
+            "version": "1.0.0-alpha5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-schedulefield.git",
@@ -1412,7 +1447,7 @@
             ],
             "description": "Very simple schedule/planning field",
             "homepage": "http://github.com/makinacorpus/drupal-schedulefield",
-            "time": "2016-06-22 08:53:28"
+            "time": "2016-06-22T08:53:28+00:00"
         },
         {
             "name": "makinacorpus/drupal-sf-dic",
@@ -1420,12 +1455,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-sf-dic.git",
-                "reference": "dbb3b4503525aa82a1e0f8c7c67e0ef4d191eb1c"
+                "reference": "2132d3e02bc9e50a346eb9e7113a2e64b4fb0f48"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/dbb3b4503525aa82a1e0f8c7c67e0ef4d191eb1c",
-                "reference": "dbb3b4503525aa82a1e0f8c7c67e0ef4d191eb1c",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/2132d3e02bc9e50a346eb9e7113a2e64b4fb0f48",
+                "reference": "2132d3e02bc9e50a346eb9e7113a2e64b4fb0f48",
                 "shasum": ""
             },
             "require": {
@@ -1472,7 +1507,7 @@
             ],
             "description": "Brings the vanilla Symfony 3 depency inject container component to Drupal 7 seamlessly along with a limited compatibility layer with Drupal 8 API",
             "homepage": "http://github.com/makinacorpus/drupal-sf-dic",
-            "time": "2017-04-19 09:29:58"
+            "time": "2017-05-05 15:17:18"
         },
         {
             "name": "makinacorpus/drupal-ucms",
@@ -1480,22 +1515,23 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-ucms.git",
-                "reference": "f3b8217843d5d6a93513d5ac5dc38a149e81f007"
+                "reference": "6eb795d35c9e4f220650306d496629a31cc0c1a1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/f3b8217843d5d6a93513d5ac5dc38a149e81f007",
-                "reference": "f3b8217843d5d6a93513d5ac5dc38a149e81f007",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/6eb795d35c9e4f220650306d496629a31cc0c1a1",
+                "reference": "6eb795d35c9e4f220650306d496629a31cc0c1a1",
                 "shasum": ""
             },
             "require": {
                 "elasticsearch/elasticsearch": "2.2.0",
                 "makinacorpus/drupal-apubsub": "^4.0",
+                "makinacorpus/drupal-dragula": "^1",
                 "makinacorpus/drupal-phplayout": "*",
-                "makinacorpus/drupal-sf-dic": ">=3.2.0-alpha21",
-                "makinacorpus/drupal-udashboard": ">=1.0.0-alpha10",
+                "makinacorpus/drupal-sf-dic": ">=3.2.2",
+                "makinacorpus/drupal-udashboard": ">=1.0.0-alpha15",
                 "makinacorpus/drupal-ulink": "^2.0",
-                "makinacorpus/drupal-umenu": "^2.0.1",
+                "makinacorpus/drupal-umenu": "^2.0.5",
                 "makinacorpus/drush-progressbar": "^1.0",
                 "makinacorpus/php-acl": "^1.0",
                 "makinacorpus/php-bloom": "^2.0.1",
@@ -1567,7 +1603,7 @@
             ],
             "description": " µCMS modules - Node/Elasticsearch/favorites based Drupal fast contribution UI/UX",
             "homepage": "http://github.com/makinacorpus/drupal-ucms",
-            "time": "2017-04-22 08:59:44"
+            "time": "2017-05-06 12:37:32"
         },
         {
             "name": "makinacorpus/drupal-udashboard",
@@ -1575,12 +1611,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-udashboard.git",
-                "reference": "9d225fa7a82e916e5e330661cf1652979c523b11"
+                "reference": "43e7ed64eff870b40258a3ae3b5e346b8f389579"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-udashboard/zipball/9d225fa7a82e916e5e330661cf1652979c523b11",
-                "reference": "9d225fa7a82e916e5e330661cf1652979c523b11",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-udashboard/zipball/43e7ed64eff870b40258a3ae3b5e346b8f389579",
+                "reference": "43e7ed64eff870b40258a3ae3b5e346b8f389579",
                 "shasum": ""
             },
             "require": {
@@ -1634,7 +1670,7 @@
                 }
             ],
             "description": "Advanced dashboard API for Drupal",
-            "time": "2017-04-22 08:49:14"
+            "time": "2017-05-06 12:07:34"
         },
         {
             "name": "makinacorpus/drupal-udate",
@@ -1712,10 +1748,10 @@
         },
         {
             "name": "makinacorpus/drupal-ulog",
-            "version": "dev-master",
+            "version": "1.0.0-alpha1",
             "source": {
                 "type": "git",
-                "url": "git@github.com:makinacorpus/drupal-ulog.git",
+                "url": "https://github.com/makinacorpus/drupal-ulog.git",
                 "reference": "467c7817104471fd20dc5377b958ae0b75296d9e"
             },
             "dist": {
@@ -1725,6 +1761,7 @@
                 "shasum": ""
             },
             "type": "drupal-module",
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2"
             ],
@@ -1740,24 +1777,20 @@
             ],
             "description": "Minimalistic module that replaces Drupal 7 error handler to provide full stack trace for errors",
             "homepage": "http://github.com/makinacorpus/drupal-ulog",
-            "support": {
-                "source": "https://github.com/makinacorpus/drupal-ulog/tree/master",
-                "issues": "https://github.com/makinacorpus/drupal-ulog/issues"
-            },
-            "time": "2016-06-09 16:00:20"
+            "time": "2016-06-09T16:00:20+00:00"
         },
         {
             "name": "makinacorpus/drupal-umenu",
-            "version": "dev-master",
+            "version": "2.0.5",
             "source": {
                 "type": "git",
-                "url": "git@github.com:makinacorpus/drupal-umenu.git",
-                "reference": "ac965b33cc085c0d29f7538916f8e36937898b0f"
+                "url": "https://github.com/makinacorpus/drupal-umenu.git",
+                "reference": "4ba6931499b63871265f6a37a5ece78970644241"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/ac965b33cc085c0d29f7538916f8e36937898b0f",
-                "reference": "ac965b33cc085c0d29f7538916f8e36937898b0f",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-umenu/zipball/4ba6931499b63871265f6a37a5ece78970644241",
+                "reference": "4ba6931499b63871265f6a37a5ece78970644241",
                 "shasum": ""
             },
             "require": {
@@ -1770,11 +1803,7 @@
                     "MakinaCorpus\\Umenu\\": "src/"
                 }
             },
-            "autoload-dev": {
-                "psr-4": {
-                    "MakinaCorpus\\Umenu\\Tests\\": "tests/"
-                }
-            },
+            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2"
             ],
@@ -1790,53 +1819,55 @@
             ],
             "description": "Drupal core menu module replacement that does not attach to node types",
             "homepage": "http://github.com/makinacorpus/drupal-umenu",
-            "time": "2017-03-04 22:55:17"
+            "time": "2017-05-06T11:33:37+00:00"
         },
         {
             "name": "makinacorpus/drupal-unoderef",
-            "version": "1.0.0-alpha5",
+            "version": "dev-typescript",
             "source": {
                 "type": "git",
-                "url": "https://github.com/makinacorpus/drupal-unoderef.git",
-                "reference": "1794cf298acf06e68ef36a8f7c50702620536a6a"
+                "url": "git@github.com:makinacorpus/drupal-unoderef.git",
+                "reference": "1825b71e8bb6c5f05e6d3376f4939ec3e29a9884"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-unoderef/zipball/1794cf298acf06e68ef36a8f7c50702620536a6a",
-                "reference": "1794cf298acf06e68ef36a8f7c50702620536a6a",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-unoderef/zipball/1825b71e8bb6c5f05e6d3376f4939ec3e29a9884",
+                "reference": "1825b71e8bb6c5f05e6d3376f4939ec3e29a9884",
                 "shasum": ""
             },
+            "require": {
+                "makinacorpus/drupal-dragula": "^1"
+            },
             "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0"
             ],
             "authors": [
                 {
-                    "name": "Makina Corpus",
-                    "homepage": "http://makina-corpus.com"
-                },
-                {
                     "name": "Sébastien Corbin",
                     "email": "sebastien.corbin@makina-corpus.com"
+                },
+                {
+                    "name": "Makina Corpus",
+                    "homepage": "http://makina-corpus.com"
                 }
             ],
             "description": "Handle nodereferences with drop areas as widgets",
             "homepage": "http://github.com/makinacorpus/drupal-unoderef",
-            "time": "2016-10-19T15:01:00+00:00"
+            "time": "2017-05-06 11:33:04"
         },
         {
             "name": "makinacorpus/drupal-usync",
-            "version": "1.0.10",
+            "version": "1.0.11",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-usync.git",
-                "reference": "6ef5d4448c99c878d783923a0c87710867fb3a03"
+                "reference": "faffefe88f3dd082c3e992180a54a518ef5c674d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-usync/zipball/6ef5d4448c99c878d783923a0c87710867fb3a03",
-                "reference": "6ef5d4448c99c878d783923a0c87710867fb3a03",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-usync/zipball/faffefe88f3dd082c3e992180a54a518ef5c674d",
+                "reference": "faffefe88f3dd082c3e992180a54a518ef5c674d",
                 "shasum": ""
             },
             "require": {
@@ -1864,7 +1895,7 @@
             ],
             "description": "Drupal features-like configuration file driven synchronization module",
             "homepage": "http://github.com/makinacorpus/drupal-usync",
-            "time": "2017-04-18T17:23:27+00:00"
+            "time": "2017-04-20T09:38:01+00:00"
         },
         {
             "name": "makinacorpus/drush-progressbar",
@@ -1913,12 +1944,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/php-acl.git",
-                "reference": "207c669b1503006d871909770dd0a6b35ff81a00"
+                "reference": "90483a1ced7cc26efb4883d36eed559386d82f77"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/php-acl/zipball/207c669b1503006d871909770dd0a6b35ff81a00",
-                "reference": "207c669b1503006d871909770dd0a6b35ff81a00",
+                "url": "https://api.github.com/repos/makinacorpus/php-acl/zipball/90483a1ced7cc26efb4883d36eed559386d82f77",
+                "reference": "90483a1ced7cc26efb4883d36eed559386d82f77",
                 "shasum": ""
             },
             "require-dev": {
@@ -1929,6 +1960,11 @@
             "autoload": {
                 "psr-4": {
                     "MakinaCorpus\\ACL\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "MakinaCorpus\\ACL\\Tests\\": "tests/"
                 }
             },
             "license": [
@@ -1945,7 +1981,7 @@
                 }
             ],
             "description": "Simple ACL API for PHP",
-            "time": "2017-02-19 17:50:44"
+            "time": "2017-04-22 10:42:04"
         },
         {
             "name": "makinacorpus/php-bloom",
@@ -3003,16 +3039,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.2.7",
+            "version": "v3.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "1631040ea8fc5e0e405c00d35cbf2c0b7b555f64"
+                "reference": "85959c2abbe4d2f050f950f39c9c3cf83819f3df"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/1631040ea8fc5e0e405c00d35cbf2c0b7b555f64",
-                "reference": "1631040ea8fc5e0e405c00d35cbf2c0b7b555f64",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/85959c2abbe4d2f050f950f39c9c3cf83819f3df",
+                "reference": "85959c2abbe4d2f050f950f39c9c3cf83819f3df",
                 "shasum": ""
             },
             "require": {
@@ -3143,7 +3179,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-04-05T12:52:29+00:00"
+            "time": "2017-05-01T17:47:03+00:00"
         },
         {
             "name": "tfd7/tfd7",
@@ -4511,16 +4547,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v2.8.19",
+            "version": "v2.8.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "bc240bf630ea49d5f86cef746254d64299029932"
+                "reference": "b0a7230649affaa40960ac7dd47d2a88f2886afb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/bc240bf630ea49d5f86cef746254d64299029932",
-                "reference": "bc240bf630ea49d5f86cef746254d64299029932",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/b0a7230649affaa40960ac7dd47d2a88f2886afb",
+                "reference": "b0a7230649affaa40960ac7dd47d2a88f2886afb",
                 "shasum": ""
             },
             "require": {
@@ -4565,7 +4601,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2017-03-01T19:11:57+00:00"
+            "time": "2017-04-12T14:07:15+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -4620,32 +4656,14 @@
     ],
     "aliases": [
         {
-            "alias": "4.0.0",
-            "alias_normalized": "4.0.0.0",
-            "version": "9999999-dev",
-            "package": "makinacorpus/apubsub"
-        },
-        {
-            "alias": "4.0.0",
-            "alias_normalized": "4.0.0.0",
-            "version": "9999999-dev",
-            "package": "makinacorpus/drupal-apubsub"
-        },
-        {
-            "alias": "1.0",
-            "alias_normalized": "1.0.0.0",
-            "version": "9999999-dev",
-            "package": "makinacorpus/drupal-schedulefield"
-        },
-        {
             "alias": "3.2",
             "alias_normalized": "3.2.0.0",
             "version": "9999999-dev",
             "package": "makinacorpus/drupal-sf-dic"
         },
         {
-            "alias": "2.0",
-            "alias_normalized": "2.0.0.0",
+            "alias": "2.0.0-alpha2",
+            "alias_normalized": "2.0.0.0-alpha2",
             "version": "9999999-dev",
             "package": "makinacorpus/drupal-ucms"
         },
@@ -4656,10 +4674,10 @@
             "package": "makinacorpus/drupal-udashboard"
         },
         {
-            "alias": "2.0.2",
-            "alias_normalized": "2.0.2.0",
-            "version": "9999999-dev",
-            "package": "makinacorpus/drupal-umenu"
+            "alias": "2.0",
+            "alias_normalized": "2.0.0.0",
+            "version": "dev-typescript",
+            "package": "makinacorpus/drupal-unoderef"
         },
         {
             "alias": "1.0",
@@ -4676,15 +4694,11 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
-        "makinacorpus/apubsub": 20,
-        "makinacorpus/drupal-apubsub": 20,
         "makinacorpus/drupal-phplayout": 20,
-        "makinacorpus/drupal-schedulefield": 20,
         "makinacorpus/drupal-sf-dic": 20,
         "makinacorpus/drupal-ucms": 20,
         "makinacorpus/drupal-udashboard": 20,
-        "makinacorpus/drupal-ulog": 20,
-        "makinacorpus/drupal-umenu": 20,
+        "makinacorpus/drupal-unoderef": 20,
         "makinacorpus/php-acl": 20,
         "makinacorpus/php-layout": 20,
         "makinacorpus/redis-bundle": 20,
