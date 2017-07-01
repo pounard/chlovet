@@ -82,10 +82,13 @@ umenu_allowed_roles:
   navigation: Plan du site
 
 # Few Drupal core variables
-udashboard.disable_css: true
+admin_theme: vetadmin
+calista_breadcrumb_alter: 1
+calista_context_pane_enable: 1
+calista_disable_css: 1
+calista_toolbar_breadcrumb: 1
+calista_toolbar_enable: 1
+gulpifier_map_path: ../themes/resources/map.json
+node_admin_theme: true
 ulink_unsafe_text_caching: true
 user_register: 0
-admin_theme: vetadmin
-node_admin_theme: true
-
-gulpifier_map_path: ../themes/resources/map.json

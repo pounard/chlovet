@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "45ab85b1365a78c8862ec1c0f49d6617",
+    "content-hash": "1c1dfe26939f209c54e594d5fc96d29b",
     "packages": [
         {
             "name": "composer/installers",
@@ -1111,11 +1111,80 @@
             "time": "2017-04-27T16:10:12+00:00"
         },
         {
-            "name": "makinacorpus/drupal-dragula",
-            "version": "1.0.0",
+            "name": "makinacorpus/drupal-calista",
+            "version": "dev-master",
             "source": {
                 "type": "git",
-                "url": "https://github.com/makinacorpus/drupal-dragula.git",
+                "url": "git@github.com:makinacorpus/drupal-calista.git",
+                "reference": "3ada443953b3351878265c57c0d5fddc64ca9d9d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-calista/zipball/3ada443953b3351878265c57c0d5fddc64ca9d9d",
+                "reference": "3ada443953b3351878265c57c0d5fddc64ca9d9d",
+                "shasum": ""
+            },
+            "require": {
+                "makinacorpus/drupal-sf-dic": ">=3.2.6",
+                "makinacorpus/php-calista": "dev-master",
+                "php": ">=5.5",
+                "symfony/dependency-injection": "^3.2",
+                "symfony/event-dispatcher": "^3.1",
+                "symfony/http-foundation": "^3.1",
+                "symfony/property-info": "^3.2"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.1"
+            },
+            "type": "drupal-module",
+            "autoload": {
+                "psr-4": {
+                    "MakinaCorpus\\Drupal\\Calista\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "MakinaCorpus\\Drupal\\Calista\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "GPL-2"
+            ],
+            "authors": [
+                {
+                    "name": "Lonny Loquesol",
+                    "email": "lonny.loquesol@makina-corpus.com"
+                },
+                {
+                    "name": "Pierre Rineau",
+                    "email": "pierre.rineau@makina-corpus.com"
+                },
+                {
+                    "name": "Régis Leroy",
+                    "email": "regis.leroy@makina-corpus.com"
+                },
+                {
+                    "name": "Sébastien Corbin",
+                    "email": "sebastien.corbin@makina-corpus.com"
+                },
+                {
+                    "name": "Yannick Chabbert",
+                    "email": "yannick.chabbert@makina-corpus.com"
+                },
+                {
+                    "name": "Makina Corpus",
+                    "homepage": "http://makina-corpus.com"
+                }
+            ],
+            "description": "Advanced dashboard/list API for Drupal using makinacorpus/drupal-calista",
+            "time": "2017-06-28 12:01:04"
+        },
+        {
+            "name": "makinacorpus/drupal-dragula",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:makinacorpus/drupal-dragula.git",
                 "reference": "0be450142a017a9cface3a021c636559188443a1"
             },
             "dist": {
@@ -1125,7 +1194,6 @@
                 "shasum": ""
             },
             "type": "drupal-module",
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "GPL-2.0"
             ],
@@ -1141,7 +1209,7 @@
             ],
             "description": "Carries the Drugula library",
             "homepage": "http://github.com/makinacorpus/drupal-dragula",
-            "time": "2017-04-23T15:38:58+00:00"
+            "time": "2017-04-23 15:38:58"
         },
         {
             "name": "makinacorpus/drupal-filechunk",
@@ -1324,12 +1392,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-phplayout.git",
-                "reference": "97c6364511ac69e02ed0c08951f3f0b1041fbdb1"
+                "reference": "c83c25b2f69c5988e3a956240935dbf69211a25a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-phplayout/zipball/97c6364511ac69e02ed0c08951f3f0b1041fbdb1",
-                "reference": "97c6364511ac69e02ed0c08951f3f0b1041fbdb1",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-phplayout/zipball/c83c25b2f69c5988e3a956240935dbf69211a25a",
+                "reference": "c83c25b2f69c5988e3a956240935dbf69211a25a",
                 "shasum": ""
             },
             "require": {
@@ -1368,7 +1436,7 @@
             ],
             "description": "PHP Layout library support, brings page composition capacity to Drupal",
             "homepage": "http://github.com/makinacorpus/drupal-phplayout",
-            "time": "2017-04-23 15:44:13"
+            "time": "2017-06-28 11:27:06"
         },
         {
             "name": "makinacorpus/drupal-plusql",
@@ -1455,18 +1523,18 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-sf-dic.git",
-                "reference": "2132d3e02bc9e50a346eb9e7113a2e64b4fb0f48"
+                "reference": "7f10af77aa8d0743d145b07a3b1b860b0e93c20d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/2132d3e02bc9e50a346eb9e7113a2e64b4fb0f48",
-                "reference": "2132d3e02bc9e50a346eb9e7113a2e64b4fb0f48",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/7f10af77aa8d0743d145b07a3b1b860b0e93c20d",
+                "reference": "7f10af77aa8d0743d145b07a3b1b860b0e93c20d",
                 "shasum": ""
             },
             "require": {
                 "psr/log": "1.*",
                 "symfony/config": "~3.0 <3.3",
-                "symfony/dependency-injection": "~3.0 <3.3",
+                "symfony/dependency-injection": "~3.2 <3.3",
                 "symfony/event-dispatcher": "~3.0 <3.3",
                 "symfony/expression-language": "~3.0 <3.3",
                 "symfony/http-foundation": "~3.0 <3.3",
@@ -1507,7 +1575,7 @@
             ],
             "description": "Brings the vanilla Symfony 3 depency inject container component to Drupal 7 seamlessly along with a limited compatibility layer with Drupal 8 API",
             "homepage": "http://github.com/makinacorpus/drupal-sf-dic",
-            "time": "2017-05-05 15:17:18"
+            "time": "2017-06-28 13:42:53"
         },
         {
             "name": "makinacorpus/drupal-ucms",
@@ -1611,16 +1679,16 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-udashboard.git",
-                "reference": "43e7ed64eff870b40258a3ae3b5e346b8f389579"
+                "reference": "9f6d1a3523a598d34a3aea8a84f2ee21e4cb1ae2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-udashboard/zipball/43e7ed64eff870b40258a3ae3b5e346b8f389579",
-                "reference": "43e7ed64eff870b40258a3ae3b5e346b8f389579",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-udashboard/zipball/9f6d1a3523a598d34a3aea8a84f2ee21e4cb1ae2",
+                "reference": "9f6d1a3523a598d34a3aea8a84f2ee21e4cb1ae2",
                 "shasum": ""
             },
             "require": {
-                "makinacorpus/drupal-sf-dic": ">=3.1.26",
+                "makinacorpus/drupal-sf-dic": ">=3.2.3",
                 "symfony/dependency-injection": "^3.1",
                 "symfony/event-dispatcher": "^3.1",
                 "symfony/http-foundation": "^3.1",
@@ -1670,7 +1738,7 @@
                 }
             ],
             "description": "Advanced dashboard API for Drupal",
-            "time": "2017-05-06 12:07:34"
+            "time": "2017-06-27 16:47:43"
         },
         {
             "name": "makinacorpus/drupal-udate",
@@ -1858,16 +1926,16 @@
         },
         {
             "name": "makinacorpus/drupal-usync",
-            "version": "1.0.11",
+            "version": "1.0.12",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-usync.git",
-                "reference": "faffefe88f3dd082c3e992180a54a518ef5c674d"
+                "reference": "92939a4a1ab63133bdb481bcb36f299ac6afe5da"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-usync/zipball/faffefe88f3dd082c3e992180a54a518ef5c674d",
-                "reference": "faffefe88f3dd082c3e992180a54a518ef5c674d",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-usync/zipball/92939a4a1ab63133bdb481bcb36f299ac6afe5da",
+                "reference": "92939a4a1ab63133bdb481bcb36f299ac6afe5da",
                 "shasum": ""
             },
             "require": {
@@ -1895,7 +1963,7 @@
             ],
             "description": "Drupal features-like configuration file driven synchronization module",
             "homepage": "http://github.com/makinacorpus/drupal-usync",
-            "time": "2017-04-20T09:38:01+00:00"
+            "time": "2017-05-09T08:19:08+00:00"
         },
         {
             "name": "makinacorpus/drush-progressbar",
@@ -2024,6 +2092,79 @@
             "time": "2016-08-30T13:36:14+00:00"
         },
         {
+            "name": "makinacorpus/php-calista",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "git@github.com:makinacorpus/php-calista.git",
+                "reference": "53aa0eb88926e667e09c055e8fab62bbee6270b6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/makinacorpus/php-calista/zipball/53aa0eb88926e667e09c055e8fab62bbee6270b6",
+                "reference": "53aa0eb88926e667e09c055e8fab62bbee6270b6",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5",
+                "symfony/dependency-injection": "^3.2",
+                "symfony/event-dispatcher": "^3.1",
+                "symfony/http-foundation": "^3.1",
+                "symfony/options-resolver": "^3.2",
+                "symfony/property-access": "^3.2",
+                "symfony/property-info": "^3.2",
+                "symfony/security": "^3.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.1",
+                "symfony/form": "^3.2",
+                "symfony/options-resolver": "^3.2",
+                "twig/twig": "^2.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "MakinaCorpus\\Calista\\": "src/"
+                }
+            },
+            "autoload-dev": {
+                "psr-4": {
+                    "MakinaCorpus\\Calista\\Tests\\": "tests/"
+                }
+            },
+            "license": [
+                "GPL-2"
+            ],
+            "authors": [
+                {
+                    "name": "Lonny Loquesol",
+                    "email": "lonny.loquesol@makina-corpus.com"
+                },
+                {
+                    "name": "Pierre Rineau",
+                    "email": "pierre.rineau@makina-corpus.com"
+                },
+                {
+                    "name": "Régis Leroy",
+                    "email": "regis.leroy@makina-corpus.com"
+                },
+                {
+                    "name": "Sébastien Corbin",
+                    "email": "sebastien.corbin@makina-corpus.com"
+                },
+                {
+                    "name": "Yannick Chabbert",
+                    "email": "yannick.chabbert@makina-corpus.com"
+                },
+                {
+                    "name": "Makina Corpus",
+                    "homepage": "http://makina-corpus.com"
+                }
+            ],
+            "description": "Backend agnostic API for building user interface or data exports",
+            "time": "2017-06-28 12:00:29"
+        },
+        {
             "name": "makinacorpus/php-layout",
             "version": "dev-master",
             "source": {
@@ -2119,16 +2260,16 @@
         },
         {
             "name": "monolog/monolog",
-            "version": "1.22.1",
+            "version": "1.23.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0"
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/1e044bc4b34e91743943479f1be7a1d5eb93add0",
-                "reference": "1e044bc4b34e91743943479f1be7a1d5eb93add0",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
+                "reference": "fd8c787753b3a2ad11bc60c063cff1358a32a3b4",
                 "shasum": ""
             },
             "require": {
@@ -2149,7 +2290,7 @@
                 "phpunit/phpunit-mock-objects": "2.3.0",
                 "ruflin/elastica": ">=0.90 <3.0",
                 "sentry/sentry": "^0.13",
-                "swiftmailer/swiftmailer": "~5.3"
+                "swiftmailer/swiftmailer": "^5.3|^6.0"
             },
             "suggest": {
                 "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
@@ -2193,7 +2334,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2017-03-13T07:08:03+00:00"
+            "time": "2017-06-19T01:22:40+00:00"
         },
         {
             "name": "nikic/php-parser",
@@ -2506,16 +2647,16 @@
         },
         {
             "name": "psy/psysh",
-            "version": "v0.8.3",
+            "version": "v0.8.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e"
+                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
-                "reference": "1dd4bbbc64d71e7ec075ffe82b42d9e096dc8d5e",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
+                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
                 "shasum": ""
             },
             "require": {
@@ -2545,7 +2686,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-develop": "0.9.x-dev"
+                    "dev-develop": "0.8.x-dev"
                 }
             },
             "autoload": {
@@ -2575,7 +2716,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-03-19T21:40:44+00:00"
+            "time": "2017-06-24T06:16:19+00:00"
         },
         {
             "name": "react/promise",
@@ -2625,16 +2766,16 @@
         },
         {
             "name": "sensio/framework-extra-bundle",
-            "version": "v3.0.25",
+            "version": "v3.0.26",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sensiolabs/SensioFrameworkExtraBundle.git",
-                "reference": "472b339cf0c82f3a033b29f85d9d9cada3cd1a9c"
+                "reference": "6d6cbe971554f0a2cc84965850481eb04a2a0059"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/472b339cf0c82f3a033b29f85d9d9cada3cd1a9c",
-                "reference": "472b339cf0c82f3a033b29f85d9d9cada3cd1a9c",
+                "url": "https://api.github.com/repos/sensiolabs/SensioFrameworkExtraBundle/zipball/6d6cbe971554f0a2cc84965850481eb04a2a0059",
+                "reference": "6d6cbe971554f0a2cc84965850481eb04a2a0059",
                 "shasum": ""
             },
             "require": {
@@ -2691,7 +2832,7 @@
                 "annotations",
                 "controllers"
             ],
-            "time": "2017-03-21T23:34:44+00:00"
+            "time": "2017-05-11T17:01:57+00:00"
         },
         {
             "name": "symfony/monolog-bundle",
@@ -2755,21 +2896,21 @@
         },
         {
             "name": "symfony/polyfill-intl-icu",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-intl-icu.git",
-                "reference": "2d6e2b20d457603eefb6e614286c22efca30fdb4"
+                "reference": "3191cbe0ce64987bd382daf6724af31c53daae01"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/2d6e2b20d457603eefb6e614286c22efca30fdb4",
-                "reference": "2d6e2b20d457603eefb6e614286c22efca30fdb4",
+                "url": "https://api.github.com/repos/symfony/polyfill-intl-icu/zipball/3191cbe0ce64987bd382daf6724af31c53daae01",
+                "reference": "3191cbe0ce64987bd382daf6724af31c53daae01",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.3.3",
-                "symfony/intl": "~2.3|~3.0"
+                "symfony/intl": "~2.3|~3.0|~4.0"
             },
             "suggest": {
                 "ext-intl": "For best performance"
@@ -2777,7 +2918,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -2809,20 +2950,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2017-06-09T08:25:21+00:00"
         },
         {
             "name": "symfony/polyfill-mbstring",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-mbstring.git",
-                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4"
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/e79d363049d1c2128f133a2667e4f4190904f7f4",
-                "reference": "e79d363049d1c2128f133a2667e4f4190904f7f4",
+                "url": "https://api.github.com/repos/symfony/polyfill-mbstring/zipball/f29dca382a6485c3cbe6379f0c61230167681937",
+                "reference": "f29dca382a6485c3cbe6379f0c61230167681937",
                 "shasum": ""
             },
             "require": {
@@ -2834,7 +2975,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -2868,20 +3009,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2017-06-09T14:24:12+00:00"
         },
         {
             "name": "symfony/polyfill-php56",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php56.git",
-                "reference": "1dd42b9b89556f18092f3d1ada22cb05ac85383c"
+                "reference": "bc0b7d6cb36b10cfabb170a3e359944a95174929"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/1dd42b9b89556f18092f3d1ada22cb05ac85383c",
-                "reference": "1dd42b9b89556f18092f3d1ada22cb05ac85383c",
+                "url": "https://api.github.com/repos/symfony/polyfill-php56/zipball/bc0b7d6cb36b10cfabb170a3e359944a95174929",
+                "reference": "bc0b7d6cb36b10cfabb170a3e359944a95174929",
                 "shasum": ""
             },
             "require": {
@@ -2891,7 +3032,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -2924,20 +3065,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2017-06-09T08:25:21+00:00"
         },
         {
             "name": "symfony/polyfill-php70",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php70.git",
-                "reference": "13ce343935f0f91ca89605a2f6ca6f5c2f3faac2"
+                "reference": "032fd647d5c11a9ceab8ee8747e13b5448e93874"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/13ce343935f0f91ca89605a2f6ca6f5c2f3faac2",
-                "reference": "13ce343935f0f91ca89605a2f6ca6f5c2f3faac2",
+                "url": "https://api.github.com/repos/symfony/polyfill-php70/zipball/032fd647d5c11a9ceab8ee8747e13b5448e93874",
+                "reference": "032fd647d5c11a9ceab8ee8747e13b5448e93874",
                 "shasum": ""
             },
             "require": {
@@ -2947,7 +3088,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -2983,20 +3124,20 @@
                 "portable",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2017-06-09T14:24:12+00:00"
         },
         {
             "name": "symfony/polyfill-util",
-            "version": "v1.3.0",
+            "version": "v1.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-util.git",
-                "reference": "746bce0fca664ac0a575e465f65c6643faddf7fb"
+                "reference": "ebccbde4aad410f6438d86d7d261c6b4d2b9a51d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/746bce0fca664ac0a575e465f65c6643faddf7fb",
-                "reference": "746bce0fca664ac0a575e465f65c6643faddf7fb",
+                "url": "https://api.github.com/repos/symfony/polyfill-util/zipball/ebccbde4aad410f6438d86d7d261c6b4d2b9a51d",
+                "reference": "ebccbde4aad410f6438d86d7d261c6b4d2b9a51d",
                 "shasum": ""
             },
             "require": {
@@ -3005,7 +3146,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.3-dev"
+                    "dev-master": "1.4-dev"
                 }
             },
             "autoload": {
@@ -3035,20 +3176,20 @@
                 "polyfill",
                 "shim"
             ],
-            "time": "2016-11-14T01:06:16+00:00"
+            "time": "2017-06-09T08:25:21+00:00"
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.2.8",
+            "version": "v3.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "85959c2abbe4d2f050f950f39c9c3cf83819f3df"
+                "reference": "78c08f2faa42210db4fe6f4ece73891ca546a9a0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/85959c2abbe4d2f050f950f39c9c3cf83819f3df",
-                "reference": "85959c2abbe4d2f050f950f39c9c3cf83819f3df",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/78c08f2faa42210db4fe6f4ece73891ca546a9a0",
+                "reference": "78c08f2faa42210db4fe6f4ece73891ca546a9a0",
                 "shasum": ""
             },
             "require": {
@@ -3179,7 +3320,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-05-01T17:47:03+00:00"
+            "time": "2017-05-29T19:32:17+00:00"
         },
         {
             "name": "tfd7/tfd7",
@@ -3222,23 +3363,24 @@
         },
         {
             "name": "twig/extensions",
-            "version": "v1.4.1",
+            "version": "v1.5.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig-extensions.git",
-                "reference": "f0bb8431c8691f5a39f1017d9a5967a082bf01ff"
+                "reference": "d188c76168b853481cc75879ea045bf93d718e9c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/f0bb8431c8691f5a39f1017d9a5967a082bf01ff",
-                "reference": "f0bb8431c8691f5a39f1017d9a5967a082bf01ff",
+                "url": "https://api.github.com/repos/twigphp/Twig-extensions/zipball/d188c76168b853481cc75879ea045bf93d718e9c",
+                "reference": "d188c76168b853481cc75879ea045bf93d718e9c",
                 "shasum": ""
             },
             "require": {
-                "twig/twig": "~1.20|~2.0"
+                "twig/twig": "~1.27|~2.0"
             },
             "require-dev": {
-                "symfony/translation": "~2.3"
+                "symfony/phpunit-bridge": "~3.3@dev",
+                "symfony/translation": "~2.3|~3.0"
             },
             "suggest": {
                 "symfony/translation": "Allow the time_diff output to be translated"
@@ -3246,12 +3388,15 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.4-dev"
+                    "dev-master": "1.5-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
                     "Twig_Extensions_": "lib/"
+                },
+                "psr-4": {
+                    "Twig\\Extensions\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3270,20 +3415,20 @@
                 "i18n",
                 "text"
             ],
-            "time": "2016-10-25T17:34:14+00:00"
+            "time": "2017-06-08T18:19:53+00:00"
         },
         {
             "name": "twig/twig",
-            "version": "v2.3.2",
+            "version": "v2.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/twigphp/Twig.git",
-                "reference": "85e8372c451510165c04bf781295f9d922fa524b"
+                "reference": "eab7c3288ae6603d7d6f92b531626af2b162d1f2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/twigphp/Twig/zipball/85e8372c451510165c04bf781295f9d922fa524b",
-                "reference": "85e8372c451510165c04bf781295f9d922fa524b",
+                "url": "https://api.github.com/repos/twigphp/Twig/zipball/eab7c3288ae6603d7d6f92b531626af2b162d1f2",
+                "reference": "eab7c3288ae6603d7d6f92b531626af2b162d1f2",
                 "shasum": ""
             },
             "require": {
@@ -3298,12 +3443,15 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.3-dev"
+                    "dev-master": "2.4-dev"
                 }
             },
             "autoload": {
                 "psr-0": {
                     "Twig_": "lib/"
+                },
+                "psr-4": {
+                    "Twig\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -3333,7 +3481,7 @@
             "keywords": [
                 "templating"
             ],
-            "time": "2017-04-21T00:13:02+00:00"
+            "time": "2017-06-07T18:47:58+00:00"
         }
     ],
     "packages-dev": [
@@ -3893,16 +4041,16 @@
         },
         {
             "name": "phpunit/phpunit",
-            "version": "5.7.19",
+            "version": "5.7.21",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "69c4f49ff376af2692bad9cebd883d17ebaa98a1"
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/69c4f49ff376af2692bad9cebd883d17ebaa98a1",
-                "reference": "69c4f49ff376af2692bad9cebd883d17ebaa98a1",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/3b91adfb64264ddec5a2dee9851f354aa66327db",
+                "reference": "3b91adfb64264ddec5a2dee9851f354aa66327db",
                 "shasum": ""
             },
             "require": {
@@ -3920,7 +4068,7 @@
                 "phpunit/php-timer": "^1.0.6",
                 "phpunit/phpunit-mock-objects": "^3.2",
                 "sebastian/comparator": "^1.2.4",
-                "sebastian/diff": "~1.2",
+                "sebastian/diff": "^1.4.3",
                 "sebastian/environment": "^1.3.4 || ^2.0",
                 "sebastian/exporter": "~2.0",
                 "sebastian/global-state": "^1.1",
@@ -3971,7 +4119,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2017-04-03T02:22:27+00:00"
+            "time": "2017-06-21T08:11:54+00:00"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -4143,23 +4291,23 @@
         },
         {
             "name": "sebastian/diff",
-            "version": "1.4.1",
+            "version": "1.4.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/diff.git",
-                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e"
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/13edfd8706462032c2f52b4b862974dd46b71c9e",
-                "reference": "13edfd8706462032c2f52b4b862974dd46b71c9e",
+                "url": "https://api.github.com/repos/sebastianbergmann/diff/zipball/7f066a26a962dbe58ddea9f72a4e82874a3975a4",
+                "reference": "7f066a26a962dbe58ddea9f72a4e82874a3975a4",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.3"
+                "php": "^5.3.3 || ^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8"
+                "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
             },
             "type": "library",
             "extra": {
@@ -4191,7 +4339,7 @@
             "keywords": [
                 "diff"
             ],
-            "time": "2015-12-08T07:14:41+00:00"
+            "time": "2017-05-22T07:24:03+00:00"
         },
         {
             "name": "sebastian/environment",
@@ -4547,16 +4695,16 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v2.8.20",
+            "version": "v2.8.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "b0a7230649affaa40960ac7dd47d2a88f2886afb"
+                "reference": "34bfa4fe0439440323aab0982a77246b6b6dfd83"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/b0a7230649affaa40960ac7dd47d2a88f2886afb",
-                "reference": "b0a7230649affaa40960ac7dd47d2a88f2886afb",
+                "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/34bfa4fe0439440323aab0982a77246b6b6dfd83",
+                "reference": "34bfa4fe0439440323aab0982a77246b6b6dfd83",
                 "shasum": ""
             },
             "require": {
@@ -4601,7 +4749,7 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2017-04-12T14:07:15+00:00"
+            "time": "2017-05-21T09:46:38+00:00"
         },
         {
             "name": "webmozart/assert",
@@ -4656,6 +4804,18 @@
     ],
     "aliases": [
         {
+            "alias": "1",
+            "alias_normalized": "1.0.0.0",
+            "version": "9999999-dev",
+            "package": "makinacorpus/drupal-calista"
+        },
+        {
+            "alias": "1",
+            "alias_normalized": "1.0.0.0",
+            "version": "9999999-dev",
+            "package": "makinacorpus/drupal-dragula"
+        },
+        {
             "alias": "3.2",
             "alias_normalized": "3.2.0.0",
             "version": "9999999-dev",
@@ -4694,6 +4854,8 @@
     ],
     "minimum-stability": "dev",
     "stability-flags": {
+        "makinacorpus/drupal-calista": 20,
+        "makinacorpus/drupal-dragula": 20,
         "makinacorpus/drupal-phplayout": 20,
         "makinacorpus/drupal-sf-dic": 20,
         "makinacorpus/drupal-ucms": 20,

@@ -33,13 +33,13 @@ dependencies[] = jquery_update
 dependencies[] = telephone
 
 ; Custom modules.
+dependencies[] = calista
 dependencies[] = filechunk
 dependencies[] = gulpifier
 dependencies[] = iresponsive
 dependencies[] = latlonfield
 dependencies[] = minidialog
 dependencies[] = schedulefield
-dependencies[] = udashboard
 dependencies[] = udate
 dependencies[] = ulink
 dependencies[] = umenu

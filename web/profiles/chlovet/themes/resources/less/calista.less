@@ -16,26 +16,26 @@
 @brand-primary:                             darken(#428bca, 6.5%); // #337ab7
 @padding-base-horizontal:                   12px;
 
-// Custom uDashboard variables
-//@udashboard-pane-zindex:                    110;
-@udashboard-border-radius:                  0;
-@udashboard-pane-width:                     330px;
-@udashboard-pane-height:                    330px;
-@udashboard-pane-color:                     lighten(@gray-light, 15%);
-@udashboard-pane-bg:                        #222;
-@udashboard-pane-border:                    darken(@udashboard-pane-bg, 10%);
-@udashboard-pane-link-color:                lighten(@gray-light, 15%);
-@udashboard-pane-link-hover-color:          #fff;
-@udashboard-pane-link-active-color:         @udashboard-pane-link-hover-color;
-@udashboard-pane-link-disabled-color:       #444;
-@udashboard-pane-toggle-font-size:          @font-size-base;
-@udashboard-pane-toggle-color:              @udashboard-pane-link-color;
-@udashboard-pane-toggle-hover-color:        @udashboard-pane-link-hover-color;
-@udashboard-pane-toggle-hover-bg:           darken(@brand-primary, 10%);
-@udashboard-pane-toggle-active-color:       @udashboard-pane-link-active-color;
-@udashboard-pane-toggle-active-bg:          @brand-primary;
+// Custom Calista variables
+//@calista-pane-zindex:                    110;
+@calista-border-radius:                  0;
+@calista-pane-width:                     330px;
+@calista-pane-height:                    330px;
+@calista-pane-color:                     lighten(@gray-light, 15%);
+@calista-pane-bg:                        #222;
+@calista-pane-border:                    darken(@calista-pane-bg, 10%);
+@calista-pane-link-color:                lighten(@gray-light, 15%);
+@calista-pane-link-hover-color:          #fff;
+@calista-pane-link-active-color:         @calista-pane-link-hover-color;
+@calista-pane-link-disabled-color:       #444;
+@calista-pane-toggle-font-size:          @font-size-base;
+@calista-pane-toggle-color:              @calista-pane-link-color;
+@calista-pane-toggle-hover-color:        @calista-pane-link-hover-color;
+@calista-pane-toggle-hover-bg:           darken(@brand-primary, 10%);
+@calista-pane-toggle-active-color:       @calista-pane-link-active-color;
+@calista-pane-toggle-active-bg:          @brand-primary;
 
-@udashboard-pane-zindex:                    @zindex-header + 1;
+@calista-pane-zindex:                    @zindex-header + 1;
 
 /*****************************************************************************
  *
@@ -45,21 +45,21 @@
 
 #contextual-pane {
   position: fixed;
-  z-index: @udashboard-pane-zindex;
+  z-index: @calista-pane-zindex;
 
   .tabs a {
     background: transparent;
 
     &.active {
-      color: @udashboard-pane-link-active-color;
+      color: @calista-pane-link-active-color;
     }
     &.disabled, &[disabled=disabled] {
-      color: @udashboard-pane-link-disabled-color;
+      color: @calista-pane-link-disabled-color;
     }
 
     &:focus,
     &:hover {
-      color: @udashboard-pane-link-hover-color;
+      color: @calista-pane-link-hover-color;
       text-decoration: none;
     }
   }
@@ -70,7 +70,7 @@
     right: 0;
     bottom: 0;
     left: 0;
-    background: @udashboard-pane-bg;
+    background: @calista-pane-bg;
     z-index: 2;
     width: 100%;
     padding-top: 10px;
@@ -79,7 +79,7 @@
   &.pane-right {
     top: 0;
     right: 0;
-    width: @udashboard-pane-width;
+    width: @calista-pane-width;
     height: 100%;
 
     .inner {
@@ -90,7 +90,7 @@
 
 #contextual-pane .tabs {
   position: relative;
-  color: @udashboard-pane-color;
+  color: @calista-pane-color;
 }
 #contextual-pane .tabs > div {
   position: absolute;
@@ -105,23 +105,23 @@
 #contextual-pane-toggle {
   position: absolute;
   display: inline-block;
-  background: @udashboard-pane-bg;
-  font-size: @udashboard-pane-toggle-font-size;
+  background: @calista-pane-bg;
+  font-size: @calista-pane-toggle-font-size;
 
   a {
     display: inline-block;
     padding: @padding-base-horizontal;
-    color: @udashboard-pane-toggle-color;
+    color: @calista-pane-toggle-color;
 
     &.active {
-      background-color: @udashboard-pane-toggle-active-bg;
-      color: @udashboard-pane-toggle-active-color;
+      background-color: @calista-pane-toggle-active-bg;
+      color: @calista-pane-toggle-active-color;
     }
 
     &:focus,
     &:hover {
-      background-color: @udashboard-pane-toggle-hover-bg;
-      color: @udashboard-pane-toggle-hover-color;
+      background-color: @calista-pane-toggle-hover-bg;
+      color: @calista-pane-toggle-hover-color;
       text-decoration: none;
     }
   }
@@ -130,17 +130,17 @@
 #contextual-pane.pane-right #contextual-pane-toggle {
   top: 50%;
   right: 100%;
-  border-radius: @udashboard-border-radius 0 0 @udashboard-border-radius;
+  border-radius: @calista-border-radius 0 0 @calista-border-radius;
 }
 #contextual-pane.pane-right #contextual-pane-toggle a:first-child {
   border-top: none;
-  border-radius: @udashboard-border-radius 0 0 0;
+  border-radius: @calista-border-radius 0 0 0;
 }
 #contextual-pane.pane-right #contextual-pane-toggle a:last-child {
-  border-radius: 0 0 0 @udashboard-border-radius;
+  border-radius: 0 0 0 @calista-border-radius;
 }
 #contextual-pane.pane-right #contextual-pane-toggle a:only-child {
-  border-radius: @udashboard-border-radius 0 0 @udashboard-border-radius;
+  border-radius: @calista-border-radius 0 0 @calista-border-radius;
 }
 
 #contextual-pane #contextual-pane-toggle a.active {
@@ -188,12 +188,12 @@
 #contextual-pane .inner input {
   background: #2d2d2d;
   border-color: #4d4d4d;
-  color: @udashboard-pane-color;
+  color: @calista-pane-color;
 }
 /* Minor fix for inputs in dropdowns */
 #contextual-pane .dropdown-menu input {
   background: #fff;
-  color: @udashboard-pane-bg;
+  color: @calista-pane-bg;
 }
 
 /*****************************************************************************
@@ -203,10 +203,10 @@
  *****************************************************************************/
 
 /* In most projects, buttons are too big */
-.udashboard-actions > .btn, .udashboard-actions > a.btn, .udashboard-actions > .btn-group > button {
+.calista-actions > .btn, .calista-actions > a.btn, .calista-actions > .btn-group > button {
   font-size: 0.8em;
 }
-.udashboard-actions > * > * {
+.calista-actions > * > * {
   font-size: inherit;
 }
 
@@ -244,7 +244,7 @@
   white-space: nowrap;
   clear: both;
   font-weight: 400;
-  color: @udashboard-pane-bg;
+  color: @calista-pane-bg;
   background: none;
   border: none;
   width: 100%;
