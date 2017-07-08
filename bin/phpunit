@@ -6,7 +6,8 @@ VENDORDIR="${PROJECTPATH}/vendor"
 DRUPALROOT="$(dirname "$SCRIPTPATH")/www"
 PHPUNIT="${VENDORDIR}/bin/phpunit"
 if [ -f "${PROJECTPATH}/phpunit.xml" ]; then
-    $PHPUNIT --bootstrap="${VENDORDIR}/autoload.php" --configuration="${PROJECTPATH}/phpunit.xml" "$@"
+    DRUPAL_PATH="${DRUPALROOT}" $PHPUNIT --bootstrap="${VENDORDIR}/autoload.php" --configuration="${PROJECTPATH}/phpunit.xml" "$@"
 else
-    $PHPUNIT --bootstrap="${VENDORDIR}/autoload.php" --configuration="${PROJECTPATH}/phpunit.xml.dist" "$@"
+    DRUPAL_PATH="${DRUPALROOT}" $PHPUNIT --bootstrap="${VENDORDIR}/autoload.php" --configuration="${PROJECTPATH}/phpunit.xml.dist" "$@"
 fi
+
