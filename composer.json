@@ -51,11 +51,6 @@
         },
         {
             "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/drupal-udashboard.git",
-            "no-api" : true
-        },
-        {
-            "type" : "vcs",
             "url" : "git@github.com:makinacorpus/php-acl.git",
             "no-api" : true
         },
@@ -97,7 +92,6 @@
         "makinacorpus/drupal-schedulefield" : "^1.0.0-alpha5",
         "makinacorpus/drupal-sf-dic" : "dev-master as 3.2",
         "makinacorpus/drupal-ucms" : "dev-master as 2.0.0-alpha2",
-        "makinacorpus/drupal-udashboard" : "dev-master as 1.0",
         "makinacorpus/drupal-udate" : "1.0.*",
         "makinacorpus/drupal-ulink" : "^2.0.3",
         "makinacorpus/drupal-ulog" : "^1.0.0-alpha1",
