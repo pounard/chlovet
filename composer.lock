@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c1dfe26939f209c54e594d5fc96d29b",
+    "content-hash": "eaa8deda697815f9b3fc6149e582c5f8",
     "packages": [
         {
             "name": "composer/installers",
@@ -267,33 +267,37 @@
         },
         {
             "name": "doctrine/cache",
-            "version": "v1.6.1",
+            "version": "v1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/cache.git",
-                "reference": "b6f544a20f4807e81f7044d31e679ccbb1866dc3"
+                "reference": "53d9518ffeb019c51d542ff60cb578f076d3ff16"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/cache/zipball/b6f544a20f4807e81f7044d31e679ccbb1866dc3",
-                "reference": "b6f544a20f4807e81f7044d31e679ccbb1866dc3",
+                "url": "https://api.github.com/repos/doctrine/cache/zipball/53d9518ffeb019c51d542ff60cb578f076d3ff16",
+                "reference": "53d9518ffeb019c51d542ff60cb578f076d3ff16",
                 "shasum": ""
             },
             "require": {
-                "php": "~5.5|~7.0"
+                "php": "~7.1"
             },
             "conflict": {
                 "doctrine/common": ">2.2,<2.4"
             },
             "require-dev": {
-                "phpunit/phpunit": "~4.8|~5.0",
-                "predis/predis": "~1.0",
-                "satooshi/php-coveralls": "~0.6"
+                "alcaeus/mongo-php-adapter": "^1.1",
+                "mongodb/mongodb": "^1.1",
+                "phpunit/phpunit": "^5.7",
+                "predis/predis": "~1.0"
+            },
+            "suggest": {
+                "alcaeus/mongo-php-adapter": "Required to use legacy MongoDB driver"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.6.x-dev"
+                    "dev-master": "1.7.x-dev"
                 }
             },
             "autoload": {
@@ -333,24 +337,24 @@
                 "cache",
                 "caching"
             ],
-            "time": "2016-10-29T11:16:17+00:00"
+            "time": "2017-07-22T13:00:15+00:00"
         },
         {
             "name": "doctrine/collections",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba"
+                "reference": "a01ee38fcd999f34d9bfbcee59dbda5105449cbf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/1a4fb7e902202c33cce8c55989b945612943c2ba",
-                "reference": "1a4fb7e902202c33cce8c55989b945612943c2ba",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/a01ee38fcd999f34d9bfbcee59dbda5105449cbf",
+                "reference": "a01ee38fcd999f34d9bfbcee59dbda5105449cbf",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.6 || ^7.0"
+                "php": "^7.1"
             },
             "require-dev": {
                 "doctrine/coding-standard": "~0.1@dev",
@@ -400,20 +404,20 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2017-01-03T10:49:41+00:00"
+            "time": "2017-07-22T10:37:32+00:00"
         },
         {
             "name": "doctrine/common",
-            "version": "v2.7.2",
+            "version": "v2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/common.git",
-                "reference": "930297026c8009a567ac051fd545bf6124150347"
+                "reference": "ed349f953d443963c590b008b37b864b8a3c4b21"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/common/zipball/930297026c8009a567ac051fd545bf6124150347",
-                "reference": "930297026c8009a567ac051fd545bf6124150347",
+                "url": "https://api.github.com/repos/doctrine/common/zipball/ed349f953d443963c590b008b37b864b8a3c4b21",
+                "reference": "ed349f953d443963c590b008b37b864b8a3c4b21",
                 "shasum": ""
             },
             "require": {
@@ -422,15 +426,15 @@
                 "doctrine/collections": "1.*",
                 "doctrine/inflector": "1.*",
                 "doctrine/lexer": "1.*",
-                "php": "~5.6|~7.0"
+                "php": "~7.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.4.6"
+                "phpunit/phpunit": "^5.7"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "2.7.x-dev"
+                    "dev-master": "2.8.x-dev"
                 }
             },
             "autoload": {
@@ -473,37 +477,37 @@
                 "persistence",
                 "spl"
             ],
-            "time": "2017-01-13T14:02:13+00:00"
+            "time": "2017-07-22T09:01:43+00:00"
         },
         {
             "name": "doctrine/inflector",
-            "version": "v1.1.0",
+            "version": "v1.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/inflector.git",
-                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae"
+                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/inflector/zipball/90b2128806bfde671b6952ab8bea493942c1fdae",
-                "reference": "90b2128806bfde671b6952ab8bea493942c1fdae",
+                "url": "https://api.github.com/repos/doctrine/inflector/zipball/e11d84c6e018beedd929cff5220969a3c6d1d462",
+                "reference": "e11d84c6e018beedd929cff5220969a3c6d1d462",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3.2"
+                "php": "^7.0"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*"
+                "phpunit/phpunit": "^6.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.1.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
-                "psr-0": {
-                    "Doctrine\\Common\\Inflector\\": "lib/"
+                "psr-4": {
+                    "Doctrine\\Common\\Inflector\\": "lib/Doctrine/Common/Inflector"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -540,7 +544,7 @@
                 "singularize",
                 "string"
             ],
-            "time": "2015-11-06T14:35:42+00:00"
+            "time": "2017-07-22T12:18:28+00:00"
         },
         {
             "name": "doctrine/lexer",
@@ -747,6 +751,60 @@
                 "search"
             ],
             "time": "2016-06-03T21:09:29+00:00"
+        },
+        {
+            "name": "fig/link-util",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/link-util.git",
+                "reference": "1a07821801a148be4add11ab0603e4af55a72fac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/link-util/zipball/1a07821801a148be4add11ab0603e4af55a72fac",
+                "reference": "1a07821801a148be4add11ab0603e4af55a72fac",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.5.0",
+                "psr/link": "~1.0@dev"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^5.1",
+                "squizlabs/php_codesniffer": "^2.3.1"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Fig\\Link\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common utility implementations for HTTP links",
+            "keywords": [
+                "http",
+                "http-link",
+                "link",
+                "psr",
+                "psr-13",
+                "rest"
+            ],
+            "time": "2016-10-17T18:31:11+00:00"
         },
         {
             "name": "guzzlehttp/ringphp",
@@ -991,6 +1049,56 @@
             "time": "2017-01-03T20:12:54+00:00"
         },
         {
+            "name": "jdorn/sql-formatter",
+            "version": "v1.2.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jdorn/sql-formatter.git",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jdorn/sql-formatter/zipball/64990d96e0959dff8e059dfcdc1af130728d92bc",
+                "reference": "64990d96e0959dff8e059dfcdc1af130728d92bc",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.2.4"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "3.7.*"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.3.x-dev"
+                }
+            },
+            "autoload": {
+                "classmap": [
+                    "lib"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Dorn",
+                    "email": "jeremy@jeremydorn.com",
+                    "homepage": "http://jeremydorn.com/"
+                }
+            ],
+            "description": "a PHP SQL highlighting library",
+            "homepage": "https://github.com/jdorn/sql-formatter/",
+            "keywords": [
+                "highlight",
+                "sql"
+            ],
+            "time": "2014-01-12T16:20:24+00:00"
+        },
+        {
             "name": "makinacorpus/apubsub",
             "version": "4.0.0",
             "source": {
@@ -1116,17 +1224,17 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-calista.git",
-                "reference": "3ada443953b3351878265c57c0d5fddc64ca9d9d"
+                "reference": "ea8c48bdff01ade52a8480461f608bdd8605cce0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-calista/zipball/3ada443953b3351878265c57c0d5fddc64ca9d9d",
-                "reference": "3ada443953b3351878265c57c0d5fddc64ca9d9d",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-calista/zipball/ea8c48bdff01ade52a8480461f608bdd8605cce0",
+                "reference": "ea8c48bdff01ade52a8480461f608bdd8605cce0",
                 "shasum": ""
             },
             "require": {
-                "makinacorpus/drupal-sf-dic": ">=3.2.6",
-                "makinacorpus/php-calista": "dev-master",
+                "makinacorpus/drupal-sf-dic": ">=3.2.8",
+                "makinacorpus/php-calista": "^1",
                 "php": ">=5.5",
                 "symfony/dependency-injection": "^3.2",
                 "symfony/event-dispatcher": "^3.1",
@@ -1177,7 +1285,7 @@
                 }
             ],
             "description": "Advanced dashboard/list API for Drupal using makinacorpus/drupal-calista",
-            "time": "2017-06-28 12:01:04"
+            "time": "2017-07-26 17:17:07"
         },
         {
             "name": "makinacorpus/drupal-dragula",
@@ -1213,16 +1321,16 @@
         },
         {
             "name": "makinacorpus/drupal-filechunk",
-            "version": "1.0.9",
+            "version": "1.0.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-filechunk.git",
-                "reference": "78e9d8729d9a349c93d4ff8cc817d7f7a8d21dd2"
+                "reference": "4995ca9c55983209fc831027958202e550e1372a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-filechunk/zipball/78e9d8729d9a349c93d4ff8cc817d7f7a8d21dd2",
-                "reference": "78e9d8729d9a349c93d4ff8cc817d7f7a8d21dd2",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-filechunk/zipball/4995ca9c55983209fc831027958202e550e1372a",
+                "reference": "4995ca9c55983209fc831027958202e550e1372a",
                 "shasum": ""
             },
             "type": "drupal-module",
@@ -1242,7 +1350,7 @@
             ],
             "description": "Javascript file upload widget for Drupal",
             "homepage": "http://github.com/makinacorpus/drupal-filechunk",
-            "time": "2017-03-01T09:50:29+00:00"
+            "time": "2017-07-25T14:13:13+00:00"
         },
         {
             "name": "makinacorpus/drupal-gulpifier",
@@ -1392,18 +1500,18 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-phplayout.git",
-                "reference": "c83c25b2f69c5988e3a956240935dbf69211a25a"
+                "reference": "ea2697817dbbaf47060c9b1fd9b985df86960cf4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-phplayout/zipball/c83c25b2f69c5988e3a956240935dbf69211a25a",
-                "reference": "c83c25b2f69c5988e3a956240935dbf69211a25a",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-phplayout/zipball/ea2697817dbbaf47060c9b1fd9b985df86960cf4",
+                "reference": "ea2697817dbbaf47060c9b1fd9b985df86960cf4",
                 "shasum": ""
             },
             "require": {
                 "makinacorpus/drupal-dragula": "^1",
                 "makinacorpus/drupal-plusql": "^1",
-                "makinacorpus/drupal-sf-dic": "^3.2",
+                "makinacorpus/drupal-sf-dic": "^3.3",
                 "makinacorpus/php-layout": "*",
                 "php": ">=7.0"
             },
@@ -1436,7 +1544,7 @@
             ],
             "description": "PHP Layout library support, brings page composition capacity to Drupal",
             "homepage": "http://github.com/makinacorpus/drupal-phplayout",
-            "time": "2017-06-28 11:27:06"
+            "time": "2017-07-28 12:24:00"
         },
         {
             "name": "makinacorpus/drupal-plusql",
@@ -1523,24 +1631,26 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-sf-dic.git",
-                "reference": "7f10af77aa8d0743d145b07a3b1b860b0e93c20d"
+                "reference": "66522ec05e2c12fe65135bb9a43920b5a1eb3d07"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/7f10af77aa8d0743d145b07a3b1b860b0e93c20d",
-                "reference": "7f10af77aa8d0743d145b07a3b1b860b0e93c20d",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-sf-dic/zipball/66522ec05e2c12fe65135bb9a43920b5a1eb3d07",
+                "reference": "66522ec05e2c12fe65135bb9a43920b5a1eb3d07",
                 "shasum": ""
             },
             "require": {
                 "psr/log": "1.*",
-                "symfony/config": "~3.0 <3.3",
-                "symfony/dependency-injection": "~3.2 <3.3",
-                "symfony/event-dispatcher": "~3.0 <3.3",
-                "symfony/expression-language": "~3.0 <3.3",
-                "symfony/http-foundation": "~3.0 <3.3",
-                "symfony/http-kernel": "~3.0 <3.3",
-                "symfony/translation": "~3.0 <3.3",
-                "symfony/yaml": "~2.8|~3.0 <3.3"
+                "symfony/config": "~3.0 <3.4",
+                "symfony/dependency-injection": "~3.2 <3.4",
+                "symfony/event-dispatcher": "~3.0 <3.4",
+                "symfony/expression-language": "~3.0 <3.4",
+                "symfony/http-foundation": "~3.0 <3.4",
+                "symfony/http-kernel": "~3.0 <3.4",
+                "symfony/routing": "~3.0 <3.4",
+                "symfony/templating": "~3.0 <3.4",
+                "symfony/translation": "~3.0 <3.4",
+                "symfony/yaml": "~2.8|~3.0 <3.4"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5.1"
@@ -1575,7 +1685,7 @@
             ],
             "description": "Brings the vanilla Symfony 3 depency inject container component to Drupal 7 seamlessly along with a limited compatibility layer with Drupal 8 API",
             "homepage": "http://github.com/makinacorpus/drupal-sf-dic",
-            "time": "2017-06-28 13:42:53"
+            "time": "2017-07-29 09:55:21"
         },
         {
             "name": "makinacorpus/drupal-ucms",
@@ -1583,21 +1693,21 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/drupal-ucms.git",
-                "reference": "6eb795d35c9e4f220650306d496629a31cc0c1a1"
+                "reference": "f4e062f891226d5204d2055766d1c21927f062cd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/6eb795d35c9e4f220650306d496629a31cc0c1a1",
-                "reference": "6eb795d35c9e4f220650306d496629a31cc0c1a1",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-ucms/zipball/f4e062f891226d5204d2055766d1c21927f062cd",
+                "reference": "f4e062f891226d5204d2055766d1c21927f062cd",
                 "shasum": ""
             },
             "require": {
                 "elasticsearch/elasticsearch": "2.2.0",
                 "makinacorpus/drupal-apubsub": "^4.0",
+                "makinacorpus/drupal-calista": "^1",
                 "makinacorpus/drupal-dragula": "^1",
                 "makinacorpus/drupal-phplayout": "*",
-                "makinacorpus/drupal-sf-dic": ">=3.2.2",
-                "makinacorpus/drupal-udashboard": ">=1.0.0-alpha15",
+                "makinacorpus/drupal-sf-dic": ">=3.3",
                 "makinacorpus/drupal-ulink": "^2.0",
                 "makinacorpus/drupal-umenu": "^2.0.5",
                 "makinacorpus/drush-progressbar": "^1.0",
@@ -1623,7 +1733,6 @@
                     "MakinaCorpus\\Ucms\\Contrib\\": "ucms_contrib/src",
                     "MakinaCorpus\\Ucms\\Extranet\\": "ucms_extranet/src",
                     "MakinaCorpus\\Ucms\\Group\\": "ucms_group/src",
-                    "MakinaCorpus\\Ucms\\Harm\\": "ucms_harm/src",
                     "MakinaCorpus\\Ucms\\Label\\": "ucms_label/src",
                     "MakinaCorpus\\Ucms\\Layout\\": "ucms_layout/src",
                     "MakinaCorpus\\Ucms\\Notification\\": "ucms_notification/src",
@@ -1637,7 +1746,10 @@
             },
             "autoload-dev": {
                 "psr-4": {
-                    "MakinaCorpus\\Ucms\\Composition\\Tests\\": "ucms_composition/tests"
+                    "MakinaCorpus\\Ucms\\Composition\\Tests\\": "ucms_composition/tests",
+                    "MakinaCorpus\\Ucms\\Contrib\\Tests\\": "ucms_contrib/tests",
+                    "MakinaCorpus\\Ucms\\Seo\\Tests\\": "ucms_seo/tests",
+                    "MakinaCorpus\\Ucms\\Site\\Tests\\": "ucms_site/tests"
                 }
             },
             "license": [
@@ -1669,76 +1781,9 @@
                     "homepage": "http://makina-corpus.com"
                 }
             ],
-            "description": " µCMS modules - Node/Elasticsearch/favorites based Drupal fast contribution UI/UX",
+            "description": "µCMS - A Drupal easy-to-use multi-site factory, without core multi-site feature",
             "homepage": "http://github.com/makinacorpus/drupal-ucms",
-            "time": "2017-05-06 12:37:32"
-        },
-        {
-            "name": "makinacorpus/drupal-udashboard",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:makinacorpus/drupal-udashboard.git",
-                "reference": "9f6d1a3523a598d34a3aea8a84f2ee21e4cb1ae2"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-udashboard/zipball/9f6d1a3523a598d34a3aea8a84f2ee21e4cb1ae2",
-                "reference": "9f6d1a3523a598d34a3aea8a84f2ee21e4cb1ae2",
-                "shasum": ""
-            },
-            "require": {
-                "makinacorpus/drupal-sf-dic": ">=3.2.3",
-                "symfony/dependency-injection": "^3.1",
-                "symfony/event-dispatcher": "^3.1",
-                "symfony/http-foundation": "^3.1",
-                "symfony/security": "^3.1"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "^5.1"
-            },
-            "type": "drupal-module",
-            "autoload": {
-                "psr-4": {
-                    "MakinaCorpus\\Drupal\\Dashboard\\": "src/"
-                }
-            },
-            "autoload-dev": {
-                "psr-4": {
-                    "MakinaCorpus\\Drupal\\Dashboard\\Tests\\": "tests/"
-                }
-            },
-            "license": [
-                "GPL-2"
-            ],
-            "authors": [
-                {
-                    "name": "Lonny Loquesol",
-                    "email": "lonny.loquesol@makina-corpus.com"
-                },
-                {
-                    "name": "Pierre Rineau",
-                    "email": "pierre.rineau@makina-corpus.com"
-                },
-                {
-                    "name": "Régis Leroy",
-                    "email": "regis.leroy@makina-corpus.com"
-                },
-                {
-                    "name": "Sébastien Corbin",
-                    "email": "sebastien.corbin@makina-corpus.com"
-                },
-                {
-                    "name": "Yannick Chabbert",
-                    "email": "yannick.chabbert@makina-corpus.com"
-                },
-                {
-                    "name": "Makina Corpus",
-                    "homepage": "http://makina-corpus.com"
-                }
-            ],
-            "description": "Advanced dashboard API for Drupal",
-            "time": "2017-06-27 16:47:43"
+            "time": "2017-07-28 11:05:14"
         },
         {
             "name": "makinacorpus/drupal-udate",
@@ -1926,16 +1971,16 @@
         },
         {
             "name": "makinacorpus/drupal-usync",
-            "version": "1.0.12",
+            "version": "1.0.13",
             "source": {
                 "type": "git",
                 "url": "https://github.com/makinacorpus/drupal-usync.git",
-                "reference": "92939a4a1ab63133bdb481bcb36f299ac6afe5da"
+                "reference": "cd36c8b09ffb4dd69b4b0def54000cefdd8b85ea"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/drupal-usync/zipball/92939a4a1ab63133bdb481bcb36f299ac6afe5da",
-                "reference": "92939a4a1ab63133bdb481bcb36f299ac6afe5da",
+                "url": "https://api.github.com/repos/makinacorpus/drupal-usync/zipball/cd36c8b09ffb4dd69b4b0def54000cefdd8b85ea",
+                "reference": "cd36c8b09ffb4dd69b4b0def54000cefdd8b85ea",
                 "shasum": ""
             },
             "require": {
@@ -1963,7 +2008,7 @@
             ],
             "description": "Drupal features-like configuration file driven synchronization module",
             "homepage": "http://github.com/makinacorpus/drupal-usync",
-            "time": "2017-05-09T08:19:08+00:00"
+            "time": "2017-07-25T13:16:29+00:00"
         },
         {
             "name": "makinacorpus/drush-progressbar",
@@ -2012,12 +2057,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/php-acl.git",
-                "reference": "90483a1ced7cc26efb4883d36eed559386d82f77"
+                "reference": "fac8714b8aa15492bc6ce9d2299c44ceb58940be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/php-acl/zipball/90483a1ced7cc26efb4883d36eed559386d82f77",
-                "reference": "90483a1ced7cc26efb4883d36eed559386d82f77",
+                "url": "https://api.github.com/repos/makinacorpus/php-acl/zipball/fac8714b8aa15492bc6ce9d2299c44ceb58940be",
+                "reference": "fac8714b8aa15492bc6ce9d2299c44ceb58940be",
                 "shasum": ""
             },
             "require-dev": {
@@ -2049,7 +2094,7 @@
                 }
             ],
             "description": "Simple ACL API for PHP",
-            "time": "2017-04-22 10:42:04"
+            "time": "2017-07-08 10:03:32"
         },
         {
             "name": "makinacorpus/php-bloom",
@@ -2093,26 +2138,27 @@
         },
         {
             "name": "makinacorpus/php-calista",
-            "version": "dev-master",
+            "version": "1.0.0-alpha1",
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/php-calista.git",
-                "reference": "53aa0eb88926e667e09c055e8fab62bbee6270b6"
+                "reference": "7b0a03d7c2e8242956bb9690df164f895442fa02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/php-calista/zipball/53aa0eb88926e667e09c055e8fab62bbee6270b6",
-                "reference": "53aa0eb88926e667e09c055e8fab62bbee6270b6",
+                "url": "https://api.github.com/repos/makinacorpus/php-calista/zipball/7b0a03d7c2e8242956bb9690df164f895442fa02",
+                "reference": "7b0a03d7c2e8242956bb9690df164f895442fa02",
                 "shasum": ""
             },
             "require": {
                 "php": ">=5.5",
                 "symfony/dependency-injection": "^3.2",
-                "symfony/event-dispatcher": "^3.1",
+                "symfony/event-dispatcher": "^2.8|^3.1",
                 "symfony/http-foundation": "^3.1",
                 "symfony/options-resolver": "^3.2",
                 "symfony/property-access": "^3.2",
                 "symfony/property-info": "^3.2",
+                "symfony/routing": "^2.8|^3.1",
                 "symfony/security": "^3.1"
             },
             "require-dev": {
@@ -2162,7 +2208,7 @@
                 }
             ],
             "description": "Backend agnostic API for building user interface or data exports",
-            "time": "2017-06-28 12:00:29"
+            "time": "2017-07-26T17:22:10+00:00"
         },
         {
             "name": "makinacorpus/php-layout",
@@ -2170,16 +2216,20 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/php-layout.git",
-                "reference": "7df9bb612b4b77567ffa10faf2b258cb6116ede4"
+                "reference": "413a2098e09340731896f070815a0b6829981008"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/php-layout/zipball/7df9bb612b4b77567ffa10faf2b258cb6116ede4",
-                "reference": "7df9bb612b4b77567ffa10faf2b258cb6116ede4",
+                "url": "https://api.github.com/repos/makinacorpus/php-layout/zipball/413a2098e09340731896f070815a0b6829981008",
+                "reference": "413a2098e09340731896f070815a0b6829981008",
                 "shasum": ""
             },
             "require": {
-                "php": ">=7.0"
+                "php": ">=7.0",
+                "symfony/dependency-injection": "^3",
+                "symfony/event-dispatcher": "^3",
+                "symfony/http-kernel": "^3",
+                "symfony/security": "^3"
             },
             "require-dev": {
                 "phpunit/phpunit": "^5"
@@ -2202,7 +2252,7 @@
                 }
             ],
             "description": "Grid layout reprensentation",
-            "time": "2017-04-20 10:29:09"
+            "time": "2017-07-24 16:09:51"
         },
         {
             "name": "makinacorpus/redis-bundle",
@@ -2338,16 +2388,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.0.5",
+            "version": "v3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "2b9e2f71b722f7c53918ab0c25f7646c2013f17d"
+                "reference": "4d4896e553f2094e657fe493506dc37c509d4e2b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/2b9e2f71b722f7c53918ab0c25f7646c2013f17d",
-                "reference": "2b9e2f71b722f7c53918ab0c25f7646c2013f17d",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/4d4896e553f2094e657fe493506dc37c509d4e2b",
+                "reference": "4d4896e553f2094e657fe493506dc37c509d4e2b",
                 "shasum": ""
             },
             "require": {
@@ -2385,69 +2435,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-03-05T18:23:57+00:00"
-        },
-        {
-            "name": "oyejorge/less.php",
-            "version": "v1.7.0.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/oyejorge/less.php.git",
-                "reference": "a1e2d3c20794b37ac4d0baeb24613e579584033b"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/oyejorge/less.php/zipball/a1e2d3c20794b37ac4d0baeb24613e579584033b",
-                "reference": "a1e2d3c20794b37ac4d0baeb24613e579584033b",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3"
-            },
-            "require-dev": {
-                "phpunit/phpunit": "~4.8.18"
-            },
-            "bin": [
-                "bin/lessc"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Less": "lib/"
-                },
-                "classmap": [
-                    "lessc.inc.php"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "Apache-2.0"
-            ],
-            "authors": [
-                {
-                    "name": "Matt Agar",
-                    "homepage": "https://github.com/agar"
-                },
-                {
-                    "name": "Martin Jantošovič",
-                    "homepage": "https://github.com/Mordred"
-                },
-                {
-                    "name": "Josh Schmidt",
-                    "homepage": "https://github.com/oyejorge"
-                }
-            ],
-            "description": "PHP port of the Javascript version of LESS http://lesscss.org",
-            "homepage": "http://lessphp.gpeasy.com",
-            "keywords": [
-                "css",
-                "less",
-                "less.js",
-                "lesscss",
-                "php",
-                "stylesheet"
-            ],
-            "time": "2015-12-30T05:47:36+00:00"
+            "time": "2017-07-28T14:45:09+00:00"
         },
         {
             "name": "paragonie/random_compat",
@@ -2599,6 +2587,104 @@
             "time": "2016-08-06T20:24:11+00:00"
         },
         {
+            "name": "psr/container",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/container.git",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/container/zipball/b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "reference": "b7ce3b176482dbbc1245ebf52b181af44c2cf55f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Container\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common Container Interface (PHP FIG PSR-11)",
+            "homepage": "https://github.com/php-fig/container",
+            "keywords": [
+                "PSR-11",
+                "container",
+                "container-interface",
+                "container-interop",
+                "psr"
+            ],
+            "time": "2017-02-14T16:28:37+00:00"
+        },
+        {
+            "name": "psr/link",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/link.git",
+                "reference": "eea8e8662d5cd3ae4517c9b864493f59fca95562"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/link/zipball/eea8e8662d5cd3ae4517c9b864493f59fca95562",
+                "reference": "eea8e8662d5cd3ae4517c9b864493f59fca95562",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Link\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for HTTP links",
+            "keywords": [
+                "http",
+                "http-link",
+                "link",
+                "psr",
+                "psr-13",
+                "rest"
+            ],
+            "time": "2016-10-28T16:06:13+00:00"
+        },
+        {
             "name": "psr/log",
             "version": "1.0.2",
             "source": {
@@ -2646,17 +2732,65 @@
             "time": "2016-10-10T12:19:37+00:00"
         },
         {
-            "name": "psy/psysh",
-            "version": "v0.8.8",
+            "name": "psr/simple-cache",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/bobthecow/psysh.git",
-                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e"
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "753fa598e8f3b9966c886fe13f370baa45ef0e24"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
-                "reference": "fe65c30cbc55c71e61ba3a38b5a581149be31b8e",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/753fa598e8f3b9966c886fe13f370baa45ef0e24",
+                "reference": "753fa598e8f3b9966c886fe13f370baa45ef0e24",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "time": "2017-01-02T13:31:39+00:00"
+        },
+        {
+            "name": "psy/psysh",
+            "version": "v0.8.10",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/bobthecow/psysh.git",
+                "reference": "7ab97e5a32202585309f3ee35a0c08d2a8e588b1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/bobthecow/psysh/zipball/7ab97e5a32202585309f3ee35a0c08d2a8e588b1",
+                "reference": "7ab97e5a32202585309f3ee35a0c08d2a8e588b1",
                 "shasum": ""
             },
             "require": {
@@ -2716,7 +2850,7 @@
                 "interactive",
                 "shell"
             ],
-            "time": "2017-06-24T06:16:19+00:00"
+            "time": "2017-07-22T15:14:19+00:00"
         },
         {
             "name": "react/promise",
@@ -3180,37 +3314,44 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.2.9",
+            "version": "v3.3.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "78c08f2faa42210db4fe6f4ece73891ca546a9a0"
+                "reference": "b9a0d3d2393f683b28043e9dbf83b8bf6b347faa"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/78c08f2faa42210db4fe6f4ece73891ca546a9a0",
-                "reference": "78c08f2faa42210db4fe6f4ece73891ca546a9a0",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/b9a0d3d2393f683b28043e9dbf83b8bf6b347faa",
+                "reference": "b9a0d3d2393f683b28043e9dbf83b8bf6b347faa",
                 "shasum": ""
             },
             "require": {
                 "doctrine/common": "~2.4",
+                "ext-xml": "*",
+                "fig/link-util": "^1.0",
                 "php": ">=5.5.9",
                 "psr/cache": "~1.0",
+                "psr/container": "^1.0",
+                "psr/link": "^1.0",
                 "psr/log": "~1.0",
+                "psr/simple-cache": "^1.0",
                 "symfony/polyfill-intl-icu": "~1.0",
                 "symfony/polyfill-mbstring": "~1.0",
                 "symfony/polyfill-php56": "~1.0",
                 "symfony/polyfill-php70": "~1.0",
                 "symfony/polyfill-util": "~1.0",
-                "twig/twig": "~1.28|~2.0"
+                "twig/twig": "~1.34|~2.4"
             },
             "conflict": {
-                "phpdocumentor/reflection-docblock": "<3.0",
+                "phpdocumentor/reflection-docblock": "<3.0||>=3.2.0",
                 "phpdocumentor/type-resolver": "<0.2.0",
                 "phpunit/phpunit": "<4.8.35|<5.4.3,>=5.0"
             },
             "provide": {
-                "psr/cache-implementation": "1.0"
+                "psr/cache-implementation": "1.0",
+                "psr/container-implementation": "1.0",
+                "psr/simple-cache-implementation": "1.0"
             },
             "replace": {
                 "symfony/asset": "self.version",
@@ -3225,6 +3366,7 @@
                 "symfony/dependency-injection": "self.version",
                 "symfony/doctrine-bridge": "self.version",
                 "symfony/dom-crawler": "self.version",
+                "symfony/dotenv": "self.version",
                 "symfony/event-dispatcher": "self.version",
                 "symfony/expression-language": "self.version",
                 "symfony/filesystem": "self.version",
@@ -3257,7 +3399,9 @@
                 "symfony/twig-bundle": "self.version",
                 "symfony/validator": "self.version",
                 "symfony/var-dumper": "self.version",
+                "symfony/web-link": "self.version",
                 "symfony/web-profiler-bundle": "self.version",
+                "symfony/web-server-bundle": "self.version",
                 "symfony/workflow": "self.version",
                 "symfony/yaml": "self.version"
             },
@@ -3281,7 +3425,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "3.2-dev"
+                    "dev-master": "3.3-dev"
                 }
             },
             "autoload": {
@@ -3289,7 +3433,6 @@
                     "Symfony\\Bridge\\Doctrine\\": "src/Symfony/Bridge/Doctrine/",
                     "Symfony\\Bridge\\Monolog\\": "src/Symfony/Bridge/Monolog/",
                     "Symfony\\Bridge\\ProxyManager\\": "src/Symfony/Bridge/ProxyManager/",
-                    "Symfony\\Bridge\\Swiftmailer\\": "src/Symfony/Bridge/Swiftmailer/",
                     "Symfony\\Bridge\\Twig\\": "src/Symfony/Bridge/Twig/",
                     "Symfony\\Bundle\\": "src/Symfony/Bundle/",
                     "Symfony\\Component\\": "src/Symfony/Component/"
@@ -3320,46 +3463,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2017-05-29T19:32:17+00:00"
-        },
-        {
-            "name": "tfd7/tfd7",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "git@github.com:makinacorpus/tfd7.git",
-                "reference": "19d90bb01e80cc36d4cd78be863297159371ca91"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/tfd7/zipball/19d90bb01e80cc36d4cd78be863297159371ca91",
-                "reference": "19d90bb01e80cc36d4cd78be863297159371ca91",
-                "shasum": ""
-            },
-            "require": {
-                "twig/twig": "^1.23|^2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "TFD_": ""
-                }
-            },
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Rene Bakx",
-                    "email": "rene@71media.net"
-                }
-            ],
-            "description": "Twig for Drupal 7, use the same convient template language as in Drupal 8 core",
-            "homepage": "http://tfd7.rocks",
-            "keywords": [
-                "templating"
-            ],
-            "time": "2017-03-22 15:43:51"
+            "time": "2017-07-17T19:08:46+00:00"
         },
         {
             "name": "twig/extensions",
@@ -3487,32 +3591,32 @@
     "packages-dev": [
         {
             "name": "doctrine/instantiator",
-            "version": "1.0.5",
+            "version": "1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/instantiator.git",
-                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d"
+                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/8e884e78f9f0eb1329e445619e04456e64d8051d",
-                "reference": "8e884e78f9f0eb1329e445619e04456e64d8051d",
+                "url": "https://api.github.com/repos/doctrine/instantiator/zipball/185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
+                "reference": "185b8868aa9bf7159f5f953ed5afb2d7fcdc3bda",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.3,<8.0-DEV"
+                "php": "^7.1"
             },
             "require-dev": {
                 "athletic/athletic": "~0.1.8",
                 "ext-pdo": "*",
                 "ext-phar": "*",
-                "phpunit/phpunit": "~4.0",
-                "squizlabs/php_codesniffer": "~2.0"
+                "phpunit/phpunit": "^6.2.3",
+                "squizlabs/php_codesniffer": "^3.0.2"
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0.x-dev"
+                    "dev-master": "1.2.x-dev"
                 }
             },
             "autoload": {
@@ -3537,7 +3641,7 @@
                 "constructor",
                 "instantiate"
             ],
-            "time": "2015-06-14T21:17:01+00:00"
+            "time": "2017-07-22T11:58:36+00:00"
         },
         {
             "name": "myclabs/deep-copy",
@@ -4123,16 +4227,16 @@
         },
         {
             "name": "phpunit/phpunit-mock-objects",
-            "version": "3.4.3",
+            "version": "3.4.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit-mock-objects.git",
-                "reference": "3ab72b65b39b491e0c011e2e09bb2206c2aa8e24"
+                "reference": "a23b761686d50a560cc56233b9ecf49597cc9118"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/3ab72b65b39b491e0c011e2e09bb2206c2aa8e24",
-                "reference": "3ab72b65b39b491e0c011e2e09bb2206c2aa8e24",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit-mock-objects/zipball/a23b761686d50a560cc56233b9ecf49597cc9118",
+                "reference": "a23b761686d50a560cc56233b9ecf49597cc9118",
                 "shasum": ""
             },
             "require": {
@@ -4178,7 +4282,7 @@
                 "mock",
                 "xunit"
             ],
-            "time": "2016-12-08T20:27:08+00:00"
+            "time": "2017-06-30T09:13:00+00:00"
         },
         {
             "name": "sebastian/code-unit-reverse-lookup",
@@ -4695,7 +4799,7 @@
         },
         {
             "name": "symfony/phpunit-bridge",
-            "version": "v2.8.22",
+            "version": "v2.8.25",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
@@ -4816,8 +4920,8 @@
             "package": "makinacorpus/drupal-dragula"
         },
         {
-            "alias": "3.2",
-            "alias_normalized": "3.2.0.0",
+            "alias": "3.3",
+            "alias_normalized": "3.3.0.0",
             "version": "9999999-dev",
             "package": "makinacorpus/drupal-sf-dic"
         },
@@ -4826,12 +4930,6 @@
             "alias_normalized": "2.0.0.0-alpha2",
             "version": "9999999-dev",
             "package": "makinacorpus/drupal-ucms"
-        },
-        {
-            "alias": "1.0",
-            "alias_normalized": "1.0.0.0",
-            "version": "9999999-dev",
-            "package": "makinacorpus/drupal-udashboard"
         },
         {
             "alias": "2.0",
@@ -4859,13 +4957,11 @@
         "makinacorpus/drupal-phplayout": 20,
         "makinacorpus/drupal-sf-dic": 20,
         "makinacorpus/drupal-ucms": 20,
-        "makinacorpus/drupal-udashboard": 20,
         "makinacorpus/drupal-unoderef": 20,
         "makinacorpus/php-acl": 20,
         "makinacorpus/php-layout": 20,
         "makinacorpus/redis-bundle": 20,
-        "pear/console_table": 20,
-        "tfd7/tfd7": 20
+        "pear/console_table": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,

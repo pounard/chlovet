@@ -63,11 +63,6 @@
             "type" : "vcs",
             "url" : "git@github.com:makinacorpus/redis-bundle.git",
             "no-api" : true
-        },
-        {
-            "type" : "vcs",
-            "url" : "git@github.com:makinacorpus/tfd7.git",
-            "no-api" : true
         }
     ],
     "minimum-stability" : "dev",
@@ -75,8 +70,10 @@
     "require" : {
         "composer/installers" : "^1.0.20",
         "cweagans/composer-patches" : "~1.0",
+        "doctrine/annotations": "^1.4 <1.5",
         "drush/drush": "8.*",
         "jbroadway/urlify": "^1.0",
+        "jdorn/sql-formatter": "*",
         "makinacorpus/apubsub" : "^4",
         "makinacorpus/drupal-apubsub" : "^4",
         "makinacorpus/drupal-badm" : "^1.1.3",
@@ -90,7 +87,7 @@
         "makinacorpus/drupal-phplayout": "dev-master",
         "makinacorpus/drupal-plusql" : "^1",
         "makinacorpus/drupal-schedulefield" : "^1.0.0-alpha5",
-        "makinacorpus/drupal-sf-dic" : "dev-master as 3.2",
+        "makinacorpus/drupal-sf-dic" : "dev-master as 3.3",
         "makinacorpus/drupal-ucms" : "dev-master as 2.0.0-alpha2",
         "makinacorpus/drupal-udate" : "1.0.*",
         "makinacorpus/drupal-ulink" : "^2.0.3",
@@ -102,12 +99,10 @@
         "makinacorpus/php-layout": "dev-master",
         "makinacorpus/redis-bundle" : "dev-master",
         "monolog/monolog": "^1.17",
-        "oyejorge/less.php": "v1.7.0.10",
         "pear/console_table" : "dev-master as 1.3.0",
         "sensio/framework-extra-bundle": "^3.0",
         "symfony/monolog-bundle": "^2.8",
-        "symfony/symfony" : "~3.2",
-        "tfd7/tfd7": "dev-master",
+        "symfony/symfony" : "^3.3",
         "twig/extensions": "~1.3",
         "twig/twig": "~1.20|~2.0"
     },
