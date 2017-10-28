@@ -1,0 +1,140 @@
+
+#banner {
+  margin-bottom: ceil(@padding-base-horizontal * 2);
+  media {
+    .media-fixed-centered(355px);
+  }
+}
+
+#map-contact {
+  height: 66vh;
+}
+
+#banner, .front-pane {
+}
+
+.node-list {
+
+  h1 {
+    .titleize();
+    text-align: center;
+  }
+
+  media {
+    .media-fixed();
+  }
+  a {
+    // Use the link to be relative so we exclude grid gutter
+    // margin and padding from .title marging computation
+    position: relative;
+    display: block;
+    color: @text-color;
+
+    // Reserve space for h1 where this is none, this is ugly but this is
+    // only a workaround for buggy use cases
+    min-height: 100px;
+  }
+  .title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    > h1 {
+      background-color: white;
+      padding: ceil(@padding-base-horizontal * 2);
+      margin: ceil(@padding-base-horizontal * 2);
+    }
+  }
+}
+
+.teaser-list {
+
+  h1 {
+    .titleize();
+    text-align: center;
+  }
+
+  h2 {
+    .titleize();
+    margin: 0;
+    margin-bottom: @padding-small-horizontal;
+  }
+
+  a {
+    color: @text-color;
+  }
+
+  img {
+    // .img-thumbnail();
+  }
+}
+
+.square {
+  // This will cascade and allow the text positioning trick to work, it
+  // will work because even if cascaded, the text aboslute positionning
+  // will be relative to the closest relative parent, which is this
+  position: relative;
+  margin-bottom: ceil(@padding-base-horizontal * 2);
+
+  &:nth-child(1) {
+    > a {
+      .highlight-square(@color-emerald);
+    }
+  }
+  &:nth-child(2) {
+    > a {
+      .highlight-square(@color-peter-river);
+    }
+  }
+  &:nth-child(3) {
+    > a {
+      .highlight-square(@color-amethyst);
+    }
+  }
+  &:nth-child(4) {
+    > a {
+      .highlight-square(@color-carrot);
+    }
+  }
+  &:nth-child(5) {
+    > a {
+      .highlight-square(@color-alizarin);
+    }
+  }
+  &:nth-child(6) {
+    > a {
+      .highlight-square(@color-concrete);
+    }
+  }
+
+  // We need an intermediate element for background coloring and borders
+  > a {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    // Centering text
+    // https://www.w3.org/Style/Examples/007/center.en.html#vertical3
+    > span {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  h2 {
+    .titleize();
+    text-align: center;
+  }
+
+  // Make it a square
+  // https://spin.atomicobject.com/2015/07/14/css-responsive-square/
+  &:after {
+    content: "";
+    display: block;
+    padding-bottom: 100%;
+  }
+}

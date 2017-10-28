@@ -37,7 +37,7 @@ function vetbase_links__ucms_contrib_display_switch($variables) {
 
         $output .= <<<EOT
 <a {$attributes}href="{$href}" title="{$link['title']}">
-  <span class="glyphicon glyphicon-{$icon}" aria-hidden="true"></span>
+  <span class="fa fa-{$icon}" aria-hidden="true"></span>
   <span class="sr-only">{$link['title']}</span>
 </a>
 EOT;
@@ -99,7 +99,7 @@ function vetbase_links__main_menu($variables) {
     $output .= '<ul class="nav navbar-nav navbar-right">';
     foreach ($variables['links'] as $link) {
       if (isset($link['icon'])) {
-        $icon = '<span aria-hidden="true" class="glyphicon glyphicon-' . $link['icon'] . '"></span> ';
+        $icon = '<span aria-hidden="true" class="fa fa-' . $link['icon'] . '"></span> ';
         $link['title'] = $icon . check_plain($link['title']);
         $link['html'] = TRUE;
       }

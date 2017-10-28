@@ -1,0 +1,64 @@
+
+.dropdown-menu {
+  hr {
+    // Remove hardcoded separator color
+    border-top: 1px solid transparent;
+  }
+}
+
+.navbar {
+  border: none;
+}
+
+// Dropdowns customizations, because paddings are ugly
+.dropdown-menu {
+  padding: 0;
+
+  > li > a {
+    line-height: @line-height-large;
+    padding: 9px 16px;
+
+    .glyphicon {
+      margin-right: 5px;
+    }
+  }
+}
+
+.navbar {
+  li > a {
+    .glyphicon {
+      margin-right: 5px;
+    }
+  }
+}
+
+// Restore admin related overrides
+.navbar-inverse {
+  font-size: 14px;
+  z-index: @zindex-admin-navbar;
+}
+
+ul.tree-admin {
+  list-style: none;
+  padding-left: @padding-small-horizontal;
+  overflow-x: hidden;
+
+  li {
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+  }
+
+  a {
+    color: @navbar-inverse-link-color;
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+
+    &.active,
+    &:hover,
+    &:focus {
+      color: @navbar-inverse-link-hover-color;
+      background-color: @navbar-inverse-link-hover-bg;
+    }
+  }
+}

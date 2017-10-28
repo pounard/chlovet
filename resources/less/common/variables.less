@@ -1,0 +1,194 @@
+
+// Change font path, else bootstrap won't find glyphicons
+@icon-font-path: "../../resources/bootstrap/fonts/";
+
+// Admin-only variables
+@navbar-height:                    46px;
+@navbar-border-radius:             0;
+
+// Inverted navbar
+@navbar-inverse-color:                      lighten(@gray-light, 15%);
+@navbar-inverse-bg:                         #222;
+@navbar-inverse-border:                     darken(@navbar-inverse-bg, 10%);
+@navbar-inverse-link-color:                 lighten(@gray-light, 15%);
+@navbar-inverse-link-hover-color:           #fff;
+@navbar-inverse-link-hover-bg:              darken(@brand-primary, 10%);
+@navbar-inverse-link-active-color:          @navbar-inverse-link-hover-color;
+@navbar-inverse-link-active-bg:             @brand-primary;
+@navbar-inverse-link-disabled-color:        #444;
+@navbar-inverse-link-disabled-bg:           transparent;
+@navbar-inverse-brand-color:                @navbar-inverse-link-color;
+@navbar-inverse-brand-hover-color:          #fff;
+@navbar-inverse-brand-hover-bg:             transparent;
+@navbar-inverse-toggle-hover-bg:            #333;
+@navbar-inverse-toggle-icon-bar-bg:         #fff;
+@navbar-inverse-toggle-border-color:        #333;
+
+// Dropdown inverse
+@dropdown-bg:                    @navbar-inverse-bg;
+@dropdown-border:                @navbar-inverse-border;
+@dropdown-fallback-border:       @navbar-inverse-border;
+@dropdown-divider-bg:            transparent;
+@dropdown-link-color:            @navbar-inverse-link-color;
+@dropdown-link-hover-color:      @navbar-inverse-link-hover-color;
+@dropdown-link-hover-bg:         @navbar-inverse-link-hover-bg;
+@dropdown-link-active-color:     @navbar-inverse-link-active-color;
+@dropdown-link-active-bg:        @navbar-inverse-link-active-bg;
+@dropdown-link-disabled-color:   @navbar-inverse-link-disabled-color;
+@dropdown-header-color:          @gray-light;
+@dropdown-caret-color:           #000;
+
+// Fouque gutters
+//@grid-gutter-width: 0;
+
+@zindex-leaflet: 1000;
+@zindex-base: 1100;
+@zindex-admin-navbar: 1103;
+@zindex-header: 1101;
+
+// We don't want borders
+@border-radius-base: 0;
+@border-radius-large: 0;
+@border-radius-small: 0;
+
+@table-bg-accent: rgba(0, 0, 0, 0.05);
+
+@navbar-border-radius: 0;
+
+// Font-size is too high for headings.
+@font-size-h1: floor((@font-size-base * 2.3)); // ~32px
+@font-size-h2: floor((@font-size-base * 1.8)); // ~25px
+@font-size-h3: ceil((@font-size-base * 1.5)); // ~21px
+@font-size-h4: ceil((@font-size-base * 1.25)); // ~18px
+@font-size-h5: @font-size-base;
+@font-size-h6: @font-size-base;
+
+// Front color when background is colored
+@color-front: #ecf0f1;
+
+// Chlovet colors
+// Pink
+@color-chlovet-pink-dark: #821332;
+@color-chlovet-pink: #B01A44;
+@color-chlovet-light: #B01A44;
+// Grey
+@color-chlovet-gray-darker: #2F2E2E;
+@color-chlovet-gray-dark: #3E3E3E;
+@color-chlovet-gray: #5f6060;
+// Blue
+@color-chlovet-blue-light: #2ECDFF; // pink dark triad
+@color-chlovet-blue: #2090B2; // pink triad
+// Background
+@color-chlovet-footer: #3E3636;
+@color-chlovet-footer-bg: #edebe6;
+
+// Flat UI colors (http://flatuicolors.com/)
+@color-turquoise: #1ABC9C;
+@color-green-sea: #16A085;
+@color-emerald: #2ECC71;
+@color-nephritis: #27AE60;
+@color-peter-river: #3498DB;
+@color-belize-hole: #2980B9;
+@color-amethyst: #9B59B6;
+@color-wisteria: #8E44AD;
+@color-wet-asphalt: #34495E;
+@color-midnight-blue: #2C3E50;
+@color-sun-flower: #F1C40F;
+@color-orange: #F39C12;
+@color-carrot: #E67E22;
+@color-pumpkin: #D35400;
+@color-alizarin: #E74C3C;
+@color-pomegranate: #C0392B;
+@color-clouds: #ECF0F1;
+@color-silver: #BDC3C7;
+@color-concrete: #95A5A6;
+@color-asbestos: #7F8C8D;
+
+// Breadcrumb
+@breadcrumb-padding-vertical: @padding-large-vertical;
+@breadcrumb-padding-horizontal: @padding-large-horizontal;
+@breadcrumb-bg: transparent;
+//@breadcrumb-color: transparent;
+
+// Navbar
+@navbar-default-color: @text-color;
+@navbar-default-bg: @body-bg;
+//@navbar-default-link-active-bg: @color-chlovet-pink-dark;
+// Following is inheritance, do not change!
+@navbar-default-toggle-border-color: @navbar-default-color;
+@navbar-default-toggle-hover-bg: @navbar-default-bg;
+@navbar-default-toggle-icon-bar-bg: @navbar-default-toggle-border-color;
+@navbar-default-brand-color: @navbar-default-color;
+@navbar-default-brand-hover-color: @navbar-default-color;
+@navbar-default-brand-hover-bg: @navbar-default-link-active-bg;
+@navbar-default-link-color: @navbar-default-color;
+@navbar-default-link-hover-color: @navbar-default-color;
+@navbar-default-link-hover-bg: @navbar-default-link-active-bg;
+@navbar-default-link-active-color: @navbar-default-color;
+
+// Navigaton menu
+@menu-navigation-color: @text-color;
+@menu-navigation-active-color: @color-chlovet-pink;
+
+// Menu direct siblings nav
+@menu-siblings-bg: transparent;
+@menu-siblings-link: @text-color;
+@menu-siblings-link-active: @color-front;
+@menu-siblings-link-active-bg: @color-turquoise;
+@menu-siblings-link-bg: @menu-siblings-bg;
+@menu-siblings-link-hover: @menu-siblings-link-active;
+@menu-siblings-link-hover-bg: @menu-siblings-link-active-bg;
+
+// Menu direct children nav
+@menu-children-bg: transparent;
+@menu-children-link-bg: transparent;
+@menu-children-link: @color-chlovet-pink;
+@menu-children-link-hover-bg: @color-clouds;
+@menu-children-link-hover: @color-chlovet-pink;
+@menu-children-border: @color-chlovet-pink;
+
+// Header
+@btn-header-color: @color-front;
+@btn-header-bg: @color-chlovet-gray;
+@btn-header-border: @color-chlovet-gray;
+@header-top-bg: @color-chlovet-gray-darker;
+@header-inner-bg: transparent;
+@header-inner: @color-front;
+@header-form-input-bg: @color-chlovet-gray-dark;
+@header-form-input: @color-front;
+@header-form-input-focus-bg: @color-chlovet-gray-dark;
+@header-form-input-focus: @header-form-input;
+
+// Search results
+@search-result-bg: transparent;
+@search-result-hover-bg: @color-clouds;
+@search-result-title: @color-pomegranate;
+@search-result-title-hover: @color-midnight-blue;
+
+// Neutrals
+//@color-silver: #EEEEEE;
+@color-white: #FFFFFF;
+@color-magniolia: #F9F7ED;
+@color-interactive-yellow: #FFFF88;
+@color-qoop-mint: #CDEB8B;
+@color-gmail-blue: #C3D9FF;
+@color-shadows-grey: #36393D;
+
+// Bold
+@color-mozilla-red: #FF1A00;
+@color-rollyo-red: #CC0000;
+@color-rss-orange: #FF7400;
+@color-techcrunch-green: #008C00;
+@color-flock-blue: #4096EE;
+@color-flickr-pink: #FF0084;
+
+// Muted
+@color-ror-red: #B02B2C;
+@color-etsy-vermillion: #D15600;
+@color-basecamp-green: #6BBA70;
+@color-mozilla-blue: #3F4C6B;
+@color-digg-blue: #356AA0;
+@color-lastfm-crimson: #D01F3C;
+
+// Fonts
+@font-size-base: 14px;

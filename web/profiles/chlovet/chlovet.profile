@@ -114,40 +114,80 @@ function chlovet_html_head_alter(&$head_elements) {
 }
 
 /**
- * Implements hook_library_alter().
+ * Implements hook_js_alter().
  */
-function chlovet_library_alter(&$libraries, $module) {
-  if ($module === 'system') {
-    $path = drupal_get_path('module', 'chlovet') . '/js/jquery';
-
-    // jQuery UI CSS
-    $names = drupal_map_assoc([
-      'ui.menu', 'ui.spinner', 'ui.tooltip',
-      'ui.accordion', 'ui.autocomplete', 'ui.button', 'ui.datepicker', 'ui.dialog',
-      'ui.progressbar', 'ui.resizable', 'ui.selectable', 'ui.slider', 'ui.tabs',
-      'ui.menu', 'ui.spinner', 'ui.tooltip',
-    ]);
-    $names['ui'] = 'ui.core';
-    foreach ($names as $name => $file) {
-      $libraries[$name]['css']["misc/ui/jquery.$file.css"]['data'] = $path . '/ui/themes/base/minified/jquery.' . $file . '.min.css';
+function chlovet_js_alter(&$js) {
+  foreach ($js as $index => $info) {
+    if ('file' === $info['type'] && false === strpos($info['data'], 'ckeditor')) {
+      unset($js[$index]);
     }
-    $libraries['ui']['css']['misc/ui/jquery.ui.theme.css']['data'] = $path . '/ui/themes/base/minified/jquery.theme.min.css';
+  }
+  $js['profiles/chlovet/dist/public.min.js'] = [
+    'type' => 'file',
+    'group' => -100,
+    'weight' => 2.007,
+    'version' => null,
+    'type' => "file",
+    'every_page' => false,
+    'requires_jquery' => false,
+    'scope' => "header",
+    'cache' => true,
+    'defer' => false,
+    'preprocess' => false,
+    'data' => 'profiles/chlovet/dist/public.min.js',
+  ];
+  if (user_is_logged_in()) {
+    $js['profiles/chlovet/dist/admin.min.js'] = [
+      'type' => 'file',
+      'group' => -100,
+      'weight' => 2.007,
+      'version' => null,
+      'type' => "file",
+      'every_page' => false,
+      'requires_jquery' => false,
+      'scope' => "header",
+      'cache' => true,
+      'defer' => false,
+      'preprocess' => false,
+      'data' => 'profiles/chlovet/dist/admin.min.js',
+    ];
+  }
+}
 
-    // jQuery UI JS
-    $names = drupal_map_assoc([
-      'ui.menu', 'ui.spinner', 'ui.tooltip',
-      'ui.accordion', 'ui.autocomplete', 'ui.button', 'ui.datepicker', 'ui.dialog', 'ui.draggable',
-      'ui.droppable', 'ui.mouse', 'ui.position', 'ui.progressbar', 'ui.resizable', 'ui.selectable',
-      'ui.slider', 'ui.sortable', 'ui.tabs', 'ui.widget', 'ui.spinner', 'ui.menu', 'ui.tooltip',
-    ]);
-    $names['ui'] = 'ui.core';
-    $names['effects'] = array('effects.core', 'ui.effect');
-    $names = jquery_update_make_library_hook_to_file_name_segment_map_for_effects($names);
-    foreach ($names as $name => $file) {
-      list($file_core, $file_updated) = is_array($file) ? $file : array($file, $file);
-      $corefile = 'misc/ui/jquery.' . $file_core . '.min.js';
-      $libraries[$name]['js'][$corefile]['data'] = $path . '/ui/minified/jquery.' . $file_updated . '.min.js';
-      $libraries[$name]['version'] = '1.10.4';
+function _chlovet_realpath_recursion(array $pieces, int $start): string {
+  for ($i = $start; $i < count($pieces); ++$i) {
+    if ('.' === $pieces[$i]) {
+      unset($pieces[$i]);
+      return _chlovet_realpath_recursion(array_values($pieces), $i);
+    } else if ('..' === $pieces[$i] && 0 !== $i) {
+      unset($pieces[$i], $pieces[$i - 1]);
+      return _chlovet_realpath_recursion(array_values($pieces), $i - 1);
+    }
+  }
+  return implode('/', $pieces);
+}
+
+function _chlovet_realpath(string $path): string {
+  return _chlovet_realpath_recursion(explode('/', $path), 0);
+}
+
+/**
+ * Implements hook_js_alter().
+ */
+function chlovet_css_alter(&$css) {
+  foreach ($css as $name => $settings) {
+    if ($settings['group'] === CSS_THEME) {
+      // Keep theme files
+      if (isset($settings['data']) && 'file' === $settings['type']) {
+        $css[$name]['data'] = _chlovet_realpath($settings['data']);
+      }
+      $css[$name]['preprocess'] = false;
+    } elseif ($settings['type'] === 'inline') {
+      // This will disable @import commands, thus fewer requests.
+      $css[$name]['preprocess'] = false;
+    } elseif ('external' !== $settings['type']) {
+      // Exclude all others
+      unset($css[$name]);
     }
   }
 }

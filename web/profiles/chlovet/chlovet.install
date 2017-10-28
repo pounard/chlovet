@@ -189,6 +189,107 @@ function chlovet_update_7004() {
   drupal_uninstall_modules(['path'], false);
 }
 
+/*
+function chlovet_update_7006() {
+  db_merge('block')
+    ->key([
+        'theme' => 'gipbe_theme',
+        'module' => 'gibpe_block',
+        'delta' => 'agenda',
+    ])
+    ->fields([
+        'region' => 'content',
+        'visibility' => 1,
+        ''
+    ])
+    ->execute()
+  ;
+
+  db_delete('block_node_type')
+    ->condition('module', 'gibpe_block')
+    ->condition('delta', 'agenda')
+    ->condition('type', 'article')
+    ->execute()
+  ;
+
+  db_merge('block_node_type')
+    ->key([
+        'module' => 'gibpe_block',
+        'delta' => 'agenda',
+        'type' => 'event',
+    ])
+    ->fields([])
+    ->execute()
+  ;
+}
+
+function ruteoiteroitue() {
+$blocks = array (
+  0 =>
+  array (
+    'bid' => '4232',
+    'module' => 'block',
+    'delta' => '3',
+    'theme' => 'laborange2',
+    'status' => '0',
+    'weight' => '0',
+    'region' => '-1',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  ),
+  1 =>
+  array (
+    'bid' => '4233',
+    'module' => 'block',
+    'delta' => '4',
+    'theme' => 'laborange2',
+    'status' => '1',
+    'weight' => '10',
+    'region' => 'content_2',
+    'custom' => '0',
+    'visibility' => '1',
+    'pages' => 'webzine
+webzine/*
+rubricage
+rubricage/*',
+    'title' => 'Participez au webzine',
+    'cache' => '-1',
+  ),
+  2 =>
+  array (
+    'bid' => '4234',
+    'module' => 'comment',
+    'delta' => 'recent',
+    'theme' => 'laborange2',
+    'status' => '0',
+    'weight' => '0',
+    'region' => '-1',
+    'custom' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '1',
+  ));
+
+  db_delete('block')->execute();
+  foreach ($blocks as $block) {
+  db_merge('block')
+    ->key([
+        'theme' => $block['theme'],
+        'module' => $block['module'],
+        'delta' => $block['delta'],
+    ])
+    ->fields($block)
+    ->execute()
+  ;
+
+  }
+}
+ */
+
 /**
  * Updates migrated layout data.
  */

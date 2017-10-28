@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "eaa8deda697815f9b3fc6149e582c5f8",
+    "content-hash": "c226ef3132b0d30dd27e97eee02d58af",
     "packages": [
         {
             "name": "composer/installers",
@@ -2138,16 +2138,16 @@
         },
         {
             "name": "makinacorpus/php-calista",
-            "version": "1.0.0-alpha1",
+            "version": "dev-master",
             "source": {
                 "type": "git",
                 "url": "git@github.com:makinacorpus/php-calista.git",
-                "reference": "7b0a03d7c2e8242956bb9690df164f895442fa02"
+                "reference": "34b78f9f3333ce9715963bd65d5773db913572f8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/makinacorpus/php-calista/zipball/7b0a03d7c2e8242956bb9690df164f895442fa02",
-                "reference": "7b0a03d7c2e8242956bb9690df164f895442fa02",
+                "url": "https://api.github.com/repos/makinacorpus/php-calista/zipball/34b78f9f3333ce9715963bd65d5773db913572f8",
+                "reference": "34b78f9f3333ce9715963bd65d5773db913572f8",
                 "shasum": ""
             },
             "require": {
@@ -2162,16 +2162,20 @@
                 "symfony/security": "^3.1"
             },
             "require-dev": {
-                "phpunit/phpunit": "^5.1",
+                "box/spout": "^2.7",
+                "phpunit/phpunit": "^5.7",
+                "symfony/config": "^2.8|^3.2",
                 "symfony/form": "^3.2",
-                "symfony/options-resolver": "^3.2",
-                "twig/twig": "^2.4"
+                "twig/twig": "^1.34|^2"
             },
             "type": "library",
             "autoload": {
                 "psr-4": {
                     "MakinaCorpus\\Calista\\": "src/"
-                }
+                },
+                "classmap": [
+                    "CalistaBundle.php"
+                ]
             },
             "autoload-dev": {
                 "psr-4": {
@@ -2208,7 +2212,7 @@
                 }
             ],
             "description": "Backend agnostic API for building user interface or data exports",
-            "time": "2017-07-26T17:22:10+00:00"
+            "time": "2017-08-22 13:31:37"
         },
         {
             "name": "makinacorpus/php-layout",
@@ -4944,6 +4948,12 @@
             "package": "makinacorpus/php-acl"
         },
         {
+            "alias": "1.0",
+            "alias_normalized": "1.0.0.0",
+            "version": "9999999-dev",
+            "package": "makinacorpus/php-calista"
+        },
+        {
             "alias": "1.3.0",
             "alias_normalized": "1.3.0.0",
             "version": "9999999-dev",
@@ -4959,6 +4969,7 @@
         "makinacorpus/drupal-ucms": 20,
         "makinacorpus/drupal-unoderef": 20,
         "makinacorpus/php-acl": 20,
+        "makinacorpus/php-calista": 20,
         "makinacorpus/php-layout": 20,
         "makinacorpus/redis-bundle": 20,
         "pear/console_table": 20

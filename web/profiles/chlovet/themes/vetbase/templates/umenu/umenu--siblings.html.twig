@@ -4,7 +4,7 @@
       {% if current == item.nodeId %}
         <li class="active">
           <a href="{{ url(item.route) }}">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="fa fa-chevron-right" aria-hidden="true"></span>
             {{ item.title }}
             <span class="sr-only">({{ "current"|trans }})</span>
           </a>
@@ -12,7 +12,7 @@
       {% else %}
         <li>
           <a href="{{ url(item.route) }}">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="fa fa-chevron-right" aria-hidden="true"></span>
             {{ item.title }}
           </a>
         </li>

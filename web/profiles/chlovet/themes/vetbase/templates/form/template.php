@@ -235,7 +235,7 @@ function vetbase_fieldset_filter_format($variables) {
 
   return <<<EOT
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#{$modalId}">
-  <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
+  <span class="fa fa-cog" aria-hidden="true"></span>
   {$text}
 </button>
 <div class="modal fade" id="{$modalId}" tabindex="-1" role="dialog" aria-labelledby="{$modalId}Label">
@@ -336,8 +336,8 @@ function vetbase_button($variables) {
     $value = '<span aria-hidden="true">&times;</span>';
   } else if (false && t("Search") === $element['#value']) {
     // Search button.
-    $element['#attributes']['class'][] = 'glyphicon';
-    $element['#attributes']['class'][] = 'glyphicon-search';
+    $element['#attributes']['class'][] = 'fa';
+    $element['#attributes']['class'][] = 'fa-search';
   } else if ($class = _vetbase_colorize_button($element['#value'])) {
     $element['#attributes']['class'][] = 'btn';
     // @todo Un-hardcoded this. (see drupal bootstrap)

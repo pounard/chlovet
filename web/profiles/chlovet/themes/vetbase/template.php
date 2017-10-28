@@ -371,9 +371,9 @@ function vetbase_menu_local_action($variables) {
   $link = $variables['element']['#link'];
   // $output = '<li role="presentation">';
   if (!empty($link['localized_options']['html'])) {
-    $title = '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ' . $link['title'];
+    $title = '<span class="fa fa-plus" aria-hidden="true"></span> ' . $link['title'];
   } else {
-    $title = '<span class="glyphicon glyphicon-plus" aria-hidden="true"></span> ' . check_plain($link['title']);
+    $title = '<span class="fa fa-plus" aria-hidden="true"></span> ' . check_plain($link['title']);
   }
   $link['localized_options']['html'] = true;
   if (isset($link['href'])) {
@@ -422,15 +422,15 @@ function vetbase_status_messages($variables) {
     switch ($type) {
       case 'error':
         $class = 'alert-danger alert-dismissible';
-        $icon = '<span class="glyphicon glyphicon-exclamation-sign"></span> '; // Space is important.
+        $icon = '<span class="fa fa-exclamation-sign"></span> '; // Space is important.
         break;
       case 'warning':
         $class = 'alert-warning alert-dismissible';
-        $icon = '<span class="glyphicon glyphicon-warning-sign"></span> '; // Space is important.
+        $icon = '<span class="fa fa-warning-sign"></span> '; // Space is important.
         break;
       default:
         $class = 'alert-success alert-dismissible';
-        $icon = '<span class="glyphicon glyphicon-ok"></span> '; // Space is important.
+        $icon = '<span class="fa fa-ok"></span> '; // Space is important.
         break;
     }
     foreach ($messages as $message) {

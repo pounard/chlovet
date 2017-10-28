@@ -12,7 +12,7 @@ item:
     path: "admin/dashboard/media"
     expanded: true
     options:
-      icon: 'picture'
+      icon: 'picture-o'
   -
     name: "Étiquettes"
     path: "admin/dashboard/label"
@@ -30,5 +30,4 @@ item:
     path: "admin/dashboard/tree"
     expanded: true
     options:
-      icon: 'tree-conifer'
-
+      icon: 'bars'

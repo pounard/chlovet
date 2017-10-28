@@ -1,0 +1,25 @@
+// Bootstrap common resource, including variables at their rightful place
+@import "~bootstrap/less/variables";
+@import "../common/variables";
+@import "./variables";
+
+// Base theme over the common resources
+@badm-theme-path: "../../../web/sites/all/themes/composer/drupal-badm";
+@import "@{badm-theme-path}/less/page";
+@import "@{badm-theme-path}/less/drupal-mess";
+@import "@{badm-theme-path}/less/vertical-tabs";
+@import "@{badm-theme-path}/less/drag";
+@import "@{badm-theme-path}/less/autocomplete";
+@import "@{badm-theme-path}/less/node";
+@import "@{badm-theme-path}/less/form";
+@import "@{badm-theme-path}/less/inverse";
+@import "@{badm-theme-path}/less/overrides";
+@import "@{badm-theme-path}/less/admin-site";
+@import "@{badm-theme-path}/less/admin-field";
+@import "@{badm-theme-path}/less/admin-user";
+
+// Base theme is more important than badm and must override whenever possible
+@import "../common/style";
+
+// And here goes our theme
+//  - There is still nothing here...

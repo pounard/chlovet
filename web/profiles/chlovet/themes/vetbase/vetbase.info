@@ -1,7 +1,7 @@
 name = Vetbase
 core = 7.x
-engine = twig
 base theme = bootbase
+engine = twig
 
 regions[header] = Header
 regions[header2] = Header, below title
@@ -13,7 +13,4 @@ regions[content] = Content
 regions[bottomright] = Content bottom right
 regions[footer] = Footer
 
-stylesheets[all][] = dist/style.min.css
-; @todo Later, use LESS version of jQuery bootstrap theme and generate it
-; with out variables whenever possible
-scripts[] = js/script.js
+stylesheets[all][] = ../../dist/style.public.css

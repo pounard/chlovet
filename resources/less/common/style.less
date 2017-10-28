@@ -1,0 +1,46 @@
+
+@module-path: "../../../web/sites/all/modules/composer";
+@ucms-path: "@{module-path}/drupal-ucms/resources/less";
+@calista-path: "@{module-path}/drupal-calista/resources/less";
+
+// variables is included into bootstrap
+@import "./bootstrap";
+
+// Needs to be imported first
+@import "./mixins";
+
+// Include 'misc' previous to others to ensure they can be overriden
+@import "./misc";
+
+// Various admin-only related styles
+@import "./admin";
+@import "./calista";
+@import "./jquery-ui-bootstrap/style";
+
+// Those will be common with front themes
+@import "./menu";
+@import "./type";
+@import "./media";
+
+// Font Awesome / Glyphicons
+@import "./fontawesome-glyphicons";
+
+// PHP-layout flex grid
+@import "./flex";
+
+// Import everything from additional modules
+@import (css) "@{module-path}/drupal-ulink/js/better-autocomplete/better-autocomplete.css";
+@import (css) "@{module-path}/drupal-dragula/dragula.css";
+@import (css) "@{module-path}/drupal-filechunk/filechunk.css";
+@import (css) "@{module-path}/drupal-minidialog/minidialog.css";
+@import (css) "@{module-path}/drupal-phplayout/public/edit.css";
+@import (css) "@{module-path}/drupal-unoderef/unoderef.css";
+
+// µCMS for everyone
+// Third party components
+@import (inline) "@{ucms-path}/select2/select2.min.css";
+@import (inline) "@{ucms-path}/select2/select2-bootstrap.min.css";
+
+// Modules-specific files
+@import "@{ucms-path}/contrib";
+@import "@{ucms-path}/tree";
