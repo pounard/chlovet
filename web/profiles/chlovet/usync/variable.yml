@@ -14,7 +14,6 @@ phplayout_region_options:
 ucms_contrib_component_types:
   - autolist
   - contact
-  - list
   - menu
   - search
   - sitemap

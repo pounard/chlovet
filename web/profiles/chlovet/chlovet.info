@@ -35,7 +35,6 @@ dependencies[] = telephone
 ; Custom modules.
 dependencies[] = calista
 dependencies[] = filechunk
-dependencies[] = gulpifier
 dependencies[] = iresponsive
 dependencies[] = latlonfield
 dependencies[] = minidialog
@@ -58,15 +57,15 @@ dependencies[] = ucms_sso
 dependencies[] = ucms_tree
 dependencies[] = ucms_user
 
-usync[] = usync/
 usync[] = usync-partial/content.autolist.yml
 usync[] = usync-partial/content.common.yml
-usync[] = usync-partial/content.document.yml
 usync[] = usync-partial/content.contact.yml
+usync[] = usync-partial/content.document.yml
 usync[] = usync-partial/content.image.yml
-usync[] = usync-partial/content.list.yml
 usync[] = usync-partial/content.menu.yml
 usync[] = usync-partial/content.news.yml
 usync[] = usync-partial/content.page.yml
 usync[] = usync-partial/content.search.yml
 usync[] = usync-partial/content.sitemap.yml
+usync[] = usync-partial/upgrade.yml
+usync[] = usync/
