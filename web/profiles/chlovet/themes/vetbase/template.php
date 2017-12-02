@@ -164,22 +164,6 @@ function vetbase_preprocess_page(&$variables) {
   $hasContext   = $siteManager->hasContext();
   $siteContext  = $hasContext ? $siteManager->getContext() : null;
 
-  // Force some JS inclusion.
-  $opts = ['preprocess' => true, 'every_page' => true];
-  $path = drupal_get_path('theme', 'vetbase') . '/../resources';
-  if (theme_get_setting('gulpifier_single_js')) {
-    drupal_add_js($path . '/bootstrap/js/alert.js', $opts);
-    drupal_add_js($path . '/bootstrap/js/button.js', $opts);
-    drupal_add_js($path . '/bootstrap/js/collapse.js', $opts);
-    drupal_add_js($path . '/bootstrap/js/dropdown.js', $opts);
-    drupal_add_js($path . '/bootstrap/js/modal.js', $opts);
-    drupal_add_js($path . '/bootstrap/js/tab.js', $opts);
-    drupal_add_js($path . '/bootstrap/js/tooltip.js', $opts);
-    drupal_add_js($path . '/bootstrap/js/popover.js', $opts);
-  } else {
-    drupal_add_js($path . '/bootstrap/dist/js/bootstrap.min.js', $opts);
-  }
-
   if ($siteContext) {
     // Append, whenever possible, the search form, for that we need a
     // search component, take the first available
@@ -293,6 +277,14 @@ function vetbase_preprocess_node(&$variables) {
     default:
       $variables['display_authoring'] = false;
   }
+
+  // @todo
+  // View modes pour le drag and drop
+  //   - Carré de couleur
+  //   - Carré avec image (front)
+  //   - Résumé avec image
+  // En plus pour les listes:
+  //   - Liste de résumés
 
   // @todo I would have preferred to do this in the template directly
   if ($variables['display_authoring']) {
