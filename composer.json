@@ -95,7 +95,7 @@
         "makinacorpus/drupal-unoderef" : "dev-typescript as 2.0",
         "makinacorpus/drupal-usync" : "1.0.*",
         "makinacorpus/php-acl" : "dev-master as 1.0",
-        "makinacorpus/php-calista" : "dev-master as 1.0",
+        "makinacorpus/php-calista" : "dev-typescript as 1.0",
         "makinacorpus/php-layout": "dev-master",
         "makinacorpus/redis-bundle" : "dev-master",
         "monolog/monolog": "^1.17",
