@@ -50,28 +50,26 @@ ucms_site_allowed_themes: ['vetbase']
 ucms_site_home_node_type: page
 
 # Roles identifiers, this must be kept in sync with role in ucms_site
-ucms_site_relative_roles:
-  6: 1
-  7: 2
+ucms_site_relative_roles: ~
 
 # Roles identifiers, this must be kept in sync with role in ucms_site
 ucms_site_state_transition_matrix:
   0:
-    10: {3: 3, 4: 4}
-    20: {3: 3, 4: 4}
+    10: {'drupal:3': 'drupal:3', 'drupal:4': 'drupal:4'}
+    20: {'drupal:3': 'drupal:3', 'drupal:4': 'drupal:4'}
   10:
-    0: {3: 3, 4: 4, 6: 6}
+    0: {'drupal:3': 'drupal:3', 'drupal:4': 'drupal:4', 'site:1': 'site:1'}
   20:
-    100: {4: 4}
+    100: {'drupal:4': 'drupal:4'}
   100:
-    200: {3: 3, 4: 4}
+    200: {'drupal:3': 'drupal:3', 'drupal:4': 'drupal:4'}
   200:
-    210: {3: 3, 4: 4, 6: 6}
-    300: {3: 3, 4: 4}
+    210: {'drupal:3': 'drupal:3', 'drupal:4': 'drupal:4', 'site:1': 'site:1'}
+    300: {'drupal:3': 'drupal:3', 'drupal:4': 'drupal:4'}
   210:
-    200: {3: 3, 4: 4, 6: 6}
+    200: {'drupal:3': 'drupal:3', 'drupal:4': 'drupal:4', 'site:1': 'site:1'}
   300:
-    200: {3: 3, 4: 4}
+    200: {'drupal:3': 'drupal:3', 'drupal:4': 'drupal:4'}
 
 ucms_search_cron_limit: 500
 

@@ -12,7 +12,7 @@ item:
     path: "admin/dashboard/media"
     expanded: true
     options:
-      icon: 'picture-o'
+      icon: 'picture'
   -
     name: "Étiquettes"
     path: "admin/dashboard/label"
@@ -25,6 +25,18 @@ item:
     expanded: true
     options:
       icon: 'cloud'
+  -
+    name: "Users"
+    path: "admin/dashboard/users"
+    expanded: true
+    options:
+      icon: 'user'
+  -
+    name: "Groups"
+    path: "admin/dashboard/group"
+    expanded: true
+    options:
+      icon: 'globe'
   -
     name: "Arborescence"
     path: "admin/dashboard/tree"

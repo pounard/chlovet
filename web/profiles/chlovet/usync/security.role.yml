@@ -8,32 +8,26 @@ anonymous:
 authenticated:
   name: Compte client
   permission:
-    - access content
     - access administration pages
-    - site request # Maybe not the best place
-    - use contextual pane
-    - view the administration theme
-
-admin_func:
-  name: Administrateur fonctionnel
-  permission:
-    - access site in maintenance mode
+    - access content
     - access ucms content overview
-    - content manage global
-    - content manage group
-    - content view all
+    - content view global
+    - content view group
+    - content view other
+    - group dashboard access
     - labels dashboard access
-    - labels edit locked
     - labels edit non locked
     - site dashboard access
-    - site manage all
-    - site view all
-    - ucms seo content all manage
+    - site request
     - ucms seo content own manage
-    - ucms seo global manage
-    - use favorites
+    - use context pane content search
+    - use contextual pane
     - use text format full_html
-    - users manage all
+    - view the administration theme
+
+admin_func: ~
+local_webmaster: ~
+local_contrib: ~
 
 admin_tech:
   name: Administrateur technique
@@ -41,46 +35,17 @@ admin_tech:
     - access site in maintenance mode
     - access ucms content overview
     - bypass node access
+    - content god
+    - group dashboard access
+    - group manage all
+    - group view all
     - site dashboard access
+    - site god
     - site manage all
     - site view all
     - ucms seo content all manage
     - ucms seo content own manage
     - ucms seo global manage
-    - use favorites
+    - use context pane content search
+    - use text format full_html
     - users manage all
-
-global_contrib:
-  name: Contributeur du référentiel global
-  permission:
-    - access ucms content overview
-    - content manage global
-    - content view global
-    - content view group
-    - labels dashboard access
-    - site dashboard access
-    - use favorites
-    - use text format full_html
-
-local_webmaster:
-  name: Webmaster local
-  permission:
-    - access ucms content overview
-    - content view global
-    - content view group
-    - content view other
-    - labels dashboard access
-    - labels edit non locked
-    - site dashboard access
-    - ucms seo content own manage
-    - use favorites
-    - use text format full_html
-
-local_contrib:
-  name: Contributeur local
-  permission:
-    - access ucms content overview
-    - labels dashboard access
-    - site dashboard access
-    - use favorites
-    - use text format full_html
