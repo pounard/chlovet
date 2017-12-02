@@ -11,9 +11,8 @@ AUTOLOAD=${SCRIPTPATH}/vendor/autoload.php
 #${SCRIPTPATH}/web/sites/all/modules/composer/drupal-ucms
 #${SCRIPTPATH}/web/sites/all/modules/composer/drupal-umenu
 #${SCRIPTPATH}/vendor/makinacorpus/redis-bundle"
-
-PROJECTS="${SCRIPTPATH}/web/sites/all/modules/composer/drupal-ucms
-${SCRIPTPATH}/web/sites/all/modules/composer/drupal-umenu"
+PROJECTS="${SCRIPTPATH}/web/sites/all/modules/composer/drupal-ucms"
+#${SCRIPTPATH}/web/sites/all/modules/composer/drupal-umenu"
 
 for project in $PROJECTS; do
     cd $project
