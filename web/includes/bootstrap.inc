@@ -2586,7 +2586,7 @@ function drupal_get_hash_salt() {
  *   An array that points to the active symbol table at the point the error
  *   occurred.
  */
-function _drupal_error_handler($error_level, $message, $filename, $line, $context) {
+function _drupal_error_handler($error_level, $message, $filename, $line = null, $context = null) {
   require_once DRUPAL_ROOT . '/includes/errors.inc';
   _drupal_error_handler_real($error_level, $message, $filename, $line, $context);
 }

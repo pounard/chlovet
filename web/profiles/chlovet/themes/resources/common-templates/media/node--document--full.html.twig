@@ -1,6 +1,6 @@
-{% extends 'theme:vetbase:common-templates/media/media-node.html.twig' %}
+{% extends '@vetbase/common-templates/media/media-node.html.twig' %}
 
-{% import 'theme:vetbase:common-templates/media/media-document.html.twig' as document %}
+{% import '@vetbase/common-templates/media/media-document.html.twig' as document %}
 
 {% block media %}
   {{ document.as_links(node.file) }}

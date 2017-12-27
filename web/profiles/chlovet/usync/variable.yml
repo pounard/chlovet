@@ -34,8 +34,6 @@ ucms_layout_regions_badm:
 ucms_tree_menu_nesting_limit: 6
 
 ucms_layout_regions_vetbase:
-  banner: 1
-  banner_right: 1
   bottomright: 1
   content: 1
   footer: 2

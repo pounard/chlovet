@@ -1,4 +1,4 @@
-{% import 'theme:vetbase:templates/node/search.html.twig' as search %}
+{% import '@vetbase/templates/node/search.html.twig' as search %}
 <nav id="header" class="navbar navbar-inverse">
   <div class="container">
     <div class="navbar-header">
@@ -21,16 +21,6 @@
   {% if menu %}
     {{ menu }}
   {% endif %}
-  <div id="banner" class="container">
-    <div class="row">
-      {% if page.banner %}
-        {{ page.banner }}
-      {% endif %}
-      {% if page.banner_right %}
-        {{ page.banner_right }}
-      {% endif %}
-    </div>
-  </div>
   {% if isFrontPage %}
     <div id="main" class="container">
       <a id="main-content" title="{{ "Main content"|trans }}"></a>

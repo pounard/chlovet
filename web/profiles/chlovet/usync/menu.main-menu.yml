@@ -27,16 +27,10 @@ item:
       icon: 'cloud'
   -
     name: "Users"
-    path: "admin/dashboard/users"
+    path: "admin/dashboard/user"
     expanded: true
     options:
       icon: 'user'
-  -
-    name: "Groups"
-    path: "admin/dashboard/group"
-    expanded: true
-    options:
-      icon: 'globe'
   -
     name: "Arborescence"
     path: "admin/dashboard/tree"

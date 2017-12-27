@@ -5,8 +5,6 @@ engine = twig
 
 regions[header] = Header
 regions[menu] = Menu
-regions[banner] = Banner
-regions[left] = Left sidebar
 regions[content] = Content
 regions[bottomright] = Content bottom right
 regions[footer] = Footer
