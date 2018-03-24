@@ -299,6 +299,20 @@ function chlovet_update_7005() {
     drupal_set_message('Please run: bin/console -vvv ucms:composition:migate --region-as-style --squash="(content front1 front2 front3 front4) (footer footer1 footer2 footer3 footer4)"', 'error');
     die();
   }
-  db_query("update layout_data  set style = 'front' where style in ('front1', 'front2', 'front3', 'front4')");
-  db_query("update layout_data  set style = 'square' where style in ('banner_right')");
+  db_query("update layout_data set style = 'front' where style in ('front1', 'front2', 'front3', 'front4')");
+  db_query("update layout_data set style = 'square' where style in ('banner_right')");
+}
+
+/**
+ * Drops all layout that don't belong to the 'content' region.
+ */
+function chlovet_update_7006() {
+  db_query("delete from layout where region <> 'content'");
+}
+
+/**
+ * Drops a few useless module.
+ */
+function chlovet_update_7007() {
+  db_query("delete from system where name in ('ucms_notification', 'apb', 'notification')");
 }
